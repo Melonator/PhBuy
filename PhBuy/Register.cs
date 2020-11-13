@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace PhBuy
 {
-	public partial class MainForm : Form
-	{
-		public MainForm()
-		{
-			InitializeComponent();
-		}
+    public partial class Register : Form
+    {
+        public Register()
+        {
+            InitializeComponent();
+        }
     }
 }
