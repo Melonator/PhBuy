@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuImageButton1.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exitButton.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAABtUSURBVHhe7d1L
@@ -244,7 +244,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAABAE/z22/8D7PeeJN72OGoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuImageButton1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exitButton.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAawAAAGsCAYAAACByJOsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMfEgaZUAAEiiSURBVHhe7Z0J
@@ -561,32 +561,26 @@
         RK5CYII=
 </value>
   </data>
-  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="registerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJYAAAAnCAYAAADtl7EyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJySURBVHhe7ZzPS1RRGIb9d1oILWoRtIiCqEgMjEAIRVGS
-        hETJQgqCEKxFJTkFpmgba1GklIZF6aJxoasRihFjimAkTILBNrb64j1zvTnM1XLuPSufB14YmB+beZjz
-        3XPfM1WFQsEISTqIRbwEsYiXIBbxEsQiXoJYxEt2FGt19Yc9fzZpXR03rPF8hx0/Vm/V+46SPRp9//Kg
-        va3Hno6NWz6/EumNsq1Yb6Zn3Qd1d92011MztjCfsZX8d4O9i75/efD+Xdqu9dxyfkiwKH/KxJKFV7t7
-        7ULLFVtb+xl8JEA56+u/nGCtzZctl/ta4lGJWJKqrrbFJl5MB28F+DfpDwtWf+6iLWWXo8XSLxVSQSVo
-        idT8VSaWZiotfwCV0n93yB4MjP4VS1d/GsSYqSAOGxu/7eyZVlvMfCyKpcleQxhAXIYfPbHbfamiWNqX
-        0CUkQFyy2c/uAtCJdfpkg33JfQueAqgcLYcH9p8oinXoYI3bkwBIAu3SO7H0ACApEAu8gFjgBcQCLyAW
-        eAGxwAuhWNp30P4DQBKEYuk+ISU+SIpQLBW11KkBiIvu4OhOjhMrdX/EVR4A4qI+n3p9Tiw1/2pONTJn
-        QWwutV+3Vy/fFsVS7t0ZtIepx8HTALtHh250oks+hWKp7Kdq6WLmU/AygP9HJVGteptHwkKxFDX/1ACk
-        QgO7QVI1NXTa7Mxc6FKJWMpcet4VtYYGx4K3AWyPCqL6pdoqlVImlqJlUfVSWagpny48bEXdPc1TOsys
-        9nHUiehIsTYjC3XpeORwndv0IkRRMVRDuv5+IcobZUexCKk0iEW8BLGIlyAW8RLEIh5SsD/Ek8svFj54
-        1AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAWAAAAAuCAYAAAAWRMPkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALhSURBVHhe7d3PS9NxHMfx/p0OQYfwIB2iICJIgoIosIx+
+        iCixlCVbHsSDlEhIVKP0UIciOkwJNj1sHtoOTQjsMEVmg8SIOZwwGdjpHe/Pvn1zbBOpffa5PB/wBGHq
+        8cX47KufI5VKRYiIqP0xwEREjmKAiYgcxQATETmKASYichQDTETkqAMHuFTakdnovAwFRqWnOyBnz1yV
+        Y0dPExFRk3QndS8H+sLy4f1HKRS2Gu6r1nSAk4mU+UXBwTGJxxZlKbMsPzZ/CgCgOd1J3ctkIi0j4cdm
+        R3WIG+1s3QDrWoeGx6X39gMpFre9XwkA+Bfl8q48DD2Su7eCsrGxWbO3NQOs43v54h2Ziy54PwoAaIV0
+        akmuXemX9Vy+8QDrO1/GFwDs0KMJPR+uG2A989VjBwCAPVNPpiXy/M3fAdanHfSgmDNfALBrb++XOepd
+        ya5VB1g/odNP6wAA9s28eieTE5HqAOvzavrIBADAvtXVnHkXbAb4wvkbkv/23XsJAGCTHkOcOH6uOsCd
+        HV3mWTUAQHvoX82ZAdYvAADtwwADgCMMMAA4wgADgCMMMAA4wgADgCMMMAA4wgADgCMMMAA4wgADgCMM
+        MAA4wgADgCMMMAA44g+w/ls0/fdoAID28AdYryPSu+wBAO3hD7DeV69XJgMA7NMLMPQiDDPAekOn3tQJ
+        ALBvLrogoeHx6gCv5/JmjTkHBgD77vWPSDyWrA6w9nRqRl48e+29DACwIR5blKHAqNldf4BLpR3p6Q7I
+        1+Ws920AgFYqFrfNaUOhsFU7wNpKds1clcwNyQDQWjq+N6/fl9SnjL+5NQOsZT5/MSM8/fKt92MAgP+R
+        TKTNO9/946vVDbCmxxGTExGz1vppnS43AODwyuVdc94bHByTgb6wf+ywv4YD/Cdda31U4tTJS+ahYSIi
+        OlydHV3mw7bZ6HzDfdUOHGAiIrIXA0xE5CgGmIjIUQwwEZGjGGAiIidV5DcFVkUCxmoZbQAAAABJRU5E
+        rkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAVwAAAApCAYAAAB5jpHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVHhe7da5DQAgDARBl0opdGZ3xpOTIEE2I20LpwsA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuZGZbdUnS36Kq
-        hiTpf/vhHpdYkvSy7BP2PdwCYSavFgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="confirmTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVwAAAApCAYAAAB5jpHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVHhe7da5DQAgDARBl0opdGZ3xpOTIEE2I20LpwsA
@@ -594,7 +588,15 @@
         hiTpf/vhHpdYkvSy7BP2PdwCYSavFgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="passTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAVwAAAApCAYAAAB5jpHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVHhe7da5DQAgDARBl0opdGZ3xpOTIEE2I20LpwsA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuZGZbdUnS36Kq
+        hiTpf/vhHpdYkvSy7BP2PdwCYSavFgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="nameTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVwAAAApCAYAAAB5jpHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABrSURBVHhe7da5DQAgDARBl0opdGZ3xpOTIEE2I20LpwsA
