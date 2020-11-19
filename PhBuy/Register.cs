@@ -49,9 +49,7 @@ namespace PhBuy
             if (username != string.Empty && password != string.Empty && cPassword != string.Empty)
             {
                 if (isMatch(password, cPassword)) //The passwords msut be matching
-                {
-                    
-
+                {                  
                     //Query based on the textbox
                     string queryString = "SELECT Name FROM Profiles WHERE Name = @Name;";
                     SqlCommand oCmd = new SqlCommand(queryString, myConnection);
