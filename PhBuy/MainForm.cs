@@ -25,5 +25,11 @@ namespace PhBuy
         {
 			Close();
         }
+
+        private void bunifuButton5_Click(object sender, EventArgs e)
+        {
+			DatabaseForm databaseForm = new DatabaseForm();
+			databaseForm.Show();
+        }
     }
 }

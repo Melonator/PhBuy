@@ -32,11 +32,19 @@ namespace PhBuy
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatabaseForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Seller = new System.Windows.Forms.DataGridView();
             this.tableDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label9 = new System.Windows.Forms.Label();
             this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.Products = new System.Windows.Forms.DataGridView();
+            this.Customer = new System.Windows.Forms.DataGridView();
+            this.Orders = new System.Windows.Forms.DataGridView();
+            this.Profiles = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Seller)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Customer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Orders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Profiles)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -44,15 +52,16 @@ namespace PhBuy
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // dataGridView
+            // Seller
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 113);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(917, 379);
-            this.dataGridView.TabIndex = 0;
+            this.Seller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Seller.Location = new System.Drawing.Point(9, 92);
+            this.Seller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Seller.Name = "Seller";
+            this.Seller.RowHeadersWidth = 51;
+            this.Seller.RowTemplate.Height = 24;
+            this.Seller.Size = new System.Drawing.Size(688, 308);
+            this.Seller.TabIndex = 0;
             // 
             // tableDropDown
             // 
@@ -87,11 +96,19 @@ namespace PhBuy
             this.tableDropDown.ItemHeight = 26;
             this.tableDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.tableDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.tableDropDown.Items.AddRange(new object[] {
+            "Seller",
+            "Products",
+            "Customer",
+            "Orders",
+            "Profiles"});
             this.tableDropDown.ItemTopMargin = 3;
-            this.tableDropDown.Location = new System.Drawing.Point(12, 58);
+            this.tableDropDown.Location = new System.Drawing.Point(9, 47);
+            this.tableDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableDropDown.Name = "tableDropDown";
-            this.tableDropDown.Size = new System.Drawing.Size(260, 32);
+            this.tableDropDown.Size = new System.Drawing.Size(196, 32);
             this.tableDropDown.TabIndex = 1;
+            this.tableDropDown.Text = null;
             this.tableDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.tableDropDown.TextLeftMargin = 5;
             this.tableDropDown.SelectedIndexChanged += new System.EventHandler(this.tableDropDown_SelectedIndexChanged);
@@ -99,11 +116,12 @@ namespace PhBuy
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label9.Location = new System.Drawing.Point(12, 0);
+            this.label9.Location = new System.Drawing.Point(9, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 55);
+            this.label9.Size = new System.Drawing.Size(102, 37);
             this.label9.TabIndex = 49;
             this.label9.Text = "Table";
             // 
@@ -124,18 +142,17 @@ namespace PhBuy
             this.exitButton.ImageActive = null;
             this.exitButton.ImageLocation = null;
             this.exitButton.ImageMargin = 40;
-            this.exitButton.ImageSize = new System.Drawing.Size(30, 30);
-            this.exitButton.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.exitButton.ImageSize = new System.Drawing.Size(12, 17);
+            this.exitButton.ImageZoomSize = new System.Drawing.Size(52, 57);
             this.exitButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("exitButton.InitialImage")));
-            this.exitButton.Location = new System.Drawing.Point(871, 0);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Location = new System.Drawing.Point(653, 0);
             this.exitButton.Name = "exitButton";
             this.exitButton.Rotation = 0;
             this.exitButton.ShowActiveImage = true;
             this.exitButton.ShowCursorChanges = true;
             this.exitButton.ShowImageBorders = true;
             this.exitButton.ShowSizeMarkers = false;
-            this.exitButton.Size = new System.Drawing.Size(70, 70);
+            this.exitButton.Size = new System.Drawing.Size(52, 57);
             this.exitButton.TabIndex = 50;
             this.exitButton.ToolTipText = "";
             this.exitButton.WaitOnLoad = false;
@@ -143,20 +160,73 @@ namespace PhBuy
             this.exitButton.ZoomSpeed = 10;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // Products
+            // 
+            this.Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Products.Location = new System.Drawing.Point(9, 92);
+            this.Products.Margin = new System.Windows.Forms.Padding(2);
+            this.Products.Name = "Products";
+            this.Products.RowHeadersWidth = 51;
+            this.Products.RowTemplate.Height = 24;
+            this.Products.Size = new System.Drawing.Size(688, 308);
+            this.Products.TabIndex = 51;
+            // 
+            // Customer
+            // 
+            this.Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Customer.Location = new System.Drawing.Point(9, 92);
+            this.Customer.Margin = new System.Windows.Forms.Padding(2);
+            this.Customer.Name = "Customer";
+            this.Customer.RowHeadersWidth = 51;
+            this.Customer.RowTemplate.Height = 24;
+            this.Customer.Size = new System.Drawing.Size(688, 308);
+            this.Customer.TabIndex = 52;
+            // 
+            // Orders
+            // 
+            this.Orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Orders.Location = new System.Drawing.Point(9, 92);
+            this.Orders.Margin = new System.Windows.Forms.Padding(2);
+            this.Orders.Name = "Orders";
+            this.Orders.RowHeadersWidth = 51;
+            this.Orders.RowTemplate.Height = 24;
+            this.Orders.Size = new System.Drawing.Size(688, 308);
+            this.Orders.TabIndex = 53;
+            // 
+            // Profiles
+            // 
+            this.Profiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Profiles.Location = new System.Drawing.Point(9, 92);
+            this.Profiles.Margin = new System.Windows.Forms.Padding(2);
+            this.Profiles.Name = "Profiles";
+            this.Profiles.RowHeadersWidth = 51;
+            this.Profiles.RowTemplate.Height = 24;
+            this.Profiles.Size = new System.Drawing.Size(688, 308);
+            this.Profiles.TabIndex = 54;
+            // 
             // DatabaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 504);
+            this.ClientSize = new System.Drawing.Size(706, 410);
+            this.Controls.Add(this.Profiles);
+            this.Controls.Add(this.Orders);
+            this.Controls.Add(this.Customer);
+            this.Controls.Add(this.Products);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tableDropDown);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.Seller);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DatabaseForm";
             this.Text = "DatabaseForm";
             this.Load += new System.EventHandler(this.DatabaseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Seller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Customer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Orders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Profiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +235,13 @@ namespace PhBuy
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView Seller;
         private Bunifu.UI.WinForms.BunifuDropdown tableDropDown;
         private System.Windows.Forms.Label label9;
         private Bunifu.UI.WinForms.BunifuImageButton exitButton;
+        private System.Windows.Forms.DataGridView Profiles;
+        private System.Windows.Forms.DataGridView Orders;
+        private System.Windows.Forms.DataGridView Customer;
+        private System.Windows.Forms.DataGridView Products;
     }
 }
