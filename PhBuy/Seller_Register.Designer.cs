@@ -31,6 +31,7 @@ namespace PhBuy
         {
             this.components = new System.ComponentModel.Container();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seller_Register));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -51,10 +52,10 @@ namespace PhBuy
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seller_Register));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.registerPages = new Bunifu.UI.WinForms.BunifuPages();
             this.page1 = new System.Windows.Forms.TabPage();
+            this.nextButton1 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label3 = new System.Windows.Forms.Label();
             this.descriptionTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,20 +70,22 @@ namespace PhBuy
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.page2 = new System.Windows.Forms.TabPage();
+            this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.linkTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.contactTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShapes4 = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes5 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.bunifuShapes6 = new Bunifu.UI.WinForms.BunifuShapes();
+            this.linkTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.contactTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuShapes6 = new Bunifu.UI.WinForms.BunifuShapes();
             this.page3 = new System.Windows.Forms.TabPage();
+            this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.uploadBackgroundButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.uploadPhotoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.sellerPicture = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -94,9 +97,6 @@ namespace PhBuy
             this.bunifuSeparator8 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator9 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuShapes9 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.nextButton1 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.registerPages.SuspendLayout();
             this.page1.SuspendLayout();
             this.page2.SuspendLayout();
@@ -121,13 +121,13 @@ namespace PhBuy
             this.registerPages.Location = new System.Drawing.Point(0, 0);
             this.registerPages.Multiline = true;
             this.registerPages.Name = "registerPages";
-            this.registerPages.Page = this.page3;
-            this.registerPages.PageIndex = 2;
-            this.registerPages.PageName = "page3";
-            this.registerPages.PageTitle = "page3";
+            this.registerPages.Page = this.page1;
+            this.registerPages.PageIndex = 0;
+            this.registerPages.PageName = "page1";
+            this.registerPages.PageTitle = "page1";
             this.registerPages.SelectedIndex = 0;
             this.registerPages.Size = new System.Drawing.Size(1006, 615);
-            this.registerPages.TabIndex = 1;
+            this.registerPages.TabIndex = 2;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -169,6 +169,31 @@ namespace PhBuy
             this.page1.Size = new System.Drawing.Size(998, 586);
             this.page1.TabIndex = 0;
             this.page1.Text = "page1";
+            // 
+            // nextButton1
+            // 
+            this.nextButton1.ActiveBorderThickness = 1;
+            this.nextButton1.ActiveCornerRadius = 20;
+            this.nextButton1.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.nextButton1.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton1.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton1.BackColor = System.Drawing.Color.Transparent;
+            this.nextButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton1.BackgroundImage")));
+            this.nextButton1.ButtonText = "Next";
+            this.nextButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton1.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton1.IdleBorderThickness = 1;
+            this.nextButton1.IdleCornerRadius = 20;
+            this.nextButton1.IdleFillColor = System.Drawing.Color.White;
+            this.nextButton1.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton1.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton1.Location = new System.Drawing.Point(862, 539);
+            this.nextButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.nextButton1.Name = "nextButton1";
+            this.nextButton1.Size = new System.Drawing.Size(82, 39);
+            this.nextButton1.TabIndex = 50;
+            this.nextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -538,20 +563,45 @@ namespace PhBuy
             this.page2.Controls.Add(this.label6);
             this.page2.Controls.Add(this.label7);
             this.page2.Controls.Add(this.label8);
-            this.page2.Controls.Add(this.linkTextBox);
-            this.page2.Controls.Add(this.contactTextBox);
             this.page2.Controls.Add(this.bunifuShapes4);
             this.page2.Controls.Add(this.bunifuShapes5);
+            this.page2.Controls.Add(this.bunifuShapes6);
+            this.page2.Controls.Add(this.linkTextBox);
+            this.page2.Controls.Add(this.contactTextBox);
             this.page2.Controls.Add(this.bunifuSeparator4);
             this.page2.Controls.Add(this.bunifuSeparator5);
             this.page2.Controls.Add(this.bunifuSeparator6);
-            this.page2.Controls.Add(this.bunifuShapes6);
             this.page2.Location = new System.Drawing.Point(4, 4);
             this.page2.Name = "page2";
             this.page2.Padding = new System.Windows.Forms.Padding(3);
             this.page2.Size = new System.Drawing.Size(998, 586);
             this.page2.TabIndex = 1;
             this.page2.Text = "page2";
+            // 
+            // nextButton2
+            // 
+            this.nextButton2.ActiveBorderThickness = 1;
+            this.nextButton2.ActiveCornerRadius = 20;
+            this.nextButton2.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.nextButton2.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton2.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nextButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton2.BackgroundImage")));
+            this.nextButton2.ButtonText = "Next";
+            this.nextButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton2.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton2.IdleBorderThickness = 1;
+            this.nextButton2.IdleCornerRadius = 20;
+            this.nextButton2.IdleFillColor = System.Drawing.Color.White;
+            this.nextButton2.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.nextButton2.Location = new System.Drawing.Point(862, 539);
+            this.nextButton2.Margin = new System.Windows.Forms.Padding(5);
+            this.nextButton2.Name = "nextButton2";
+            this.nextButton2.Size = new System.Drawing.Size(82, 39);
+            this.nextButton2.TabIndex = 51;
+            this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // typeDropDown
             // 
@@ -638,6 +688,51 @@ namespace PhBuy
             this.label8.Size = new System.Drawing.Size(210, 55);
             this.label8.TabIndex = 41;
             this.label8.Text = "Welcome!";
+            // 
+            // bunifuShapes4
+            // 
+            this.bunifuShapes4.Angle = 0F;
+            this.bunifuShapes4.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShapes4.BorderThickness = 2;
+            this.bunifuShapes4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuShapes4.FillShape = true;
+            this.bunifuShapes4.Location = new System.Drawing.Point(597, 155);
+            this.bunifuShapes4.Name = "bunifuShapes4";
+            this.bunifuShapes4.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
+            this.bunifuShapes4.Sides = 4;
+            this.bunifuShapes4.Size = new System.Drawing.Size(40, 40);
+            this.bunifuShapes4.TabIndex = 31;
+            this.bunifuShapes4.Text = "bunifuShapes1";
+            // 
+            // bunifuShapes5
+            // 
+            this.bunifuShapes5.Angle = 0F;
+            this.bunifuShapes5.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShapes5.BorderThickness = 2;
+            this.bunifuShapes5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.bunifuShapes5.FillShape = true;
+            this.bunifuShapes5.Location = new System.Drawing.Point(449, 155);
+            this.bunifuShapes5.Name = "bunifuShapes5";
+            this.bunifuShapes5.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
+            this.bunifuShapes5.Sides = 4;
+            this.bunifuShapes5.Size = new System.Drawing.Size(40, 40);
+            this.bunifuShapes5.TabIndex = 32;
+            this.bunifuShapes5.Text = "bunifuShapes1";
+            // 
+            // bunifuShapes6
+            // 
+            this.bunifuShapes6.Angle = 0F;
+            this.bunifuShapes6.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShapes6.BorderThickness = 2;
+            this.bunifuShapes6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.bunifuShapes6.FillShape = true;
+            this.bunifuShapes6.Location = new System.Drawing.Point(301, 155);
+            this.bunifuShapes6.Name = "bunifuShapes6";
+            this.bunifuShapes6.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
+            this.bunifuShapes6.Sides = 4;
+            this.bunifuShapes6.Size = new System.Drawing.Size(40, 40);
+            this.bunifuShapes6.TabIndex = 33;
+            this.bunifuShapes6.Text = "bunifuShapes6";
             // 
             // linkTextBox
             // 
@@ -787,36 +882,6 @@ namespace PhBuy
             this.contactTextBox.UseSystemPasswordChar = false;
             this.contactTextBox.WordWrap = true;
             // 
-            // bunifuShapes4
-            // 
-            this.bunifuShapes4.Angle = 0F;
-            this.bunifuShapes4.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes4.BorderThickness = 2;
-            this.bunifuShapes4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuShapes4.FillShape = true;
-            this.bunifuShapes4.Location = new System.Drawing.Point(597, 155);
-            this.bunifuShapes4.Name = "bunifuShapes4";
-            this.bunifuShapes4.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes4.Sides = 4;
-            this.bunifuShapes4.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes4.TabIndex = 31;
-            this.bunifuShapes4.Text = "bunifuShapes1";
-            // 
-            // bunifuShapes5
-            // 
-            this.bunifuShapes5.Angle = 0F;
-            this.bunifuShapes5.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes5.BorderThickness = 2;
-            this.bunifuShapes5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes5.FillShape = true;
-            this.bunifuShapes5.Location = new System.Drawing.Point(449, 155);
-            this.bunifuShapes5.Name = "bunifuShapes5";
-            this.bunifuShapes5.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes5.Sides = 4;
-            this.bunifuShapes5.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes5.TabIndex = 32;
-            this.bunifuShapes5.Text = "bunifuShapes1";
-            // 
             // bunifuSeparator4
             // 
             this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
@@ -865,21 +930,6 @@ namespace PhBuy
             this.bunifuSeparator6.Size = new System.Drawing.Size(102, 10);
             this.bunifuSeparator6.TabIndex = 36;
             // 
-            // bunifuShapes6
-            // 
-            this.bunifuShapes6.Angle = 0F;
-            this.bunifuShapes6.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes6.BorderThickness = 2;
-            this.bunifuShapes6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes6.FillShape = true;
-            this.bunifuShapes6.Location = new System.Drawing.Point(301, 155);
-            this.bunifuShapes6.Name = "bunifuShapes6";
-            this.bunifuShapes6.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes6.Sides = 4;
-            this.bunifuShapes6.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes6.TabIndex = 33;
-            this.bunifuShapes6.Text = "bunifuShapes6";
-            // 
             // page3
             // 
             this.page3.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -901,6 +951,31 @@ namespace PhBuy
             this.page3.Size = new System.Drawing.Size(998, 586);
             this.page3.TabIndex = 2;
             this.page3.Text = "page3";
+            // 
+            // confirmButton
+            // 
+            this.confirmButton.ActiveBorderThickness = 1;
+            this.confirmButton.ActiveCornerRadius = 20;
+            this.confirmButton.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.confirmButton.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.confirmButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.confirmButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.confirmButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmButton.BackgroundImage")));
+            this.confirmButton.ButtonText = "Confirm";
+            this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.confirmButton.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.confirmButton.IdleBorderThickness = 1;
+            this.confirmButton.IdleCornerRadius = 20;
+            this.confirmButton.IdleFillColor = System.Drawing.Color.White;
+            this.confirmButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.confirmButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.confirmButton.Location = new System.Drawing.Point(837, 531);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(5);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(107, 47);
+            this.confirmButton.TabIndex = 52;
+            this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uploadBackgroundButton
             // 
@@ -926,7 +1001,6 @@ namespace PhBuy
             this.uploadBackgroundButton.Size = new System.Drawing.Size(82, 39);
             this.uploadBackgroundButton.TabIndex = 49;
             this.uploadBackgroundButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadBackgroundButton.Click += new System.EventHandler(this.uploadBackgroundButton_Click);
             // 
             // uploadPhotoButton
             // 
@@ -952,7 +1026,6 @@ namespace PhBuy
             this.uploadPhotoButton.Size = new System.Drawing.Size(82, 39);
             this.uploadPhotoButton.TabIndex = 49;
             this.uploadPhotoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadPhotoButton.Click += new System.EventHandler(this.uploadPhotoButton_Click);
             // 
             // sellerPicture
             // 
@@ -1082,84 +1155,6 @@ namespace PhBuy
             this.bunifuShapes9.TabIndex = 44;
             this.bunifuShapes9.Text = "bunifuShapes9";
             // 
-            // nextButton1
-            // 
-            this.nextButton1.ActiveBorderThickness = 1;
-            this.nextButton1.ActiveCornerRadius = 20;
-            this.nextButton1.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.nextButton1.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton1.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton1.BackColor = System.Drawing.Color.Transparent;
-            this.nextButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton1.BackgroundImage")));
-            this.nextButton1.ButtonText = "Next";
-            this.nextButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextButton1.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton1.IdleBorderThickness = 1;
-            this.nextButton1.IdleCornerRadius = 20;
-            this.nextButton1.IdleFillColor = System.Drawing.Color.White;
-            this.nextButton1.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton1.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton1.Location = new System.Drawing.Point(862, 539);
-            this.nextButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.nextButton1.Name = "nextButton1";
-            this.nextButton1.Size = new System.Drawing.Size(82, 39);
-            this.nextButton1.TabIndex = 50;
-            this.nextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nextButton1.Click += new System.EventHandler(this.nextButton1_Click);
-            // 
-            // nextButton2
-            // 
-            this.nextButton2.ActiveBorderThickness = 1;
-            this.nextButton2.ActiveCornerRadius = 20;
-            this.nextButton2.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.nextButton2.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton2.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.nextButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton2.BackgroundImage")));
-            this.nextButton2.ButtonText = "Next";
-            this.nextButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextButton2.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton2.IdleBorderThickness = 1;
-            this.nextButton2.IdleCornerRadius = 20;
-            this.nextButton2.IdleFillColor = System.Drawing.Color.White;
-            this.nextButton2.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton2.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.nextButton2.Location = new System.Drawing.Point(862, 539);
-            this.nextButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.nextButton2.Name = "nextButton2";
-            this.nextButton2.Size = new System.Drawing.Size(82, 39);
-            this.nextButton2.TabIndex = 51;
-            this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
-            // 
-            // confirmButton
-            // 
-            this.confirmButton.ActiveBorderThickness = 1;
-            this.confirmButton.ActiveCornerRadius = 20;
-            this.confirmButton.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.confirmButton.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.confirmButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmButton.BackgroundImage")));
-            this.confirmButton.ButtonText = "Confirm";
-            this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.confirmButton.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.IdleBorderThickness = 1;
-            this.confirmButton.IdleCornerRadius = 20;
-            this.confirmButton.IdleFillColor = System.Drawing.Color.White;
-            this.confirmButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.Location = new System.Drawing.Point(837, 531);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(5);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(107, 47);
-            this.confirmButton.TabIndex = 52;
-            this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
             // Seller_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1189,6 +1184,7 @@ namespace PhBuy
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.UI.WinForms.BunifuPages registerPages;
         private System.Windows.Forms.TabPage page1;
+        private Bunifu.Framework.UI.BunifuThinButton2 nextButton1;
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuTextBox descriptionTextBox;
         private System.Windows.Forms.Label label2;
@@ -1203,33 +1199,32 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.TabPage page2;
+        private Bunifu.Framework.UI.BunifuThinButton2 nextButton2;
+        private Bunifu.UI.WinForms.BunifuDropdown typeDropDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private Bunifu.UI.WinForms.BunifuTextBox linkTextBox;
-        private Bunifu.UI.WinForms.BunifuTextBox contactTextBox;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes4;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes5;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes6;
+        private Bunifu.UI.WinForms.BunifuTextBox linkTextBox;
+        private Bunifu.UI.WinForms.BunifuTextBox contactTextBox;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator5;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator6;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes6;
-        private Bunifu.UI.WinForms.BunifuDropdown typeDropDown;
         private System.Windows.Forms.TabPage page3;
-        private System.Windows.Forms.Label label9;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes8;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator8;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator9;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes9;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes7;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
+        private Bunifu.Framework.UI.BunifuThinButton2 confirmButton;
+        private Bunifu.Framework.UI.BunifuThinButton2 uploadBackgroundButton;
         private Bunifu.Framework.UI.BunifuThinButton2 uploadPhotoButton;
         private Bunifu.UI.WinForms.BunifuPictureBox sellerPicture;
         private System.Windows.Forms.PictureBox sellerBackground;
-        private Bunifu.Framework.UI.BunifuThinButton2 uploadBackgroundButton;
-        private Bunifu.Framework.UI.BunifuThinButton2 nextButton1;
-        private Bunifu.Framework.UI.BunifuThinButton2 nextButton2;
-        private Bunifu.Framework.UI.BunifuThinButton2 confirmButton;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes7;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes8;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator8;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator9;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes9;
     }
 }

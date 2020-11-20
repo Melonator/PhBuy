@@ -145,13 +145,16 @@
   <data name="exit_208pxw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_208pxw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_account_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_account_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="126047349_747162852544485_8863433835923509126_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\126047349_747162852544485_8863433835923509126_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
