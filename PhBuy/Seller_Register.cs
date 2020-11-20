@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +20,17 @@ namespace PhBuy
         private string description;
         private string link;
         private string type;
-        private string imgLoc;
+        private string sellerImageLocation;
+        private byte[] sellerImage;
+        private byte[] sellerCover;
         private int contact;
+        private int ID;
         
-        public Seller_Register()
+        public Seller_Register(int id)
         {
+            ID = id;
             InitializeComponent();
+            sellerImageLocation = sellerPicture.ImageLocation;
         }
 
         #region Events
@@ -39,7 +45,7 @@ namespace PhBuy
                 location = locationTextBox.Text;
                 description = descriptionTextBox.Text;
                 //Switch Page
-                registerPages.TabIndex = 1;
+                registerPages.PageIndex = 1;
             }
         }
 
@@ -53,47 +59,47 @@ namespace PhBuy
                 link = linkTextBox.Text;
                 type = typeDropDown.Text;
                 //Switch Page
-                registerPages.TabIndex = 2;
+                registerPages.PageIndex = 2;
             }
         }
 
         private void uploadPhotoButton_Click(object sender, EventArgs e)
         {
+
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Title = "Choose your product image";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                imgLoc = dlg.FileName.ToString();
-                sellerPicture.ImageLocation = imgLoc;
+                sellerImageLocation = dlg.FileName.ToString();
+                sellerPicture.ImageLocation = sellerImageLocation;
             }
         }
 
         private void uploadBackgroundButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Title = "Choose your product image";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                imgLoc = dlg.FileName.ToString();
-                sellerBackground.ImageLocation = imgLoc;
-            }
+            CoverForm form = new CoverForm(this);
+            form.Location = new Point(1000, 268);
+            form.Show();
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
-        {
-            string queryString = "INSERT INTO Seller VALUES(@ID, @Name, @Contact, @Link, @Pic, @Background, @Description, @Type);";
+        {         
+            string queryString = "INSERT INTO Seller VALUES(@ID, @Name, @Contact, @Pic, @Background, @Link, @Description, @Location);" +
+                "INSERT INTO SellerTypes VALUES (@SellerID, @Type)";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
-            SqlParameter param1 = new SqlParameter() { ParameterName = "@ID", Value = GenerateID() };
+            SqlParameter param1 = new SqlParameter() { ParameterName = "@ID", Value = ID };
             SqlParameter param2 = new SqlParameter() { ParameterName = "@Name", Value = name };
             SqlParameter param3 = new SqlParameter() { ParameterName = "@Contact", Value = contact };
             SqlParameter param4 = new SqlParameter() { ParameterName = "@Link", Value = link };
-            SqlParameter param5 = new SqlParameter() { ParameterName = "@Pic", Value = null };
-            SqlParameter param6 = new SqlParameter() { ParameterName = "@Background", Value = null };
+            SqlParameter param5 = new SqlParameter() { ParameterName = "@Pic", Value = sellerImage };
+            SqlParameter param6 = new SqlParameter() { ParameterName = "@Background", Value = sellerCover };
             SqlParameter param7 = new SqlParameter() { ParameterName = "@Description", Value = description };
-            SqlParameter param8 = new SqlParameter() { ParameterName = "@Link", Value = type };
-
+            SqlParameter param8 = new SqlParameter() { ParameterName = "@Type", Value = type };
+            SqlParameter param9 = new SqlParameter() { ParameterName = "@SellerID", Value = ID };
+            SqlParameter param10 = new SqlParameter() { ParameterName = "@Location", Value = location };
             SqlCommand cmd = new SqlCommand(queryString, myConnection);
+
             cmd.Parameters.Add(param1);
             cmd.Parameters.Add(param2);
             cmd.Parameters.Add(param3);
@@ -102,6 +108,8 @@ namespace PhBuy
             cmd.Parameters.Add(param6);
             cmd.Parameters.Add(param7);
             cmd.Parameters.Add(param8);
+            cmd.Parameters.Add(param9);
+            cmd.Parameters.Add(param10);
             cmd.ExecuteNonQuery();
             myConnection.Close();
         }
@@ -109,42 +117,16 @@ namespace PhBuy
         #endregion
 
         #region Helper Functions
-        private int GenerateID()
+        public void SetImage()
         {
-            Random r = new Random();
-            int id = 1 + r.Next(2) * 10000 + r.Next(10000);
+            MemoryStream stream = new MemoryStream();
+            sellerBackground.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            sellerCover = stream.ToArray();
 
-            //Keep on generating the ID until it is a new one
-            while (!IsIDValid(id)) { id = 1 + r.Next(2) * 10000 + r.Next(10000); }
-
-            return id;
+            FileStream fs = new FileStream(sellerImageLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            sellerImage = br.ReadBytes((int)fs.Length);
         }
-
-        private bool IsIDValid(int id)
-        {
-            SqlConnection myConnection = new SqlConnection(connectionString);
-            string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
-
-            myConnection.Open();
-            SqlParameter param = new SqlParameter() { ParameterName = "@ID", Value = id };
-            SqlCommand cmd = new SqlCommand(queryString, myConnection);
-            cmd.Parameters.Add(param);
-
-            SqlDataReader oReader = cmd.ExecuteReader();
-
-            while (oReader.Read())
-            {
-                if (oReader["ID"].ToString() == id.ToString())
-                {
-                    myConnection.Close();
-                    return false;
-                }
-            }
-
-            myConnection.Close();
-            return true;
-        }
-
         #endregion
     }
 }

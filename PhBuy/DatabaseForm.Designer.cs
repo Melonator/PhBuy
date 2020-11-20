@@ -40,6 +40,8 @@ namespace PhBuy
             this.Customer = new System.Windows.Forms.DataGridView();
             this.Orders = new System.Windows.Forms.DataGridView();
             this.Profiles = new System.Windows.Forms.DataGridView();
+            this.editButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Seller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Products)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Customer)).BeginInit();
@@ -55,12 +57,12 @@ namespace PhBuy
             // Seller
             // 
             this.Seller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Seller.Location = new System.Drawing.Point(9, 92);
-            this.Seller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Seller.Location = new System.Drawing.Point(12, 113);
+            this.Seller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Seller.Name = "Seller";
             this.Seller.RowHeadersWidth = 51;
             this.Seller.RowTemplate.Height = 24;
-            this.Seller.Size = new System.Drawing.Size(688, 308);
+            this.Seller.Size = new System.Drawing.Size(917, 379);
             this.Seller.TabIndex = 0;
             // 
             // tableDropDown
@@ -96,17 +98,11 @@ namespace PhBuy
             this.tableDropDown.ItemHeight = 26;
             this.tableDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.tableDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.tableDropDown.Items.AddRange(new object[] {
-            "Seller",
-            "Products",
-            "Customer",
-            "Orders",
-            "Profiles"});
             this.tableDropDown.ItemTopMargin = 3;
-            this.tableDropDown.Location = new System.Drawing.Point(9, 47);
-            this.tableDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableDropDown.Location = new System.Drawing.Point(12, 58);
+            this.tableDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableDropDown.Name = "tableDropDown";
-            this.tableDropDown.Size = new System.Drawing.Size(196, 32);
+            this.tableDropDown.Size = new System.Drawing.Size(260, 32);
             this.tableDropDown.TabIndex = 1;
             this.tableDropDown.Text = null;
             this.tableDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -118,10 +114,9 @@ namespace PhBuy
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label9.Location = new System.Drawing.Point(9, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(12, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 37);
+            this.label9.Size = new System.Drawing.Size(124, 46);
             this.label9.TabIndex = 49;
             this.label9.Text = "Table";
             // 
@@ -142,17 +137,18 @@ namespace PhBuy
             this.exitButton.ImageActive = null;
             this.exitButton.ImageLocation = null;
             this.exitButton.ImageMargin = 40;
-            this.exitButton.ImageSize = new System.Drawing.Size(12, 17);
-            this.exitButton.ImageZoomSize = new System.Drawing.Size(52, 57);
+            this.exitButton.ImageSize = new System.Drawing.Size(29, 30);
+            this.exitButton.ImageZoomSize = new System.Drawing.Size(69, 70);
             this.exitButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("exitButton.InitialImage")));
-            this.exitButton.Location = new System.Drawing.Point(653, 0);
+            this.exitButton.Location = new System.Drawing.Point(871, 0);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.exitButton.Name = "exitButton";
             this.exitButton.Rotation = 0;
             this.exitButton.ShowActiveImage = true;
             this.exitButton.ShowCursorChanges = true;
             this.exitButton.ShowImageBorders = true;
             this.exitButton.ShowSizeMarkers = false;
-            this.exitButton.Size = new System.Drawing.Size(52, 57);
+            this.exitButton.Size = new System.Drawing.Size(69, 70);
             this.exitButton.TabIndex = 50;
             this.exitButton.ToolTipText = "";
             this.exitButton.WaitOnLoad = false;
@@ -163,52 +159,74 @@ namespace PhBuy
             // Products
             // 
             this.Products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Products.Location = new System.Drawing.Point(9, 92);
-            this.Products.Margin = new System.Windows.Forms.Padding(2);
+            this.Products.Location = new System.Drawing.Point(12, 113);
+            this.Products.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Products.Name = "Products";
             this.Products.RowHeadersWidth = 51;
             this.Products.RowTemplate.Height = 24;
-            this.Products.Size = new System.Drawing.Size(688, 308);
+            this.Products.Size = new System.Drawing.Size(917, 379);
             this.Products.TabIndex = 51;
             // 
             // Customer
             // 
             this.Customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Customer.Location = new System.Drawing.Point(9, 92);
-            this.Customer.Margin = new System.Windows.Forms.Padding(2);
+            this.Customer.Location = new System.Drawing.Point(12, 113);
+            this.Customer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Customer.Name = "Customer";
             this.Customer.RowHeadersWidth = 51;
             this.Customer.RowTemplate.Height = 24;
-            this.Customer.Size = new System.Drawing.Size(688, 308);
+            this.Customer.Size = new System.Drawing.Size(917, 379);
             this.Customer.TabIndex = 52;
             // 
             // Orders
             // 
             this.Orders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Orders.Location = new System.Drawing.Point(9, 92);
-            this.Orders.Margin = new System.Windows.Forms.Padding(2);
+            this.Orders.Location = new System.Drawing.Point(12, 113);
+            this.Orders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Orders.Name = "Orders";
             this.Orders.RowHeadersWidth = 51;
             this.Orders.RowTemplate.Height = 24;
-            this.Orders.Size = new System.Drawing.Size(688, 308);
+            this.Orders.Size = new System.Drawing.Size(917, 379);
             this.Orders.TabIndex = 53;
             // 
             // Profiles
             // 
             this.Profiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Profiles.Location = new System.Drawing.Point(9, 92);
-            this.Profiles.Margin = new System.Windows.Forms.Padding(2);
+            this.Profiles.Location = new System.Drawing.Point(12, 113);
+            this.Profiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Profiles.Name = "Profiles";
             this.Profiles.RowHeadersWidth = 51;
             this.Profiles.RowTemplate.Height = 24;
-            this.Profiles.Size = new System.Drawing.Size(688, 308);
+            this.Profiles.Size = new System.Drawing.Size(917, 379);
             this.Profiles.TabIndex = 54;
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(438, 51);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(112, 42);
+            this.editButton.TabIndex = 55;
+            this.editButton.Text = "Edit Database";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(607, 51);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(139, 42);
+            this.clearButton.TabIndex = 55;
+            this.clearButton.Text = "Clear Database";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // DatabaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 410);
+            this.ClientSize = new System.Drawing.Size(941, 505);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.Profiles);
             this.Controls.Add(this.Orders);
             this.Controls.Add(this.Customer);
@@ -218,7 +236,7 @@ namespace PhBuy
             this.Controls.Add(this.tableDropDown);
             this.Controls.Add(this.Seller);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DatabaseForm";
             this.Text = "DatabaseForm";
             this.Load += new System.EventHandler(this.DatabaseForm_Load);
@@ -243,5 +261,7 @@ namespace PhBuy
         private System.Windows.Forms.DataGridView Orders;
         private System.Windows.Forms.DataGridView Customer;
         private System.Windows.Forms.DataGridView Products;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }

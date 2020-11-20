@@ -1,7 +1,7 @@
 ﻿
 namespace PhBuy
 {
-    partial class Customer_Seller_RegForm
+    partial class Customer_Seller
     {
         /// <summary>
         /// Required designer variable.
@@ -32,17 +32,17 @@ namespace PhBuy
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.sellerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.customerPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.sellerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.customerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,23 +54,36 @@ namespace PhBuy
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mainPanel.Controls.Add(this.panel2);
-            this.mainPanel.Controls.Add(this.panel1);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainPanel.Location = new System.Drawing.Point(0, 135);
+            this.mainPanel.Controls.Add(this.label4);
+            this.mainPanel.Controls.Add(this.sellerPanel);
+            this.mainPanel.Controls.Add(this.customerPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1006, 480);
+            this.mainPanel.Size = new System.Drawing.Size(1006, 615);
             this.mainPanel.TabIndex = 1;
             // 
-            // panel2
+            // label4
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(485, 456);
-            this.panel2.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label4.Location = new System.Drawing.Point(305, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(377, 55);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Would you like to...";
+            // 
+            // sellerPanel
+            // 
+            this.sellerPanel.BackColor = System.Drawing.Color.White;
+            this.sellerPanel.Controls.Add(this.pictureBox1);
+            this.sellerPanel.Controls.Add(this.label1);
+            this.sellerPanel.Location = new System.Drawing.Point(12, 147);
+            this.sellerPanel.Name = "sellerPanel";
+            this.sellerPanel.Size = new System.Drawing.Size(485, 456);
+            this.sellerPanel.TabIndex = 0;
+            this.sellerPanel.Click += new System.EventHandler(this.sellerPanel_Click);
             // 
             // pictureBox1
             // 
@@ -93,15 +106,16 @@ namespace PhBuy
             this.label1.TabIndex = 12;
             this.label1.Text = "Sell";
             // 
-            // panel1
+            // customerPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(509, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 456);
-            this.panel1.TabIndex = 0;
+            this.customerPanel.BackColor = System.Drawing.Color.White;
+            this.customerPanel.Controls.Add(this.pictureBox2);
+            this.customerPanel.Controls.Add(this.label2);
+            this.customerPanel.Location = new System.Drawing.Point(509, 147);
+            this.customerPanel.Name = "customerPanel";
+            this.customerPanel.Size = new System.Drawing.Size(485, 456);
+            this.customerPanel.TabIndex = 0;
+            this.customerPanel.Click += new System.EventHandler(this.customerPanel_Click);
             // 
             // pictureBox2
             // 
@@ -124,37 +138,25 @@ namespace PhBuy
             this.label2.TabIndex = 12;
             this.label2.Text = "Buy";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(315, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(377, 55);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Would you like to...";
-            // 
             // Customer_Seller_RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1006, 615);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customer_Seller_RegForm";
             this.Text = "s";
             this.mainPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.mainPanel.PerformLayout();
+            this.sellerPanel.ResumeLayout(false);
+            this.sellerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.customerPanel.ResumeLayout(false);
+            this.customerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -163,8 +165,8 @@ namespace PhBuy
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel sellerPanel;
+        private System.Windows.Forms.Panel customerPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;

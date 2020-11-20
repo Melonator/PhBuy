@@ -81,7 +81,7 @@ namespace PhBuy
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1019, 486);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // leftPanel
             // 
@@ -287,6 +287,7 @@ namespace PhBuy
             this.exitButton.WaitOnLoad = false;
             this.exitButton.Zoom = 40;
             this.exitButton.ZoomSpeed = 10;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // passTextBox
             // 
@@ -386,6 +387,7 @@ namespace PhBuy
             this.registerButton.Size = new System.Drawing.Size(150, 39);
             this.registerButton.TabIndex = 21;
             this.registerButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // loginButton
             // 
@@ -411,6 +413,7 @@ namespace PhBuy
             this.loginButton.Size = new System.Drawing.Size(150, 39);
             this.loginButton.TabIndex = 22;
             this.loginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // label8
             // 
@@ -449,7 +452,7 @@ namespace PhBuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PhBuy.Properties.Resources._126047349_747162852544485_8863433835923509126_n;
+            this.BackgroundImage = global::PhBuy.Properties.Resources._125882841_2838879412994219_3149737760896158500_n;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1019, 486);
             this.Controls.Add(this.tableLayoutPanel1);

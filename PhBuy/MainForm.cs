@@ -19,7 +19,12 @@ namespace PhBuy
 
 		public MainForm()
 		{
-			InitializeComponent();
+			if (new LandingForm().ShowDialog() == DialogResult.OK)
+			{
+				InitializeComponent();
+			}
+			else
+				Close();
 		}
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {

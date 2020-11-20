@@ -60,43 +60,22 @@ namespace PhBuy
             this.descriptionTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.locationTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuShapes3 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.page2 = new System.Windows.Forms.TabPage();
             this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bunifuShapes4 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuShapes5 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuShapes6 = new Bunifu.UI.WinForms.BunifuShapes();
             this.linkTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.contactTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.page3 = new System.Windows.Forms.TabPage();
             this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.uploadBackgroundButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.uploadPhotoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.sellerPicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerBackground = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuShapes7 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuShapes8 = new Bunifu.UI.WinForms.BunifuShapes();
-            this.bunifuSeparator7 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator8 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator9 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuShapes9 = new Bunifu.UI.WinForms.BunifuShapes();
             this.registerPages.SuspendLayout();
             this.page1.SuspendLayout();
             this.page2.SuspendLayout();
@@ -117,18 +96,17 @@ namespace PhBuy
             this.registerPages.Controls.Add(this.page1);
             this.registerPages.Controls.Add(this.page2);
             this.registerPages.Controls.Add(this.page3);
-            this.registerPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.registerPages.Location = new System.Drawing.Point(0, 0);
             this.registerPages.Multiline = true;
             this.registerPages.Name = "registerPages";
-            this.registerPages.Page = this.page1;
-            this.registerPages.PageIndex = 0;
-            this.registerPages.PageName = "page1";
-            this.registerPages.PageTitle = "page1";
+            this.registerPages.Page = this.page3;
+            this.registerPages.PageIndex = 2;
+            this.registerPages.PageName = "page3";
+            this.registerPages.PageTitle = "page3";
             this.registerPages.SelectedIndex = 0;
             this.registerPages.Size = new System.Drawing.Size(1006, 615);
-            this.registerPages.TabIndex = 2;
-            animation1.AnimateOnlyDifferences = false;
+            this.registerPages.TabIndex = 3;
+            animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
             animation1.MaxTime = 1F;
@@ -136,33 +114,28 @@ namespace PhBuy
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
             animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
             animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
             this.registerPages.Transition = animation1;
-            this.registerPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.registerPages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
             // 
             // page1
             // 
             this.page1.BackColor = System.Drawing.Color.Transparent;
+            this.page1.BackgroundImage = global::PhBuy.Properties.Resources._125772638_125413982465704_4113881353070638943_n;
+            this.page1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.page1.Controls.Add(this.nextButton1);
             this.page1.Controls.Add(this.label3);
             this.page1.Controls.Add(this.descriptionTextBox);
             this.page1.Controls.Add(this.label2);
             this.page1.Controls.Add(this.label1);
-            this.page1.Controls.Add(this.label4);
             this.page1.Controls.Add(this.locationTextBox);
             this.page1.Controls.Add(this.nameTextBox);
-            this.page1.Controls.Add(this.bunifuShapes3);
-            this.page1.Controls.Add(this.bunifuShapes2);
-            this.page1.Controls.Add(this.bunifuSeparator2);
-            this.page1.Controls.Add(this.bunifuSeparator3);
-            this.page1.Controls.Add(this.bunifuSeparator1);
-            this.page1.Controls.Add(this.bunifuShapes1);
             this.page1.Location = new System.Drawing.Point(4, 4);
             this.page1.Name = "page1";
             this.page1.Padding = new System.Windows.Forms.Padding(3);
@@ -194,13 +167,14 @@ namespace PhBuy
             this.nextButton1.Size = new System.Drawing.Size(82, 39);
             this.nextButton1.TabIndex = 50;
             this.nextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nextButton1.Click += new System.EventHandler(this.nextButton1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label3.Location = new System.Drawing.Point(510, 246);
+            this.label3.Location = new System.Drawing.Point(511, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 33);
             this.label3.TabIndex = 30;
@@ -233,7 +207,7 @@ namespace PhBuy
             this.descriptionTextBox.IconRight = null;
             this.descriptionTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.descriptionTextBox.Lines = new string[0];
-            this.descriptionTextBox.Location = new System.Drawing.Point(516, 282);
+            this.descriptionTextBox.Location = new System.Drawing.Point(517, 341);
             this.descriptionTextBox.MaxLength = 32767;
             this.descriptionTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.descriptionTextBox.Modified = false;
@@ -285,7 +259,7 @@ namespace PhBuy
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(70, 378);
+            this.label2.Location = new System.Drawing.Point(71, 437);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 33);
             this.label2.TabIndex = 28;
@@ -296,22 +270,11 @@ namespace PhBuy
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(70, 246);
+            this.label1.Location = new System.Drawing.Point(71, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 33);
             this.label1.TabIndex = 28;
             this.label1.Text = "Shop Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(14, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 55);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Welcome!";
             // 
             // locationTextBox
             // 
@@ -340,7 +303,7 @@ namespace PhBuy
             this.locationTextBox.IconRight = null;
             this.locationTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.locationTextBox.Lines = new string[0];
-            this.locationTextBox.Location = new System.Drawing.Point(76, 414);
+            this.locationTextBox.Location = new System.Drawing.Point(77, 473);
             this.locationTextBox.MaxLength = 32767;
             this.locationTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.locationTextBox.Modified = false;
@@ -414,7 +377,7 @@ namespace PhBuy
             this.nameTextBox.IconRight = null;
             this.nameTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.nameTextBox.Lines = new string[0];
-            this.nameTextBox.Location = new System.Drawing.Point(76, 282);
+            this.nameTextBox.Location = new System.Drawing.Point(77, 341);
             this.nameTextBox.MaxLength = 32767;
             this.nameTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.nameTextBox.Modified = false;
@@ -461,116 +424,18 @@ namespace PhBuy
             this.nameTextBox.UseSystemPasswordChar = false;
             this.nameTextBox.WordWrap = true;
             // 
-            // bunifuShapes3
-            // 
-            this.bunifuShapes3.Angle = 0F;
-            this.bunifuShapes3.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes3.BorderThickness = 2;
-            this.bunifuShapes3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuShapes3.FillShape = true;
-            this.bunifuShapes3.Location = new System.Drawing.Point(597, 155);
-            this.bunifuShapes3.Name = "bunifuShapes3";
-            this.bunifuShapes3.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes3.Sides = 4;
-            this.bunifuShapes3.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes3.TabIndex = 0;
-            this.bunifuShapes3.Text = "bunifuShapes1";
-            // 
-            // bunifuShapes2
-            // 
-            this.bunifuShapes2.Angle = 0F;
-            this.bunifuShapes2.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes2.BorderThickness = 2;
-            this.bunifuShapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuShapes2.FillShape = true;
-            this.bunifuShapes2.Location = new System.Drawing.Point(449, 155);
-            this.bunifuShapes2.Name = "bunifuShapes2";
-            this.bunifuShapes2.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes2.Sides = 4;
-            this.bunifuShapes2.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes2.TabIndex = 0;
-            this.bunifuShapes2.Text = "bunifuShapes1";
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 5;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(492, 170);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator2.TabIndex = 1;
-            // 
-            // bunifuSeparator3
-            // 
-            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
-            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator3.LineThickness = 2;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(24, 97);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator3.Size = new System.Drawing.Size(920, 10);
-            this.bunifuSeparator3.TabIndex = 1;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 5;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(344, 170);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator1.TabIndex = 1;
-            // 
-            // bunifuShapes1
-            // 
-            this.bunifuShapes1.Angle = 0F;
-            this.bunifuShapes1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes1.BorderThickness = 2;
-            this.bunifuShapes1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes1.FillShape = true;
-            this.bunifuShapes1.Location = new System.Drawing.Point(301, 155);
-            this.bunifuShapes1.Name = "bunifuShapes1";
-            this.bunifuShapes1.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes1.Sides = 4;
-            this.bunifuShapes1.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes1.TabIndex = 0;
-            this.bunifuShapes1.Text = "bunifuShapes1";
-            // 
             // page2
             // 
             this.page2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.page2.BackgroundImage = global::PhBuy.Properties.Resources._125442320_435191487873283_3142954965594498196_n;
+            this.page2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.page2.Controls.Add(this.nextButton2);
             this.page2.Controls.Add(this.typeDropDown);
             this.page2.Controls.Add(this.label5);
             this.page2.Controls.Add(this.label6);
             this.page2.Controls.Add(this.label7);
-            this.page2.Controls.Add(this.label8);
-            this.page2.Controls.Add(this.bunifuShapes4);
-            this.page2.Controls.Add(this.bunifuShapes5);
-            this.page2.Controls.Add(this.bunifuShapes6);
             this.page2.Controls.Add(this.linkTextBox);
             this.page2.Controls.Add(this.contactTextBox);
-            this.page2.Controls.Add(this.bunifuSeparator4);
-            this.page2.Controls.Add(this.bunifuSeparator5);
-            this.page2.Controls.Add(this.bunifuSeparator6);
             this.page2.Location = new System.Drawing.Point(4, 4);
             this.page2.Name = "page2";
             this.page2.Padding = new System.Windows.Forms.Padding(3);
@@ -602,6 +467,7 @@ namespace PhBuy
             this.nextButton2.Size = new System.Drawing.Size(82, 39);
             this.nextButton2.TabIndex = 51;
             this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
             // 
             // typeDropDown
             // 
@@ -636,8 +502,10 @@ namespace PhBuy
             this.typeDropDown.ItemHeight = 26;
             this.typeDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.typeDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.typeDropDown.Items.AddRange(new object[] {
+            "Food"});
             this.typeDropDown.ItemTopMargin = 3;
-            this.typeDropDown.Location = new System.Drawing.Point(516, 282);
+            this.typeDropDown.Location = new System.Drawing.Point(516, 341);
             this.typeDropDown.Name = "typeDropDown";
             this.typeDropDown.Size = new System.Drawing.Size(276, 32);
             this.typeDropDown.TabIndex = 44;
@@ -650,7 +518,7 @@ namespace PhBuy
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(510, 246);
+            this.label5.Location = new System.Drawing.Point(510, 305);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(198, 33);
             this.label5.TabIndex = 43;
@@ -661,7 +529,7 @@ namespace PhBuy
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(70, 378);
+            this.label6.Location = new System.Drawing.Point(70, 437);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(320, 33);
             this.label6.TabIndex = 39;
@@ -672,67 +540,11 @@ namespace PhBuy
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mulish Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label7.Location = new System.Drawing.Point(70, 246);
+            this.label7.Location = new System.Drawing.Point(70, 305);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 33);
             this.label7.TabIndex = 40;
             this.label7.Text = "Contact Number";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label8.Location = new System.Drawing.Point(14, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(210, 55);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Welcome!";
-            // 
-            // bunifuShapes4
-            // 
-            this.bunifuShapes4.Angle = 0F;
-            this.bunifuShapes4.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes4.BorderThickness = 2;
-            this.bunifuShapes4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuShapes4.FillShape = true;
-            this.bunifuShapes4.Location = new System.Drawing.Point(597, 155);
-            this.bunifuShapes4.Name = "bunifuShapes4";
-            this.bunifuShapes4.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes4.Sides = 4;
-            this.bunifuShapes4.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes4.TabIndex = 31;
-            this.bunifuShapes4.Text = "bunifuShapes1";
-            // 
-            // bunifuShapes5
-            // 
-            this.bunifuShapes5.Angle = 0F;
-            this.bunifuShapes5.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes5.BorderThickness = 2;
-            this.bunifuShapes5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes5.FillShape = true;
-            this.bunifuShapes5.Location = new System.Drawing.Point(449, 155);
-            this.bunifuShapes5.Name = "bunifuShapes5";
-            this.bunifuShapes5.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes5.Sides = 4;
-            this.bunifuShapes5.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes5.TabIndex = 32;
-            this.bunifuShapes5.Text = "bunifuShapes1";
-            // 
-            // bunifuShapes6
-            // 
-            this.bunifuShapes6.Angle = 0F;
-            this.bunifuShapes6.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes6.BorderThickness = 2;
-            this.bunifuShapes6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes6.FillShape = true;
-            this.bunifuShapes6.Location = new System.Drawing.Point(301, 155);
-            this.bunifuShapes6.Name = "bunifuShapes6";
-            this.bunifuShapes6.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes6.Sides = 4;
-            this.bunifuShapes6.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes6.TabIndex = 33;
-            this.bunifuShapes6.Text = "bunifuShapes6";
             // 
             // linkTextBox
             // 
@@ -761,7 +573,7 @@ namespace PhBuy
             this.linkTextBox.IconRight = null;
             this.linkTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.linkTextBox.Lines = new string[0];
-            this.linkTextBox.Location = new System.Drawing.Point(76, 414);
+            this.linkTextBox.Location = new System.Drawing.Point(76, 473);
             this.linkTextBox.MaxLength = 32767;
             this.linkTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.linkTextBox.Modified = false;
@@ -835,7 +647,7 @@ namespace PhBuy
             this.contactTextBox.IconRight = null;
             this.contactTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.contactTextBox.Lines = new string[0];
-            this.contactTextBox.Location = new System.Drawing.Point(76, 282);
+            this.contactTextBox.Location = new System.Drawing.Point(76, 341);
             this.contactTextBox.MaxLength = 32767;
             this.contactTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.contactTextBox.Modified = false;
@@ -882,69 +694,16 @@ namespace PhBuy
             this.contactTextBox.UseSystemPasswordChar = false;
             this.contactTextBox.WordWrap = true;
             // 
-            // bunifuSeparator4
-            // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator4.BackgroundImage")));
-            this.bunifuSeparator4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator4.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator4.LineThickness = 5;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(492, 170);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator4.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator4.TabIndex = 34;
-            // 
-            // bunifuSeparator5
-            // 
-            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator5.BackgroundImage")));
-            this.bunifuSeparator5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator5.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.bunifuSeparator5.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator5.LineThickness = 2;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(24, 97);
-            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator5.Name = "bunifuSeparator5";
-            this.bunifuSeparator5.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator5.Size = new System.Drawing.Size(920, 10);
-            this.bunifuSeparator5.TabIndex = 35;
-            // 
-            // bunifuSeparator6
-            // 
-            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
-            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator6.LineThickness = 5;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(344, 170);
-            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator6.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator6.TabIndex = 36;
-            // 
             // page3
             // 
             this.page3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.page3.BackgroundImage = global::PhBuy.Properties.Resources._125753206_122552969464265_2211899416766309768_n;
+            this.page3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.page3.Controls.Add(this.confirmButton);
             this.page3.Controls.Add(this.uploadBackgroundButton);
             this.page3.Controls.Add(this.uploadPhotoButton);
             this.page3.Controls.Add(this.sellerPicture);
             this.page3.Controls.Add(this.sellerBackground);
-            this.page3.Controls.Add(this.label9);
-            this.page3.Controls.Add(this.bunifuShapes7);
-            this.page3.Controls.Add(this.bunifuShapes8);
-            this.page3.Controls.Add(this.bunifuSeparator7);
-            this.page3.Controls.Add(this.bunifuSeparator8);
-            this.page3.Controls.Add(this.bunifuSeparator9);
-            this.page3.Controls.Add(this.bunifuShapes9);
             this.page3.Location = new System.Drawing.Point(4, 4);
             this.page3.Name = "page3";
             this.page3.Padding = new System.Windows.Forms.Padding(3);
@@ -961,6 +720,7 @@ namespace PhBuy
             this.confirmButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.confirmButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.confirmButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmButton.BackgroundImage")));
+            this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.confirmButton.ButtonText = "Confirm";
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmButton.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -970,12 +730,13 @@ namespace PhBuy
             this.confirmButton.IdleFillColor = System.Drawing.Color.White;
             this.confirmButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.confirmButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.confirmButton.Location = new System.Drawing.Point(837, 531);
+            this.confirmButton.Location = new System.Drawing.Point(830, 281);
             this.confirmButton.Margin = new System.Windows.Forms.Padding(5);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(107, 47);
             this.confirmButton.TabIndex = 52;
             this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // uploadBackgroundButton
             // 
@@ -986,7 +747,7 @@ namespace PhBuy
             this.uploadBackgroundButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.uploadBackgroundButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.uploadBackgroundButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadBackgroundButton.BackgroundImage")));
-            this.uploadBackgroundButton.ButtonText = "Upload";
+            this.uploadBackgroundButton.ButtonText = "Change Cover";
             this.uploadBackgroundButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadBackgroundButton.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadBackgroundButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
@@ -995,12 +756,13 @@ namespace PhBuy
             this.uploadBackgroundButton.IdleFillColor = System.Drawing.Color.White;
             this.uploadBackgroundButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.uploadBackgroundButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.uploadBackgroundButton.Location = new System.Drawing.Point(862, 402);
+            this.uploadBackgroundButton.Location = new System.Drawing.Point(362, 517);
             this.uploadBackgroundButton.Margin = new System.Windows.Forms.Padding(5);
             this.uploadBackgroundButton.Name = "uploadBackgroundButton";
-            this.uploadBackgroundButton.Size = new System.Drawing.Size(82, 39);
+            this.uploadBackgroundButton.Size = new System.Drawing.Size(143, 39);
             this.uploadBackgroundButton.TabIndex = 49;
             this.uploadBackgroundButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uploadBackgroundButton.Click += new System.EventHandler(this.uploadBackgroundButton_Click);
             // 
             // uploadPhotoButton
             // 
@@ -1020,12 +782,13 @@ namespace PhBuy
             this.uploadPhotoButton.IdleFillColor = System.Drawing.Color.White;
             this.uploadPhotoButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.uploadPhotoButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.uploadPhotoButton.Location = new System.Drawing.Point(189, 469);
+            this.uploadPhotoButton.Location = new System.Drawing.Point(160, 540);
             this.uploadPhotoButton.Margin = new System.Windows.Forms.Padding(5);
             this.uploadPhotoButton.Name = "uploadPhotoButton";
             this.uploadPhotoButton.Size = new System.Drawing.Size(82, 39);
             this.uploadPhotoButton.TabIndex = 49;
             this.uploadPhotoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uploadPhotoButton.Click += new System.EventHandler(this.uploadPhotoButton_Click);
             // 
             // sellerPicture
             // 
@@ -1035,7 +798,7 @@ namespace PhBuy
             this.sellerPicture.BorderRadius = 50;
             this.sellerPicture.Image = ((System.Drawing.Image)(resources.GetObject("sellerPicture.Image")));
             this.sellerPicture.IsCircle = true;
-            this.sellerPicture.Location = new System.Drawing.Point(108, 385);
+            this.sellerPicture.Location = new System.Drawing.Point(100, 456);
             this.sellerPicture.Name = "sellerPicture";
             this.sellerPicture.Size = new System.Drawing.Size(100, 100);
             this.sellerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1045,115 +808,12 @@ namespace PhBuy
             // 
             // sellerBackground
             // 
-            this.sellerBackground.Location = new System.Drawing.Point(39, 212);
+            this.sellerBackground.Location = new System.Drawing.Point(41, 281);
             this.sellerBackground.Name = "sellerBackground";
-            this.sellerBackground.Size = new System.Drawing.Size(905, 208);
+            this.sellerBackground.Size = new System.Drawing.Size(464, 261);
+            this.sellerBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.sellerBackground.TabIndex = 51;
             this.sellerBackground.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mulish SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label9.Location = new System.Drawing.Point(14, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(210, 55);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "Welcome!";
-            // 
-            // bunifuShapes7
-            // 
-            this.bunifuShapes7.Angle = 0F;
-            this.bunifuShapes7.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes7.BorderThickness = 2;
-            this.bunifuShapes7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes7.FillShape = true;
-            this.bunifuShapes7.Location = new System.Drawing.Point(600, 155);
-            this.bunifuShapes7.Name = "bunifuShapes7";
-            this.bunifuShapes7.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes7.Sides = 4;
-            this.bunifuShapes7.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes7.TabIndex = 43;
-            this.bunifuShapes7.Text = "bunifuShapes1";
-            // 
-            // bunifuShapes8
-            // 
-            this.bunifuShapes8.Angle = 0F;
-            this.bunifuShapes8.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes8.BorderThickness = 2;
-            this.bunifuShapes8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes8.FillShape = true;
-            this.bunifuShapes8.Location = new System.Drawing.Point(449, 155);
-            this.bunifuShapes8.Name = "bunifuShapes8";
-            this.bunifuShapes8.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes8.Sides = 4;
-            this.bunifuShapes8.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes8.TabIndex = 43;
-            this.bunifuShapes8.Text = "bunifuShapes1";
-            // 
-            // bunifuSeparator7
-            // 
-            this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator7.BackgroundImage")));
-            this.bunifuSeparator7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator7.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuSeparator7.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator7.LineThickness = 5;
-            this.bunifuSeparator7.Location = new System.Drawing.Point(492, 170);
-            this.bunifuSeparator7.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator7.Name = "bunifuSeparator7";
-            this.bunifuSeparator7.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator7.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator7.TabIndex = 47;
-            // 
-            // bunifuSeparator8
-            // 
-            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator8.BackgroundImage")));
-            this.bunifuSeparator8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator8.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(212)))), ((int)(((byte)(215)))));
-            this.bunifuSeparator8.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator8.LineThickness = 2;
-            this.bunifuSeparator8.Location = new System.Drawing.Point(24, 97);
-            this.bunifuSeparator8.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator8.Name = "bunifuSeparator8";
-            this.bunifuSeparator8.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator8.Size = new System.Drawing.Size(920, 10);
-            this.bunifuSeparator8.TabIndex = 46;
-            // 
-            // bunifuSeparator9
-            // 
-            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator9.BackgroundImage")));
-            this.bunifuSeparator9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator9.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuSeparator9.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator9.LineThickness = 5;
-            this.bunifuSeparator9.Location = new System.Drawing.Point(344, 170);
-            this.bunifuSeparator9.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuSeparator9.Name = "bunifuSeparator9";
-            this.bunifuSeparator9.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator9.Size = new System.Drawing.Size(102, 10);
-            this.bunifuSeparator9.TabIndex = 47;
-            // 
-            // bunifuShapes9
-            // 
-            this.bunifuShapes9.Angle = 0F;
-            this.bunifuShapes9.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShapes9.BorderThickness = 2;
-            this.bunifuShapes9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuShapes9.FillShape = true;
-            this.bunifuShapes9.Location = new System.Drawing.Point(301, 155);
-            this.bunifuShapes9.Name = "bunifuShapes9";
-            this.bunifuShapes9.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Square;
-            this.bunifuShapes9.Sides = 4;
-            this.bunifuShapes9.Size = new System.Drawing.Size(40, 40);
-            this.bunifuShapes9.TabIndex = 44;
-            this.bunifuShapes9.Text = "bunifuShapes9";
             // 
             // Seller_Register
             // 
@@ -1172,7 +832,6 @@ namespace PhBuy
             this.page2.ResumeLayout(false);
             this.page2.PerformLayout();
             this.page3.ResumeLayout(false);
-            this.page3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellerBackground)).EndInit();
             this.ResumeLayout(false);
@@ -1189,42 +848,21 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuTextBox descriptionTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuTextBox locationTextBox;
         private Bunifu.UI.WinForms.BunifuTextBox nameTextBox;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes3;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
         private System.Windows.Forms.TabPage page2;
         private Bunifu.Framework.UI.BunifuThinButton2 nextButton2;
         private Bunifu.UI.WinForms.BunifuDropdown typeDropDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes4;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes5;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes6;
         private Bunifu.UI.WinForms.BunifuTextBox linkTextBox;
         private Bunifu.UI.WinForms.BunifuTextBox contactTextBox;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator5;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator6;
         private System.Windows.Forms.TabPage page3;
         private Bunifu.Framework.UI.BunifuThinButton2 confirmButton;
         private Bunifu.Framework.UI.BunifuThinButton2 uploadBackgroundButton;
         private Bunifu.Framework.UI.BunifuThinButton2 uploadPhotoButton;
         private Bunifu.UI.WinForms.BunifuPictureBox sellerPicture;
-        private System.Windows.Forms.PictureBox sellerBackground;
-        private System.Windows.Forms.Label label9;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes7;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes8;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator8;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator9;
-        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes9;
+        public System.Windows.Forms.PictureBox sellerBackground;
     }
 }

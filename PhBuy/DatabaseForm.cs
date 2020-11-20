@@ -29,73 +29,55 @@ namespace PhBuy
         {
             //Load the dropdown contents based on the tables on the database
 
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string queryString = "SELECT * FROM information_schema.tables;";
+            SqlCommand cmd = new SqlCommand(queryString, connection);
+            SqlDataReader oReader = cmd.ExecuteReader();
 
-            Profiles.DataSource = null; //empty table
+            while (oReader.Read())
+            {
+                tableDropDown.Items.Add(oReader["TABLE_NAME"].ToString());
+            }
             
+            Profiles.DataSource = null; //empty table
+            connection.Close();
         }
 
         private void tableDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string queryString = "";
-            //Load the table here once the user selects something in the dropdown
-            switch (tableDropDown.Text)
-            {
-                case "Seller":
-                    {
-                        queryString = "SELECT * FROM Seller;";
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-                        DataTable table = new DataTable();
-                        dataAdapter.Fill(table);
-                        Seller.DataSource = table;
-                        Seller.BringToFront();
-                    }
-                    break;
-                case "Products":
-                    {
-                        queryString = "SELECT * FROM Products;";
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-                        DataTable table = new DataTable();
-                        dataAdapter.Fill(table);
-                        Products.DataSource = table;
-                        Products.BringToFront();
-                    }
-                    break;
-                case "Customer":
-                    {
-                        queryString = "SELECT * FROM Customer;";
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-                        DataTable table = new DataTable();
-                        dataAdapter.Fill(table);
-                        Customer.DataSource = table;
-                        Customer.BringToFront();
-                    }
-                    break;
-                case "Orders":
-                    {
-                        queryString = "SELECT * FROM Orders;";
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-                        DataTable table = new DataTable();
-                        dataAdapter.Fill(table);
-                        Orders.DataSource = table;
-                        Orders.BringToFront();
-                    }
-                    break;
-                case "Profiles":
-                    {
-                        queryString = "SELECT * FROM Profiles;";
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-                        DataTable table = new DataTable();
-                        dataAdapter.Fill(table);
-                        Profiles.DataSource = table;
-                        Profiles.BringToFront();
-                    }
-                    break;
-            }
+            string queryString = $"SELECT * FROM {tableDropDown.Text}";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
+            DataTable table = new DataTable();
+            dataAdapter.Fill(table);
+            Seller.DataSource = table;
+            Seller.BringToFront();
+            connection.Close();
+        }
 
-            SqlCommand command = new SqlCommand(queryString, connection);
-            command.ExecuteNonQuery();
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            //Do edits in the database here!
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string queryString = "";
+            SqlCommand cmd = new SqlCommand(queryString, connection);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            //Delete the contents of the table selected!
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string queryString = $"DELETE FROM {tableDropDown.Text}";
+            SqlCommand cmd = new SqlCommand(queryString, connection);
+            cmd.ExecuteNonQuery();
             connection.Close();
         }
     }

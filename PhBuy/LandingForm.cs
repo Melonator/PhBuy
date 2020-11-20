@@ -13,6 +13,8 @@ namespace PhBuy
 {
     public partial class LandingForm : Form
     {
+        private string connectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+
         public LandingForm()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace PhBuy
             else
             {
                 MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Customer_Seller form = new Customer_Seller(GetUserID());
+                form.Show();
             }
         }
 
@@ -51,8 +55,6 @@ namespace PhBuy
         {
             string username = nameTextBox.Text;
             string password = passTextBox.Text;
-
-            string connectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
             if (username != string.Empty && password != string.Empty)
@@ -77,6 +79,25 @@ namespace PhBuy
 
             myConnection.Close();
             return false;
+        }
+
+        private int GetUserID()
+        {
+            int id = 0;
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            string queryString = $"SELECT * FROM Profiles WHERE Name = @Name;";
+            SqlParameter param = new SqlParameter() { ParameterName = "@Name", Value = nameTextBox.Text };
+            SqlCommand oCmd = new SqlCommand(queryString, myConnection);
+            oCmd.Parameters.Add(param);
+            SqlDataReader oReader = oCmd.ExecuteReader();
+            //Return true if the entries are valid else false
+            while (oReader.Read())
+            {
+                id = (int)float.Parse(oReader["ID"].ToString());
+            }
+            myConnection.Close();
+            return id;
         }
 
         #endregion
