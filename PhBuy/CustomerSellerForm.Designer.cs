@@ -1,7 +1,7 @@
 ﻿
 namespace PhBuy
 {
-    partial class Customer_Seller
+    partial class CustomerSellerForm
     {
         /// <summary>
         /// Required designer variable.

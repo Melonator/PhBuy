@@ -65,15 +65,6 @@ namespace PhBuy
             this.coverFlowPanel.Size = new System.Drawing.Size(793, 361);
             this.coverFlowPanel.TabIndex = 2;
             // 
-            // titlePanel
-            // 
-            this.titlePanel.Controls.Add(this.label1);
-            this.titlePanel.Location = new System.Drawing.Point(3, 3);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(786, 38);
-            this.titlePanel.TabIndex = 0;
-            this.titlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.titlePanel_Paint);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
