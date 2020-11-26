@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="125442320_435191487873283_3142954965594498196_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125442320_435191487873283_3142954965594498196_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Stars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stars.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cardboard_box_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cardboard_box_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +172,8 @@
   <data name="RegistrationP2(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RegistrationP2(2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stars.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trees" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trees.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,5 +183,8 @@
   </data>
   <data name="RegistrationP1(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RegistrationP1(2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

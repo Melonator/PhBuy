@@ -24,7 +24,7 @@ namespace PhBuy
 
         private void dropDown_Click(object sender, EventArgs e)
         {
-            BunifuButton btn = (BunifuButton)sender;
+            BunifuButton btn = (BunifuButton)sender; 
            
             switch(btn.Name)
             {
