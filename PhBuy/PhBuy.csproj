@@ -32,6 +32,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
       <HintPath>..\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
       <HintPath>..\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
