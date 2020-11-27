@@ -27,7 +27,7 @@ namespace PhBuy
         {
 			//Determine if the user is a seller or not
 			//If seller
-			SellerPanel form = new SellerPanel();
+			SellerPanel form = new SellerPanel(this);
 			form.TopLevel = false;
 			form.Show();
 			sidePanel.Controls.Add(form);

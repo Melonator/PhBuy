@@ -17,8 +17,10 @@ namespace PhBuy
         private bool isPanelOpen2 = true;
         private bool isPanelOpen3 = true;
         private bool isPanelOpen4 = true;
-        public SellerPanel()
+        MainForm _form;
+        public SellerPanel(MainForm form)
         {
+            _form = form;
             InitializeComponent();
         }
 
@@ -109,7 +111,10 @@ namespace PhBuy
 
         private void addProductButton_Click(object sender, EventArgs e)
         {
-            //TODO: show add products
+            AddProduct form = new AddProduct() { TopLevel = false };
+            form.Show();
+            _form.mainPanel.Controls.Clear();
+            _form.mainPanel.Controls.Add(form);
         }
 
         private void ordersButton_Click(object sender, EventArgs e)
