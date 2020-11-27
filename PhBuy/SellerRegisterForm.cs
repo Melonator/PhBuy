@@ -113,6 +113,6 @@ namespace PhBuy
 			BinaryReader br = new BinaryReader(fs);
 			_sellerImage = br.ReadBytes((int)fs.Length);
 		}
-		#endregion
-	}
+        #endregion
+    }
 }
