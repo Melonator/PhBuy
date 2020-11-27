@@ -38,7 +38,7 @@ namespace PhBuy
 			_location = locationTextBox.Text;
 			_description = descriptionTextBox.Text;
 			//Switch Page
-			registerPages.PageIndex = 1;
+			registerPages.PageIndex++;
 		}
 
 		private void nextButton2_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace PhBuy
 			_link = linkTextBox.Text;
 			_type = typeDropDown.Text;
 			//Switch Page
-			registerPages.PageIndex = 2;
+			registerPages.PageIndex++;
 		}
 
 		private void uploadPhotoButton_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace PhBuy
 
 		private void uploadBackgroundButton_Click(object sender, EventArgs e)
 		{
-			CoverForm form = new CoverForm(this) { Location = new Point(1000, 268) };
+			CoverForm form = new CoverForm(this);
 			form.Show();
 		}
 
@@ -114,5 +114,11 @@ namespace PhBuy
 			_sellerImage = br.ReadBytes((int)fs.Length);
 		}
         #endregion
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+			//switch page
+			registerPages.PageIndex--;
+        }
     }
 }

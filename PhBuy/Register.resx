@@ -121,20 +121,20 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="registerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQUAAAAlCAYAAABLTfwTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACXSURBVHhe7dSpEYBAAMBAuroeoUTKwIHgkZmhg1uxKj7L
+        tY39dQO89m8KfwGYlCkAYQpAmAIQpgCEKQBhCkCYAhCmAIQpAGEKQJgCEKYAhCkAYQpAmAIQpgCEKQBh
+        CkCYAhCmAIQpAGEKQJgCEKYAhCkAYQpAmAIQpgCEKQBhCkCYAhCmAIQpAGEKQCznOo6/AMznXMfxANP/
+        K4LdpZHXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="exitButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAYAAACGVs+MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAbSURBVFhH7cExAQAAAMKg9U9tDB8gAAAA4KsGD58AAZ0v
         JVkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="registerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQUAAAAlCAYAAABLTfwTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACZSURBVHhe7dSpEYBAAMBAyjlagf4VZWBA8cjM0AErVsVn
-        Otexnet8Abw/eKbwFYC/MgUgTAEIUwDCFIAwBSBMAQhTAMIUgDAFIEwBCFMAwhSAMAUgTAEIUwDCFIAw
-        BSBMAQhTAMIUgDAFIEwBCFMAwhSAMAUgTAEIUwDCFIAwBSBMAQhTAMIUgDAFIEwBiOlYxv4VgP85lrHf
-        dM5g+uAyYLoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
