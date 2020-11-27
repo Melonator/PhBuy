@@ -13,7 +13,7 @@ namespace PhBuy
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new SellerRegisterForm(1));
+			Application.Run(new LandingForm());
 		}
 	}
 }

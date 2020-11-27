@@ -233,6 +233,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap luke_chesser_eICUFSeirc0_unsplash {
             get {
                 object obj = ResourceManager.GetObject("luke-chesser-eICUFSeirc0-unsplash", resourceCulture);
@@ -296,6 +306,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap plus_512px {
             get {
                 object obj = ResourceManager.GetObject("plus_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Register_Account {
+            get {
+                object obj = ResourceManager.GetObject("Register Account", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
