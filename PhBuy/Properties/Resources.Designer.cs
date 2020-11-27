@@ -433,6 +433,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_512px {
+            get {
+                object obj = ResourceManager.GetObject("user_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_account_208px {
             get {
                 object obj = ResourceManager.GetObject("user_account_208px", resourceCulture);

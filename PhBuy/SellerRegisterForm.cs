@@ -24,7 +24,7 @@ namespace PhBuy
 		{
 			_id = id;
 			InitializeComponent();
-			_sellerImageLocation = sellerPicture.ImageLocation;
+
 		}
 
 		#region Events
@@ -109,9 +109,11 @@ namespace PhBuy
 			sellerBackground.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
 			_sellerCover = stream.ToArray();
 
-			FileStream fs = new FileStream(_sellerImageLocation, FileMode.Open, FileAccess.Read);
-			BinaryReader br = new BinaryReader(fs);
-			_sellerImage = br.ReadBytes((int)fs.Length);
+			if (_sellerImageLocation == null)
+			{
+				sellerPicture.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+				_sellerImage = stream.ToArray();
+			}
 		}
         #endregion
 
