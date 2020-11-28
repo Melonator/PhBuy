@@ -111,6 +111,7 @@ namespace PhBuy
             this.imagesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.addCoverButton = new System.Windows.Forms.Button();
             this.addImageButton = new System.Windows.Forms.Button();
+            this.imageCountLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -132,7 +133,7 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.imageCountLabel = new System.Windows.Forms.Label();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -172,10 +173,10 @@ namespace PhBuy
             this.addProductPages.Location = new System.Drawing.Point(0, 0);
             this.addProductPages.Multiline = true;
             this.addProductPages.Name = "addProductPages";
-            this.addProductPages.Page = this.tabPage2;
-            this.addProductPages.PageIndex = 1;
-            this.addProductPages.PageName = "tabPage2";
-            this.addProductPages.PageTitle = "tabPage2";
+            this.addProductPages.Page = this.tabPage3;
+            this.addProductPages.PageIndex = 2;
+            this.addProductPages.PageName = "tabPage3";
+            this.addProductPages.PageTitle = "tabPage3";
             this.addProductPages.SelectedIndex = 0;
             this.addProductPages.Size = new System.Drawing.Size(1233, 719);
             this.addProductPages.TabIndex = 5;
@@ -1176,6 +1177,18 @@ namespace PhBuy
             this.addImageButton.UseVisualStyleBackColor = true;
             this.addImageButton.Click += new System.EventHandler(this.addImageButton_Click);
             // 
+            // imageCountLabel
+            // 
+            this.imageCountLabel.AutoSize = true;
+            this.imageCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imageCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.imageCountLabel.Location = new System.Drawing.Point(865, 48);
+            this.imageCountLabel.Name = "imageCountLabel";
+            this.imageCountLabel.Size = new System.Drawing.Size(130, 28);
+            this.imageCountLabel.TabIndex = 23;
+            this.imageCountLabel.Text = "Images: 0 / 8";
+            this.imageCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1216,6 +1229,7 @@ namespace PhBuy
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.bunifuThinButton21);
             this.tabPage3.Controls.Add(this.cancelButton);
             this.tabPage3.Controls.Add(this.confirmButton);
             this.tabPage3.Controls.Add(this.shippingPanel);
@@ -1244,7 +1258,7 @@ namespace PhBuy
             this.cancelButton.IdleFillColor = System.Drawing.Color.White;
             this.cancelButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.cancelButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.cancelButton.Location = new System.Drawing.Point(681, 330);
+            this.cancelButton.Location = new System.Drawing.Point(519, 330);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(5);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(149, 39);
@@ -1713,17 +1727,31 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
-            // imageCountLabel
+            // bunifuThinButton21
             // 
-            this.imageCountLabel.AutoSize = true;
-            this.imageCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imageCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.imageCountLabel.Location = new System.Drawing.Point(865, 48);
-            this.imageCountLabel.Name = "imageCountLabel";
-            this.imageCountLabel.Size = new System.Drawing.Size(130, 28);
-            this.imageCountLabel.TabIndex = 23;
-            this.imageCountLabel.Text = "Images: 0 / 8";
-            this.imageCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Back";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(688, 330);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(149, 39);
+            this.bunifuThinButton21.TabIndex = 26;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // AddProduct
             // 
@@ -1823,5 +1851,6 @@ namespace PhBuy
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label imageCountLabel;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
