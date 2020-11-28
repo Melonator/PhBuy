@@ -77,7 +77,7 @@ namespace PhBuy
             this.tableLayoutPanel1.Controls.Add(this.rightPanel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -94,7 +94,7 @@ namespace PhBuy
             this.leftPanel.Controls.Add(this.label1);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftPanel.Location = new System.Drawing.Point(2, 2);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(378, 391);
             this.leftPanel.TabIndex = 2;
@@ -171,7 +171,7 @@ namespace PhBuy
             this.rightPanel.Controls.Add(this.label10);
             this.rightPanel.Controls.Add(this.label9);
             this.rightPanel.Location = new System.Drawing.Point(384, 2);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(378, 390);
             this.rightPanel.TabIndex = 1;
@@ -204,7 +204,7 @@ namespace PhBuy
             this.nameTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.nameTextBox.Lines = new string[0];
             this.nameTextBox.Location = new System.Drawing.Point(55, 139);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameTextBox.MaxLength = 32767;
             this.nameTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.nameTextBox.Modified = false;
@@ -230,7 +230,7 @@ namespace PhBuy
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.nameTextBox.OnIdleState = stateProperties4;
-            this.nameTextBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.nameTextBox.PasswordChar = '\0';
             this.nameTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.nameTextBox.PlaceholderText = "Enter text";
@@ -326,7 +326,7 @@ namespace PhBuy
             this.passTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.passTextBox.Lines = new string[0];
             this.passTextBox.Location = new System.Drawing.Point(55, 220);
-            this.passTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passTextBox.MaxLength = 32767;
             this.passTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.passTextBox.Modified = false;
@@ -352,7 +352,7 @@ namespace PhBuy
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.passTextBox.OnIdleState = stateProperties8;
-            this.passTextBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.passTextBox.PasswordChar = '\0';
             this.passTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.passTextBox.PlaceholderText = "Enter your password";
@@ -392,7 +392,7 @@ namespace PhBuy
             this.registerButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.registerButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.registerButton.Location = new System.Drawing.Point(200, 306);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(112, 32);
             this.registerButton.TabIndex = 21;
@@ -418,7 +418,7 @@ namespace PhBuy
             this.loginButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.loginButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.loginButton.Location = new System.Drawing.Point(51, 306);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(4);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(112, 32);
             this.loginButton.TabIndex = 22;
@@ -470,7 +470,7 @@ namespace PhBuy
             this.ClientSize = new System.Drawing.Size(764, 395);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LandingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
