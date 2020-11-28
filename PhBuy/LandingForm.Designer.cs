@@ -242,7 +242,7 @@ namespace PhBuy
             this.nameTextBox.ShortcutsEnabled = true;
             this.nameTextBox.Size = new System.Drawing.Size(261, 38);
             this.nameTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.nameTextBox.TabIndex = 26;
+            this.nameTextBox.TabIndex = 1;
             this.nameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nameTextBox.TextMarginBottom = 0;
             this.nameTextBox.TextMarginLeft = 3;
@@ -364,7 +364,7 @@ namespace PhBuy
             this.passTextBox.ShortcutsEnabled = true;
             this.passTextBox.Size = new System.Drawing.Size(261, 38);
             this.passTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.passTextBox.TabIndex = 24;
+            this.passTextBox.TabIndex = 1;
             this.passTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.passTextBox.TextMarginBottom = 0;
             this.passTextBox.TextMarginLeft = 3;
@@ -466,7 +466,7 @@ namespace PhBuy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PhBuy.Properties.Resources._125882841_2838879412994219_3149737760896158500_n;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(764, 395);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
