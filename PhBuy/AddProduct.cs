@@ -31,7 +31,7 @@ namespace PhBuy
 
         private string previousLabel = string.Empty;
         private bool hasCover = false;
-        private int imageNo = 1;
+        private int imageNo = 0;
 
         private ProductImage p = new ProductImage();
 
@@ -68,6 +68,7 @@ namespace PhBuy
         private void addImageButton_Click(object sender, EventArgs e)
         {
             string imageLoc = uploadImage();
+            imageNo++;
             ProductImage p = new ProductImage();
             p.Name = $"Image {imageNo}";
             p.pictureBox.ImageLocation = imageLoc;
@@ -83,8 +84,8 @@ namespace PhBuy
 
             imagesPanel.Controls.SetChildIndex(addCoverButton, imagesPanel.Controls.Count);
             imagesPanel.Controls.SetChildIndex(addImageButton, imagesPanel.Controls.Count - 1);
-            imageCountLabel.Text = $"Images: {imageNo}/8";
-            imageNo++;
+           
+            imageCountLabel.Text = $"Images: {imageNo} / 8"; 
         }
 
         private void addCoverButton_Click(object sender, EventArgs e)
@@ -103,6 +104,7 @@ namespace PhBuy
                 addCoverButton.Text = "Change Cover";
                 imagesPanel.Controls.Add(p);
 
+                imagesPanel.Controls.SetChildIndex(p, 0);
                 imagesPanel.Controls.SetChildIndex(addCoverButton, imagesPanel.Controls.Count);
                 imagesPanel.Controls.SetChildIndex(addImageButton, imagesPanel.Controls.Count - 1);
             }
@@ -146,19 +148,41 @@ namespace PhBuy
         //First event when the product form is clicked
         private void ProductImage_Click(object sender, EventArgs e)
         {
-            imageCountLabel.Text = $"Images: {imageNo}/8";
+            imageNo--;
+            imageCountLabel.Text = $"Images: {imageNo} / 8";
             ProductImage p = (ProductImage)sender;
             imagesPanel.Controls.Remove(imagesPanel.Controls.Find(p.Name, true).First());
-            imageNo--;
+            RenameImages(p.label.Text);
         }
 
         //Second event when the picture in the product image is clicked
         private void ProductImage_Click2(object sender, EventArgs e)
         {
-            imageCountLabel.Text = $"Images: {imageNo}/8";
-            PictureBox p = (PictureBox)sender;
-            imagesPanel.Controls.Remove(imagesPanel.Controls.Find(p.Parent.Name, true).First());
             imageNo--;
+            imageCountLabel.Text = $"Images: {imageNo} / 8";
+            PictureBox p = (PictureBox)sender;
+            ProductImage i = (ProductImage)p.Parent;
+            imagesPanel.Controls.Remove(imagesPanel.Controls.Find(p.Parent.Name, true).First());
+            RenameImages(i.label.Text);
+        }
+
+        private void RenameImages(string imageName)
+        {
+            int i = int.Parse(imageName.Split(' ')[1]) - 1;
+
+            for (; i < imageNo; i++)
+            {
+                ProductImage p;
+
+                if(hasCover)
+                    p = (ProductImage)imagesPanel.Controls[i + 1];
+                else
+                    p = (ProductImage)imagesPanel.Controls[i];
+
+                p.Name = $"Image {i + 1}";
+                p.label.Text = $"Image {i + 1}";
+                
+            }
         }
     }
 }
