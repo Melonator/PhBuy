@@ -57,7 +57,7 @@ namespace PhBuy
 
 			SqlConnection connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			string queryString = "";
+			string queryString = "ALTER TABLE Products ADD Type VARCHAR(20)";
 			SqlCommand cmd = new SqlCommand(queryString, connection);
 			cmd.ExecuteNonQuery();
 			connection.Close();

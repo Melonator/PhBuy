@@ -10,14 +10,7 @@ namespace PhBuy
 
 		public MainForm()
 		{
-			if (new LandingForm().ShowDialog() == DialogResult.OK)
-			{
-				InitializeComponent();
-			}
-			else
-			{
-				Close();
-			}
+			InitializeComponent();
 		}
 		private void bunifuImageButton1_Click(object sender, EventArgs e)
 		{
@@ -29,5 +22,15 @@ namespace PhBuy
 			DatabaseForm databaseForm = new DatabaseForm();
 			databaseForm.Show();
 		}
-	}
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+			//Determine if the user is a seller or not
+			//If seller
+			SellerPanel form = new SellerPanel(this);
+			form.TopLevel = false;
+			form.Show();
+			sidePanel.Controls.Add(form);
+        }
+    }
 }
