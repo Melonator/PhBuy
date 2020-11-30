@@ -284,6 +284,11 @@ namespace PhBuy
             return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
         }
 
+        private void healthLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private bool IsIdValid(uint id)
         {
             SqlConnection myConnection = new SqlConnection(ConnectionString);
