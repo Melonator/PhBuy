@@ -120,6 +120,9 @@
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuVScrollBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -174,6 +177,13 @@
         cQMApIgbACBF3AAAKeIGAEgRNwBAirgBAFLEDQCQIm4AgBRxAwCkiBsAIEXcAAAp4gYASBE3AECKuAEA
         UsQNAJAibgCAFHEDAKSIGwAgRdwAACniBgBIETcAQIq4AQBS/uLmeZ7vPszMzMxu3e6ZkzYAABVjvKsI
         LtItJ+fSAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnSURBVDhPY8AHDhw48B/KJA2MasQDRjXiAaMa8YBRjXjA
+        YNLIwAAAlK1N6fXiQhoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="nameTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -2929,6 +2939,27 @@
         zMdCmMHTITzig7dvgXobE+mj4umJ+ZoQRjAt4LT8ekb4I9ALVjMYDmUmDCeQ54z1k+01nF/OygTqHGW1
         RHcjaX4mhAFsyvSd90seUikQwXGaiGvb6HZkyK8T72+63uGtCP16RcCrFcECTWAbrSo2NWXvbEj+JU57
         s9+spFOBfpCqAiXhjwhkHhHIPCKQeUQg61j0CWHDp6XaRZexAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuSeparator5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnSURBVDhPY8AHDhw48B/KJA2MasQDRjXiAaMa8YBRjXjA
+        YNLIwAAAlK1N6fXiQhoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuSeparator4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnSURBVDhPY8AHDhw48B/KJA2MasQDRjXiAaMa8YBRjXjA
+        YNLIwAAAlK1N6fXiQhoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuSeparator3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnSURBVDhPY8AHDhw48B/KJA2MasQDRjXiAaMa8YBRjXjA
+        YNLIwAAAlK1N6fXiQhoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="heightTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

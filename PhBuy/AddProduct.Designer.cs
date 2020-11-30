@@ -73,8 +73,18 @@ namespace PhBuy
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.addProductPages = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.registryPanel = new System.Windows.Forms.Panel();
+            this.descCharCountLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nextButton1 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.fdaTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.descriptionTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.productTypePanel = new System.Windows.Forms.Panel();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.nameCharCountLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.healthLabel = new System.Windows.Forms.Label();
             this.othersLabel = new System.Windows.Forms.Label();
             this.booksLabel = new System.Windows.Forms.Label();
@@ -84,22 +94,51 @@ namespace PhBuy
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.fashionLabel = new System.Windows.Forms.Label();
+            this.others = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.health = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.books = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.tech = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.food = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.fashion = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.backButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.salesPanel = new System.Windows.Forms.Panel();
+            this.stockTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.priceTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mediaPanel = new System.Windows.Forms.Panel();
             this.imagesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.addCoverPanel = new System.Windows.Forms.Panel();
+            this.addCoverButton = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addImagePanel = new System.Windows.Forms.Panel();
+            this.addImageButton = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.imageCountLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.cancelButton = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.shippingPanel = new System.Windows.Forms.Panel();
+            this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.usedRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.newRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.heightTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.widthTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lengthTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.weightTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -109,32 +148,6 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.nextButton1 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.fdaTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.descriptionTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.others = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.health = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.books = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.tech = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.food = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.fashion = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.backButton = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.stockTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.priceTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.cancelButton = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.heightTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.widthTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.lengthTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.weightTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.addCoverButton = new System.Windows.Forms.PictureBox();
-            this.addImageButton = new System.Windows.Forms.PictureBox();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -144,10 +157,12 @@ namespace PhBuy
             this.salesPanel.SuspendLayout();
             this.mediaPanel.SuspendLayout();
             this.imagesPanel.SuspendLayout();
+            this.addCoverPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addCoverButton)).BeginInit();
+            this.addImagePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addImageButton)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.shippingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addCoverButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addImageButton)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -174,7 +189,7 @@ namespace PhBuy
             this.addProductPages.Controls.Add(this.tabPage3);
             this.addProductPages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addProductPages.Location = new System.Drawing.Point(0, 0);
-            this.addProductPages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addProductPages.Margin = new System.Windows.Forms.Padding(2);
             this.addProductPages.Multiline = true;
             this.addProductPages.Name = "addProductPages";
             this.addProductPages.Page = this.tabPage2;
@@ -208,491 +223,12 @@ namespace PhBuy
             this.tabPage1.Controls.Add(this.bunifuVScrollBar1);
             this.tabPage1.Controls.Add(this.registryPanel);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(917, 558);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            // 
-            // registryPanel
-            // 
-            this.registryPanel.BackColor = System.Drawing.Color.White;
-            this.registryPanel.Controls.Add(this.label1);
-            this.registryPanel.Controls.Add(this.nextButton1);
-            this.registryPanel.Controls.Add(this.fdaTextBox);
-            this.registryPanel.Controls.Add(this.descriptionTextBox);
-            this.registryPanel.Controls.Add(this.productTypePanel);
-            this.registryPanel.Controls.Add(this.label8);
-            this.registryPanel.Controls.Add(this.label10);
-            this.registryPanel.Location = new System.Drawing.Point(4, 0);
-            this.registryPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.registryPanel.Name = "registryPanel";
-            this.registryPanel.Size = new System.Drawing.Size(752, 555);
-            this.registryPanel.TabIndex = 7;
-            // 
-            // productTypePanel
-            // 
-            this.productTypePanel.Controls.Add(this.nameTextBox);
-            this.productTypePanel.Controls.Add(this.bunifuSeparator1);
-            this.productTypePanel.Controls.Add(this.healthLabel);
-            this.productTypePanel.Controls.Add(this.othersLabel);
-            this.productTypePanel.Controls.Add(this.booksLabel);
-            this.productTypePanel.Controls.Add(this.techLabel);
-            this.productTypePanel.Controls.Add(this.foodLabel);
-            this.productTypePanel.Controls.Add(this.label9);
-            this.productTypePanel.Controls.Add(this.label7);
-            this.productTypePanel.Controls.Add(this.label6);
-            this.productTypePanel.Controls.Add(this.fashionLabel);
-            this.productTypePanel.Controls.Add(this.others);
-            this.productTypePanel.Controls.Add(this.health);
-            this.productTypePanel.Controls.Add(this.books);
-            this.productTypePanel.Controls.Add(this.tech);
-            this.productTypePanel.Controls.Add(this.food);
-            this.productTypePanel.Controls.Add(this.fashion);
-            this.productTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productTypePanel.Location = new System.Drawing.Point(0, 0);
-            this.productTypePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.productTypePanel.Name = "productTypePanel";
-            this.productTypePanel.Size = new System.Drawing.Size(752, 365);
-            this.productTypePanel.TabIndex = 1;
-            // 
-            // healthLabel
-            // 
-            this.healthLabel.AutoSize = true;
-            this.healthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.healthLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.healthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.healthLabel.Location = new System.Drawing.Point(495, 266);
-            this.healthLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.healthLabel.Name = "healthLabel";
-            this.healthLabel.Size = new System.Drawing.Size(76, 78);
-            this.healthLabel.TabIndex = 20;
-            this.healthLabel.Text = "Health \r\n     &\r\nBeauty";
-            this.healthLabel.UseMnemonic = false;
-            this.healthLabel.Click += new System.EventHandler(this.healthLabel_Click);
-            // 
-            // othersLabel
-            // 
-            this.othersLabel.AutoSize = true;
-            this.othersLabel.BackColor = System.Drawing.Color.Transparent;
-            this.othersLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.othersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.othersLabel.Location = new System.Drawing.Point(618, 266);
-            this.othersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.othersLabel.Name = "othersLabel";
-            this.othersLabel.Size = new System.Drawing.Size(71, 26);
-            this.othersLabel.TabIndex = 20;
-            this.othersLabel.Text = "Others";
-            // 
-            // booksLabel
-            // 
-            this.booksLabel.AutoSize = true;
-            this.booksLabel.BackColor = System.Drawing.Color.Transparent;
-            this.booksLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.booksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.booksLabel.Location = new System.Drawing.Point(383, 266);
-            this.booksLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.booksLabel.Name = "booksLabel";
-            this.booksLabel.Size = new System.Drawing.Size(71, 26);
-            this.booksLabel.TabIndex = 20;
-            this.booksLabel.Text = "Books ";
-            // 
-            // techLabel
-            // 
-            this.techLabel.AutoSize = true;
-            this.techLabel.BackColor = System.Drawing.Color.Transparent;
-            this.techLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.techLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.techLabel.Location = new System.Drawing.Point(275, 266);
-            this.techLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.techLabel.Name = "techLabel";
-            this.techLabel.Size = new System.Drawing.Size(52, 26);
-            this.techLabel.TabIndex = 20;
-            this.techLabel.Text = "Tech";
-            // 
-            // foodLabel
-            // 
-            this.foodLabel.AutoSize = true;
-            this.foodLabel.BackColor = System.Drawing.Color.Transparent;
-            this.foodLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foodLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.foodLabel.Location = new System.Drawing.Point(164, 266);
-            this.foodLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.foodLabel.Name = "foodLabel";
-            this.foodLabel.Size = new System.Drawing.Size(56, 26);
-            this.foodLabel.TabIndex = 20;
-            this.foodLabel.Text = "Food";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label9.Location = new System.Drawing.Point(13, 79);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 26);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Basic Information";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label7.Location = new System.Drawing.Point(14, 141);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 21);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Product Name";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mulish", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(5, 19);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(213, 30);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Add a New Product";
-            // 
-            // fashionLabel
-            // 
-            this.fashionLabel.AutoSize = true;
-            this.fashionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fashionLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fashionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.fashionLabel.Location = new System.Drawing.Point(43, 266);
-            this.fashionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.fashionLabel.Name = "fashionLabel";
-            this.fashionLabel.Size = new System.Drawing.Size(81, 26);
-            this.fashionLabel.TabIndex = 20;
-            this.fashionLabel.Text = "Fashion";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label8.Location = new System.Drawing.Point(13, 367);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 26);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Product Description";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label10.Location = new System.Drawing.Point(14, 588);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(207, 21);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "FDA Registration  Number";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.backButton);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.nextButton2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(917, 558);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.salesPanel);
-            this.panel1.Controls.Add(this.mediaPanel);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 500);
-            this.panel1.TabIndex = 0;
-            // 
-            // salesPanel
-            // 
-            this.salesPanel.BackColor = System.Drawing.Color.White;
-            this.salesPanel.Controls.Add(this.stockTextBox);
-            this.salesPanel.Controls.Add(this.label15);
-            this.salesPanel.Controls.Add(this.priceTextBox);
-            this.salesPanel.Controls.Add(this.label14);
-            this.salesPanel.Controls.Add(this.label12);
-            this.salesPanel.Location = new System.Drawing.Point(2, 4);
-            this.salesPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.salesPanel.Name = "salesPanel";
-            this.salesPanel.Size = new System.Drawing.Size(750, 229);
-            this.salesPanel.TabIndex = 1;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label15.Location = new System.Drawing.Point(10, 109);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 21);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Stock";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label14.Location = new System.Drawing.Point(10, 60);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 21);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "Price";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label12.Location = new System.Drawing.Point(2, 7);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(170, 26);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Sales Information";
-            // 
-            // mediaPanel
-            // 
-            this.mediaPanel.BackColor = System.Drawing.Color.White;
-            this.mediaPanel.Controls.Add(this.imagesPanel);
-            this.mediaPanel.Controls.Add(this.imageCountLabel);
-            this.mediaPanel.Controls.Add(this.label13);
-            this.mediaPanel.Location = new System.Drawing.Point(4, 256);
-            this.mediaPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mediaPanel.Name = "mediaPanel";
-            this.mediaPanel.Size = new System.Drawing.Size(750, 229);
-            this.mediaPanel.TabIndex = 2;
-            // 
-            // imagesPanel
-            // 
-            this.imagesPanel.Controls.Add(this.addCoverButton);
-            this.imagesPanel.Controls.Add(this.addImageButton);
-            this.imagesPanel.Location = new System.Drawing.Point(7, 64);
-            this.imagesPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.imagesPanel.Name = "imagesPanel";
-            this.imagesPanel.Size = new System.Drawing.Size(740, 162);
-            this.imagesPanel.TabIndex = 22;
-            // 
-            // imageCountLabel
-            // 
-            this.imageCountLabel.AutoSize = true;
-            this.imageCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imageCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.imageCountLabel.Location = new System.Drawing.Point(629, 24);
-            this.imageCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.imageCountLabel.Name = "imageCountLabel";
-            this.imageCountLabel.Size = new System.Drawing.Size(106, 21);
-            this.imageCountLabel.TabIndex = 23;
-            this.imageCountLabel.Text = "Images: 0 / 8";
-            this.imageCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label13.Location = new System.Drawing.Point(2, 19);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(176, 26);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Media Information";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage3.Controls.Add(this.bunifuThinButton21);
-            this.tabPage3.Controls.Add(this.cancelButton);
-            this.tabPage3.Controls.Add(this.confirmButton);
-            this.tabPage3.Controls.Add(this.shippingPanel);
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(917, 558);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            // 
-            // shippingPanel
-            // 
-            this.shippingPanel.BackColor = System.Drawing.Color.White;
-            this.shippingPanel.Controls.Add(this.usedRadioButton);
-            this.shippingPanel.Controls.Add(this.newRadioButton);
-            this.shippingPanel.Controls.Add(this.heightTextBox);
-            this.shippingPanel.Controls.Add(this.widthTextBox);
-            this.shippingPanel.Controls.Add(this.lengthTextBox);
-            this.shippingPanel.Controls.Add(this.weightTextBox);
-            this.shippingPanel.Controls.Add(this.label21);
-            this.shippingPanel.Controls.Add(this.label20);
-            this.shippingPanel.Controls.Add(this.label19);
-            this.shippingPanel.Controls.Add(this.label18);
-            this.shippingPanel.Controls.Add(this.label17);
-            this.shippingPanel.Controls.Add(this.label16);
-            this.shippingPanel.Location = new System.Drawing.Point(4, 6);
-            this.shippingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.shippingPanel.Name = "shippingPanel";
-            this.shippingPanel.Size = new System.Drawing.Size(750, 239);
-            this.shippingPanel.TabIndex = 0;
-            // 
-            // usedRadioButton
-            // 
-            this.usedRadioButton.AllowBindingControlLocation = false;
-            this.usedRadioButton.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.usedRadioButton.BorderThickness = 1;
-            this.usedRadioButton.Checked = false;
-            this.usedRadioButton.Location = new System.Drawing.Point(174, 168);
-            this.usedRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.usedRadioButton.Name = "usedRadioButton";
-            this.usedRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.usedRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.usedRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.usedRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.usedRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.usedRadioButton.Size = new System.Drawing.Size(16, 16);
-            this.usedRadioButton.TabIndex = 27;
-            this.usedRadioButton.Text = null;
-            // 
-            // newRadioButton
-            // 
-            this.newRadioButton.AllowBindingControlLocation = false;
-            this.newRadioButton.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.newRadioButton.BorderThickness = 1;
-            this.newRadioButton.Checked = true;
-            this.newRadioButton.Location = new System.Drawing.Point(98, 168);
-            this.newRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.newRadioButton.Name = "newRadioButton";
-            this.newRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.newRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.newRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.newRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.newRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.newRadioButton.Size = new System.Drawing.Size(16, 16);
-            this.newRadioButton.TabIndex = 27;
-            this.newRadioButton.Text = null;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label21.Location = new System.Drawing.Point(194, 164);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 21);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "Used";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label20.Location = new System.Drawing.Point(118, 164);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 21);
-            this.label20.TabIndex = 25;
-            this.label20.Text = "New";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label19.Location = new System.Drawing.Point(7, 164);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 21);
-            this.label19.TabIndex = 25;
-            this.label19.Text = "Condition";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label18.Location = new System.Drawing.Point(7, 106);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(92, 21);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "Parcel Size";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label17.Location = new System.Drawing.Point(32, 58);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 21);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Weight";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label16.Location = new System.Drawing.Point(2, 7);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(201, 26);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "Shipping Information";
-            // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 25;
-            this.bunifuElipse4.TargetControl = this.salesPanel;
-            // 
-            // bunifuElipse5
-            // 
-            this.bunifuElipse5.ElipseRadius = 25;
-            this.bunifuElipse5.TargetControl = this.mediaPanel;
-            // 
-            // bunifuElipse6
-            // 
-            this.bunifuElipse6.ElipseRadius = 25;
-            this.bunifuElipse6.TargetControl = this.shippingPanel;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(658, 624);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 24;
             // 
             // bunifuVScrollBar1
             // 
@@ -732,6 +268,44 @@ namespace PhBuy
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.bunifuVScrollBar1.Value = 0;
+            // 
+            // registryPanel
+            // 
+            this.registryPanel.BackColor = System.Drawing.Color.White;
+            this.registryPanel.Controls.Add(this.descCharCountLabel);
+            this.registryPanel.Controls.Add(this.label1);
+            this.registryPanel.Controls.Add(this.nextButton1);
+            this.registryPanel.Controls.Add(this.fdaTextBox);
+            this.registryPanel.Controls.Add(this.descriptionTextBox);
+            this.registryPanel.Controls.Add(this.productTypePanel);
+            this.registryPanel.Controls.Add(this.label8);
+            this.registryPanel.Controls.Add(this.label10);
+            this.registryPanel.Location = new System.Drawing.Point(4, 0);
+            this.registryPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.registryPanel.Name = "registryPanel";
+            this.registryPanel.Size = new System.Drawing.Size(752, 555);
+            this.registryPanel.TabIndex = 7;
+            // 
+            // descCharCountLabel
+            // 
+            this.descCharCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.descCharCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descCharCountLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.descCharCountLabel.Location = new System.Drawing.Point(439, 530);
+            this.descCharCountLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.descCharCountLabel.Name = "descCharCountLabel";
+            this.descCharCountLabel.Size = new System.Drawing.Size(142, 21);
+            this.descCharCountLabel.TabIndex = 26;
+            this.descCharCountLabel.Text = "0 / 300";
+            this.descCharCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(658, 624);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 24;
             // 
             // nextButton1
             // 
@@ -908,6 +482,63 @@ namespace PhBuy
             this.descriptionTextBox.TextPlaceholder = "Enter text";
             this.descriptionTextBox.UseSystemPasswordChar = false;
             this.descriptionTextBox.WordWrap = true;
+            this.descriptionTextBox.TextChange += new System.EventHandler(this.descriptionTextBox_TextChange);
+            // 
+            // productTypePanel
+            // 
+            this.productTypePanel.Controls.Add(this.bunifuSeparator2);
+            this.productTypePanel.Controls.Add(this.nameCharCountLabel);
+            this.productTypePanel.Controls.Add(this.nameTextBox);
+            this.productTypePanel.Controls.Add(this.bunifuSeparator1);
+            this.productTypePanel.Controls.Add(this.healthLabel);
+            this.productTypePanel.Controls.Add(this.othersLabel);
+            this.productTypePanel.Controls.Add(this.booksLabel);
+            this.productTypePanel.Controls.Add(this.techLabel);
+            this.productTypePanel.Controls.Add(this.foodLabel);
+            this.productTypePanel.Controls.Add(this.label9);
+            this.productTypePanel.Controls.Add(this.label7);
+            this.productTypePanel.Controls.Add(this.label6);
+            this.productTypePanel.Controls.Add(this.fashionLabel);
+            this.productTypePanel.Controls.Add(this.others);
+            this.productTypePanel.Controls.Add(this.health);
+            this.productTypePanel.Controls.Add(this.books);
+            this.productTypePanel.Controls.Add(this.tech);
+            this.productTypePanel.Controls.Add(this.food);
+            this.productTypePanel.Controls.Add(this.fashion);
+            this.productTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productTypePanel.Location = new System.Drawing.Point(0, 0);
+            this.productTypePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.productTypePanel.Name = "productTypePanel";
+            this.productTypePanel.Size = new System.Drawing.Size(752, 365);
+            this.productTypePanel.TabIndex = 1;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(622, 143);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator2.TabIndex = 9;
+            // 
+            // nameCharCountLabel
+            // 
+            this.nameCharCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.nameCharCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameCharCountLabel.ForeColor = System.Drawing.Color.DarkGray;
+            this.nameCharCountLabel.Location = new System.Drawing.Point(612, 143);
+            this.nameCharCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameCharCountLabel.Name = "nameCharCountLabel";
+            this.nameCharCountLabel.Size = new System.Drawing.Size(106, 21);
+            this.nameCharCountLabel.TabIndex = 24;
+            this.nameCharCountLabel.Text = "0  / 50";
+            this.nameCharCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nameTextBox
             // 
@@ -983,6 +614,7 @@ namespace PhBuy
             this.nameTextBox.TextPlaceholder = "Enter text";
             this.nameTextBox.UseSystemPasswordChar = false;
             this.nameTextBox.WordWrap = true;
+            this.nameTextBox.TextChange += new System.EventHandler(this.nameTextBox_TextChange);
             // 
             // bunifuSeparator1
             // 
@@ -998,6 +630,122 @@ namespace PhBuy
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(713, 14);
             this.bunifuSeparator1.TabIndex = 21;
+            // 
+            // healthLabel
+            // 
+            this.healthLabel.AutoSize = true;
+            this.healthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.healthLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.healthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.healthLabel.Location = new System.Drawing.Point(495, 266);
+            this.healthLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.healthLabel.Name = "healthLabel";
+            this.healthLabel.Size = new System.Drawing.Size(76, 78);
+            this.healthLabel.TabIndex = 20;
+            this.healthLabel.Text = "Health \r\n     &\r\nBeauty";
+            this.healthLabel.UseMnemonic = false;
+            // 
+            // othersLabel
+            // 
+            this.othersLabel.AutoSize = true;
+            this.othersLabel.BackColor = System.Drawing.Color.Transparent;
+            this.othersLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.othersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.othersLabel.Location = new System.Drawing.Point(618, 266);
+            this.othersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.othersLabel.Name = "othersLabel";
+            this.othersLabel.Size = new System.Drawing.Size(71, 26);
+            this.othersLabel.TabIndex = 20;
+            this.othersLabel.Text = "Others";
+            // 
+            // booksLabel
+            // 
+            this.booksLabel.AutoSize = true;
+            this.booksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.booksLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.booksLabel.Location = new System.Drawing.Point(383, 266);
+            this.booksLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.booksLabel.Name = "booksLabel";
+            this.booksLabel.Size = new System.Drawing.Size(71, 26);
+            this.booksLabel.TabIndex = 20;
+            this.booksLabel.Text = "Books ";
+            // 
+            // techLabel
+            // 
+            this.techLabel.AutoSize = true;
+            this.techLabel.BackColor = System.Drawing.Color.Transparent;
+            this.techLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.techLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.techLabel.Location = new System.Drawing.Point(275, 266);
+            this.techLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.techLabel.Name = "techLabel";
+            this.techLabel.Size = new System.Drawing.Size(52, 26);
+            this.techLabel.TabIndex = 20;
+            this.techLabel.Text = "Tech";
+            // 
+            // foodLabel
+            // 
+            this.foodLabel.AutoSize = true;
+            this.foodLabel.BackColor = System.Drawing.Color.Transparent;
+            this.foodLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foodLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.foodLabel.Location = new System.Drawing.Point(164, 266);
+            this.foodLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.foodLabel.Name = "foodLabel";
+            this.foodLabel.Size = new System.Drawing.Size(56, 26);
+            this.foodLabel.TabIndex = 20;
+            this.foodLabel.Text = "Food";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label9.Location = new System.Drawing.Point(13, 79);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(171, 26);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Basic Information";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label7.Location = new System.Drawing.Point(10, 141);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 21);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Product Name";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mulish", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label6.Location = new System.Drawing.Point(5, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(213, 30);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Add a New Product";
+            // 
+            // fashionLabel
+            // 
+            this.fashionLabel.AutoSize = true;
+            this.fashionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fashionLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fashionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.fashionLabel.Location = new System.Drawing.Point(43, 266);
+            this.fashionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fashionLabel.Name = "fashionLabel";
+            this.fashionLabel.Size = new System.Drawing.Size(81, 26);
+            this.fashionLabel.TabIndex = 20;
+            this.fashionLabel.Text = "Fashion";
             // 
             // others
             // 
@@ -1209,6 +957,45 @@ namespace PhBuy
             this.fashion.ZoomSpeed = 10;
             this.fashion.Click += new System.EventHandler(this.foodtype_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label8.Location = new System.Drawing.Point(13, 367);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(184, 26);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Product Description";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label10.Location = new System.Drawing.Point(14, 588);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(207, 21);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "FDA Registration  Number";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.backButton);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Controls.Add(this.nextButton2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(917, 558);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
             // backButton
             // 
             this.backButton.ActiveBorderThickness = 1;
@@ -1233,6 +1020,30 @@ namespace PhBuy
             this.backButton.Size = new System.Drawing.Size(85, 32);
             this.backButton.TabIndex = 25;
             this.backButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.salesPanel);
+            this.panel1.Controls.Add(this.mediaPanel);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(752, 500);
+            this.panel1.TabIndex = 0;
+            // 
+            // salesPanel
+            // 
+            this.salesPanel.BackColor = System.Drawing.Color.White;
+            this.salesPanel.Controls.Add(this.stockTextBox);
+            this.salesPanel.Controls.Add(this.label15);
+            this.salesPanel.Controls.Add(this.priceTextBox);
+            this.salesPanel.Controls.Add(this.label14);
+            this.salesPanel.Controls.Add(this.label12);
+            this.salesPanel.Location = new System.Drawing.Point(2, 4);
+            this.salesPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.salesPanel.Name = "salesPanel";
+            this.salesPanel.Size = new System.Drawing.Size(750, 229);
+            this.salesPanel.TabIndex = 1;
             // 
             // stockTextBox
             // 
@@ -1309,6 +1120,19 @@ namespace PhBuy
             this.stockTextBox.UseSystemPasswordChar = false;
             this.stockTextBox.WordWrap = true;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label15.Location = new System.Drawing.Point(10, 109);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(51, 21);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Stock";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // priceTextBox
             // 
             this.priceTextBox.AcceptsReturn = false;
@@ -1384,6 +1208,148 @@ namespace PhBuy
             this.priceTextBox.UseSystemPasswordChar = false;
             this.priceTextBox.WordWrap = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label14.Location = new System.Drawing.Point(10, 60);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 21);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Price";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label12.Location = new System.Drawing.Point(2, 7);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(170, 26);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Sales Information";
+            // 
+            // mediaPanel
+            // 
+            this.mediaPanel.BackColor = System.Drawing.Color.White;
+            this.mediaPanel.Controls.Add(this.imagesPanel);
+            this.mediaPanel.Controls.Add(this.imageCountLabel);
+            this.mediaPanel.Controls.Add(this.label13);
+            this.mediaPanel.Location = new System.Drawing.Point(4, 256);
+            this.mediaPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mediaPanel.Name = "mediaPanel";
+            this.mediaPanel.Size = new System.Drawing.Size(750, 229);
+            this.mediaPanel.TabIndex = 2;
+            // 
+            // imagesPanel
+            // 
+            this.imagesPanel.Controls.Add(this.addCoverPanel);
+            this.imagesPanel.Controls.Add(this.addImagePanel);
+            this.imagesPanel.Location = new System.Drawing.Point(7, 64);
+            this.imagesPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.imagesPanel.Name = "imagesPanel";
+            this.imagesPanel.Size = new System.Drawing.Size(740, 162);
+            this.imagesPanel.TabIndex = 22;
+            // 
+            // addCoverPanel
+            // 
+            this.addCoverPanel.Controls.Add(this.addCoverButton);
+            this.addCoverPanel.Controls.Add(this.label3);
+            this.addCoverPanel.Location = new System.Drawing.Point(3, 3);
+            this.addCoverPanel.Name = "addCoverPanel";
+            this.addCoverPanel.Size = new System.Drawing.Size(98, 125);
+            this.addCoverPanel.TabIndex = 4;
+            // 
+            // addCoverButton
+            // 
+            this.addCoverButton.BackColor = System.Drawing.Color.Transparent;
+            this.addCoverButton.BackgroundImage = global::PhBuy.Properties.Resources.AddImage;
+            this.addCoverButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addCoverButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addCoverButton.Location = new System.Drawing.Point(0, -1);
+            this.addCoverButton.Name = "addCoverButton";
+            this.addCoverButton.Size = new System.Drawing.Size(98, 98);
+            this.addCoverButton.TabIndex = 2;
+            this.addCoverButton.TabStop = false;
+            this.addCoverButton.Click += new System.EventHandler(this.addCoverButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label3.Location = new System.Drawing.Point(6, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Add Cover";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // addImagePanel
+            // 
+            this.addImagePanel.Controls.Add(this.addImageButton);
+            this.addImagePanel.Controls.Add(this.label2);
+            this.addImagePanel.Location = new System.Drawing.Point(107, 3);
+            this.addImagePanel.Name = "addImagePanel";
+            this.addImagePanel.Size = new System.Drawing.Size(98, 125);
+            this.addImagePanel.TabIndex = 4;
+            // 
+            // addImageButton
+            // 
+            this.addImageButton.BackColor = System.Drawing.Color.Transparent;
+            this.addImageButton.BackgroundImage = global::PhBuy.Properties.Resources.AddImage;
+            this.addImageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addImageButton.Location = new System.Drawing.Point(0, 0);
+            this.addImageButton.Name = "addImageButton";
+            this.addImageButton.Size = new System.Drawing.Size(98, 98);
+            this.addImageButton.TabIndex = 3;
+            this.addImageButton.TabStop = false;
+            this.addImageButton.Click += new System.EventHandler(this.addImageButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label2.Location = new System.Drawing.Point(3, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 21);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Add Image";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // imageCountLabel
+            // 
+            this.imageCountLabel.AutoSize = true;
+            this.imageCountLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imageCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.imageCountLabel.Location = new System.Drawing.Point(630, 24);
+            this.imageCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.imageCountLabel.Name = "imageCountLabel";
+            this.imageCountLabel.Size = new System.Drawing.Size(106, 21);
+            this.imageCountLabel.TabIndex = 23;
+            this.imageCountLabel.Text = "Images: 0 / 8";
+            this.imageCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label13.Location = new System.Drawing.Point(2, 19);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(176, 26);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Media Information";
+            // 
             // nextButton2
             // 
             this.nextButton2.ActiveBorderThickness = 1;
@@ -1409,6 +1375,21 @@ namespace PhBuy
             this.nextButton2.TabIndex = 24;
             this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.bunifuThinButton21);
+            this.tabPage3.Controls.Add(this.cancelButton);
+            this.tabPage3.Controls.Add(this.confirmButton);
+            this.tabPage3.Controls.Add(this.shippingPanel);
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(917, 558);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
             // 
             // bunifuThinButton21
             // 
@@ -1486,6 +1467,155 @@ namespace PhBuy
             this.confirmButton.TabIndex = 22;
             this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            // 
+            // shippingPanel
+            // 
+            this.shippingPanel.BackColor = System.Drawing.Color.White;
+            this.shippingPanel.Controls.Add(this.bunifuSeparator5);
+            this.shippingPanel.Controls.Add(this.bunifuSeparator4);
+            this.shippingPanel.Controls.Add(this.bunifuSeparator3);
+            this.shippingPanel.Controls.Add(this.label11);
+            this.shippingPanel.Controls.Add(this.label5);
+            this.shippingPanel.Controls.Add(this.usedRadioButton);
+            this.shippingPanel.Controls.Add(this.label4);
+            this.shippingPanel.Controls.Add(this.newRadioButton);
+            this.shippingPanel.Controls.Add(this.heightTextBox);
+            this.shippingPanel.Controls.Add(this.widthTextBox);
+            this.shippingPanel.Controls.Add(this.lengthTextBox);
+            this.shippingPanel.Controls.Add(this.weightTextBox);
+            this.shippingPanel.Controls.Add(this.label21);
+            this.shippingPanel.Controls.Add(this.label20);
+            this.shippingPanel.Controls.Add(this.label19);
+            this.shippingPanel.Controls.Add(this.label18);
+            this.shippingPanel.Controls.Add(this.label17);
+            this.shippingPanel.Controls.Add(this.label16);
+            this.shippingPanel.Location = new System.Drawing.Point(4, 6);
+            this.shippingPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.shippingPanel.Name = "shippingPanel";
+            this.shippingPanel.Size = new System.Drawing.Size(750, 239);
+            this.shippingPanel.TabIndex = 0;
+            // 
+            // bunifuSeparator5
+            // 
+            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator5.BackgroundImage")));
+            this.bunifuSeparator5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator5.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator5.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator5.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator5.LineThickness = 1;
+            this.bunifuSeparator5.Location = new System.Drawing.Point(355, 107);
+            this.bunifuSeparator5.Name = "bunifuSeparator5";
+            this.bunifuSeparator5.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator5.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator5.TabIndex = 29;
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator4.BackgroundImage")));
+            this.bunifuSeparator4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator4.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(177, 107);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator4.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator4.TabIndex = 29;
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
+            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator3.LineThickness = 1;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(615, 53);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator3.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator3.TabIndex = 27;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label11.Location = new System.Drawing.Point(368, 108);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 21);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "cm";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label5.Location = new System.Drawing.Point(190, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 21);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "cm";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // usedRadioButton
+            // 
+            this.usedRadioButton.AllowBindingControlLocation = false;
+            this.usedRadioButton.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.usedRadioButton.BorderThickness = 1;
+            this.usedRadioButton.Checked = false;
+            this.usedRadioButton.Location = new System.Drawing.Point(174, 168);
+            this.usedRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.usedRadioButton.Name = "usedRadioButton";
+            this.usedRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.usedRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.usedRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.usedRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.usedRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.usedRadioButton.Size = new System.Drawing.Size(16, 16);
+            this.usedRadioButton.TabIndex = 27;
+            this.usedRadioButton.Text = null;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label4.Location = new System.Drawing.Point(556, 54);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 21);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "kg";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // newRadioButton
+            // 
+            this.newRadioButton.AllowBindingControlLocation = false;
+            this.newRadioButton.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.newRadioButton.BorderThickness = 1;
+            this.newRadioButton.Checked = true;
+            this.newRadioButton.Location = new System.Drawing.Point(98, 168);
+            this.newRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.newRadioButton.Name = "newRadioButton";
+            this.newRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.newRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.newRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.newRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.newRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.newRadioButton.Size = new System.Drawing.Size(16, 16);
+            this.newRadioButton.TabIndex = 27;
+            this.newRadioButton.Text = null;
             // 
             // heightTextBox
             // 
@@ -1787,31 +1917,97 @@ namespace PhBuy
             this.weightTextBox.UseSystemPasswordChar = false;
             this.weightTextBox.WordWrap = true;
             // 
-            // addCoverButton
+            // label21
             // 
-            this.addCoverButton.BackColor = System.Drawing.Color.Transparent;
-            this.addCoverButton.BackgroundImage = global::PhBuy.Properties.Resources.AddImage;
-            this.addCoverButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addCoverButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addCoverButton.Location = new System.Drawing.Point(3, 3);
-            this.addCoverButton.Name = "addCoverButton";
-            this.addCoverButton.Size = new System.Drawing.Size(98, 98);
-            this.addCoverButton.TabIndex = 2;
-            this.addCoverButton.TabStop = false;
-            this.addCoverButton.Click += new System.EventHandler(this.addCoverButton_Click);
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label21.Location = new System.Drawing.Point(194, 164);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 21);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Used";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // addImageButton
+            // label20
             // 
-            this.addImageButton.BackColor = System.Drawing.Color.Transparent;
-            this.addImageButton.BackgroundImage = global::PhBuy.Properties.Resources.AddImage;
-            this.addImageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addImageButton.Location = new System.Drawing.Point(107, 3);
-            this.addImageButton.Name = "addImageButton";
-            this.addImageButton.Size = new System.Drawing.Size(98, 98);
-            this.addImageButton.TabIndex = 3;
-            this.addImageButton.TabStop = false;
-            this.addImageButton.Click += new System.EventHandler(this.addImageButton_Click);
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label20.Location = new System.Drawing.Point(118, 164);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 21);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "New";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label19.Location = new System.Drawing.Point(7, 164);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 21);
+            this.label19.TabIndex = 25;
+            this.label19.Text = "Condition";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label18.Location = new System.Drawing.Point(7, 106);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(92, 21);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "Parcel Size";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label17.Location = new System.Drawing.Point(32, 58);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 21);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "Weight";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label16.Location = new System.Drawing.Point(2, 7);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(201, 26);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "Shipping Information";
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 25;
+            this.bunifuElipse4.TargetControl = this.salesPanel;
+            // 
+            // bunifuElipse5
+            // 
+            this.bunifuElipse5.ElipseRadius = 25;
+            this.bunifuElipse5.TargetControl = this.mediaPanel;
+            // 
+            // bunifuElipse6
+            // 
+            this.bunifuElipse6.ElipseRadius = 25;
+            this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
             // AddProduct
             // 
@@ -1821,7 +2017,7 @@ namespace PhBuy
             this.ClientSize = new System.Drawing.Size(925, 584);
             this.Controls.Add(this.addProductPages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddProduct";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "AddProduct";
@@ -1838,11 +2034,15 @@ namespace PhBuy
             this.mediaPanel.ResumeLayout(false);
             this.mediaPanel.PerformLayout();
             this.imagesPanel.ResumeLayout(false);
+            this.addCoverPanel.ResumeLayout(false);
+            this.addCoverPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addCoverButton)).EndInit();
+            this.addImagePanel.ResumeLayout(false);
+            this.addImagePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addImageButton)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.shippingPanel.ResumeLayout(false);
             this.shippingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addCoverButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addImageButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1916,5 +2116,18 @@ namespace PhBuy
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox addCoverButton;
         private System.Windows.Forms.PictureBox addImageButton;
+        private System.Windows.Forms.Panel addCoverPanel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel addImagePanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label descCharCountLabel;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.Label nameCharCountLabel;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator5;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

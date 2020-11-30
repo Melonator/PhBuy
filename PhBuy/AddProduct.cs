@@ -64,7 +64,21 @@ namespace PhBuy
    
             previousLabel = button.Name + "Label";
         }
+        private void nextButton1_Click(object sender, EventArgs e)
+        {
+            if (fdaTextBox.Text != string.Empty)
+            {
+                fdanum = fdaTextBox.Text;
+            }
 
+            if (type != string.Empty && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty && nameTextBox.Text.Count() <= 50 && descriptionTextBox.Text.Count() <= 300)
+            {
+                name = nameTextBox.Text;
+                description = descriptionTextBox.Text;
+                addProductPages.PageIndex++;
+            }
+
+        }
         private void nextButton2_Click(object sender, EventArgs e)
         {
             if (priceTextBox.Text != string.Empty && stockTextBox.Text !=  string.Empty && hasCover)
@@ -98,8 +112,8 @@ namespace PhBuy
             productImages.Add(br.ReadBytes((int)fs.Length));
 
             //Re arrange the buttons
-            imagesPanel.Controls.SetChildIndex(addCoverButton, imagesPanel.Controls.Count);
-            imagesPanel.Controls.SetChildIndex(addImageButton, imagesPanel.Controls.Count - 1);
+            imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
+            imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
            
             imageCountLabel.Text = $"Images: {imageNo} / 8"; 
         }
@@ -122,8 +136,8 @@ namespace PhBuy
 
                 //Re arrange the buttons
                 imagesPanel.Controls.SetChildIndex(coverImage, 0);
-                imagesPanel.Controls.SetChildIndex(addCoverButton, imagesPanel.Controls.Count);
-                imagesPanel.Controls.SetChildIndex(addImageButton, imagesPanel.Controls.Count - 1);
+                imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
+                imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
             }
 
             else
@@ -203,21 +217,6 @@ namespace PhBuy
             }
         }
 
-        private void nextButton1_Click(object sender, EventArgs e)
-        {
-            if (fdaTextBox.Text != string.Empty)
-            {
-                fdanum = fdaTextBox.Text;
-            }
-
-            if (type != string.Empty && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty)
-            {
-                name = nameTextBox.Text;
-                description = descriptionTextBox.Text;
-                addProductPages.PageIndex++;
-            }
-        }
-
         //First event when the product form is clicked
         private void ProductImage_Click(object sender, EventArgs e)
         {
@@ -284,9 +283,16 @@ namespace PhBuy
             return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
         }
 
-        private void healthLabel_Click(object sender, EventArgs e)
+        private void descriptionTextBox_TextChange(object sender, EventArgs e)
         {
+            descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
+            //TODO: Notify the user when it is empty or beyond the count
+        }
 
+        private void nameTextBox_TextChange(object sender, EventArgs e)
+        {
+            nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
+            //TODO: Notify the user when it is empty or beyond the count
         }
 
         private bool IsIdValid(uint id)
