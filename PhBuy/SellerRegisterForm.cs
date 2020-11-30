@@ -24,7 +24,7 @@ namespace PhBuy
 		{
 			_id = id;
 			InitializeComponent();
-			_sellerImageLocation = sellerPicture.ImageLocation;
+
 		}
 
 		#region Events
@@ -38,7 +38,7 @@ namespace PhBuy
 			_location = locationTextBox.Text;
 			_description = descriptionTextBox.Text;
 			//Switch Page
-			registerPages.PageIndex = 1;
+			registerPages.PageIndex++;
 		}
 
 		private void nextButton2_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace PhBuy
 			_link = linkTextBox.Text;
 			_type = typeDropDown.Text;
 			//Switch Page
-			registerPages.PageIndex = 2;
+			registerPages.PageIndex++;
 		}
 
 		private void uploadPhotoButton_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace PhBuy
 
 		private void uploadBackgroundButton_Click(object sender, EventArgs e)
 		{
-			CoverForm form = new CoverForm(this) { Location = new Point(1000, 268) };
+			CoverForm form = new CoverForm(this);
 			form.Show();
 		}
 
@@ -109,10 +109,18 @@ namespace PhBuy
 			sellerBackground.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
 			_sellerCover = stream.ToArray();
 
-			FileStream fs = new FileStream(_sellerImageLocation, FileMode.Open, FileAccess.Read);
-			BinaryReader br = new BinaryReader(fs);
-			_sellerImage = br.ReadBytes((int)fs.Length);
+			if (_sellerImageLocation == null)
+			{
+				sellerPicture.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+				_sellerImage = stream.ToArray();
+			}
 		}
-		#endregion
-	}
+        #endregion
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+			//switch page
+			registerPages.PageIndex--;
+        }
+    }
 }
