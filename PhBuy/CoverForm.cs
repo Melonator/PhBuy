@@ -16,13 +16,13 @@ namespace PhBuy
 
 		private void cover_Click(object sender, EventArgs e)
 		{
-			_pictureBox = (PictureBox)sender;
+			_pictureBox = (PictureBox) sender;
 			_form.sellerBackground.Image = _pictureBox.Image;
 		}
 
 		private void uploadButton_Click(object sender, EventArgs e)
 		{
-			OpenFileDialog dlg = new OpenFileDialog { Title = "Choose your product image" };
+			var dlg = new OpenFileDialog {Title = "Choose your product image"};
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
 				// TODO: Do Something

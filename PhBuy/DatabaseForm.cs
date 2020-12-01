@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Data;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace PhBuy
 {
 	public partial class DatabaseForm : Form
 	{
-		private const string ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+		private const string ConnectionString =
+			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
 		public DatabaseForm()
 		{
@@ -23,16 +24,13 @@ namespace PhBuy
 		{
 			//Load the dropdown contents based on the tables on the database
 
-			SqlConnection connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			string queryString = "SELECT * FROM information_schema.tables;";
-			SqlCommand cmd = new SqlCommand(queryString, connection);
-			SqlDataReader oReader = cmd.ExecuteReader();
+			var queryString = "SELECT * FROM information_schema.tables;";
+			var cmd = new SqlCommand(queryString, connection);
+			var oReader = cmd.ExecuteReader();
 
-			while (oReader.Read())
-			{
-				tableDropDown.Items.Add(oReader["TABLE_NAME"].ToString());
-			}
+			while (oReader.Read()) tableDropDown.Items.Add(oReader["TABLE_NAME"].ToString());
 
 			Profiles.DataSource = null; //empty table
 			connection.Close();
@@ -40,11 +38,11 @@ namespace PhBuy
 
 		private void tableDropDown_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			SqlConnection connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			string queryString = $"SELECT * FROM {tableDropDown.Text}";
-			SqlDataAdapter dataAdapter = new SqlDataAdapter(queryString, connection);
-			DataTable table = new DataTable();
+			var queryString = $"SELECT * FROM {tableDropDown.Text}";
+			var dataAdapter = new SqlDataAdapter(queryString, connection);
+			var table = new DataTable();
 			dataAdapter.Fill(table);
 			Seller.DataSource = table;
 			Seller.BringToFront();
@@ -55,10 +53,10 @@ namespace PhBuy
 		{
 			//Do edits in the database here!
 
-			SqlConnection connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			string queryString = "ALTER TABLE Products ADD Type VARCHAR(20)";
-			SqlCommand cmd = new SqlCommand(queryString, connection);
+			var queryString = "ALTER TABLE Products ADD Type VARCHAR(20)";
+			var cmd = new SqlCommand(queryString, connection);
 			cmd.ExecuteNonQuery();
 			connection.Close();
 		}
@@ -67,10 +65,10 @@ namespace PhBuy
 		{
 			//Delete the contents of the table selected!
 
-			SqlConnection connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			string queryString = $"DELETE FROM {tableDropDown.Text}";
-			SqlCommand cmd = new SqlCommand(queryString, connection);
+			var queryString = $"DELETE FROM {tableDropDown.Text}";
+			var cmd = new SqlCommand(queryString, connection);
 			cmd.ExecuteNonQuery();
 			connection.Close();
 		}

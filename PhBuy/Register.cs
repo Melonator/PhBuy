@@ -7,17 +7,19 @@ namespace PhBuy
 {
 	public partial class Register : Form
 	{
-		private const string ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+		private const string ConnectionString =
+			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
 		public Register()
 		{
 			InitializeComponent();
 		}
+
 		#region Events
 
 		private void registerButton_Click(object sender, EventArgs e)
 		{
-			int entryStatus = AreEntriesValid();
+			var entryStatus = AreEntriesValid();
 
 			switch (entryStatus)
 			{
@@ -26,39 +28,47 @@ namespace PhBuy
 					MessageBox.Show("Yay!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 					break;
 				case 1:
-					MessageBox.Show("Please type a different name", "User already exists!", MessageBoxButtons.OK, MessageBoxIcon.Error); // User already exists
+					MessageBox.Show("Please type a different name", "User already exists!", MessageBoxButtons.OK,
+						MessageBoxIcon.Error); // User already exists
 					break;
 				case 2:
-					MessageBox.Show("Please type matching passwords", "Passwords do not match!", MessageBoxButtons.OK, MessageBoxIcon.Error); // Passwords do not match
+					MessageBox.Show("Please type matching passwords", "Passwords do not match!", MessageBoxButtons.OK,
+						MessageBoxIcon.Error); // Passwords do not match
 					break;
 				case 3:
-					MessageBox.Show("Please fill in all the textboxes", "Empty Textbox", MessageBoxButtons.OK, MessageBoxIcon.Error); // Textboxes are empty
+					MessageBox.Show("Please fill in all the textboxes", "Empty Textbox", MessageBoxButtons.OK,
+						MessageBoxIcon.Error); // Textboxes are empty
 					break;
 			}
 		}
 
 		#endregion
 
+		private void exitButton_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
 		#region Helper Functions
 
 		private int AreEntriesValid()
 		{
-			string username = nameTextBox.Text;
-			string password = passTextBox.Text;
-			string cPassword = confirmTextBox.Text;
+			var username = nameTextBox.Text;
+			var password = passTextBox.Text;
+			var cPassword = confirmTextBox.Text;
 
-			SqlConnection myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(ConnectionString);
 			if (username != string.Empty && password != string.Empty && cPassword != string.Empty)
 			{
 				if (password == cPassword) // The passwords must be matching
 				{
 					// Query based on the textbox
-					string queryString = "SELECT Name FROM Profiles WHERE Name = @Name;";
-					SqlCommand oCmd = new SqlCommand(queryString, myConnection);
-					SqlParameter param = new SqlParameter { ParameterName = "@Name", Value = username };
+					var queryString = "SELECT Name FROM Profiles WHERE Name = @Name;";
+					var oCmd = new SqlCommand(queryString, myConnection);
+					var param = new SqlParameter {ParameterName = "@Name", Value = username};
 					oCmd.Parameters.Add(param);
 					myConnection.Open();
-					SqlDataReader oReader = oCmd.ExecuteReader();
+					var oReader = oCmd.ExecuteReader();
 
 					while (oReader.Read())
 					{
@@ -88,16 +98,16 @@ namespace PhBuy
 
 		private void RegisterUser(string name, string password)
 		{
-			SqlConnection myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(ConnectionString);
 			//Add new entries
-			string queryString = "INSERT INTO Profiles VALUES(@ID, @Name, @Password);";
+			var queryString = "INSERT INTO Profiles VALUES(@ID, @Name, @Password);";
 
 			myConnection.Open();
-			SqlParameter param1 = new SqlParameter() { ParameterName = "@ID", Value = GenerateId() };
-			SqlParameter param2 = new SqlParameter() { ParameterName = "@Name", Value = name };
-			SqlParameter param3 = new SqlParameter() { ParameterName = "@Password", Value = password };
+			var param1 = new SqlParameter {ParameterName = "@ID", Value = GenerateId()};
+			var param2 = new SqlParameter {ParameterName = "@Name", Value = name};
+			var param3 = new SqlParameter {ParameterName = "@Password", Value = password};
 
-			SqlCommand cmd = new SqlCommand(queryString, myConnection);
+			var cmd = new SqlCommand(queryString, myConnection);
 			cmd.Parameters.Add(param1);
 			cmd.Parameters.Add(param2);
 			cmd.Parameters.Add(param3);
@@ -114,6 +124,7 @@ namespace PhBuy
 			{
 				id = Get5Digits();
 			} while (!IsIdValid(id));
+
 			return id;
 		}
 
@@ -127,15 +138,15 @@ namespace PhBuy
 
 		private bool IsIdValid(uint id)
 		{
-			SqlConnection myConnection = new SqlConnection(ConnectionString);
-			string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
+			var myConnection = new SqlConnection(ConnectionString);
+			var queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
-			SqlParameter param = new SqlParameter() { ParameterName = "@ID", Value = id };
-			SqlCommand cmd = new SqlCommand(queryString, myConnection);
+			var param = new SqlParameter {ParameterName = "@ID", Value = id};
+			var cmd = new SqlCommand(queryString, myConnection);
 			cmd.Parameters.Add(param);
 
-			SqlDataReader oReader = cmd.ExecuteReader();
+			var oReader = cmd.ExecuteReader();
 
 			while (oReader.Read())
 			{
@@ -150,10 +161,5 @@ namespace PhBuy
 		}
 
 		#endregion
-
-		private void exitButton_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
-    }
+	}
 }
