@@ -1,146 +1,140 @@
-﻿using Bunifu.UI.WinForms.BunifuButton;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms.BunifuButton;
 
 namespace PhBuy
 {
-    public partial class SellerPanel : Form
-    {
-        private bool isPanelOpen1 = true;
-        private bool isPanelOpen2 = true;
-        private bool isPanelOpen3 = true;
-        private bool isPanelOpen4 = true;
-        MainForm _form;
-        public SellerPanel(MainForm form)
-        {
-            _form = form;
-            InitializeComponent();
-        }
+	public partial class SellerPanel : Form
+	{
+		private readonly MainForm _form;
+		private bool isPanelOpen1 = true;
+		private bool isPanelOpen2 = true;
+		private bool isPanelOpen3 = true;
+		private bool isPanelOpen4 = true;
 
-        private void dropDown_Click(object sender, EventArgs e)
-        {
-            BunifuButton btn = (BunifuButton)sender; 
-           
-            switch(btn.Name)
-            {
-                case "storeDropDown":
-                    {
-                        if (isPanelOpen1)
-                        {
-                            isPanelOpen1 = false;
-                            panel1.Hide();
-                        }
-                        else
-                        {
-                            isPanelOpen1 = true;
-                            panel1.Show();
-                        }
-                    }
-                    break;
-                case "productDropDown":
-                    {
-                        if (isPanelOpen2)
-                        {
-                            isPanelOpen2 = false;
-                            panel2.Hide();
-                        }
-                        else
-                        {
-                            isPanelOpen2 = true;
-                            panel2.Show();
-                        }
-                    }
-                    break;
-                case "orderDropDown":
-                    {
-                        if (isPanelOpen3)
-                        {
-                            isPanelOpen3 = false;
-                            panel3.Hide();
-                        }
-                        else
-                        {
-                            isPanelOpen3 = true;
-                            panel3.Show();
-                        }
-                    }
-                    break;
-                case "analyticDropDown":
-                    {
-                        if (isPanelOpen4)
-                        {
-                            isPanelOpen4 = false;
-                            panel4.Hide();
-                        }
-                        else
-                        {
-                            isPanelOpen4 = true;
-                            panel4.Show();
-                        }
-                    }
-                    break;
-            }
-        }
+		public SellerPanel(MainForm form)
+		{
+			_form = form;
+			InitializeComponent();
+		}
 
-        private void profileButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show seller profile
-        }
+		private void dropDown_Click(object sender, EventArgs e)
+		{
+			var btn = (BunifuButton) sender;
 
-        private void ratingButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show seller rating 
-        }
+			switch (btn.Name)
+			{
+				case "storeDropDown":
+				{
+					if (isPanelOpen1)
+					{
+						isPanelOpen1 = false;
+						panel1.Hide();
+					}
+					else
+					{
+						isPanelOpen1 = true;
+						panel1.Show();
+					}
+				}
+					break;
+				case "productDropDown":
+				{
+					if (isPanelOpen2)
+					{
+						isPanelOpen2 = false;
+						panel2.Hide();
+					}
+					else
+					{
+						isPanelOpen2 = true;
+						panel2.Show();
+					}
+				}
+					break;
+				case "orderDropDown":
+				{
+					if (isPanelOpen3)
+					{
+						isPanelOpen3 = false;
+						panel3.Hide();
+					}
+					else
+					{
+						isPanelOpen3 = true;
+						panel3.Show();
+					}
+				}
+					break;
+				case "analyticDropDown":
+				{
+					if (isPanelOpen4)
+					{
+						isPanelOpen4 = false;
+						panel4.Hide();
+					}
+					else
+					{
+						isPanelOpen4 = true;
+						panel4.Show();
+					}
+				}
+					break;
+			}
+		}
 
-        private void reportButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show seller reports
-        }
+		private void profileButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show seller profile
+		}
 
-        private void productButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show products
-        }
+		private void ratingButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show seller rating 
+		}
 
-        private void addProductButton_Click(object sender, EventArgs e)
-        {
-            AddProduct form = new AddProduct() { TopLevel = false };
-            form.Show();
-            _form.mainPanel.Controls.Clear();
-            _form.mainPanel.Controls.Add(form);
-        }
+		private void reportButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show seller reports
+		}
 
-        private void ordersButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show orders
-        }
+		private void productButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show products
+		}
 
-        private void incomeButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show income
-        }
+		private void addProductButton_Click(object sender, EventArgs e)
+		{
+			var form = new AddProduct {TopLevel = false};
+			form.Show();
+			_form.mainPanel.Controls.Clear();
+			_form.mainPanel.Controls.Add(form);
+		}
 
-        private void insightButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show insights
-        }
+		private void ordersButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show orders
+		}
 
-        private void inventoryButton_Click(object sender, EventArgs e)
-        {
-            //TODO: show inventory
-        }
+		private void incomeButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show income
+		}
 
-        private void databaseButton_Click(object sender, EventArgs e)
-        {
-            DatabaseForm form = new DatabaseForm();
-            form.Show();
-        }
-    }
+		private void insightButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show insights
+		}
+
+		private void inventoryButton_Click(object sender, EventArgs e)
+		{
+			//TODO: show inventory
+		}
+
+		private void databaseButton_Click(object sender, EventArgs e)
+		{
+			var form = new DatabaseForm();
+			form.Show();
+		}
+	}
 }
