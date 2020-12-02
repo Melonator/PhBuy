@@ -65,7 +65,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _125442320_435191487873283_3142954965594498196_n {
             get {
-                object obj = ResourceManager.GetObject("125442320_435191487873283_3142954965594498196_n", resourceCulture);
+                object obj = ResourceManager.GetObject("_125442320_435191487873283_3142954965594498196_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,17 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _125753206_122552969464265_2211899416766309768_n {
             get {
-                object obj = ResourceManager.GetObject("125753206_122552969464265_2211899416766309768_n", resourceCulture);
+                object obj = ResourceManager.GetObject("_125753206_122552969464265_2211899416766309768_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _125772240_1088967664894229_5760288061086223140_n {
+            get {
+                object obj = ResourceManager.GetObject("_125772240_1088967664894229_5760288061086223140_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +95,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _125772638_125413982465704_4113881353070638943_n {
             get {
-                object obj = ResourceManager.GetObject("125772638_125413982465704_4113881353070638943_n", resourceCulture);
+                object obj = ResourceManager.GetObject("_125772638_125413982465704_4113881353070638943_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +105,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _125853710_1023677731371154_291525496420872077_n {
             get {
-                object obj = ResourceManager.GetObject("125853710_1023677731371154_291525496420872077_n", resourceCulture);
+                object obj = ResourceManager.GetObject("_125853710_1023677731371154_291525496420872077_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +115,37 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _125882841_2838879412994219_3149737760896158500_n {
             get {
-                object obj = ResourceManager.GetObject("125882841_2838879412994219_3149737760896158500_n", resourceCulture);
+                object obj = ResourceManager.GetObject("_125882841_2838879412994219_3149737760896158500_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _125904862_789271368646202_2880759978547485106_n {
+            get {
+                object obj = ResourceManager.GetObject("_125904862_789271368646202_2880759978547485106_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _126047349_747162852544485_8863433835923509126_n {
+            get {
+                object obj = ResourceManager.GetObject("_126047349_747162852544485_8863433835923509126_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _126537189_196208098742960_9173648381840221022_n {
+            get {
+                object obj = ResourceManager.GetObject("_126537189_196208098742960_9173648381840221022_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -345,7 +385,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Health_and_Beauty {
             get {
-                object obj = ResourceManager.GetObject("Health-and-Beauty", resourceCulture);
+                object obj = ResourceManager.GetObject("Health_and_Beauty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -385,7 +425,17 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Logo_WHITE {
             get {
-                object obj = ResourceManager.GetObject("Logo-WHITE", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_WHITE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -523,9 +573,59 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ProPicIcon {
+            get {
+                object obj = ResourceManager.GetObject("ProPicIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProPicIcon1 {
+            get {
+                object obj = ResourceManager.GetObject("ProPicIcon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProPicIcon2 {
+            get {
+                object obj = ResourceManager.GetObject("ProPicIcon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProPicIcon21 {
+            get {
+                object obj = ResourceManager.GetObject("ProPicIcon21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProPicIcon22 {
             get {
                 object obj = ResourceManager.GetObject("ProPicIcon22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProPicIcon3 {
+            get {
+                object obj = ResourceManager.GetObject("ProPicIcon3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -545,7 +645,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap RegistrationP1_2_ {
             get {
-                object obj = ResourceManager.GetObject("RegistrationP1(2)", resourceCulture);
+                object obj = ResourceManager.GetObject("RegistrationP1_2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -555,7 +655,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap RegistrationP2_2_ {
             get {
-                object obj = ResourceManager.GetObject("RegistrationP2(2)", resourceCulture);
+                object obj = ResourceManager.GetObject("RegistrationP2_2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -565,7 +665,7 @@ namespace PhBuy.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap RegistrationP3_2_ {
             get {
-                object obj = ResourceManager.GetObject("RegistrationP3(2)", resourceCulture);
+                object obj = ResourceManager.GetObject("RegistrationP3_2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +786,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap Trees {
             get {
                 object obj = ResourceManager.GetObject("Trees", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_512px {
+            get {
+                object obj = ResourceManager.GetObject("user_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
