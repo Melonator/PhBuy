@@ -24,5 +24,23 @@ namespace PhBuy
 		private void customerPanel_Click(object sender, EventArgs e)
 		{
 		}
+
+		private void bunifuTileButton1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void sellTileButton_Click(object sender, EventArgs e)
+		{
+			
+			var main = new MainForm();
+			main.Show();
+		}
+
+		private void registerButton_Click(object sender, EventArgs e)
+		{
+			var reg = new SellerRegisterForm(_id);
+			reg.ShowDialog();
+		}
 	}
 }
