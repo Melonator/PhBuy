@@ -1020,6 +1020,7 @@ namespace PhBuy
             this.backButton.Size = new System.Drawing.Size(85, 32);
             this.backButton.TabIndex = 25;
             this.backButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // panel1
             // 

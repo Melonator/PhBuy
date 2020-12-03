@@ -26,7 +26,7 @@ namespace PhBuy
 		private bool hasCover;
 
 		//Product Data
-		private int id;
+		private int productID;
 		private int imageNo;
 		private double length, width, height;
 		private string name;
@@ -164,7 +164,7 @@ namespace PhBuy
 				var br = new BinaryReader(fs);
 				var productCover = br.ReadBytes((int) fs.Length);
 
-				var productID = (int) GenerateId();
+				productID = (int) GenerateId();
 
 				//Confirm the stuff
 				var myConnection = new SqlConnection(ConnectionString);
@@ -183,7 +183,7 @@ namespace PhBuy
 				var param6 = new SqlParameter {ParameterName = "@Stock", Value = stock};
 				var param7 = new SqlParameter {ParameterName = "@Weight", Value = weight};
 				var param8 = new SqlParameter {ParameterName = "@Length", Value = length};
-				var param9 = new SqlParameter {ParameterName = "@Width", Value = Width};
+				var param9 = new SqlParameter {ParameterName = "@Width", Value = width};
 				var param10 = new SqlParameter {ParameterName = "@Height", Value = height};
 				var param11 = new SqlParameter {ParameterName = "@Condition", Value = condition};
 				var param12 = new SqlParameter {ParameterName = "@Description", Value = description};
@@ -211,7 +211,7 @@ namespace PhBuy
 
 				myConnection.Close();
 
-				queryString = "INSERT INTO ProductImages VALUES(@ProductID, @Image);";
+				queryString = "INSERT INTO ProductImages(ProductID, Picture) VALUES(@ProductID, @Image);";
 				InsertImages(queryString, productID);
 			}
 		}
@@ -283,25 +283,13 @@ namespace PhBuy
 			return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
 		}
 
-		private void descriptionTextBox_TextChange(object sender, EventArgs e)
-		{
-			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
-			// TODO: Notify the user when it is empty or beyond the count
-		}
-
-		private void nameTextBox_TextChange(object sender, EventArgs e)
-		{
-			nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
-			// TODO: Notify the user when it is empty or beyond the count
-		}
-
 		private bool IsIdValid(uint id)
 		{
 			var myConnection = new SqlConnection(ConnectionString);
 			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
-			var param = new SqlParameter {ParameterName = "@ID", Value = (int) id};
+			var param = new SqlParameter { ParameterName = "@ID", Value = (int)id };
 			var cmd = new SqlCommand(queryString, myConnection);
 			cmd.Parameters.Add(param);
 
@@ -318,6 +306,24 @@ namespace PhBuy
 			myConnection.Close();
 			return true;
 		}
+		private void descriptionTextBox_TextChange(object sender, EventArgs e)
+		{
+			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
+			// TODO: Notify the user when it is empty or beyond the count
+		}
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+			addProductPages.PageIndex--;
+        }
+
+        private void nameTextBox_TextChange(object sender, EventArgs e)
+		{
+			nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
+			// TODO: Notify the user when it is empty or beyond the count
+		}
+
+	
 
 		private void InsertImages(string queryString, int productID)
 		{
@@ -327,16 +333,19 @@ namespace PhBuy
 			var cmd = new SqlCommand(queryString, myConnection);
 			var param = new SqlParameter();
 			var param2 = new SqlParameter();
+
+			param.ParameterName = "@ProductID";
+			param2.ParameterName = "@Image";
+
 			for (var i = 0; i < productImages.Count; i++)
 			{
-				param.ParameterName = "@ProductID";
 				param.Value = productID;
-				param2.ParameterName = "@Image";
-				param.Value = productImages[i];
+				param2.Value = productImages[i];
 
 				cmd.Parameters.Add(param);
 				cmd.Parameters.Add(param2);
 				cmd.ExecuteNonQuery();
+				cmd.Parameters.Clear();
 			}
 
 			myConnection.Close();
