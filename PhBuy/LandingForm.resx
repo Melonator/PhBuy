@@ -124,9 +124,9 @@
   <data name="nameTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQUAAAAmCAYAAADN2Y69AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVHhe7dZBDQAgDARBpCIFZ60zoA9+KICZZC1crgEA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8ISI6LshSVXLzClJp3oK17WQ9GMxFnRS5PaW
-        QjV7AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABcSURBVHhe7dQxDQAhEABB3BCKEwFKkILzBwo6FPAzyVrY
+        BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAEyK3HqUOSdqlKO2TpNOawv0Wkv5YHRMp
+        U9fmZ1meNgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="exitButton.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -572,9 +572,9 @@
   <data name="passTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQUAAAAmCAYAAADN2Y69AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVHhe7dZBDQAgDARBpCIFZ60zoA9+KICZZC1crgEA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8ISI6LshSVXLzClJp3oK17WQ9GMxFnRS5PaW
-        QjV7AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABcSURBVHhe7dQxDQAhEABB3BCKEwFKkILzBwo6FPAzyVrY
+        BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAEyK3HqUOSdqlKO2TpNOawv0Wkv5YHRMp
+        U9fmZ1meNgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="registerButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -124,12 +124,13 @@ namespace PhBuy
             this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.cancelButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.shippingPanel = new System.Windows.Forms.Panel();
+            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.label22 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.usedRadioButton = new Bunifu.UI.WinForms.BunifuRadioButton();
@@ -148,8 +149,6 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label22 = new System.Windows.Forms.Label();
-            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -1383,7 +1382,6 @@ namespace PhBuy
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage3.Controls.Add(this.bunifuThinButton21);
-            this.tabPage3.Controls.Add(this.cancelButton);
             this.tabPage3.Controls.Add(this.confirmButton);
             this.tabPage3.Controls.Add(this.shippingPanel);
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
@@ -1419,31 +1417,6 @@ namespace PhBuy
             this.bunifuThinButton21.TabIndex = 26;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.ActiveBorderThickness = 1;
-            this.cancelButton.ActiveCornerRadius = 20;
-            this.cancelButton.ActiveFillColor = System.Drawing.Color.White;
-            this.cancelButton.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(67)))));
-            this.cancelButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.cancelButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cancelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancelButton.BackgroundImage")));
-            this.cancelButton.ButtonText = "Cancel";
-            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelButton.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.cancelButton.IdleBorderThickness = 1;
-            this.cancelButton.IdleCornerRadius = 20;
-            this.cancelButton.IdleFillColor = System.Drawing.Color.White;
-            this.cancelButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.cancelButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.cancelButton.Location = new System.Drawing.Point(389, 268);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(112, 32);
-            this.cancelButton.TabIndex = 22;
-            this.cancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // confirmButton
             // 
@@ -1500,6 +1473,21 @@ namespace PhBuy
             this.shippingPanel.Size = new System.Drawing.Size(750, 239);
             this.shippingPanel.TabIndex = 0;
             // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
+            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(533, 107);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator6.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator6.TabIndex = 29;
+            // 
             // bunifuSeparator5
             // 
             this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
@@ -1545,6 +1533,20 @@ namespace PhBuy
             this.bunifuSeparator3.Size = new System.Drawing.Size(14, 24);
             this.bunifuSeparator3.TabIndex = 27;
             // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label22.Location = new System.Drawing.Point(544, 108);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 21);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "cm";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -1582,11 +1584,11 @@ namespace PhBuy
             this.usedRadioButton.Location = new System.Drawing.Point(174, 168);
             this.usedRadioButton.Margin = new System.Windows.Forms.Padding(2);
             this.usedRadioButton.Name = "usedRadioButton";
-            this.usedRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.usedRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.usedRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.usedRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.usedRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.usedRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.usedRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.usedRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.usedRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.usedRadioButton.Size = new System.Drawing.Size(16, 16);
             this.usedRadioButton.TabIndex = 27;
             this.usedRadioButton.Text = null;
@@ -1613,11 +1615,11 @@ namespace PhBuy
             this.newRadioButton.Location = new System.Drawing.Point(98, 168);
             this.newRadioButton.Margin = new System.Windows.Forms.Padding(2);
             this.newRadioButton.Name = "newRadioButton";
-            this.newRadioButton.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.newRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.newRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.newRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.newRadioButton.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.newRadioButton.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.newRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.newRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.newRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.newRadioButton.Size = new System.Drawing.Size(16, 16);
             this.newRadioButton.TabIndex = 27;
             this.newRadioButton.Text = null;
@@ -2014,35 +2016,6 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label22.Location = new System.Drawing.Point(544, 108);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(32, 21);
-            this.label22.TabIndex = 30;
-            this.label22.Text = "cm";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bunifuSeparator6
-            // 
-            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
-            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(533, 107);
-            this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator6.Size = new System.Drawing.Size(14, 24);
-            this.bunifuSeparator6.TabIndex = 29;
-            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2115,7 +2088,6 @@ namespace PhBuy
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private Bunifu.Framework.UI.BunifuThinButton2 cancelButton;
         private Bunifu.Framework.UI.BunifuThinButton2 confirmButton;
         private Bunifu.Framework.UI.BunifuThinButton2 backButton;
         private Bunifu.Framework.UI.BunifuThinButton2 nextButton2;
