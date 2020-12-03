@@ -148,6 +148,8 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label22 = new System.Windows.Forms.Label();
+            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -192,10 +194,10 @@ namespace PhBuy
             this.addProductPages.Margin = new System.Windows.Forms.Padding(2);
             this.addProductPages.Multiline = true;
             this.addProductPages.Name = "addProductPages";
-            this.addProductPages.Page = this.tabPage2;
-            this.addProductPages.PageIndex = 1;
-            this.addProductPages.PageName = "tabPage2";
-            this.addProductPages.PageTitle = "tabPage2";
+            this.addProductPages.Page = this.tabPage3;
+            this.addProductPages.PageIndex = 2;
+            this.addProductPages.PageName = "tabPage3";
+            this.addProductPages.PageTitle = "tabPage3";
             this.addProductPages.SelectedIndex = 0;
             this.addProductPages.Size = new System.Drawing.Size(925, 584);
             this.addProductPages.TabIndex = 5;
@@ -1472,9 +1474,11 @@ namespace PhBuy
             // shippingPanel
             // 
             this.shippingPanel.BackColor = System.Drawing.Color.White;
+            this.shippingPanel.Controls.Add(this.bunifuSeparator6);
             this.shippingPanel.Controls.Add(this.bunifuSeparator5);
             this.shippingPanel.Controls.Add(this.bunifuSeparator4);
             this.shippingPanel.Controls.Add(this.bunifuSeparator3);
+            this.shippingPanel.Controls.Add(this.label22);
             this.shippingPanel.Controls.Add(this.label11);
             this.shippingPanel.Controls.Add(this.label5);
             this.shippingPanel.Controls.Add(this.usedRadioButton);
@@ -1547,7 +1551,7 @@ namespace PhBuy
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label11.Location = new System.Drawing.Point(368, 108);
+            this.label11.Location = new System.Drawing.Point(365, 108);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 21);
@@ -1561,7 +1565,7 @@ namespace PhBuy
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(190, 108);
+            this.label5.Location = new System.Drawing.Point(188, 108);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 21);
@@ -1675,7 +1679,7 @@ namespace PhBuy
             this.heightTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.heightTextBox.PasswordChar = '\0';
             this.heightTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.heightTextBox.PlaceholderText = "Enter text";
+            this.heightTextBox.PlaceholderText = "height";
             this.heightTextBox.ReadOnly = false;
             this.heightTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.heightTextBox.SelectedText = "";
@@ -1689,7 +1693,7 @@ namespace PhBuy
             this.heightTextBox.TextMarginBottom = 0;
             this.heightTextBox.TextMarginLeft = 3;
             this.heightTextBox.TextMarginTop = 0;
-            this.heightTextBox.TextPlaceholder = "Enter text";
+            this.heightTextBox.TextPlaceholder = "height";
             this.heightTextBox.UseSystemPasswordChar = false;
             this.heightTextBox.WordWrap = true;
             // 
@@ -1750,7 +1754,7 @@ namespace PhBuy
             this.widthTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.widthTextBox.PasswordChar = '\0';
             this.widthTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.widthTextBox.PlaceholderText = "Enter text";
+            this.widthTextBox.PlaceholderText = "width";
             this.widthTextBox.ReadOnly = false;
             this.widthTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.widthTextBox.SelectedText = "";
@@ -1764,7 +1768,7 @@ namespace PhBuy
             this.widthTextBox.TextMarginBottom = 0;
             this.widthTextBox.TextMarginLeft = 3;
             this.widthTextBox.TextMarginTop = 0;
-            this.widthTextBox.TextPlaceholder = "Enter text";
+            this.widthTextBox.TextPlaceholder = "width";
             this.widthTextBox.UseSystemPasswordChar = false;
             this.widthTextBox.WordWrap = true;
             // 
@@ -1825,7 +1829,7 @@ namespace PhBuy
             this.lengthTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.lengthTextBox.PasswordChar = '\0';
             this.lengthTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.lengthTextBox.PlaceholderText = "Enter text";
+            this.lengthTextBox.PlaceholderText = "length";
             this.lengthTextBox.ReadOnly = false;
             this.lengthTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.lengthTextBox.SelectedText = "";
@@ -1839,7 +1843,7 @@ namespace PhBuy
             this.lengthTextBox.TextMarginBottom = 0;
             this.lengthTextBox.TextMarginLeft = 3;
             this.lengthTextBox.TextMarginTop = 0;
-            this.lengthTextBox.TextPlaceholder = "Enter text";
+            this.lengthTextBox.TextPlaceholder = "length";
             this.lengthTextBox.UseSystemPasswordChar = false;
             this.lengthTextBox.WordWrap = true;
             // 
@@ -2010,6 +2014,35 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label22.Location = new System.Drawing.Point(544, 108);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 21);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "cm";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
+            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(533, 107);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator6.Size = new System.Drawing.Size(14, 24);
+            this.bunifuSeparator6.TabIndex = 29;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2117,8 +2150,6 @@ namespace PhBuy
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox addCoverButton;
         private System.Windows.Forms.PictureBox addImageButton;
-        private System.Windows.Forms.Panel addCoverPanel;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel addImagePanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label descCharCountLabel;
@@ -2130,5 +2161,9 @@ namespace PhBuy
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel addCoverPanel;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator6;
+        private System.Windows.Forms.Label label22;
     }
 }

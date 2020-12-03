@@ -30,18 +30,12 @@ namespace PhBuy
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoverForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.coverFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.cover1 = new System.Windows.Forms.PictureBox();
             this.cover2 = new System.Windows.Forms.PictureBox();
@@ -51,6 +45,8 @@ namespace PhBuy
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -59,12 +55,15 @@ namespace PhBuy
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.exitButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.coverScroll = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.coverFlowPanel.SuspendLayout();
             this.titlePanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cover1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cover2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cover3)).BeginInit();
@@ -73,6 +72,7 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -138,93 +138,6 @@ namespace PhBuy
             this.label2.Text = "Science and Nature";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(2, 222);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 31);
-            this.panel1.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.label4.Location = new System.Drawing.Point(5, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gradient Color";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Backgrounds";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Product Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 34);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Select Cover Photo";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 10;
-            this.bunifuElipse2.TargetControl = this.bunifuButton1;
-            // 
-            // exitButton
-            // 
-            this.exitButton.ActiveImage = null;
-            this.exitButton.AllowAnimations = true;
-            this.exitButton.AllowBuffering = false;
-            this.exitButton.AllowToggling = false;
-            this.exitButton.AllowZooming = false;
-            this.exitButton.AllowZoomingOnFocus = false;
-            this.exitButton.BackColor = System.Drawing.Color.Transparent;
-            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.exitButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("exitButton.ErrorImage")));
-            this.exitButton.FadeWhenInactive = false;
-            this.exitButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.exitButton.Image = global::PhBuy.Properties.Resources.exit_208px;
-            this.exitButton.ImageActive = null;
-            this.exitButton.ImageLocation = null;
-            this.exitButton.ImageMargin = 40;
-            this.exitButton.ImageSize = new System.Drawing.Size(24, 28);
-            this.exitButton.ImageZoomSize = new System.Drawing.Size(64, 68);
-            this.exitButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("exitButton.InitialImage")));
-            this.exitButton.Location = new System.Drawing.Point(565, -9);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(0);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Rotation = 0;
-            this.exitButton.ShowActiveImage = true;
-            this.exitButton.ShowCursorChanges = true;
-            this.exitButton.ShowImageBorders = true;
-            this.exitButton.ShowSizeMarkers = false;
-            this.exitButton.Size = new System.Drawing.Size(64, 68);
-            this.exitButton.TabIndex = 54;
-            this.exitButton.ToolTipText = "";
-            this.exitButton.WaitOnLoad = false;
-            this.exitButton.Zoom = 40;
-            this.exitButton.ZoomSpeed = 10;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
             // bunifuButton1
             // 
             this.bunifuButton1.AllowAnimations = true;
@@ -244,11 +157,11 @@ namespace PhBuy
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges2;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -419,6 +332,28 @@ namespace PhBuy
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.cover_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(2, 222);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(592, 31);
+            this.panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label4.Location = new System.Drawing.Point(5, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gradient Color";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::PhBuy.Properties.Resources.cesar_couto_27HiryxnHJk_unsplash;
@@ -515,13 +450,78 @@ namespace PhBuy
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Click += new System.EventHandler(this.cover_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Backgrounds";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Product Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 34);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Select Cover Photo";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 10;
+            this.bunifuElipse2.TargetControl = this.bunifuButton1;
+            // 
+            // exitButton
+            // 
+            this.exitButton.ActiveImage = null;
+            this.exitButton.AllowAnimations = true;
+            this.exitButton.AllowBuffering = false;
+            this.exitButton.AllowToggling = false;
+            this.exitButton.AllowZooming = false;
+            this.exitButton.AllowZoomingOnFocus = false;
+            this.exitButton.BackColor = System.Drawing.Color.Transparent;
+            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.exitButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("exitButton.ErrorImage")));
+            this.exitButton.FadeWhenInactive = false;
+            this.exitButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.exitButton.Image = global::PhBuy.Properties.Resources.exit_208pxw;
+            this.exitButton.ImageActive = null;
+            this.exitButton.ImageLocation = null;
+            this.exitButton.ImageMargin = 40;
+            this.exitButton.ImageSize = new System.Drawing.Size(24, 28);
+            this.exitButton.ImageZoomSize = new System.Drawing.Size(64, 68);
+            this.exitButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("exitButton.InitialImage")));
+            this.exitButton.Location = new System.Drawing.Point(565, -9);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(0);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Rotation = 0;
+            this.exitButton.ShowActiveImage = true;
+            this.exitButton.ShowCursorChanges = true;
+            this.exitButton.ShowImageBorders = true;
+            this.exitButton.ShowSizeMarkers = false;
+            this.exitButton.Size = new System.Drawing.Size(64, 68);
+            this.exitButton.TabIndex = 54;
+            this.exitButton.ToolTipText = "";
+            this.exitButton.WaitOnLoad = false;
+            this.exitButton.Zoom = 40;
+            this.exitButton.ZoomSpeed = 10;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
             this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 2;
             this.bunifuSeparator1.Location = new System.Drawing.Point(10, 42);
@@ -594,8 +594,6 @@ namespace PhBuy
             this.coverFlowPanel.ResumeLayout(false);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cover1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cover2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cover3)).EndInit();
@@ -604,6 +602,8 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

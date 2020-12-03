@@ -22,7 +22,7 @@ namespace PhBuy
 		//Instance of cover image 
 		private readonly ProductImage coverImage = new ProductImage();
 		private string description;
-		private string fdanum;
+		private string fdanum = string.Empty;
 		private bool hasCover;
 
 		//Product Data
@@ -68,7 +68,7 @@ namespace PhBuy
 		{
 			if (fdaTextBox.Text != string.Empty) fdanum = fdaTextBox.Text;
 
-			if (type != string.Empty && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty &&
+			if (type != null && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty &&
 			    nameTextBox.Text.Count() <= 50 && descriptionTextBox.Text.Count() <= 300)
 			{
 				name = nameTextBox.Text;
@@ -127,9 +127,9 @@ namespace PhBuy
 				_productCoverLocation = dlg.FileName;
 				coverImage.Name = "CoverImage";
 				coverImage.pictureBox.ImageLocation = _productCoverLocation;
-				coverImage.label.Text = "Cover Image";
-				coverImage.label.Location = new Point(-5, 123);
-				addCoverButton.Text = "Change Cover";
+				coverImage.label.Text = "Cover Photo";
+				label3.Text = "Change Cover";
+				coverImage.label.Location = new Point(-5, 100);
 				imagesPanel.Controls.Add(coverImage);
 
 				//Re arrange the buttons
@@ -138,6 +138,7 @@ namespace PhBuy
 				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
 			}
 
+			
 			else
 			{
 				var dlg = new OpenFileDialog {Title = "Choose your product cover image"};
@@ -153,6 +154,7 @@ namespace PhBuy
 			                                       && widthTextBox.Text != string.Empty &&
 			                                       heightTextBox.Text != string.Empty)
 			{
+				weight = int.Parse(weightTextBox.Text);
 				height = int.Parse(heightTextBox.Text);
 				width = int.Parse(widthTextBox.Text);
 				length = int.Parse(lengthTextBox.Text);
@@ -322,8 +324,6 @@ namespace PhBuy
 			nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
 			// TODO: Notify the user when it is empty or beyond the count
 		}
-
-	
 
 		private void InsertImages(string queryString, int productID)
 		{

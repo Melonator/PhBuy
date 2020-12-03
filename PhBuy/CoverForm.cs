@@ -25,7 +25,7 @@ namespace PhBuy
 			var dlg = new OpenFileDialog {Title = "Choose your product image"};
 			if (dlg.ShowDialog() == DialogResult.OK)
 			{
-				// TODO: Do Something
+				_form.sellerBackground.ImageLocation = dlg.FileName;
 			}
 		}
 
