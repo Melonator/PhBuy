@@ -40,6 +40,7 @@ namespace PhBuy
 						MessageBoxIcon.Error); // Textboxes are empty
 					break;
 			}
+			this.Close();
 		}
 
 		#endregion
