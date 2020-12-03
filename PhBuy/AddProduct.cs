@@ -56,6 +56,8 @@ namespace PhBuy
 				label.ForeColor = Color.FromArgb(248, 58, 38);
 				type = label.Text;
 
+				//Quickfix
+				if (label.Name == "healthLabel") type = "Health & Beauty";
 				//Set the previously clicked type to black
 				if (previousLabel != string.Empty)
 				{
@@ -92,31 +94,39 @@ namespace PhBuy
 
 		private void addImageButton_Click(object sender, EventArgs e)
 		{
-			var dlg = new OpenFileDialog {Title = "Choose your product image"};
-			if (dlg.ShowDialog() != DialogResult.OK) return;
-			var imageLoc = dlg.FileName;
+			if (productImages.Count <= 8)
+			{
+				var dlg = new OpenFileDialog { Title = "Choose your product image" };
+				if (dlg.ShowDialog() != DialogResult.OK) return;
+				var imageLoc = dlg.FileName;
 
-			var p = new ProductImage();
+				var p = new ProductImage();
 
-			//Set the properties
-			imageNo++;
-			p.Name = $"Image {imageNo}";
-			p.pictureBox.ImageLocation = imageLoc;
-			p.label.Text = $"Image {imageNo}";
-			p.Click += ProductImage_Click;
-			p.pictureBox.Click += ProductImage_Click2;
+				//Set the properties
+				imageNo++;
+				p.Name = $"Image {imageNo}";
+				p.pictureBox.ImageLocation = imageLoc;
+				p.label.Text = $"Image {imageNo}";
+				p.Click += ProductImage_Click;
+				p.pictureBox.Click += ProductImage_Click2;
 
-			imagesPanel.Controls.Add(p);
+				imagesPanel.Controls.Add(p);
 
-			var fs = new FileStream(imageLoc, FileMode.Open, FileAccess.Read);
-			var br = new BinaryReader(fs);
-			productImages.Add(br.ReadBytes((int) fs.Length));
+				var fs = new FileStream(imageLoc, FileMode.Open, FileAccess.Read);
+				var br = new BinaryReader(fs);
+				productImages.Add(br.ReadBytes((int)fs.Length));
 
-			//Re arrange the buttons
-			imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
-			imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
+				//Re arrange the buttons
+				imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
+				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
 
-			imageCountLabel.Text = $"Images: {imageNo} / 8";
+				imageCountLabel.Text = $"Images: {imageNo} / 8";
+			}
+
+            else
+            {
+				//TODO: Bunifu Snackbar or something notification 
+            }
 		}
 
 		private void addCoverButton_Click(object sender, EventArgs e)
