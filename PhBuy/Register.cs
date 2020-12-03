@@ -40,6 +40,7 @@ namespace PhBuy
 						MessageBoxIcon.Error); // Textboxes are empty
 					break;
 			}
+			this.Close();
 		}
 
 		#endregion
@@ -103,7 +104,7 @@ namespace PhBuy
 			var queryString = "INSERT INTO Profiles VALUES(@ID, @Name, @Password);";
 
 			myConnection.Open();
-			var param1 = new SqlParameter {ParameterName = "@ID", Value = GenerateId()};
+			var param1 = new SqlParameter {ParameterName = "@ID", Value = (int)GenerateId()};
 			var param2 = new SqlParameter {ParameterName = "@Name", Value = name};
 			var param3 = new SqlParameter {ParameterName = "@Password", Value = password};
 
@@ -142,7 +143,7 @@ namespace PhBuy
 			var queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
-			var param = new SqlParameter {ParameterName = "@ID", Value = id};
+			var param = new SqlParameter {ParameterName = "@ID", Value = (int)id};
 			var cmd = new SqlCommand(queryString, myConnection);
 			cmd.Parameters.Add(param);
 
@@ -150,7 +151,9 @@ namespace PhBuy
 
 			while (oReader.Read())
 			{
-				if (oReader["ID"].ToString() != id.ToString()) continue;
+				float ID = float.Parse(oReader["ID"].ToString());
+
+				if ((int)ID != id) continue;
 
 				myConnection.Close();
 				return false;

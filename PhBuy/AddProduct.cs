@@ -22,11 +22,11 @@ namespace PhBuy
 		//Instance of cover image 
 		private readonly ProductImage coverImage = new ProductImage();
 		private string description;
-		private string fdanum;
+		private string fdanum = string.Empty;
 		private bool hasCover;
 
 		//Product Data
-		private int id;
+		private int productID;
 		private int imageNo;
 		private double length, width, height;
 		private string name;
@@ -34,14 +34,15 @@ namespace PhBuy
 		private string previousLabel = string.Empty;
 		private double price;
 		private readonly List<byte[]> productImages = new List<byte[]>();
-		private int sellerID;
+		private int _sellerID;
 		private int stock;
 		private string type;
 		private double weight;
 
-		public AddProduct()
+		public AddProduct(int id)
 		{
 			//TODO: Connect all forms and get current ID
+			_sellerID = id;
 			InitializeComponent();
 		}
 
@@ -49,25 +50,30 @@ namespace PhBuy
 		{
 			//Set the color of the font to orange when selected
 			var button = (BunifuImageButton) sender;
-			var label = (Label) Controls.Find($"{button.Name}Label", true).First();
-			label.ForeColor = Color.FromArgb(248, 58, 38);
-			type = label.Text;
-
-			//Set the previously clicked type to black
-			if (previousLabel != string.Empty)
+			if (previousLabel != $"{button.Name}Label")
 			{
-				label = (Label) Controls.Find(previousLabel, true).First();
-				label.ForeColor = Color.FromArgb(45, 41, 66);
-			}
+				var label = (Label)Controls.Find($"{button.Name}Label", true).First();
+				label.ForeColor = Color.FromArgb(248, 58, 38);
+				type = label.Text;
 
-			previousLabel = button.Name + "Label";
+				//Quickfix
+				if (label.Name == "healthLabel") type = "Health & Beauty";
+				//Set the previously clicked type to black
+				if (previousLabel != string.Empty)
+				{
+					label = (Label)Controls.Find(previousLabel, true).First();
+					label.ForeColor = Color.FromArgb(45, 41, 66);
+				}
+
+				previousLabel = button.Name + "Label";
+			}
 		}
 
 		private void nextButton1_Click(object sender, EventArgs e)
 		{
 			if (fdaTextBox.Text != string.Empty) fdanum = fdaTextBox.Text;
 
-			if (type != string.Empty && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty &&
+			if (type != null && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty &&
 			    nameTextBox.Text.Count() <= 50 && descriptionTextBox.Text.Count() <= 300)
 			{
 				name = nameTextBox.Text;
@@ -88,31 +94,39 @@ namespace PhBuy
 
 		private void addImageButton_Click(object sender, EventArgs e)
 		{
-			var dlg = new OpenFileDialog {Title = "Choose your product image"};
-			if (dlg.ShowDialog() != DialogResult.OK) return;
-			var imageLoc = dlg.FileName;
+			if (productImages.Count <= 8)
+			{
+				var dlg = new OpenFileDialog { Title = "Choose your product image" };
+				if (dlg.ShowDialog() != DialogResult.OK) return;
+				var imageLoc = dlg.FileName;
 
-			var p = new ProductImage();
+				var p = new ProductImage();
 
-			//Set the properties
-			imageNo++;
-			p.Name = $"Image {imageNo}";
-			p.pictureBox.ImageLocation = imageLoc;
-			p.label.Text = $"Image {imageNo}";
-			p.Click += ProductImage_Click;
-			p.pictureBox.Click += ProductImage_Click2;
+				//Set the properties
+				imageNo++;
+				p.Name = $"Image {imageNo}";
+				p.pictureBox.ImageLocation = imageLoc;
+				p.label.Text = $"Image {imageNo}";
+				p.Click += ProductImage_Click;
+				p.pictureBox.Click += ProductImage_Click2;
 
-			imagesPanel.Controls.Add(p);
+				imagesPanel.Controls.Add(p);
 
-			var fs = new FileStream(imageLoc, FileMode.Open, FileAccess.Read);
-			var br = new BinaryReader(fs);
-			productImages.Add(br.ReadBytes((int) fs.Length));
+				var fs = new FileStream(imageLoc, FileMode.Open, FileAccess.Read);
+				var br = new BinaryReader(fs);
+				productImages.Add(br.ReadBytes((int)fs.Length));
 
-			//Re arrange the buttons
-			imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
-			imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
+				//Re arrange the buttons
+				imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
+				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
 
-			imageCountLabel.Text = $"Images: {imageNo} / 8";
+				imageCountLabel.Text = $"Images: {imageNo} / 8";
+			}
+
+            else
+            {
+				//TODO: Bunifu Snackbar or something notification 
+            }
 		}
 
 		private void addCoverButton_Click(object sender, EventArgs e)
@@ -126,9 +140,9 @@ namespace PhBuy
 				_productCoverLocation = dlg.FileName;
 				coverImage.Name = "CoverImage";
 				coverImage.pictureBox.ImageLocation = _productCoverLocation;
-				coverImage.label.Text = "Cover Image";
-				coverImage.label.Location = new Point(-5, 123);
-				addCoverButton.Text = "Change Cover";
+				coverImage.label.Text = "Cover Photo";
+				label3.Text = "Edit Cover";
+				coverImage.label.Location = new Point(-5, 100);
 				imagesPanel.Controls.Add(coverImage);
 
 				//Re arrange the buttons
@@ -137,6 +151,7 @@ namespace PhBuy
 				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
 			}
 
+			
 			else
 			{
 				var dlg = new OpenFileDialog {Title = "Choose your product cover image"};
@@ -152,6 +167,7 @@ namespace PhBuy
 			                                       && widthTextBox.Text != string.Empty &&
 			                                       heightTextBox.Text != string.Empty)
 			{
+				weight = int.Parse(weightTextBox.Text);
 				height = int.Parse(heightTextBox.Text);
 				width = int.Parse(widthTextBox.Text);
 				length = int.Parse(lengthTextBox.Text);
@@ -163,7 +179,7 @@ namespace PhBuy
 				var br = new BinaryReader(fs);
 				var productCover = br.ReadBytes((int) fs.Length);
 
-				var productID = (int) GenerateId();
+				productID = (int) GenerateId();
 
 				//Confirm the stuff
 				var myConnection = new SqlConnection(ConnectionString);
@@ -175,14 +191,14 @@ namespace PhBuy
 
 				//Crap ton of parameters aaaa
 				var param1 = new SqlParameter {ParameterName = "@ProductID", Value = productID};
-				var param2 = new SqlParameter {ParameterName = "@SellerID", Value = sellerID};
+				var param2 = new SqlParameter {ParameterName = "@SellerID", Value = _sellerID};
 				var param3 = new SqlParameter {ParameterName = "@Name", Value = name};
 				var param4 = new SqlParameter {ParameterName = "@Price", Value = price};
 				var param5 = new SqlParameter {ParameterName = "@Cover", Value = productCover};
 				var param6 = new SqlParameter {ParameterName = "@Stock", Value = stock};
 				var param7 = new SqlParameter {ParameterName = "@Weight", Value = weight};
 				var param8 = new SqlParameter {ParameterName = "@Length", Value = length};
-				var param9 = new SqlParameter {ParameterName = "@Width", Value = Width};
+				var param9 = new SqlParameter {ParameterName = "@Width", Value = width};
 				var param10 = new SqlParameter {ParameterName = "@Height", Value = height};
 				var param11 = new SqlParameter {ParameterName = "@Condition", Value = condition};
 				var param12 = new SqlParameter {ParameterName = "@Description", Value = description};
@@ -210,7 +226,7 @@ namespace PhBuy
 
 				myConnection.Close();
 
-				queryString = "INSERT INTO ProductImages VALUES(@ProductID, @Image);";
+				queryString = "INSERT INTO ProductImages(ProductID, Picture) VALUES(@ProductID, @Image);";
 				InsertImages(queryString, productID);
 			}
 		}
@@ -282,25 +298,13 @@ namespace PhBuy
 			return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
 		}
 
-		private void descriptionTextBox_TextChange(object sender, EventArgs e)
-		{
-			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
-			// TODO: Notify the user when it is empty or beyond the count
-		}
-
-		private void nameTextBox_TextChange(object sender, EventArgs e)
-		{
-			nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
-			// TODO: Notify the user when it is empty or beyond the count
-		}
-
 		private bool IsIdValid(uint id)
 		{
 			var myConnection = new SqlConnection(ConnectionString);
 			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
-			var param = new SqlParameter {ParameterName = "@ID", Value = (int) id};
+			var param = new SqlParameter { ParameterName = "@ID", Value = (int)id };
 			var cmd = new SqlCommand(queryString, myConnection);
 			cmd.Parameters.Add(param);
 
@@ -317,6 +321,22 @@ namespace PhBuy
 			myConnection.Close();
 			return true;
 		}
+		private void descriptionTextBox_TextChange(object sender, EventArgs e)
+		{
+			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
+			// TODO: Notify the user when it is empty or beyond the count
+		}
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+			addProductPages.PageIndex--;
+        }
+
+        private void nameTextBox_TextChange(object sender, EventArgs e)
+		{
+			nameCharCountLabel.Text = $"{nameTextBox.Text.Count()} / 50";
+			// TODO: Notify the user when it is empty or beyond the count
+		}
 
 		private void InsertImages(string queryString, int productID)
 		{
@@ -326,16 +346,19 @@ namespace PhBuy
 			var cmd = new SqlCommand(queryString, myConnection);
 			var param = new SqlParameter();
 			var param2 = new SqlParameter();
+
+			param.ParameterName = "@ProductID";
+			param2.ParameterName = "@Image";
+
 			for (var i = 0; i < productImages.Count; i++)
 			{
-				param.ParameterName = "@ProductID";
 				param.Value = productID;
-				param2.ParameterName = "@Image";
-				param.Value = productImages[i];
+				param2.Value = productImages[i];
 
 				cmd.Parameters.Add(param);
 				cmd.Parameters.Add(param2);
 				cmd.ExecuteNonQuery();
+				cmd.Parameters.Clear();
 			}
 
 			myConnection.Close();

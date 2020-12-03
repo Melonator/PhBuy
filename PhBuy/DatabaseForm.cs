@@ -52,10 +52,9 @@ namespace PhBuy
 		private void editButton_Click(object sender, EventArgs e)
 		{
 			//Do edits in the database here!
-
 			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
-			var queryString = "ALTER TABLE Products ADD Type VARCHAR(20)";
+			var queryString = $"";
 			var cmd = new SqlCommand(queryString, connection);
 			cmd.ExecuteNonQuery();
 			connection.Close();

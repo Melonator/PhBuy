@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PhBuy
@@ -6,23 +7,49 @@ namespace PhBuy
 	public partial class CustomerSellerForm : Form
 	{
 		private readonly int _id;
+		private readonly string _userName;
+		private const string ConnectionString =
+			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
-		public CustomerSellerForm(int id)
+		public CustomerSellerForm(string name, int id)
 		{
 			_id = id;
+			_userName = name;
 			InitializeComponent();
 		}
 
-		private void sellerPanel_Click(object sender, EventArgs e)
+		private void sellTileButton_Click(object sender, EventArgs e)
 		{
-			var form = new SellerRegisterForm(_id);
-			mainPanel.Controls.Clear();
-			form.TopLevel = false;
-			mainPanel.Controls.Add(form);
+			if (isNewSeller())
+			{
+				var reg = new SellerRegisterForm(_userName, _id);
+				reg.ShowDialog();
+			}
+
+            else
+            {
+				var main = new MainForm(_userName, _id);
+				main.Show();
+			}
 		}
 
-		private void customerPanel_Click(object sender, EventArgs e)
-		{
-		}
+		private bool isNewSeller()
+        {
+			var myConnection = new SqlConnection(ConnectionString);
+			myConnection.Open();
+			var queryString = $"SELECT ID FROM Seller";
+			var oCmd = new SqlCommand(queryString, myConnection);
+			var oReader = oCmd.ExecuteReader();
+
+			while (oReader.Read())
+            {
+				float id = float.Parse(oReader["id"].ToString());
+				if ((int)id == _id) 
+					return false;
+            }
+
+			myConnection.Close();
+			return true;
+        }
 	}
 }
