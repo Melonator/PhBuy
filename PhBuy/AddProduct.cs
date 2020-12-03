@@ -131,7 +131,7 @@ namespace PhBuy
 				coverImage.Name = "CoverImage";
 				coverImage.pictureBox.ImageLocation = _productCoverLocation;
 				coverImage.label.Text = "Cover Photo";
-				label3.Text = "Change Cover";
+				label3.Text = "Edit Cover";
 				coverImage.label.Location = new Point(-5, 100);
 				imagesPanel.Controls.Add(coverImage);
 
