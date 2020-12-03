@@ -50,18 +50,21 @@ namespace PhBuy
 		{
 			//Set the color of the font to orange when selected
 			var button = (BunifuImageButton) sender;
-			var label = (Label) Controls.Find($"{button.Name}Label", true).First();
-			label.ForeColor = Color.FromArgb(248, 58, 38);
-			type = label.Text;
-
-			//Set the previously clicked type to black
-			if (previousLabel != string.Empty)
+			if (previousLabel != $"{button.Name}Label")
 			{
-				label = (Label) Controls.Find(previousLabel, true).First();
-				label.ForeColor = Color.FromArgb(45, 41, 66);
-			}
+				var label = (Label)Controls.Find($"{button.Name}Label", true).First();
+				label.ForeColor = Color.FromArgb(248, 58, 38);
+				type = label.Text;
 
-			previousLabel = button.Name + "Label";
+				//Set the previously clicked type to black
+				if (previousLabel != string.Empty)
+				{
+					label = (Label)Controls.Find(previousLabel, true).First();
+					label.ForeColor = Color.FromArgb(45, 41, 66);
+				}
+
+				previousLabel = button.Name + "Label";
+			}
 		}
 
 		private void nextButton1_Click(object sender, EventArgs e)
