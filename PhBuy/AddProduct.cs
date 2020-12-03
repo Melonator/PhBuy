@@ -34,14 +34,15 @@ namespace PhBuy
 		private string previousLabel = string.Empty;
 		private double price;
 		private readonly List<byte[]> productImages = new List<byte[]>();
-		private int sellerID;
+		private int _sellerID;
 		private int stock;
 		private string type;
 		private double weight;
 
-		public AddProduct()
+		public AddProduct(int id)
 		{
 			//TODO: Connect all forms and get current ID
+			_sellerID = id;
 			InitializeComponent();
 		}
 
@@ -175,7 +176,7 @@ namespace PhBuy
 
 				//Crap ton of parameters aaaa
 				var param1 = new SqlParameter {ParameterName = "@ProductID", Value = productID};
-				var param2 = new SqlParameter {ParameterName = "@SellerID", Value = sellerID};
+				var param2 = new SqlParameter {ParameterName = "@SellerID", Value = _sellerID};
 				var param3 = new SqlParameter {ParameterName = "@Name", Value = name};
 				var param4 = new SqlParameter {ParameterName = "@Price", Value = price};
 				var param5 = new SqlParameter {ParameterName = "@Cover", Value = productCover};

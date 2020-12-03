@@ -32,7 +32,7 @@ namespace PhBuy
 			else
 			{
 				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				var form = new CustomerSellerForm(GetUserId());
+				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
 				form.Show();
 			}
 		}
