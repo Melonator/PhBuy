@@ -122,7 +122,7 @@ namespace PhBuy
 
 				imageCountLabel.Text = $"Images: {imageNo} / 8";
 			}
-
+			
             else
             {
 				//TODO: Bunifu Snackbar or something notification 
