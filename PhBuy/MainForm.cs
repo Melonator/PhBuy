@@ -23,7 +23,7 @@ namespace PhBuy
 
 		private void bunifuImageButton1_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.Exit();
 		}
 
 		private void bunifuButton5_Click(object sender, EventArgs e)
