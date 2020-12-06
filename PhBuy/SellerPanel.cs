@@ -102,7 +102,10 @@ namespace PhBuy
 
 		private void productButton_Click(object sender, EventArgs e)
 		{
-			//TODO: show products
+			var form = new MyProducts(_id) { TopLevel = false };
+			form.Show();
+			_form.mainPanel.Controls.Clear();
+			_form.mainPanel.Controls.Add(form);
 		}
 
 		private void addProductButton_Click(object sender, EventArgs e)
