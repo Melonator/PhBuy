@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace PhBuyModels
 {
-    public partial class DB_A6A7CB_PhBuyContext : DbContext
+    public partial class PhBuyContext : DbContext
     {
-        public DB_A6A7CB_PhBuyContext()
+        public PhBuyContext()
         {
         }
 
-        public DB_A6A7CB_PhBuyContext(DbContextOptions<DB_A6A7CB_PhBuyContext> options): base(options)
+        public PhBuyContext(DbContextOptions<PhBuyContext> options): base(options)
         {
         }
 
