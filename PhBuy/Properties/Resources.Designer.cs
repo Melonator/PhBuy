@@ -573,6 +573,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pencil {
+            get {
+                object obj = ResourceManager.GetObject("Pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_512px {
             get {
                 object obj = ResourceManager.GetObject("plus_512px", resourceCulture);
@@ -796,6 +806,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap TopPanel {
             get {
                 object obj = ResourceManager.GetObject("TopPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trash {
+            get {
+                object obj = ResourceManager.GetObject("Trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

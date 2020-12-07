@@ -10,7 +10,8 @@ namespace PhBuyModels
         {
         }
 
-        public PhBuyContext(DbContextOptions<PhBuyContext> options): base(options)
+        public PhBuyContext(DbContextOptions<PhBuyContext> options)
+            : base(options)
         {
         }
 
@@ -26,6 +27,7 @@ namespace PhBuyModels
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123");
             }
         }
@@ -91,7 +93,10 @@ namespace PhBuyModels
 
             modelBuilder.Entity<ProductImages>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.ImageiD)
+                    .HasName("PK__ProductI__7511F8C4CFF1BF2E");
+
+                entity.Property(e => e.ImageiD).ValueGeneratedNever();
 
                 entity.Property(e => e.Picture).HasColumnType("image");
 
@@ -100,7 +105,7 @@ namespace PhBuyModels
                     .HasColumnType("smallmoney");
 
                 entity.HasOne(d => d.Product)
-                    .WithMany()
+                    .WithMany(p => p.ProductImages)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__ProductIm__Produ__34C8D9D1");
             });

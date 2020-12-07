@@ -226,7 +226,7 @@ namespace PhBuy
 
 				myConnection.Close();
 
-				queryString = "INSERT INTO ProductImages(ProductID, Picture) VALUES(@ProductID, @Image);";
+				queryString = "INSERT INTO ProductImages(ImageID, ProductID, Picture) VALUES(@ImageID, @ProductID, @Image);";
 				InsertImages(queryString, productID);
 			}
 		}
@@ -346,17 +346,20 @@ namespace PhBuy
 			var cmd = new SqlCommand(queryString, myConnection);
 			var param = new SqlParameter();
 			var param2 = new SqlParameter();
+			var param3 = new SqlParameter();
 
 			param.ParameterName = "@ProductID";
 			param2.ParameterName = "@Image";
-
+			param3.ParameterName = "@ImageID";
 			for (var i = 0; i < productImages.Count; i++)
 			{
 				param.Value = productID;
 				param2.Value = productImages[i];
+				param3.Value = (int)GenerateId();
 
 				cmd.Parameters.Add(param);
 				cmd.Parameters.Add(param2);
+				cmd.Parameters.Add(param3);
 				cmd.ExecuteNonQuery();
 				cmd.Parameters.Clear();
 			}

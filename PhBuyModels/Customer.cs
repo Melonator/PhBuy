@@ -7,7 +7,7 @@ namespace PhBuyModels
     {
         public Customer()
         {
-            Orders = new List<Orders>();
+            Orders = new HashSet<Orders>();
         }
 
         public decimal Id { get; set; }
@@ -16,6 +16,6 @@ namespace PhBuyModels
         public int? Contact { get; set; }
         public string Address { get; set; }
 
-        public virtual List<Orders> Orders { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

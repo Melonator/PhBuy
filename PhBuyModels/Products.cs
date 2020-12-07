@@ -7,7 +7,8 @@ namespace PhBuyModels
     {
         public Products()
         {
-            Orders = new List<Orders>();
+            Orders = new HashSet<Orders>();
+            ProductImages = new HashSet<ProductImages>();
         }
 
         public decimal ProductId { get; set; }
@@ -26,6 +27,7 @@ namespace PhBuyModels
         public string Type { get; set; }
 
         public virtual Seller Seller { get; set; }
-        public virtual List<Orders> Orders { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<ProductImages> ProductImages { get; set; }
     }
 }

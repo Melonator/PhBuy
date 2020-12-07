@@ -23,6 +23,7 @@ namespace PhBuy
         private PhBuyContext data = new PhBuyContext();
         private List<Products> products = new List<Products>();
         private List<Products> displayQuery = new List<Products>();
+        private List<string> selectedCards = new List<string>();
         private MemoryStream _stream;
 
         private int _id;
@@ -58,6 +59,7 @@ namespace PhBuy
 
             ChangeCategory(_previousLabel);
         }
+
         private void ChangeCategory(string SelectedLabel, string productName = "", int stockMin = -1, int stockMax = -1, string type = null)
         {
             switch (SelectedLabel)
@@ -84,6 +86,7 @@ namespace PhBuy
                     }
             }
         }
+       
         private void DisplayProducts(string productName = "", int stockMin = -1, int stockMax = -1, string type = null, string status = "Listed")
         {
             //Reset the display
@@ -105,35 +108,31 @@ namespace PhBuy
 
             foreach(var p in displayQuery)
             {
+                int stock = (int)p.Stock;
                 _stream = new MemoryStream(p.Picture);
-                ProductPanel product = new ProductPanel(Image.FromStream(_stream), p.Name, $"₱{p.Price}");
+                ProductPanel product = new ProductPanel(Image.FromStream(_stream), p.Name, $"₱{p.Price}", $"Stock: {stock}");
+                product.SetStockLocation(stock.ToString());
+                product.SetButtonImages();
                 product.MouseHover += shadowPanel_Hover;
                 product.MouseLeave += shadowPanel_Leave;
+                product.CheckButton.CheckedChanged += checkBox_CheckChanged;
+                product.DeleteButton.Click += deleteButton_Click;
                 product.Picture.MouseHover += shadowPanelPicture_Hover;
                 product.Picture.MouseLeave += shadowPanelPicture_Leave;
                 _stream.Close();
                 productsFlowLayoutPanel.Controls.Add(product);
             }
         }
+       
         private void searchButton_Click(object sender, EventArgs e)
         {
-            //Set the values of the query
-            if (stockMinTextBox.Text != string.Empty)
-                _sellerQuery.StockMin = int.Parse(stockMinTextBox.Text);
-            if (stockMaxTextBox.Text != string.Empty)
-                _sellerQuery.StockMax = int.Parse(stockMaxTextBox.Text);
-            if (nameTextBox.Text != string.Empty)
-                _sellerQuery.ProductName = nameTextBox.Text;
-            if (categoryDropDown.Text != string.Empty)
-                _sellerQuery.Type = categoryDropDown.Text;
-
-            ChangeCategory(_previousLabel, _sellerQuery.ProductName, _sellerQuery.StockMin, _sellerQuery.StockMax, _sellerQuery.Type);
+            StartQuery();
         }
 
         private void shadowPanel_Hover(object sender, EventArgs e)
         {
             BunifuShadowPanel p = (BunifuShadowPanel)sender;
-            p.ShadowDepth = 5;
+            p.ShadowDepth = 6;
         }
 
         private void shadowPanel_Leave(object sender, EventArgs e)
@@ -146,7 +145,7 @@ namespace PhBuy
         {
             PictureBox s = (PictureBox)sender;
             ProductPanel p = (ProductPanel)s.Parent;
-            p.ShadowDepth = 5;
+            p.ShadowDepth = 6;
         }
 
         private void shadowPanelPicture_Leave(object sender, EventArgs e)
@@ -154,6 +153,79 @@ namespace PhBuy
             PictureBox s = (PictureBox)sender;
             ProductPanel p = (ProductPanel)s.Parent;
             p.ShadowDepth = 2;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //TODO: User Prompt, Custom messagebox
+            Bunifu.Framework.UI.BunifuTileButton b = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            ProductPanel a = (ProductPanel)b.Parent;
+            Products p = products.Find(s => s.Name == a.Name);
+            RemoveProductImages((int)p.ProductId);
+            data.Products.Remove(p);
+            RemoveDeletedProducts();
+        }
+
+        private void checkBox_CheckChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            BunifuCheckBox c = (BunifuCheckBox)sender;
+            ProductPanel p = (ProductPanel)c.Parent;
+            if (c.Checked) selectedCards.Add(p.Name);
+            else selectedCards.Remove(p.Name);
+            deleteAllButton.Enabled = true;
+
+            if (selectedCards.Count == 0) deleteAllButton.Enabled = false;
+        }
+
+        private void deleteAllButton_Click(object sender, EventArgs e)
+        {
+            Products p;
+            foreach (var name in selectedCards)
+            {
+                p = products.Find(s => s.Name == name);
+                RemoveProductImages((int)p.ProductId);
+                products.Remove(p);
+                data.Products.Remove(p);
+            }
+            data.SaveChanges();
+            RemoveDeletedProducts();
+        }
+
+        private void RemoveProductImages(int id)
+        {
+            var Images = data.ProductImages.ToList().Where(p => p.ProductId == id);
+            foreach(var p in Images)
+            {
+                data.Remove(p);
+            }
+            data.SaveChanges();
+        }
+        private void StartQuery()
+        {
+            if (stockMinTextBox.Text != string.Empty)
+                _sellerQuery.StockMin = int.Parse(stockMinTextBox.Text);
+            if (stockMaxTextBox.Text != string.Empty)
+                _sellerQuery.StockMax = int.Parse(stockMaxTextBox.Text);
+            if (nameTextBox.Text != string.Empty)
+                _sellerQuery.ProductName = nameTextBox.Text;
+            if (categoryDropDown.Text != string.Empty)
+                _sellerQuery.Type = categoryDropDown.Text;
+
+            ChangeCategory(_previousLabel, _sellerQuery.ProductName, _sellerQuery.StockMin, _sellerQuery.StockMax, _sellerQuery.Type);
+        }
+        private void RemoveDeletedProducts()
+        {
+            foreach(var p in selectedCards)
+            {
+                ProductPanel panel = (ProductPanel)productsFlowLayoutPanel.Controls.Find(p, true).First();
+                productsFlowLayoutPanel.Controls.Remove(panel);
+            }
+            selectedCards.Clear();
         }
     }
 }

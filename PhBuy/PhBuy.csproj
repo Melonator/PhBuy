@@ -11,6 +11,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
