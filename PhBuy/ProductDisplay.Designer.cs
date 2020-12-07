@@ -41,6 +41,7 @@ namespace PhBuy
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.bunifuCheckBox1 = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +200,7 @@ namespace PhBuy
             this.bunifuCheckBox1.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
             this.bunifuCheckBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuCheckBox1.CustomCheckmarkImage = null;
-            this.bunifuCheckBox1.Location = new System.Drawing.Point(7, 8);
+            this.bunifuCheckBox1.Location = new System.Drawing.Point(76, 75);
             this.bunifuCheckBox1.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuCheckBox1.MinimumSize = new System.Drawing.Size(17, 17);
             this.bunifuCheckBox1.Name = "bunifuCheckBox1";
@@ -235,11 +236,21 @@ namespace PhBuy
             this.bunifuCheckBox1.ThreeState = false;
             this.bunifuCheckBox1.ToolTipText = null;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(3, 3);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 47;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // ProductDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.bunifuCheckBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.bunifuTileButton2);
@@ -272,5 +283,6 @@ namespace PhBuy
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
         private System.Windows.Forms.CheckBox checkBox1;
         private Bunifu.UI.WinForms.BunifuCheckBox bunifuCheckBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

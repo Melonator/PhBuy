@@ -166,14 +166,16 @@ namespace PhBuy
             Bunifu.Framework.UI.BunifuTileButton b = (Bunifu.Framework.UI.BunifuTileButton)sender;
             ProductPanel a = (ProductPanel)b.Parent;
             Products p = products.Find(s => s.Name == a.Name);
+            selectedCards.Add(p.Name);
             RemoveProductImages((int)p.ProductId);
             data.Products.Remove(p);
+            data.SaveChanges();
             RemoveDeletedProducts();
         }
 
-        private void checkBox_CheckChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        private void checkBox_CheckChanged(object sender, EventArgs e)
         {
-            BunifuCheckBox c = (BunifuCheckBox)sender;
+            CheckBox c = (CheckBox)sender;
             ProductPanel p = (ProductPanel)c.Parent;
             if (c.Checked) selectedCards.Add(p.Name);
             else selectedCards.Remove(p.Name);
