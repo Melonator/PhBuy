@@ -268,16 +268,13 @@ namespace PhBuy
 				InsertImages(queryString, productID);
 
 				_myProducts.LoadProducts();
-
-				productImages.Clear();
 			}
 
 			//Go back to my products after editing
-			if(_edit)
-            {
-				_edit = false;
-				_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
-            }
+			ClearValues();
+
+			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+            
 		}
 
 		//First event when the product form is clicked
@@ -295,7 +292,6 @@ namespace PhBuy
 		{
 			addProductPages.PageIndex--;
 		}
-
 		private byte[] GetImageByte(ProductImage p)
         {
 			_stream = new MemoryStream();
@@ -473,7 +469,12 @@ namespace PhBuy
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-			//CANCEL 
+			ClearValues();
+			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+		}
+
+		public void ClearValues()
+        {
 			ClearExcessImages();
 			imageNo = 0;
 			previousLabel = string.Empty;
@@ -481,16 +482,16 @@ namespace PhBuy
 			lengthTextBox.Text = string.Empty;
 			widthTextBox.Text = string.Empty;
 			heightTextBox.Text = string.Empty;
-			nameTextBox.Text = string.Empty; 
+			nameTextBox.Text = string.Empty;
 			descriptionTextBox.Text = string.Empty;
 			priceTextBox.Text = string.Empty;
 			stockTextBox.Text = string.Empty;
 			fdaTextBox.Text = string.Empty;
 			type = string.Empty;
 			hasCover = false;
-			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+			productImages.Clear();
+			if (_edit) _edit = false;
 		}
-
         private void SetImages(int id)
         {
 			PhBuyContext data = new PhBuyContext();

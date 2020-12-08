@@ -130,6 +130,7 @@ namespace PhBuy
 		private void addProductButton_Click(object sender, EventArgs e)
 		{
 			addProduct.addProductPages.PageIndex = 0;
+			addProduct.ClearValues();
 			sellerDashBoard.sellerTabControl.SelectedIndex = 4;
 		}
 
