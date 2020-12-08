@@ -121,6 +121,14 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="deleteAllButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHMAAAAeCAYAAAAfKSFiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVGhD7dExEYAwAMDAqqkH8O8CGSwwwbFjoLkffsqY
+        ce/zuPb5sLbv4/gLrMnMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TM
+        EDNDzAwxM8TMEDNDzAwZ1zbPv8Bitnm+h7GJ6O6XGfoAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="clearButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFMAAAAeCAYAAABQdCKyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -134,21 +142,6 @@
         cJiSiV4T3fyVz6/8jMkF+nLs6OQkKSUTQeOJBpQre24gsrtjhFznnpS/NJmI5+JSCLWubyu3MX9BT44V
         +VskkiETwZZHRw/zqFT8mZkYveF8xHwXg2K1IbGqzGRgHiW/qrIpbfpcjEEfiUKDfx7UXCFZZXK0hWVK
         DMuUGJYpMSxTWmL0BfQVptZgl4p6AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="deleteAllButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFMAAAAeCAYAAABQdCKyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAICSURBVGhD7ZgxS8NAFMf9NH4CF52cdBEHQRAUQRFEBalD
-        qSAOooODOKhgBR10cSoucbGLuhRBdFERpSAqIipKKYmXtM3z/te0tjatbbit7wf/KU3gfty993otpmkS
-        R09YpsawTI1hmRrDMjWGZWpMbZlfn2QaMRJz0yQmB0n0dZLoaG2uYM1Ye3icrIN9st5e/V3JVJVpHcfV
-        h5z5EGXjBuUuzsh9eaZmA2vG2nMnccoszSonkOrnrEImzIuFMNkzo+R+vHufZIqkU+QsRkiERsh8eixz
-        VyYTIu3hXsoexrw3mWrkEqdkj/WTmbz3l4kdySLrB8cf9bRCJmokjjbTGNnNFbJ2Nkpkyq6Nwso1MgC2
-        UKXRur3Oy0R3QqdigpHZ2yKxvpyXKQa6VetnguHe3aiTnZcph1P3Iek9YhpGHnU4VDLtrjbV6plgYCPC
-        Yb5mym6ErsQEA+MkxkolE4Mn6ia2K9M4TmSCrCPDkynzHV2lzPaa95ipF9xb4CIIDosy1awpp/nc1aX3
-        M+Y/MJfjRBdukn5lymDwxADKnf1/INKeGiJLNu6CvzKZKucJJdTZjXqvMX/BTK52ZIlIpFImgiMvJ3qY
-        R6fiv5mSdErVR9zvqotin0tif5leYB4tX/S0l98+N2EwR6pGY8R8XSE1ZXIaC8vUGJapMSxTY1imtpj0
-        A934Kkn1rlzJAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="searchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

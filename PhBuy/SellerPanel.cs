@@ -12,12 +12,34 @@ namespace PhBuy
 		private bool isPanelOpen2 = true;
 		private bool isPanelOpen3 = true;
 		private bool isPanelOpen4 = true;
+		public SellerDashBoard sellerDashBoard;
+		private MyProducts myProducts;
 
+		public AddProduct addProduct;
 		public SellerPanel(MainForm form, int id)
 		{
 			_form = form;
 			_id = id;
 			InitializeComponent();
+		}
+		private void SellerPanel_Load(object sender, EventArgs e)
+		{
+			sellerDashBoard =(SellerDashBoard) _form.mainPanel.Controls[0];
+
+			myProducts = new MyProducts(_id, this)
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[3]
+			};
+			myProducts.Show();
+			myProducts.LoadProducts();
+
+			addProduct = new AddProduct(_id, myProducts, this)
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[4]
+			};
+			addProduct.Show();
 		}
 
 		private void dropDown_Click(object sender, EventArgs e)
@@ -102,18 +124,13 @@ namespace PhBuy
 
 		private void productButton_Click(object sender, EventArgs e)
 		{
-			var form = new MyProducts(_id) { TopLevel = false };
-			form.Show();
-			_form.mainPanel.Controls.Clear();
-			_form.mainPanel.Controls.Add(form);
+			sellerDashBoard.sellerTabControl.SelectedIndex = 3;
 		}
 
 		private void addProductButton_Click(object sender, EventArgs e)
 		{
-			var form = new AddProduct(_id) {TopLevel = false};
-			form.Show();
-			_form.mainPanel.Controls.Clear();
-			_form.mainPanel.Controls.Add(form);
+			addProduct.addProductPages.PageIndex = 0;
+			sellerDashBoard.sellerTabControl.SelectedIndex = 4;
 		}
 
 		private void ordersButton_Click(object sender, EventArgs e)
@@ -141,5 +158,5 @@ namespace PhBuy
 			var form = new DatabaseForm();
 			form.Show();
 		}
-	}
+    }
 }

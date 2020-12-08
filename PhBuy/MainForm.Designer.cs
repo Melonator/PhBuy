@@ -32,21 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.userPanel = new System.Windows.Forms.Panel();
+            this.userPhoto = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.userNameLabel = new System.Windows.Forms.Label();
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.gridButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.userPhoto = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.userPanel = new System.Windows.Forms.Panel();
+            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).BeginInit();
             this.userPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -63,6 +63,13 @@
             this.sidePanel.Size = new System.Drawing.Size(118, 583);
             this.sidePanel.TabIndex = 0;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.mainPanel;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // mainPanel
             // 
             this.mainPanel.Location = new System.Drawing.Point(122, 50);
@@ -70,13 +77,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(925, 584);
             this.mainPanel.TabIndex = 0;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.mainPanel;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // topPanel
             // 
@@ -94,6 +94,33 @@
             this.topPanel.Size = new System.Drawing.Size(1056, 46);
             this.topPanel.TabIndex = 1;
             // 
+            // userPanel
+            // 
+            this.userPanel.AutoSize = true;
+            this.userPanel.Controls.Add(this.userPhoto);
+            this.userPanel.Controls.Add(this.userNameLabel);
+            this.userPanel.Location = new System.Drawing.Point(753, 0);
+            this.userPanel.Name = "userPanel";
+            this.userPanel.Size = new System.Drawing.Size(69, 45);
+            this.userPanel.TabIndex = 0;
+            // 
+            // userPhoto
+            // 
+            this.userPhoto.AllowFocused = false;
+            this.userPhoto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.userPhoto.AutoSizeHeight = true;
+            this.userPhoto.BorderRadius = 16;
+            this.userPhoto.Image = ((System.Drawing.Image)(resources.GetObject("userPhoto.Image")));
+            this.userPhoto.IsCircle = true;
+            this.userPhoto.Location = new System.Drawing.Point(2, 6);
+            this.userPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.userPhoto.Name = "userPhoto";
+            this.userPhoto.Size = new System.Drawing.Size(33, 33);
+            this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPhoto.TabIndex = 2;
+            this.userPhoto.TabStop = false;
+            this.userPhoto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
@@ -107,13 +134,6 @@
             this.userNameLabel.TabIndex = 8;
             this.userNameLabel.Text = "JD";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.topPanel;
-            this.bunifuDragControl2.Vertical = true;
             // 
             // gridButton
             // 
@@ -212,32 +232,12 @@
             this.bunifuImageButton1.ZoomSpeed = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // userPhoto
+            // bunifuDragControl2
             // 
-            this.userPhoto.AllowFocused = false;
-            this.userPhoto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.userPhoto.AutoSizeHeight = true;
-            this.userPhoto.BorderRadius = 16;
-            this.userPhoto.Image = ((System.Drawing.Image)(resources.GetObject("userPhoto.Image")));
-            this.userPhoto.IsCircle = true;
-            this.userPhoto.Location = new System.Drawing.Point(2, 6);
-            this.userPhoto.Margin = new System.Windows.Forms.Padding(2);
-            this.userPhoto.Name = "userPhoto";
-            this.userPhoto.Size = new System.Drawing.Size(33, 33);
-            this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPhoto.TabIndex = 2;
-            this.userPhoto.TabStop = false;
-            this.userPhoto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // userPanel
-            // 
-            this.userPanel.AutoSize = true;
-            this.userPanel.Controls.Add(this.userPhoto);
-            this.userPanel.Controls.Add(this.userNameLabel);
-            this.userPanel.Location = new System.Drawing.Point(753, 0);
-            this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(69, 45);
-            this.userPanel.TabIndex = 0;
+            this.bunifuDragControl2.Fixed = true;
+            this.bunifuDragControl2.Horizontal = true;
+            this.bunifuDragControl2.TargetControl = this.topPanel;
+            this.bunifuDragControl2.Vertical = true;
             // 
             // MainForm
             // 
@@ -249,16 +249,17 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).EndInit();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -273,11 +274,11 @@
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Panel mainPanel;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.UI.WinForms.BunifuImageButton gridButton;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Panel userPanel;
+        public System.Windows.Forms.Panel mainPanel;
     }
 }
 

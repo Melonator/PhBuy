@@ -30,7 +30,6 @@ namespace PhBuy
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyProducts));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -43,6 +42,8 @@ namespace PhBuy
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyProducts));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.all = new System.Windows.Forms.Label();
             this.soldOut = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@ namespace PhBuy
             this.soldOutSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.allSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.deleteAllButton = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.deleteAllButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -588,29 +589,93 @@ namespace PhBuy
             // 
             // deleteAllButton
             // 
-            this.deleteAllButton.ActiveBorderThickness = 1;
-            this.deleteAllButton.ActiveCornerRadius = 20;
-            this.deleteAllButton.ActiveFillColor = System.Drawing.Color.White;
-            this.deleteAllButton.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(67)))));
-            this.deleteAllButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.deleteAllButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.deleteAllButton.AllowAnimations = true;
+            this.deleteAllButton.AllowMouseEffects = true;
+            this.deleteAllButton.AllowToggling = false;
+            this.deleteAllButton.AnimationSpeed = 200;
+            this.deleteAllButton.AutoGenerateColors = false;
+            this.deleteAllButton.AutoRoundBorders = false;
+            this.deleteAllButton.AutoSizeLeftIcon = true;
+            this.deleteAllButton.AutoSizeRightIcon = true;
+            this.deleteAllButton.BackColor = System.Drawing.Color.Transparent;
+            this.deleteAllButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
             this.deleteAllButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteAllButton.BackgroundImage")));
-            this.deleteAllButton.ButtonText = "Delete";
-            this.deleteAllButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteAllButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.deleteAllButton.ButtonText = "Delete Selected";
+            this.deleteAllButton.ButtonTextMarginLeft = 0;
+            this.deleteAllButton.ColorContrastOnClick = 45;
+            this.deleteAllButton.ColorContrastOnHover = 45;
+            this.deleteAllButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.deleteAllButton.CustomizableEdges = borderEdges1;
+            this.deleteAllButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.deleteAllButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.deleteAllButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.deleteAllButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.deleteAllButton.Enabled = false;
-            this.deleteAllButton.Font = new System.Drawing.Font("Mulish", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteAllButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.deleteAllButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.deleteAllButton.Font = new System.Drawing.Font("Mulish", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAllButton.ForeColor = System.Drawing.Color.White;
+            this.deleteAllButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteAllButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.deleteAllButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.deleteAllButton.IconMarginLeft = 11;
+            this.deleteAllButton.IconPadding = 10;
+            this.deleteAllButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteAllButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.deleteAllButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.deleteAllButton.IconSize = 25;
+            this.deleteAllButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.deleteAllButton.IdleBorderRadius = 1;
             this.deleteAllButton.IdleBorderThickness = 1;
-            this.deleteAllButton.IdleCornerRadius = 20;
-            this.deleteAllButton.IdleFillColor = System.Drawing.Color.White;
-            this.deleteAllButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.deleteAllButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.deleteAllButton.Location = new System.Drawing.Point(773, 118);
-            this.deleteAllButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteAllButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.deleteAllButton.IdleIconLeftImage = null;
+            this.deleteAllButton.IdleIconRightImage = null;
+            this.deleteAllButton.IndicateFocus = false;
+            this.deleteAllButton.Location = new System.Drawing.Point(741, 121);
             this.deleteAllButton.Name = "deleteAllButton";
-            this.deleteAllButton.Size = new System.Drawing.Size(83, 30);
-            this.deleteAllButton.TabIndex = 27;
+            this.deleteAllButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.deleteAllButton.OnDisabledState.BorderRadius = 1;
+            this.deleteAllButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.deleteAllButton.OnDisabledState.BorderThickness = 1;
+            this.deleteAllButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.deleteAllButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.deleteAllButton.OnDisabledState.IconLeftImage = null;
+            this.deleteAllButton.OnDisabledState.IconRightImage = null;
+            this.deleteAllButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.deleteAllButton.onHoverState.BorderRadius = 1;
+            this.deleteAllButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.deleteAllButton.onHoverState.BorderThickness = 1;
+            this.deleteAllButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.deleteAllButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.deleteAllButton.onHoverState.IconLeftImage = null;
+            this.deleteAllButton.onHoverState.IconRightImage = null;
+            this.deleteAllButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.deleteAllButton.OnIdleState.BorderRadius = 1;
+            this.deleteAllButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.deleteAllButton.OnIdleState.BorderThickness = 1;
+            this.deleteAllButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.deleteAllButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.deleteAllButton.OnIdleState.IconLeftImage = null;
+            this.deleteAllButton.OnIdleState.IconRightImage = null;
+            this.deleteAllButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.deleteAllButton.OnPressedState.BorderRadius = 1;
+            this.deleteAllButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.deleteAllButton.OnPressedState.BorderThickness = 1;
+            this.deleteAllButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.deleteAllButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.deleteAllButton.OnPressedState.IconLeftImage = null;
+            this.deleteAllButton.OnPressedState.IconRightImage = null;
+            this.deleteAllButton.Size = new System.Drawing.Size(115, 30);
+            this.deleteAllButton.TabIndex = 29;
             this.deleteAllButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.deleteAllButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.deleteAllButton.TextMarginLeft = 0;
+            this.deleteAllButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.deleteAllButton.UseDefaultRadiusAndThickness = true;
             this.deleteAllButton.Click += new System.EventHandler(this.deleteAllButton_Click);
             // 
             // MyProducts
@@ -619,8 +684,8 @@ namespace PhBuy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(925, 584);
-            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.deleteAllButton);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.categoryDropDown);
             this.Controls.Add(this.stockMaxTextBox);
@@ -672,6 +737,6 @@ namespace PhBuy
         private Bunifu.Framework.UI.BunifuThinButton2 clearButton;
         private Bunifu.Framework.UI.BunifuThinButton2 searchButton;
         private Bunifu.UI.WinForms.BunifuDropdown categoryDropDown;
-        private Bunifu.Framework.UI.BunifuThinButton2 deleteAllButton;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton deleteAllButton;
     }
 }

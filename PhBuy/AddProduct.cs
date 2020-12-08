@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
+using PhBuyModels;
 
 namespace PhBuy
 {
@@ -33,16 +35,24 @@ namespace PhBuy
 
 		private string previousLabel = string.Empty;
 		private double price;
-		private readonly List<byte[]> productImages = new List<byte[]>();
+		private List<byte[]> productImages = new List<byte[]>();
 		private int _sellerID;
 		private int stock;
 		private string type;
 		private double weight;
 
-		public AddProduct(int id)
+		private MyProducts _myProducts;
+		private MemoryStream _stream;
+		private SellerPanel _sellerPanel;
+		private Products _editedProduct;
+
+		private bool _edit = false;
+		public AddProduct(int id, MyProducts m, SellerPanel p)
 		{
 			//TODO: Connect all forms and get current ID
 			_sellerID = id;
+			_myProducts = m;
+			_sellerPanel = p;
 			InitializeComponent();
 		}
 
@@ -103,6 +113,7 @@ namespace PhBuy
 				var p = new ProductImage();
 
 				//Set the properties
+				p.Tag = imageNo;
 				imageNo++;
 				p.Name = $"Image {imageNo}";
 				p.pictureBox.ImageLocation = imageLoc;
@@ -118,7 +129,7 @@ namespace PhBuy
 
 				//Re arrange the buttons
 				imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
-				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
+				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count);
 
 				imageCountLabel.Text = $"Images: {imageNo} / 8";
 			}
@@ -148,7 +159,7 @@ namespace PhBuy
 				//Re arrange the buttons
 				imagesPanel.Controls.SetChildIndex(coverImage, 0);
 				imagesPanel.Controls.SetChildIndex(addCoverPanel, imagesPanel.Controls.Count);
-				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count - 1);
+				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count);
 			}
 
 			
@@ -167,17 +178,16 @@ namespace PhBuy
 			                                       && widthTextBox.Text != string.Empty &&
 			                                       heightTextBox.Text != string.Empty)
 			{
-				weight = int.Parse(weightTextBox.Text);
-				height = int.Parse(heightTextBox.Text);
-				width = int.Parse(widthTextBox.Text);
-				length = int.Parse(lengthTextBox.Text);
+				weight = double.Parse(weightTextBox.Text);
+				height = double.Parse(heightTextBox.Text);
+				width = double.Parse(widthTextBox.Text);
+				length = double.Parse(lengthTextBox.Text);
 
 				if (newRadioButton.Checked) condition = "New";
 				else condition = "Used";
 
-				var fs = new FileStream(_productCoverLocation, FileMode.Open, FileAccess.Read);
-				var br = new BinaryReader(fs);
-				var productCover = br.ReadBytes((int) fs.Length);
+
+				byte[] productCover = null;
 
 				productID = (int) GenerateId();
 
@@ -187,6 +197,29 @@ namespace PhBuy
 				var queryString = "INSERT INTO Products VALUES(@ProductID, @SellerID, @Name" +
 				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type);";
 
+
+				if (_edit)
+				{
+					queryString = "UPDATE Products SET " +
+						"Name = @Name, Price = @Price, Picture = @Cover, " +
+						"Stock = @Stock, Weight = @Weight, Length = @Length, " +
+						"Width = @Width, Height = @Height, Condition = @Condition, " +
+						"Description = @Description, FDA_Number = @FDANumber, Type = @Type " +
+						$"WHERE ProductID = {_editedProduct.ProductId}";
+
+					productID = (int)_editedProduct.ProductId;
+
+					_stream = new MemoryStream();
+					coverImage.pictureBox.Image.Save(_stream, ImageFormat.Jpeg);
+					productCover = _stream.ToArray();
+				}
+
+                else
+                {
+					var fs = new FileStream(_productCoverLocation, FileMode.Open, FileAccess.Read);
+					var br = new BinaryReader(fs);
+					productCover = br.ReadBytes((int)fs.Length);
+				}
 				myConnection.Open();
 
 				//Crap ton of parameters aaaa
@@ -207,8 +240,12 @@ namespace PhBuy
 
 				var cmd = new SqlCommand(queryString, myConnection);
 
-				cmd.Parameters.Add(param1);
-				cmd.Parameters.Add(param2);
+				if (!_edit)
+				{
+					cmd.Parameters.Add(param1);
+					cmd.Parameters.Add(param2);
+				}
+
 				cmd.Parameters.Add(param3);
 				cmd.Parameters.Add(param4);
 				cmd.Parameters.Add(param5);
@@ -227,8 +264,20 @@ namespace PhBuy
 				myConnection.Close();
 
 				queryString = "INSERT INTO ProductImages(ImageID, ProductID, Picture) VALUES(@ImageID, @ProductID, @Image);";
+
 				InsertImages(queryString, productID);
+
+				_myProducts.LoadProducts();
+
+				productImages.Clear();
 			}
+
+			//Go back to my products after editing
+			if(_edit)
+            {
+				_edit = false;
+				_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+            }
 		}
 
 		//First event when the product form is clicked
@@ -238,12 +287,20 @@ namespace PhBuy
 			imageCountLabel.Text = $"Images: {imageNo} / 8";
 			var p = (ProductImage) sender;
 			imagesPanel.Controls.Remove(imagesPanel.Controls.Find(p.Name, true).First());
+			productImages.Remove(GetImageByte(p));
 			RenameImages(p.label.Text);
 		}
 
 		private void bunifuThinButton21_Click(object sender, EventArgs e)
 		{
 			addProductPages.PageIndex--;
+		}
+
+		private byte[] GetImageByte(ProductImage p)
+        {
+			_stream = new MemoryStream();
+			p.pictureBox.Image.Save(_stream, ImageFormat.Jpeg);
+			return _stream.ToArray();
 		}
 
 		//Second event when the picture in the product image is clicked
@@ -253,6 +310,7 @@ namespace PhBuy
 			imageCountLabel.Text = $"Images: {imageNo} / 8";
 			var p = (PictureBox) sender;
 			var i = (ProductImage) p.Parent;
+			productImages.RemoveAt((int)i.Tag);
 			imagesPanel.Controls.Remove(imagesPanel.Controls.Find(p.Parent.Name, true).First());
 			RenameImages(i.label.Text);
 		}
@@ -274,6 +332,7 @@ namespace PhBuy
 					p = (ProductImage) imagesPanel.Controls[i];
 
 				p.Name = $"Image {i + 1}";
+				p.Tag = i;
 				p.label.Text = $"Image {i + 1}";
 			}
 		}
@@ -343,11 +402,19 @@ namespace PhBuy
 			var myConnection = new SqlConnection(ConnectionString);
 			myConnection.Open();
 
-			var cmd = new SqlCommand(queryString, myConnection);
+			SqlCommand cmd;
 			var param = new SqlParameter();
 			var param2 = new SqlParameter();
 			var param3 = new SqlParameter();
 
+			if(_edit)
+            {
+				string queryString2 = $"DELETE FROM ProductImages WHERE ProductID = {productID}";
+				cmd = new SqlCommand(queryString2, myConnection);
+				cmd.ExecuteNonQuery();
+			}
+
+			cmd = new SqlCommand(queryString, myConnection);
 			param.ParameterName = "@ProductID";
 			param2.ParameterName = "@Image";
 			param3.ParameterName = "@ImageID";
@@ -366,5 +433,97 @@ namespace PhBuy
 
 			myConnection.Close();
 		}
+
+		public void SetValues(Products p)
+        {
+			imageNo = 0;
+			previousLabel = p.Type;
+			_editedProduct = p;
+			_edit = true;
+			ClearExcessImages();
+			_stream = new MemoryStream(p.Picture);
+
+			//Set Cover
+			coverImage.pictureBox.Image = Image.FromStream(_stream);
+			coverImage.label.Text = "Cover Photo";
+			coverImage.Name = "CoverImage";
+			coverImage.label.Location = new Point(-5, 100);
+			label3.Text = "Edit Cover";
+			hasCover = true;
+
+			imagesPanel.Controls.Add(coverImage);
+			imagesPanel.Controls.SetChildIndex(coverImage, 0);
+
+			nameTextBox.Text = p.Name;
+			descriptionTextBox.Text = p.Description;
+			type = p.Type;
+			Label l = (Label)Controls.Find($"{p.Type}Label", true).First();
+			l.ForeColor = Color.FromArgb(248, 58, 38);
+            fdaTextBox.Text = p.FdaNumber;
+			priceTextBox.Text = p.Price.ToString();
+			int Stock = (int)p.Stock;
+			stockTextBox.Text = Stock.ToString();
+			SetImages((int)p.ProductId);
+
+			weightTextBox.Text = p.Weight.ToString();
+			lengthTextBox.Text = p.Length.ToString();
+			widthTextBox.Text = p.Width.ToString();
+			heightTextBox.Text = p.Height.ToString();
+		}
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+			//CANCEL 
+			ClearExcessImages();
+			imageNo = 0;
+			previousLabel = string.Empty;
+			weightTextBox.Text = string.Empty;
+			lengthTextBox.Text = string.Empty;
+			widthTextBox.Text = string.Empty;
+			heightTextBox.Text = string.Empty;
+			nameTextBox.Text = string.Empty; 
+			descriptionTextBox.Text = string.Empty;
+			priceTextBox.Text = string.Empty;
+			stockTextBox.Text = string.Empty;
+			fdaTextBox.Text = string.Empty;
+			type = string.Empty;
+			hasCover = false;
+			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+		}
+
+        private void SetImages(int id)
+        {
+			PhBuyContext data = new PhBuyContext();
+
+			foreach(var p in data.ProductImages.Where(p => p.ProductId == id))
+            {
+				_stream = new MemoryStream(p.Picture);
+				ProductImage image = new ProductImage();
+				image.Tag = imageNo;
+				imageNo++;
+				image.label.Text = $"Image {imageNo}";
+				image.Name = $"Image {imageNo}";
+				image.pictureBox.Image = Image.FromStream(_stream);
+				image.Click += ProductImage_Click;
+				image.pictureBox.Click += ProductImage_Click2;
+				imagesPanel.Controls.Add(image);
+				imagesPanel.Controls.SetChildIndex(image, imageNo);
+				productImages.Add(p.Picture);
+			}
+
+			imageCountLabel.Text = $"{imageNo} / 8";
+		}
+
+		private void ClearExcessImages()
+        {
+			if (imagesPanel.Controls.Count > 2)
+			{
+				int increments = imagesPanel.Controls.Count - 2;
+				for (int i = 0; i < increments; i++)
+				{
+					imagesPanel.Controls.RemoveAt(0);
+				}
+			}
+        }
 	}
 }

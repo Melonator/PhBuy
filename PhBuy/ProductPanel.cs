@@ -68,16 +68,10 @@ namespace PhBuy
             _separatorV.Size = new Size(14, 23);
             //Checkbox
             CheckButton.Location = new Point(6, 5);
-            //CheckButton.OnCheck.BorderColor = Color.FromArgb(249, 58, 39);
-            //CheckButton.OnCheck.CheckBoxColor = Color.FromArgb(249, 58, 39);
-            //CheckButton.OnHoverChecked.BorderColor = Color.FromArgb(192, 50, 43);
-            //CheckButton.OnHoverChecked.CheckBoxColor = Color.FromArgb(192, 50, 43);
-            //CheckButton.OnHoverUnchecked.BorderColor = Color.DarkGray;
-            //CheckButton.OnHoverUnchecked.CheckBoxColor = Color.DarkGray;
             CheckButton.Checked = false;
             CheckButton.BackColor = Color.Transparent;
             CheckButton.Text = "";
-            CheckButton.AutoSize = false;
+            CheckButton.AutoSize = true;
             //Add the controls
             Controls.Add(Picture);
             Controls.Add(ProductName);

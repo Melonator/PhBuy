@@ -25,41 +25,29 @@ namespace PhBuy
         private List<Products> displayQuery = new List<Products>();
         private List<string> selectedCards = new List<string>();
         private MemoryStream _stream;
+        private SellerPanel _sellerPanel;
 
         private int _id;
 
-        public MyProducts(int id)
+        public MyProducts(int id, SellerPanel p)
         {
             _id = id;
+            _sellerPanel = p;
             InitializeComponent();
         }
         private void MyProducts_Load(object sender, EventArgs e)
         {
+            LoadProducts();
+        }
+
+        public void LoadProducts()
+        {
+            data = new PhBuyContext();
             products = data.Products.Where(p => p.SellerId == _id).ToList();
+            ChangeCategory("all");
         }
 
-        private void label_Click(object sender, EventArgs e)
-        {    
-            Label label = (Label)sender;
-            if (label.Name != _previousLabel)
-            {
-                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{label.Name}Separator", true).First();
-                s.LineThickness = 2;
-                s.LineColor = Color.FromArgb(249, 58, 39);
-   
-                if (_previousLabel != string.Empty)
-                {
-                    s = (BunifuSeparator)Controls.Find($"{_previousLabel}Separator", true).First();
-                    s.LineThickness = 1;
-                    s.LineColor = Color.FromArgb(45, 41, 66);
-                }
-
-                _previousLabel = label.Name;
-            }
-
-            ChangeCategory(_previousLabel);
-        }
-
+        #region Helper Functions
         private void ChangeCategory(string SelectedLabel, string productName = "", int stockMin = -1, int stockMax = -1, string type = null)
         {
             switch (SelectedLabel)
@@ -119,11 +107,70 @@ namespace PhBuy
                 product.DeleteButton.Click += deleteButton_Click;
                 product.Picture.MouseHover += shadowPanelPicture_Hover;
                 product.Picture.MouseLeave += shadowPanelPicture_Leave;
+                product.EditButton.Click += editButton_Click;
                 _stream.Close();
                 productsFlowLayoutPanel.Controls.Add(product);
             }
         }
-       
+
+        private void RemoveProductImages(int id)
+        {
+            var Images = data.ProductImages.ToList().Where(p => p.ProductId == id);
+            foreach(var p in Images)
+            {
+                data.Remove(p);
+            }
+            data.SaveChanges();
+        }
+
+        private void StartQuery()
+        {
+            if (stockMinTextBox.Text != string.Empty)
+                _sellerQuery.StockMin = int.Parse(stockMinTextBox.Text);
+            if (stockMaxTextBox.Text != string.Empty)
+                _sellerQuery.StockMax = int.Parse(stockMaxTextBox.Text);
+            if (nameTextBox.Text != string.Empty)
+                _sellerQuery.ProductName = nameTextBox.Text;
+            if (categoryDropDown.Text != string.Empty)
+                _sellerQuery.Type = categoryDropDown.Text;
+
+            ChangeCategory(_previousLabel, _sellerQuery.ProductName, _sellerQuery.StockMin, _sellerQuery.StockMax, _sellerQuery.Type);
+        }
+
+        private void RemoveDeletedProducts()
+        {
+            foreach(var p in selectedCards)
+            {
+                ProductPanel panel = (ProductPanel)productsFlowLayoutPanel.Controls.Find(p, true).First();
+                productsFlowLayoutPanel.Controls.Remove(panel);
+            }
+            selectedCards.Clear();
+        }
+        #endregion
+
+        #region Events
+        private void label_Click(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            if (label.Name != _previousLabel)
+            {
+                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{label.Name}Separator", true).First();
+                s.LineThickness = 2;
+                s.LineColor = Color.FromArgb(249, 58, 39);
+
+                if (_previousLabel != string.Empty)
+                {
+                    s = (BunifuSeparator)Controls.Find($"{_previousLabel}Separator", true).First();
+                    s.LineThickness = 1;
+                    s.LineColor = Color.FromArgb(45, 41, 66);
+                }
+
+                _previousLabel = label.Name;
+            }
+
+            ChangeCategory(_previousLabel);
+        }
+
         private void searchButton_Click(object sender, EventArgs e)
         {
             StartQuery();
@@ -157,7 +204,10 @@ namespace PhBuy
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            
+            Bunifu.Framework.UI.BunifuTileButton t = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            ProductPanel a = (ProductPanel)t.Parent;
+            _sellerPanel.addProduct.SetValues(products.Find(p => p.Name == a.Name));
+            _sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 4;
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -197,37 +247,6 @@ namespace PhBuy
             data.SaveChanges();
             RemoveDeletedProducts();
         }
-
-        private void RemoveProductImages(int id)
-        {
-            var Images = data.ProductImages.ToList().Where(p => p.ProductId == id);
-            foreach(var p in Images)
-            {
-                data.Remove(p);
-            }
-            data.SaveChanges();
-        }
-        private void StartQuery()
-        {
-            if (stockMinTextBox.Text != string.Empty)
-                _sellerQuery.StockMin = int.Parse(stockMinTextBox.Text);
-            if (stockMaxTextBox.Text != string.Empty)
-                _sellerQuery.StockMax = int.Parse(stockMaxTextBox.Text);
-            if (nameTextBox.Text != string.Empty)
-                _sellerQuery.ProductName = nameTextBox.Text;
-            if (categoryDropDown.Text != string.Empty)
-                _sellerQuery.Type = categoryDropDown.Text;
-
-            ChangeCategory(_previousLabel, _sellerQuery.ProductName, _sellerQuery.StockMin, _sellerQuery.StockMax, _sellerQuery.Type);
-        }
-        private void RemoveDeletedProducts()
-        {
-            foreach(var p in selectedCards)
-            {
-                ProductPanel panel = (ProductPanel)productsFlowLayoutPanel.Controls.Find(p, true).First();
-                productsFlowLayoutPanel.Controls.Remove(panel);
-            }
-            selectedCards.Clear();
-        }
+        #endregion
     }
 }
