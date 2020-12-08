@@ -24,12 +24,14 @@ namespace PhBuy
 			{
 				var reg = new SellerRegisterForm(_userName, _id);
 				reg.ShowDialog();
+				Hide();
 			}
 
             else
             {
 				var main = new MainForm(_userName, _id);
 				main.Show();
+				Hide();
 			}
 		}
 

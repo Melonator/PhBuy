@@ -164,6 +164,7 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Cancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -1550,6 +1551,7 @@ namespace PhBuy
             this.tabPage3.Controls.Add(this.label29);
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label31);
+            this.tabPage3.Controls.Add(this.Cancel);
             this.tabPage3.Controls.Add(this.bunifuThinButton21);
             this.tabPage3.Controls.Add(this.confirmButton);
             this.tabPage3.Controls.Add(this.shippingPanel);
@@ -2254,6 +2256,32 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
+            // Cancel
+            // 
+            this.Cancel.ActiveBorderThickness = 1;
+            this.Cancel.ActiveCornerRadius = 20;
+            this.Cancel.ActiveFillColor = System.Drawing.Color.White;
+            this.Cancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(67)))));
+            this.Cancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.Cancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cancel.BackgroundImage")));
+            this.Cancel.ButtonText = "Cancel";
+            this.Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cancel.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.IdleBorderThickness = 1;
+            this.Cancel.IdleCornerRadius = 20;
+            this.Cancel.IdleFillColor = System.Drawing.Color.White;
+            this.Cancel.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.Location = new System.Drawing.Point(396, 268);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(112, 32);
+            this.Cancel.TabIndex = 26;
+            this.Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2300,7 +2328,6 @@ namespace PhBuy
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-        private Bunifu.UI.WinForms.BunifuPages addProductPages;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel salesPanel;
@@ -2393,5 +2420,7 @@ namespace PhBuy
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
+        private Bunifu.Framework.UI.BunifuThinButton2 Cancel;
+        public Bunifu.UI.WinForms.BunifuPages addProductPages;
     }
 }

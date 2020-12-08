@@ -23,7 +23,7 @@ namespace PhBuy
 
 		private void bunifuImageButton1_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.Exit();
 		}
 
 		private void bunifuButton5_Click(object sender, EventArgs e)
@@ -36,8 +36,11 @@ namespace PhBuy
 		{
 			//Determine if the user is a seller or not
 			//If seller
-			var form = new SellerPanel(this, _id);
-			form.TopLevel = false;
+			var form2 = new SellerDashBoard() { TopLevel = false };
+			form2.Show();
+			mainPanel.Controls.Add(form2);
+
+			var form = new SellerPanel(this, _id) { TopLevel = false };
 			form.Show();
 			sidePanel.Controls.Add(form);
 			setInformation();
@@ -48,7 +51,6 @@ namespace PhBuy
 			int panelDistance = 6;
 			userNameLabel.Text = _userName;
 			userPhoto.Image = getUserImage();
-
 			userPanel.Location = new Point(bunifuSeparator1.Location.X - panelDistance - userPanel.Width,0);
         }
 
