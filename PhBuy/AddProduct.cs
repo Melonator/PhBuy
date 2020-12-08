@@ -67,7 +67,7 @@ namespace PhBuy
 				type = label.Text;
 
 				//Quickfix
-				if (label.Name == "healthLabel") type = "Health & Beauty";
+				if (label.Name == "healthLabel") type = "Health";
 				//Set the previously clicked type to black
 				if (previousLabel != string.Empty)
 				{
