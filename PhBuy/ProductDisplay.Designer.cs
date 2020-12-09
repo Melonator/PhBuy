@@ -86,7 +86,7 @@ namespace PhBuy
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(367, 320);
+            this.label2.Location = new System.Drawing.Point(81, 195);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 20);
@@ -263,7 +263,7 @@ namespace PhBuy
             this.Controls.Add(this.name);
             this.Controls.Add(this.image);
             this.Name = "ProductDisplay";
-            this.Size = new System.Drawing.Size(450, 515);
+            this.Size = new System.Drawing.Size(164, 265);
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
