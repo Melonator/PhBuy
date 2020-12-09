@@ -52,6 +52,7 @@ namespace PhBuy
 
         private void SetPhotos()
         {
+            productImagesFlowPanel.Controls.Clear();
             _stream = new MemoryStream(_product.Picture);
             productPictureBox.Image = Image.FromStream(_stream);
             PictureBox productCover = new PictureBox

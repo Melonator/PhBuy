@@ -94,7 +94,7 @@ namespace PhBuy
             BunifuShadowPanel a = (BunifuShadowPanel)sender;
             SellerDisplay p = (SellerDisplay)a.Parent;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _cd.SellerShop.LoadData(_products, seller);
+            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
             _cd.scrollBar.ThumbLength = 100;
             _cd.customerTabControl.SelectedIndex = 3;
         }
@@ -104,7 +104,7 @@ namespace PhBuy
             PictureBox b = (PictureBox)sender;
             SellerDisplay p = (SellerDisplay)b.Parent.Parent;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _cd.SellerShop.LoadData(_products, seller);
+            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
             _cd.scrollBar.ThumbLength = 100;
             _cd.customerTabControl.SelectedIndex = 3;
         }

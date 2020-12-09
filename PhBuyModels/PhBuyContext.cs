@@ -47,8 +47,6 @@ namespace PhBuyModels
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Picture).HasColumnType("image");
             });
 
             modelBuilder.Entity<Orders>(entity =>
@@ -98,8 +96,6 @@ namespace PhBuyModels
 
                 entity.Property(e => e.ImageiD).ValueGeneratedNever();
 
-                entity.Property(e => e.Picture).HasColumnType("image");
-
                 entity.Property(e => e.ProductId)
                     .HasColumnName("ProductID")
                     .HasColumnType("smallmoney");
@@ -140,13 +136,9 @@ namespace PhBuyModels
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Picture).HasColumnType("image");
-
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
                     .HasColumnType("smallmoney");
-
-                entity.Property(e => e.Stock).HasColumnType("smallmoney");
 
                 entity.Property(e => e.Type)
                     .HasMaxLength(20)
@@ -183,7 +175,9 @@ namespace PhBuyModels
                     .HasColumnName("ID")
                     .HasColumnType("smallmoney");
 
-                entity.Property(e => e.Background).HasColumnType("image");
+                entity.Property(e => e.Contact)
+                    .HasMaxLength(14)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Descrption)
                     .HasMaxLength(150)
@@ -201,8 +195,6 @@ namespace PhBuyModels
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Picture).HasColumnType("image");
             });
 
             modelBuilder.Entity<SellerTypes>(entity =>

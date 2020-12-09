@@ -16,7 +16,7 @@ namespace PhBuyModels
         public string Name { get; set; }
         public double? Price { get; set; }
         public byte[] Picture { get; set; }
-        public decimal? Stock { get; set; }
+        public int? Stock { get; set; }
         public decimal? Weight { get; set; }
         public decimal? Length { get; set; }
         public decimal? Width { get; set; }

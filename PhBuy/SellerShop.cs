@@ -34,6 +34,7 @@ namespace PhBuy
 
         public void LoadData(List<Products> p, Seller s)
         {
+            ResetPage();
             _products = p;
             _currentSeller = s;
             _productsQuery = _products.ToList();
@@ -41,6 +42,14 @@ namespace PhBuy
             DisplayProducts();
         }
 
+        private void ResetPage()
+        {
+            tabControl1.SelectedIndex = 0;
+            homeSeparator.LineColor = Color.FromArgb(248, 58, 38);
+            homeSeparator.LineThickness = 2;
+            allSeparator.LineColor = Color.FromArgb(45, 41, 66);
+            allSeparator.LineThickness = 1;
+        }
         private void LoadSellerInfo()
         {
             _stream = new MemoryStream(_currentSeller.Picture);
