@@ -617,7 +617,7 @@ namespace PhBuy
             this.deleteAllButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.deleteAllButton.Enabled = false;
             this.deleteAllButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.deleteAllButton.Font = new System.Drawing.Font("Mulish", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteAllButton.Font = new System.Drawing.Font("Mulish", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteAllButton.ForeColor = System.Drawing.Color.White;
             this.deleteAllButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteAllButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -635,7 +635,7 @@ namespace PhBuy
             this.deleteAllButton.IdleIconLeftImage = null;
             this.deleteAllButton.IdleIconRightImage = null;
             this.deleteAllButton.IndicateFocus = false;
-            this.deleteAllButton.Location = new System.Drawing.Point(741, 121);
+            this.deleteAllButton.Location = new System.Drawing.Point(727, 121);
             this.deleteAllButton.Name = "deleteAllButton";
             this.deleteAllButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.deleteAllButton.OnDisabledState.BorderRadius = 1;
@@ -669,7 +669,7 @@ namespace PhBuy
             this.deleteAllButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.deleteAllButton.OnPressedState.IconLeftImage = null;
             this.deleteAllButton.OnPressedState.IconRightImage = null;
-            this.deleteAllButton.Size = new System.Drawing.Size(115, 30);
+            this.deleteAllButton.Size = new System.Drawing.Size(129, 30);
             this.deleteAllButton.TabIndex = 29;
             this.deleteAllButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deleteAllButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;

@@ -10,8 +10,13 @@ using System.Windows.Forms;
 
 namespace PhBuy
 {
-    public partial class ProductDisplay : UserControl
+    public partial class SellerDisplay : UserControl
     {
+        public SellerDisplay()
+        {
+            InitializeComponent();
+        }
+
         protected override CreateParams CreateParams
         {
             get
@@ -22,9 +27,12 @@ namespace PhBuy
             }
         }
 
-        public ProductDisplay()
+        public void SetTypes(string[] types)
         {
-            InitializeComponent();
+            foreach(var t in types)
+            {
+                typesPanel.Controls[t].Visible = true;
+            }
         }
     }
 }

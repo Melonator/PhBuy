@@ -121,8 +121,8 @@
   <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shop_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Register_Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Register Account.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -132,6 +132,9 @@
   </data>
   <data name="online_store_480px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\online_store_480px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="luke_chesser_eICUFSeirc0_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luke-chesser-eICUFSeirc0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerSellerForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerSellerForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +178,8 @@
   <data name="ProPicIcon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProPicIcon3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register_Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Register Account.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buy_512px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buy_512px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +187,8 @@
   <data name="RegistrationP1_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RegistrationP1(2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buy_512px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buy_512px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="city_night_moon_145265_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city_night_moon_145265_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cesar_couto_27HiryxnHJk_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cesar-couto-27HiryxnHJk-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,6 +198,9 @@
   </data>
   <data name="mohammad_alizade_XgeZu2jBaVI_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mohammad-alizade-XgeZu2jBaVI-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chat_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chat_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="graph_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +229,8 @@
   <data name="img4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Technology" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Technology.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buy_512px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buy_512px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_125442320_435191487873283_3142954965594498196_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125442320_435191487873283_3142954965594498196_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +238,14 @@
   <data name="free_shipping_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free_shipping_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Technology1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Technology1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ProPicIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ProPicIcon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shop_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_125772638_125413982465704_4113881353070638943_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125772638_125413982465704_4113881353070638943_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,17 +256,20 @@
   <data name="Fashion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fashion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="grid_view_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grid_view_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_126537189_196208098742960_9173648381840221022_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\126537189_196208098742960_9173648381840221022_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ProPicIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProPicIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="city_night_moon_145265_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\city_night_moon_145265_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buy_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buy_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mulish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mulish-VariableFont_wght.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,6 +289,9 @@
   <data name="road_sunset_marking_trees_116194_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\road_sunset_marking_trees_116194_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buying_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buying_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CustomerSellerForm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerSellerForm1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -288,6 +303,9 @@
   </data>
   <data name="_125853710_1023677731371154_291525496420872077_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125853710_1023677731371154_291525496420872077_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heart_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EpnMhl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EpnMhl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,8 +319,8 @@
   <data name="AddImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_126537189_196208098742960_9173648381840221022_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\126537189_196208098742960_9173648381840221022_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Technology" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Technology.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_125753206_122552969464265_2211899416766309768_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125753206_122552969464265_2211899416766309768_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -312,6 +330,9 @@
   </data>
   <data name="database_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProPicIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProPicIcon2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,22 +358,16 @@
   <data name="starry_sky_night_milky_way_143696_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\starry_sky_night_milky_way_143696_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Health_and_Beauty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Health-and-Beauty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="moon_sky_night_135728_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moon_sky_night_135728_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grid_view_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grid_view_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mulish" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mulish-VariableFont_wght.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star_filled_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_filled_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
