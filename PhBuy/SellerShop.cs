@@ -126,6 +126,56 @@ namespace PhBuy
             DisplayProducts(productNametextBox.Text);
         }
 
+        private void page_Click(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            if (l.Name == "home")
+            {
+                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
+                s.LineColor = Color.FromArgb(248, 58, 38);
+                s.LineThickness = 2;
+                s = (BunifuSeparator)Controls.Find("allSeparator", true).First();
+                s.LineColor = Color.FromArgb(45, 41, 66);
+                s.LineThickness = 1;
+                tabControl1.SelectedIndex = 0;
+            }
+            else
+            {
+                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
+                s.LineColor = Color.FromArgb(248, 58, 38);
+                s.LineThickness = 2;
+                s = (BunifuSeparator)Controls.Find("homeSeparator", true).First();
+                s.LineColor = Color.FromArgb(45, 41, 66);
+                s.LineThickness = 1;
+                tabControl1.SelectedIndex = 1;
+            }
+        }
+
+        private void SellerShop_Load(object sender, EventArgs e)
+        {
+            DoubleBuffered = true;
+            _dashBoard.scrollBar.BindTo(mainPanel);
+            _dashBoard.scrollBar.ThumbLength = 100;
+        }
+
+        private void product_Click(object sender, EventArgs e)
+        {
+            BunifuShadowPanel s = (BunifuShadowPanel)sender;
+            ProductDisplay d = (ProductDisplay)s.Parent;
+            Products p = _products.Find(i => i.Name == d.NameLabel.Text);
+            _dashBoard.ProductPage.LoadData(p, _currentSeller);
+            _dashBoard.customerTabControl.SelectedIndex = 5;
+        }
+
+        private void product_Click2(object sender, EventArgs e)
+        {
+            PictureBox s = (PictureBox)sender;
+            ProductDisplay d = (ProductDisplay)s.Parent.Parent;
+            Products p = _products.Find(i => i.Name == d.NameLabel.Text);
+            _dashBoard.ProductPage.LoadData(p, _currentSeller);
+            _dashBoard.customerTabControl.SelectedIndex = 5;
+        }
+
         #endregion
 
         #region Helper Functions
@@ -133,7 +183,7 @@ namespace PhBuy
         {
             productsFlowLayoutPanel.Controls.Clear();
             _productsQuery = _products.ToList();
-            if (productName != "")
+            if (productName == "")
             {
                 if (priceMin != -1)
                     _productsQuery = _productsQuery.Where(p => p.Price >= priceMin).ToList();
@@ -180,6 +230,8 @@ namespace PhBuy
                 product.sellerProfilePicture.Image = Image.FromStream(_stream);
                 product.sellerNameLabel.Text = _currentSeller.Name;
                 product.statusLabel.Text = p.Condition;
+                product.Click += product_Click;
+                product.productPictureBox.Click += product_Click2;
                 productsFlowLayoutPanel.Controls.Add(product);
             }
         }
@@ -193,38 +245,7 @@ namespace PhBuy
             _productsQuery.Remove(p);
         }
 
+
         #endregion
-
-        private void page_Click(object sender, EventArgs e)
-        {
-            Label l = (Label)sender;
-            if (l.Name == "home")
-            {
-                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
-                s.LineColor = Color.FromArgb(248, 58, 38);
-                s.LineThickness = 2;
-                s = (BunifuSeparator)Controls.Find("allSeparator", true).First();
-                s.LineColor = Color.FromArgb(45, 41, 66);
-                s.LineThickness = 1;
-                tabControl1.SelectedIndex = 0;
-            }
-            else
-            {
-                BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
-                s.LineColor = Color.FromArgb(248, 58, 38);
-                s.LineThickness = 2;
-                s = (BunifuSeparator)Controls.Find("homeSeparator", true).First();
-                s.LineColor = Color.FromArgb(45, 41, 66);
-                s.LineThickness = 1;
-                tabControl1.SelectedIndex = 1;
-            }
-        }
-
-        private void SellerShop_Load(object sender, EventArgs e)
-        {
-            DoubleBuffered = true;
-            _dashBoard.scrollBar.BindTo(mainPanel);
-            _dashBoard.scrollBar.ThumbLength = 100;
-        }
     }
 }

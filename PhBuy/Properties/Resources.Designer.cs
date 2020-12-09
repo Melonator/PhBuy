@@ -153,6 +153,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_shopping_cart_208px {
+            get {
+                object obj = ResourceManager.GetObject("add_shopping_cart_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AddImage {
             get {
                 object obj = ResourceManager.GetObject("AddImage", resourceCulture);
@@ -246,6 +256,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap chat_208px {
             get {
                 object obj = ResourceManager.GetObject("chat_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chat_bubble_512px {
+            get {
+                object obj = ResourceManager.GetObject("chat_bubble_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +446,26 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap heart_208px {
             get {
                 object obj = ResourceManager.GetObject("heart_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_empty {
+            get {
+                object obj = ResourceManager.GetObject("heart_empty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_filled {
+            get {
+                object obj = ResourceManager.GetObject("heart_filled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -756,6 +796,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap shop_208px {
             get {
                 object obj = ResourceManager.GetObject("shop_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shop_208px1 {
+            get {
+                object obj = ResourceManager.GetObject("shop_208px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

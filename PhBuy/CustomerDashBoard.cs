@@ -14,6 +14,7 @@ namespace PhBuy
     public partial class CustomerDashBoard : Form
     {
         public SellerShop SellerShop;
+        public ProductPage ProductPage;
         private CustomerHomePage customerHomePage;
         public CustomerDashBoard()
         {
@@ -52,6 +53,12 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[3]
             };
             SellerShop.Show();
+            ProductPage = new ProductPage(this)
+            {
+                MdiParent = this,
+                Parent = customerTabControl.TabPages[5]
+            };
+            ProductPage.Show();
         }
 
         private void homePictureBox_Click(object sender, EventArgs e)
