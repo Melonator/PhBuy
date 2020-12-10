@@ -31,7 +31,7 @@ namespace PhBuy
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerDisplay));
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.typesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Fashion = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Food = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -44,41 +44,16 @@ namespace PhBuy
             this.shopNameLabel = new System.Windows.Forms.Label();
             this.sellerProfilePicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerCoverPicture = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuShadowPanel1.SuspendLayout();
             this.typesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellerProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellerCoverPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuShadowPanel1
+            // bunifuElipse1
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 1;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.typesPanel);
-            this.bunifuShadowPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuShadowPanel1.Controls.Add(this.label1);
-            this.bunifuShadowPanel1.Controls.Add(this.shopNameLabel);
-            this.bunifuShadowPanel1.Controls.Add(this.sellerProfilePicture);
-            this.bunifuShadowPanel1.Controls.Add(this.sellerCoverPicture);
-            this.bunifuShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(350, 311);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 1;
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // typesPanel
             // 
@@ -88,10 +63,10 @@ namespace PhBuy
             this.typesPanel.Controls.Add(this.Books);
             this.typesPanel.Controls.Add(this.Health);
             this.typesPanel.Controls.Add(this.Others);
-            this.typesPanel.Location = new System.Drawing.Point(8, 272);
+            this.typesPanel.Location = new System.Drawing.Point(2, 270);
             this.typesPanel.Name = "typesPanel";
             this.typesPanel.Size = new System.Drawing.Size(345, 35);
-            this.typesPanel.TabIndex = 42;
+            this.typesPanel.TabIndex = 48;
             // 
             // Fashion
             // 
@@ -312,11 +287,11 @@ namespace PhBuy
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PhBuy.Properties.Resources.star_208px;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 229);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 233);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
             // label1
@@ -325,11 +300,11 @@ namespace PhBuy
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(150, 229);
+            this.label1.Location = new System.Drawing.Point(149, 233);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 21);
-            this.label1.TabIndex = 34;
+            this.label1.TabIndex = 45;
             this.label1.Text = "5.0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -339,11 +314,11 @@ namespace PhBuy
             this.shopNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shopNameLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shopNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.shopNameLabel.Location = new System.Drawing.Point(123, 204);
+            this.shopNameLabel.Location = new System.Drawing.Point(122, 208);
             this.shopNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.shopNameLabel.Name = "shopNameLabel";
             this.shopNameLabel.Size = new System.Drawing.Size(137, 21);
-            this.shopNameLabel.TabIndex = 34;
+            this.shopNameLabel.TabIndex = 46;
             this.shopNameLabel.Text = "Shop Name Here";
             this.shopNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -355,58 +330,58 @@ namespace PhBuy
             this.sellerProfilePicture.BorderRadius = 50;
             this.sellerProfilePicture.Image = ((System.Drawing.Image)(resources.GetObject("sellerProfilePicture.Image")));
             this.sellerProfilePicture.IsCircle = true;
-            this.sellerProfilePicture.Location = new System.Drawing.Point(14, 145);
+            this.sellerProfilePicture.Location = new System.Drawing.Point(13, 152);
             this.sellerProfilePicture.Name = "sellerProfilePicture";
             this.sellerProfilePicture.Size = new System.Drawing.Size(100, 100);
             this.sellerProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.sellerProfilePicture.TabIndex = 0;
+            this.sellerProfilePicture.TabIndex = 43;
             this.sellerProfilePicture.TabStop = false;
             this.sellerProfilePicture.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // sellerCoverPicture
             // 
-            this.sellerCoverPicture.Location = new System.Drawing.Point(8, 3);
+            this.sellerCoverPicture.Location = new System.Drawing.Point(7, 6);
             this.sellerCoverPicture.Name = "sellerCoverPicture";
             this.sellerCoverPicture.Size = new System.Drawing.Size(335, 198);
-            this.sellerCoverPicture.TabIndex = 1;
+            this.sellerCoverPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sellerCoverPicture.TabIndex = 44;
             this.sellerCoverPicture.TabStop = false;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // SellerDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuShadowPanel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.typesPanel);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.shopNameLabel);
+            this.Controls.Add(this.sellerProfilePicture);
+            this.Controls.Add(this.sellerCoverPicture);
             this.Name = "SellerDisplay";
             this.Size = new System.Drawing.Size(350, 311);
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.PerformLayout();
             this.typesPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellerProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sellerCoverPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        public Bunifu.UI.WinForms.BunifuPictureBox sellerProfilePicture;
-        public System.Windows.Forms.PictureBox sellerCoverPicture;
-        public System.Windows.Forms.Label shopNameLabel;
+        private System.Windows.Forms.FlowLayoutPanel typesPanel;
         private Bunifu.UI.WinForms.BunifuImageButton Fashion;
         private Bunifu.UI.WinForms.BunifuImageButton Food;
         private Bunifu.UI.WinForms.BunifuImageButton Tech;
         private Bunifu.UI.WinForms.BunifuImageButton Books;
         private Bunifu.UI.WinForms.BunifuImageButton Health;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuImageButton Others;
+        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel typesPanel;
+        public System.Windows.Forms.Label shopNameLabel;
+        public Bunifu.UI.WinForms.BunifuPictureBox sellerProfilePicture;
+        public System.Windows.Forms.PictureBox sellerCoverPicture;
     }
 }

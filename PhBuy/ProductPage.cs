@@ -34,9 +34,9 @@ namespace PhBuy
 
             SetPhotos();
             productNameLabel.Text = _product.Name;
-            priceLabel.Text = _product.Price.ToString();
+            priceLabel.Text = $"₱{p.Price}";
             descLabel.Text = _product.Description;
-            stockLabel.Text = $"Stock: {_product.Stock}";
+            stockLabel.Text = $"{_product.Stock} Available";
             /*ADD RATING AND SALES8*/
             _stream = new MemoryStream(_seller.Picture);
             sellerPictureBox.Image = Image.FromStream(_stream);
@@ -81,6 +81,19 @@ namespace PhBuy
         {
             PictureBox p = (PictureBox)sender;
             productPictureBox.Image = p.Image;
+        }
+
+        private void viewShopButton_Click(object sender, EventArgs e)
+        {
+            List<Products> Products = _dashBoard.CustomerHomePage._products;
+            _dashBoard.SellerShop.LoadData(Products.Where(s => s.SellerId == _product.SellerId).ToList(),_seller);
+            _dashBoard.customerTabControl.SelectedIndex = 3;
+            _dashBoard.scrollBar.ThumbLength = 100;
+        }
+
+        private void chatNowButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

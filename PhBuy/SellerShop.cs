@@ -37,7 +37,6 @@ namespace PhBuy
             ResetPage();
             _products = p;
             _currentSeller = s;
-            _productsQuery = _products.ToList();
             LoadSellerInfo();
             DisplayProducts();
         }
@@ -45,9 +44,9 @@ namespace PhBuy
         private void ResetPage()
         {
             tabControl1.SelectedIndex = 0;
-            homeSeparator.LineColor = Color.FromArgb(248, 58, 38);
+            homeSeparator.LineColor = Color.White;
             homeSeparator.LineThickness = 2;
-            allSeparator.LineColor = Color.FromArgb(45, 41, 66);
+            allSeparator.LineColor = Color.FromArgb(248, 58, 38);
             allSeparator.LineThickness = 1;
         }
         private void LoadSellerInfo()
@@ -58,6 +57,7 @@ namespace PhBuy
             sellerBackground.Image = Image.FromStream(_stream);
             descLabel.Text = _currentSeller.Descrption;
             sellerShopLabel.Text = _currentSeller.Name;
+            productCountLabel.Text = $"Products: {_products.Count}";
         }
         #region Events
 
@@ -89,16 +89,16 @@ namespace PhBuy
             _selectedTypes.Remove(t.Name);
         }
 
-        private void start_Click(object sender, EventArgs e)
+        private void star_Click(object sender, EventArgs e)
         {
-            BunifuPictureBox b = (BunifuPictureBox)sender;
-            BunifuPanel p = (BunifuPanel)b.Parent;
+            BunifuPictureBox a = (BunifuPictureBox)sender;
+            BunifuPanel p = (BunifuPanel)a.Parent;
             p.BorderColor = Color.FromArgb(248, 58, 38);
 
             if (_previousPanel != string.Empty)
             {
                 BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.FromArgb(45, 41, 66);
+                previous.BorderColor = Color.Transparent;
             }
 
             _previousPanel = $"panel{p.Tag}";
@@ -112,7 +112,7 @@ namespace PhBuy
             if (_previousPanel != string.Empty)
             {
                 BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.FromArgb(45, 41, 66);
+                previous.BorderColor = Color.Transparent;
             }
 
             _previousPanel = $"panel{p.Tag}";
@@ -141,20 +141,20 @@ namespace PhBuy
             if (l.Name == "home")
             {
                 BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
-                s.LineColor = Color.FromArgb(248, 58, 38);
+                s.LineColor = Color.White;
                 s.LineThickness = 2;
                 s = (BunifuSeparator)Controls.Find("allSeparator", true).First();
-                s.LineColor = Color.FromArgb(45, 41, 66);
+                s.LineColor = Color.FromArgb(248, 58, 38);
                 s.LineThickness = 1;
                 tabControl1.SelectedIndex = 0;
             }
             else
             {
                 BunifuSeparator s = (BunifuSeparator)Controls.Find($"{l.Name}Separator", true).First();
-                s.LineColor = Color.FromArgb(248, 58, 38);
+                s.LineColor = Color.White;
                 s.LineThickness = 2;
                 s = (BunifuSeparator)Controls.Find("homeSeparator", true).First();
-                s.LineColor = Color.FromArgb(45, 41, 66);
+                s.LineColor = Color.FromArgb(248, 58, 38);
                 s.LineThickness = 1;
                 tabControl1.SelectedIndex = 1;
             }
@@ -162,15 +162,13 @@ namespace PhBuy
 
         private void SellerShop_Load(object sender, EventArgs e)
         {
-            DoubleBuffered = true;
             _dashBoard.scrollBar.BindTo(mainPanel);
             _dashBoard.scrollBar.ThumbLength = 100;
         }
 
         private void product_Click(object sender, EventArgs e)
         {
-            BunifuShadowPanel s = (BunifuShadowPanel)sender;
-            ProductDisplay d = (ProductDisplay)s.Parent;
+            ProductDisplaySeller d = (ProductDisplaySeller)sender;
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
@@ -179,7 +177,7 @@ namespace PhBuy
         private void product_Click2(object sender, EventArgs e)
         {
             PictureBox s = (PictureBox)sender;
-            ProductDisplay d = (ProductDisplay)s.Parent.Parent;
+            ProductDisplaySeller d = (ProductDisplaySeller)s.Parent;
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
@@ -194,15 +192,17 @@ namespace PhBuy
             _productsQuery = _products.ToList();
             if (productName == "")
             {
+                if (_selectedTypes.Count != 0)
+                {
+                    foreach (var p in _products)
+                    {
+                        FilterTypes(p);
+                    }
+                }
                 if (priceMin != -1)
                     _productsQuery = _productsQuery.Where(p => p.Price >= priceMin).ToList();
                 if (priceMax != -1)
                     _productsQuery = _productsQuery.Where(p => p.Price <= priceMax).ToList();
-                if (_selectedTypes.Count != 0)
-                {
-                    foreach (var p in _productsQuery)
-                        FilterTypes(p);
-                }
                 switch(sort)
                 {
                     case "Top Sales":
@@ -230,15 +230,13 @@ namespace PhBuy
 
             foreach(var p in _productsQuery)
             {
-                ProductDisplay product = new ProductDisplay();
+                ProductDisplaySeller product = new ProductDisplaySeller();
                 _stream = new MemoryStream(p.Picture);
                 product.productPictureBox.Image = Image.FromStream(_stream);
                 product.NameLabel.Text = p.Name;
-                product.PriceLabel.Text = $"₱{p.Price}";
-                _stream = new MemoryStream(_currentSeller.Picture);
-                product.sellerProfilePicture.Image = Image.FromStream(_stream);
-                product.sellerNameLabel.Text = _currentSeller.Name;
+                product.PriceLabel.Text = $"₱{1000}";
                 product.statusLabel.Text = p.Condition;
+                product.statusPanel.Location = new Point(product.statusLabel.Width + 12, 198);
                 product.Click += product_Click;
                 product.productPictureBox.Click += product_Click2;
                 productsFlowLayoutPanel.Controls.Add(product);

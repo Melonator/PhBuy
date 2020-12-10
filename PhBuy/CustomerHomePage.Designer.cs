@@ -33,13 +33,15 @@ namespace PhBuy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerHomePage));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel = new System.Windows.Forms.Panel();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.productsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.moreProductsLabel = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.sellerFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.discoverSellersLabel = new System.Windows.Forms.Label();
-            this.categoryShadowPanel = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.sellerFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.others = new Bunifu.UI.WinForms.BunifuImageButton();
             this.health = new Bunifu.UI.WinForms.BunifuImageButton();
             this.books = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -55,9 +57,9 @@ namespace PhBuy
             this.adPictureBox2 = new System.Windows.Forms.PictureBox();
             this.adPictureBox = new System.Windows.Forms.PictureBox();
             this.panel.SuspendLayout();
-            this.bunifuShadowPanel2.SuspendLayout();
-            this.bunifuShadowPanel1.SuspendLayout();
-            this.categoryShadowPanel.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -69,46 +71,35 @@ namespace PhBuy
             // 
             // panel
             // 
-            this.panel.Controls.Add(this.bunifuShadowPanel2);
-            this.panel.Controls.Add(this.bunifuShadowPanel1);
-            this.panel.Controls.Add(this.categoryShadowPanel);
+            this.panel.Controls.Add(this.productsFlowLayoutPanel);
+            this.panel.Controls.Add(this.panel4);
+            this.panel.Controls.Add(this.panel1);
+            this.panel.Controls.Add(this.sellerFlowLayoutPanel);
+            this.panel.Controls.Add(this.panel3);
             this.panel.Controls.Add(this.adPictureBox2);
             this.panel.Controls.Add(this.adPictureBox);
             this.panel.Location = new System.Drawing.Point(1, 1);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(890, 593);
+            this.panel.Size = new System.Drawing.Size(877, 583);
             this.panel.TabIndex = 32;
-            // 
-            // bunifuShadowPanel2
-            // 
-            this.bunifuShadowPanel2.AutoScroll = true;
-            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderRadius = 1;
-            this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.productsFlowLayoutPanel);
-            this.bunifuShadowPanel2.Controls.Add(this.moreProductsLabel);
-            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(10, 665);
-            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
-            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.Gray;
-            this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 4;
-            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(854, 361);
-            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 1;
             // 
             // productsFlowLayoutPanel
             // 
-            this.productsFlowLayoutPanel.Location = new System.Drawing.Point(11, 39);
+            this.productsFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productsFlowLayoutPanel.Location = new System.Drawing.Point(11, 765);
             this.productsFlowLayoutPanel.Name = "productsFlowLayoutPanel";
-            this.productsFlowLayoutPanel.Size = new System.Drawing.Size(832, 319);
-            this.productsFlowLayoutPanel.TabIndex = 29;
+            this.productsFlowLayoutPanel.Size = new System.Drawing.Size(850, 319);
+            this.productsFlowLayoutPanel.TabIndex = 31;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.moreProductsLabel);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(8, 701);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(853, 49);
+            this.panel4.TabIndex = 34;
             // 
             // moreProductsLabel
             // 
@@ -116,7 +107,7 @@ namespace PhBuy
             this.moreProductsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.moreProductsLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moreProductsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.moreProductsLabel.Location = new System.Drawing.Point(709, 16);
+            this.moreProductsLabel.Location = new System.Drawing.Point(719, 16);
             this.moreProductsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.moreProductsLabel.Name = "moreProductsLabel";
             this.moreProductsLabel.Size = new System.Drawing.Size(132, 21);
@@ -125,36 +116,44 @@ namespace PhBuy
             this.moreProductsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.moreProductsLabel.Click += new System.EventHandler(this.moreProductsLabel_Click);
             // 
-            // bunifuShadowPanel1
+            // label8
             // 
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 1;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.sellerFlowLayoutPanel);
-            this.bunifuShadowPanel1.Controls.Add(this.discoverSellersLabel);
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(10, 301);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 4;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(854, 361);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 1;
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Mulish", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label8.Location = new System.Drawing.Point(5, 11);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 26);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Products";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // sellerFlowLayoutPanel
+            // panel1
             // 
-            this.sellerFlowLayoutPanel.AutoScroll = true;
-            this.sellerFlowLayoutPanel.Location = new System.Drawing.Point(11, 39);
-            this.sellerFlowLayoutPanel.Name = "sellerFlowLayoutPanel";
-            this.sellerFlowLayoutPanel.Size = new System.Drawing.Size(832, 319);
-            this.sellerFlowLayoutPanel.TabIndex = 29;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.discoverSellersLabel);
+            this.panel1.Location = new System.Drawing.Point(10, 304);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(853, 49);
+            this.panel1.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Mulish", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(5, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 26);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Sellers";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.discoverSellersLabel_Click);
             // 
             // discoverSellersLabel
             // 
@@ -162,7 +161,7 @@ namespace PhBuy
             this.discoverSellersLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.discoverSellersLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discoverSellersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.discoverSellersLabel.Location = new System.Drawing.Point(654, 15);
+            this.discoverSellersLabel.Location = new System.Drawing.Point(666, 14);
             this.discoverSellersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.discoverSellersLabel.Name = "discoverSellersLabel";
             this.discoverSellersLabel.Size = new System.Drawing.Size(185, 21);
@@ -171,38 +170,34 @@ namespace PhBuy
             this.discoverSellersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.discoverSellersLabel.Click += new System.EventHandler(this.discoverSellersLabel_Click);
             // 
-            // categoryShadowPanel
+            // sellerFlowLayoutPanel
             // 
-            this.categoryShadowPanel.BackColor = System.Drawing.Color.Transparent;
-            this.categoryShadowPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.categoryShadowPanel.BorderRadius = 1;
-            this.categoryShadowPanel.BorderThickness = 1;
-            this.categoryShadowPanel.Controls.Add(this.others);
-            this.categoryShadowPanel.Controls.Add(this.health);
-            this.categoryShadowPanel.Controls.Add(this.books);
-            this.categoryShadowPanel.Controls.Add(this.tech);
-            this.categoryShadowPanel.Controls.Add(this.food);
-            this.categoryShadowPanel.Controls.Add(this.fashion);
-            this.categoryShadowPanel.Controls.Add(this.label7);
-            this.categoryShadowPanel.Controls.Add(this.label6);
-            this.categoryShadowPanel.Controls.Add(this.label5);
-            this.categoryShadowPanel.Controls.Add(this.label4);
-            this.categoryShadowPanel.Controls.Add(this.label3);
-            this.categoryShadowPanel.Controls.Add(this.label2);
-            this.categoryShadowPanel.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.categoryShadowPanel.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.categoryShadowPanel.Location = new System.Drawing.Point(10, 190);
-            this.categoryShadowPanel.Name = "categoryShadowPanel";
-            this.categoryShadowPanel.PanelColor = System.Drawing.Color.White;
-            this.categoryShadowPanel.PanelColor2 = System.Drawing.Color.White;
-            this.categoryShadowPanel.ShadowColor = System.Drawing.Color.Gray;
-            this.categoryShadowPanel.ShadowDept = 2;
-            this.categoryShadowPanel.ShadowDepth = 4;
-            this.categoryShadowPanel.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.categoryShadowPanel.ShadowTopLeftVisible = false;
-            this.categoryShadowPanel.Size = new System.Drawing.Size(854, 105);
-            this.categoryShadowPanel.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.categoryShadowPanel.TabIndex = 1;
+            this.sellerFlowLayoutPanel.AutoScroll = true;
+            this.sellerFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sellerFlowLayoutPanel.Location = new System.Drawing.Point(10, 370);
+            this.sellerFlowLayoutPanel.Name = "sellerFlowLayoutPanel";
+            this.sellerFlowLayoutPanel.Size = new System.Drawing.Size(853, 313);
+            this.sellerFlowLayoutPanel.TabIndex = 32;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.others);
+            this.panel3.Controls.Add(this.health);
+            this.panel3.Controls.Add(this.books);
+            this.panel3.Controls.Add(this.tech);
+            this.panel3.Controls.Add(this.food);
+            this.panel3.Controls.Add(this.fashion);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(10, 185);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(854, 105);
+            this.panel3.TabIndex = 31;
             // 
             // others
             // 
@@ -225,7 +220,7 @@ namespace PhBuy
             this.others.ImageSize = new System.Drawing.Size(50, 50);
             this.others.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.others.InitialImage = ((System.Drawing.Image)(resources.GetObject("others.InitialImage")));
-            this.others.Location = new System.Drawing.Point(684, 14);
+            this.others.Location = new System.Drawing.Point(677, 14);
             this.others.Name = "others";
             this.others.Rotation = 0;
             this.others.ShowActiveImage = true;
@@ -233,7 +228,7 @@ namespace PhBuy
             this.others.ShowImageBorders = true;
             this.others.ShowSizeMarkers = false;
             this.others.Size = new System.Drawing.Size(55, 55);
-            this.others.TabIndex = 29;
+            this.others.TabIndex = 41;
             this.others.ToolTipText = "";
             this.others.WaitOnLoad = false;
             this.others.Zoom = 5;
@@ -260,7 +255,7 @@ namespace PhBuy
             this.health.ImageSize = new System.Drawing.Size(50, 50);
             this.health.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.health.InitialImage = ((System.Drawing.Image)(resources.GetObject("health.InitialImage")));
-            this.health.Location = new System.Drawing.Point(563, 14);
+            this.health.Location = new System.Drawing.Point(556, 14);
             this.health.Name = "health";
             this.health.Rotation = 0;
             this.health.ShowActiveImage = true;
@@ -268,7 +263,7 @@ namespace PhBuy
             this.health.ShowImageBorders = true;
             this.health.ShowSizeMarkers = false;
             this.health.Size = new System.Drawing.Size(55, 55);
-            this.health.TabIndex = 30;
+            this.health.TabIndex = 42;
             this.health.ToolTipText = "";
             this.health.WaitOnLoad = false;
             this.health.Zoom = 5;
@@ -295,7 +290,7 @@ namespace PhBuy
             this.books.ImageSize = new System.Drawing.Size(50, 50);
             this.books.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.books.InitialImage = ((System.Drawing.Image)(resources.GetObject("books.InitialImage")));
-            this.books.Location = new System.Drawing.Point(446, 14);
+            this.books.Location = new System.Drawing.Point(439, 14);
             this.books.Name = "books";
             this.books.Rotation = 0;
             this.books.ShowActiveImage = true;
@@ -303,7 +298,7 @@ namespace PhBuy
             this.books.ShowImageBorders = true;
             this.books.ShowSizeMarkers = false;
             this.books.Size = new System.Drawing.Size(55, 55);
-            this.books.TabIndex = 31;
+            this.books.TabIndex = 43;
             this.books.ToolTipText = "";
             this.books.WaitOnLoad = false;
             this.books.Zoom = 5;
@@ -330,7 +325,7 @@ namespace PhBuy
             this.tech.ImageSize = new System.Drawing.Size(50, 50);
             this.tech.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.tech.InitialImage = ((System.Drawing.Image)(resources.GetObject("tech.InitialImage")));
-            this.tech.Location = new System.Drawing.Point(332, 14);
+            this.tech.Location = new System.Drawing.Point(325, 14);
             this.tech.Name = "tech";
             this.tech.Rotation = 0;
             this.tech.ShowActiveImage = true;
@@ -338,7 +333,7 @@ namespace PhBuy
             this.tech.ShowImageBorders = true;
             this.tech.ShowSizeMarkers = false;
             this.tech.Size = new System.Drawing.Size(55, 55);
-            this.tech.TabIndex = 32;
+            this.tech.TabIndex = 44;
             this.tech.ToolTipText = "";
             this.tech.WaitOnLoad = false;
             this.tech.Zoom = 5;
@@ -365,7 +360,7 @@ namespace PhBuy
             this.food.ImageSize = new System.Drawing.Size(50, 50);
             this.food.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.food.InitialImage = ((System.Drawing.Image)(resources.GetObject("food.InitialImage")));
-            this.food.Location = new System.Drawing.Point(222, 14);
+            this.food.Location = new System.Drawing.Point(215, 14);
             this.food.Name = "food";
             this.food.Rotation = 0;
             this.food.ShowActiveImage = true;
@@ -373,7 +368,7 @@ namespace PhBuy
             this.food.ShowImageBorders = true;
             this.food.ShowSizeMarkers = false;
             this.food.Size = new System.Drawing.Size(55, 55);
-            this.food.TabIndex = 33;
+            this.food.TabIndex = 45;
             this.food.ToolTipText = "";
             this.food.WaitOnLoad = false;
             this.food.Zoom = 5;
@@ -400,7 +395,7 @@ namespace PhBuy
             this.fashion.ImageSize = new System.Drawing.Size(50, 50);
             this.fashion.ImageZoomSize = new System.Drawing.Size(55, 55);
             this.fashion.InitialImage = ((System.Drawing.Image)(resources.GetObject("fashion.InitialImage")));
-            this.fashion.Location = new System.Drawing.Point(114, 14);
+            this.fashion.Location = new System.Drawing.Point(107, 14);
             this.fashion.Name = "fashion";
             this.fashion.Rotation = 0;
             this.fashion.ShowActiveImage = true;
@@ -408,7 +403,7 @@ namespace PhBuy
             this.fashion.ShowImageBorders = false;
             this.fashion.ShowSizeMarkers = false;
             this.fashion.Size = new System.Drawing.Size(55, 55);
-            this.fashion.TabIndex = 34;
+            this.fashion.TabIndex = 46;
             this.fashion.ToolTipText = "";
             this.fashion.WaitOnLoad = false;
             this.fashion.Zoom = 5;
@@ -419,11 +414,11 @@ namespace PhBuy
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label7.Location = new System.Drawing.Point(683, 72);
+            this.label7.Location = new System.Drawing.Point(676, 72);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 20);
-            this.label7.TabIndex = 35;
+            this.label7.TabIndex = 47;
             this.label7.Text = "Others";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label7.UseMnemonic = false;
@@ -433,11 +428,11 @@ namespace PhBuy
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label6.Location = new System.Drawing.Point(536, 72);
+            this.label6.Location = new System.Drawing.Point(529, 72);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 20);
-            this.label6.TabIndex = 36;
+            this.label6.TabIndex = 48;
             this.label6.Text = "Health & Beauty";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.UseMnemonic = false;
@@ -447,11 +442,11 @@ namespace PhBuy
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(450, 72);
+            this.label5.Location = new System.Drawing.Point(443, 72);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 20);
-            this.label5.TabIndex = 37;
+            this.label5.TabIndex = 49;
             this.label5.Text = "Books";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -460,11 +455,11 @@ namespace PhBuy
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(339, 72);
+            this.label4.Location = new System.Drawing.Point(332, 72);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 38;
+            this.label4.TabIndex = 50;
             this.label4.Text = "Tech";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -473,11 +468,11 @@ namespace PhBuy
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label3.Location = new System.Drawing.Point(228, 72);
+            this.label3.Location = new System.Drawing.Point(221, 72);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
-            this.label3.TabIndex = 39;
+            this.label3.TabIndex = 51;
             this.label3.Text = "Food";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -486,18 +481,18 @@ namespace PhBuy
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mulish Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(109, 72);
+            this.label2.Location = new System.Drawing.Point(102, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
-            this.label2.TabIndex = 40;
+            this.label2.TabIndex = 52;
             this.label2.Text = "Fashion";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // adPictureBox2
             // 
-            this.adPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("adPictureBox2.Image")));
-            this.adPictureBox2.Location = new System.Drawing.Point(586, 17);
+            this.adPictureBox2.Image = global::PhBuy.Properties.Resources.small_banner;
+            this.adPictureBox2.Location = new System.Drawing.Point(583, 11);
             this.adPictureBox2.Name = "adPictureBox2";
             this.adPictureBox2.Size = new System.Drawing.Size(278, 167);
             this.adPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -506,8 +501,8 @@ namespace PhBuy
             // 
             // adPictureBox
             // 
-            this.adPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adPictureBox.Image")));
-            this.adPictureBox.Location = new System.Drawing.Point(10, 17);
+            this.adPictureBox.Image = global::PhBuy.Properties.Resources.big_banner;
+            this.adPictureBox.Location = new System.Drawing.Point(10, 11);
             this.adPictureBox.Name = "adPictureBox";
             this.adPictureBox.Size = new System.Drawing.Size(568, 167);
             this.adPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -519,19 +514,19 @@ namespace PhBuy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(874, 576);
+            this.ClientSize = new System.Drawing.Size(874, 586);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerHomePage";
             this.Text = "CustomerHomePage";
             this.Load += new System.EventHandler(this.CustomerHomePage_Load);
             this.panel.ResumeLayout(false);
-            this.bunifuShadowPanel2.ResumeLayout(false);
-            this.bunifuShadowPanel2.PerformLayout();
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel1.PerformLayout();
-            this.categoryShadowPanel.ResumeLayout(false);
-            this.categoryShadowPanel.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -541,13 +536,12 @@ namespace PhBuy
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
-        private System.Windows.Forms.FlowLayoutPanel productsFlowLayoutPanel;
         private System.Windows.Forms.Label moreProductsLabel;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private System.Windows.Forms.FlowLayoutPanel sellerFlowLayoutPanel;
         private System.Windows.Forms.Label discoverSellersLabel;
-        private Bunifu.UI.WinForms.BunifuShadowPanel categoryShadowPanel;
+        private System.Windows.Forms.PictureBox adPictureBox2;
+        private System.Windows.Forms.PictureBox adPictureBox;
+        public System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panel3;
         private Bunifu.UI.WinForms.BunifuImageButton others;
         private Bunifu.UI.WinForms.BunifuImageButton health;
         private Bunifu.UI.WinForms.BunifuImageButton books;
@@ -560,8 +554,11 @@ namespace PhBuy
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox adPictureBox2;
-        private System.Windows.Forms.PictureBox adPictureBox;
-        public System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.FlowLayoutPanel sellerFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel productsFlowLayoutPanel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

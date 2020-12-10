@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using PhBuyModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,33 +17,25 @@ namespace PhBuy
     {
         public SellerShop SellerShop;
         public ProductPage ProductPage;
-        private CustomerHomePage customerHomePage;
+        public CustomerHomePage CustomerHomePage;
+        private ProductSearch _productSearch;
+        private PhBuyContext _data = new PhBuyContext();
         public CustomerDashBoard()
         {
             InitializeComponent();
-        }
-
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
-                return cp;
-            }
         }
 
         private void CustomerDashBoard_Load(object sender, EventArgs e)
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             scrollBar.ThumbLength = 100;
-            customerHomePage = new CustomerHomePage(this)
+            CustomerHomePage = new CustomerHomePage(this, _data)
             {
                 MdiParent = this,
                 Parent = customerTabControl.TabPages[0]
             };
-            customerHomePage.Show();
-            DiscoverSellers discoverSellers = new DiscoverSellers(customerHomePage._sellers, customerHomePage._sellerTypes)
+            CustomerHomePage.Show();
+            DiscoverSellers discoverSellers = new DiscoverSellers(CustomerHomePage._sellers, CustomerHomePage._sellerTypes)
             {
                 MdiParent = this,
                 Parent = customerTabControl.TabPages[2]
@@ -59,14 +53,32 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[5]
             };
             ProductPage.Show();
+            _productSearch = new ProductSearch(this)
+            {
+                MdiParent = this,
+                Parent = customerTabControl.TabPages[1]
+            };
+            _productSearch.Show();
         }
 
         private void homePictureBox_Click(object sender, EventArgs e)
         { 
             scrollBar.DataBindings.Clear();
-            scrollBar.BindTo(customerHomePage.panel);
+            scrollBar.BindTo(CustomerHomePage.panel);
             scrollBar.ThumbLength = 100;
             customerTabControl.SelectedIndex = 0;
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (dropDown.Text == "Product")
+            {
+                _productSearch.CustomSearch(CustomerHomePage._products.Where(s => s.Name.Contains($"{searchTextBox.Text}")).ToList(), CustomerHomePage._sellers);
+                if (customerTabControl.SelectedIndex != 1)
+                {
+                    customerTabControl.SelectedIndex = 1;
+                }
+            }
         }
     }
 }

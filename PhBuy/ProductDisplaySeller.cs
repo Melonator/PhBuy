@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace PhBuy
 {
-    public partial class SellerDisplay : UserControl
+    public partial class ProductDisplaySeller : UserControl
     {
-        public SellerDisplay()
+        public ProductDisplaySeller()
         {
             InitializeComponent();
-        }
-
-        public void SetTypes(string[] types)
-        {
-            foreach(var t in types)
-            {
-                typesPanel.Controls[t].Visible = true;
-            }
         }
     }
 }

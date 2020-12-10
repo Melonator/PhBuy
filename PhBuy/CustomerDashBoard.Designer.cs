@@ -30,10 +30,11 @@ namespace PhBuy
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashBoard));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -45,13 +46,14 @@ namespace PhBuy
             this.sellerShop = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.productTab = new System.Windows.Forms.TabPage();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.dropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.homePictureBox = new System.Windows.Forms.PictureBox();
+            this.searchButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.searchTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.homePictureBox = new System.Windows.Forms.PictureBox();
             this.scrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.mainPanel.SuspendLayout();
             this.customerTabControl.SuspendLayout();
@@ -85,7 +87,7 @@ namespace PhBuy
             this.customerTabControl.Controls.Add(this.sellerShop);
             this.customerTabControl.Controls.Add(this.tabPage1);
             this.customerTabControl.Controls.Add(this.productTab);
-            this.customerTabControl.Location = new System.Drawing.Point(3, -19);
+            this.customerTabControl.Location = new System.Drawing.Point(3, -22);
             this.customerTabControl.Name = "customerTabControl";
             this.customerTabControl.SelectedIndex = 0;
             this.customerTabControl.Size = new System.Drawing.Size(887, 612);
@@ -93,7 +95,7 @@ namespace PhBuy
             // 
             // homePage
             // 
-            this.homePage.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.homePage.BackColor = System.Drawing.Color.Transparent;
             this.homePage.Location = new System.Drawing.Point(4, 22);
             this.homePage.Name = "homePage";
             this.homePage.Padding = new System.Windows.Forms.Padding(3);
@@ -147,50 +149,50 @@ namespace PhBuy
             this.productTab.Text = "tabPage2";
             this.productTab.UseVisualStyleBackColor = true;
             // 
-            // bunifuDropdown1
+            // dropDown
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.BorderRadius = 1;
-            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = true;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items.AddRange(new object[] {
+            this.dropDown.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dropDown.BackgroundColor = System.Drawing.Color.White;
+            this.dropDown.BorderColor = System.Drawing.Color.Silver;
+            this.dropDown.BorderRadius = 1;
+            this.dropDown.Color = System.Drawing.Color.Silver;
+            this.dropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.dropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.dropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropDown.FillDropDown = true;
+            this.dropDown.FillIndicator = false;
+            this.dropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dropDown.ForeColor = System.Drawing.Color.Black;
+            this.dropDown.FormattingEnabled = true;
+            this.dropDown.Icon = null;
+            this.dropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropDown.IndicatorColor = System.Drawing.Color.Gray;
+            this.dropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dropDown.ItemBackColor = System.Drawing.Color.White;
+            this.dropDown.ItemBorderColor = System.Drawing.Color.White;
+            this.dropDown.ItemForeColor = System.Drawing.Color.Black;
+            this.dropDown.ItemHeight = 26;
+            this.dropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.dropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dropDown.Items.AddRange(new object[] {
             "Product",
             "Seller"});
-            this.bunifuDropdown1.ItemTopMargin = 3;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(616, 16);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(114, 32);
-            this.bunifuDropdown1.TabIndex = 32;
-            this.bunifuDropdown1.Text = null;
-            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.TextLeftMargin = 5;
+            this.dropDown.ItemTopMargin = 3;
+            this.dropDown.Location = new System.Drawing.Point(616, 16);
+            this.dropDown.Name = "dropDown";
+            this.dropDown.Size = new System.Drawing.Size(114, 32);
+            this.dropDown.TabIndex = 32;
+            this.dropDown.Text = "Product";
+            this.dropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dropDown.TextLeftMargin = 5;
             // 
             // label8
             // 
@@ -208,6 +210,7 @@ namespace PhBuy
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.searchButton);
             this.panel1.Controls.Add(this.bunifuImageButton1);
             this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.mainPanel);
@@ -217,93 +220,95 @@ namespace PhBuy
             this.panel1.Size = new System.Drawing.Size(1056, 667);
             this.panel1.TabIndex = 35;
             // 
-            // bunifuTextBox1
+            // searchButton
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 1;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(172, 15);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox1.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Enter text";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(446, 34);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 1;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 3;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Enter text";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
-            // 
-            // homePictureBox
-            // 
-            this.homePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homePictureBox.Image = global::PhBuy.Properties.Resources._125853710_1023677731371154_291525496420872077_n;
-            this.homePictureBox.InitialImage = null;
-            this.homePictureBox.Location = new System.Drawing.Point(39, 13);
-            this.homePictureBox.Margin = new System.Windows.Forms.Padding(0);
-            this.homePictureBox.Name = "homePictureBox";
-            this.homePictureBox.Size = new System.Drawing.Size(137, 37);
-            this.homePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.homePictureBox.TabIndex = 0;
-            this.homePictureBox.TabStop = false;
-            this.homePictureBox.Click += new System.EventHandler(this.homePictureBox_Click);
+            this.searchButton.AllowAnimations = true;
+            this.searchButton.AllowMouseEffects = true;
+            this.searchButton.AllowToggling = false;
+            this.searchButton.AnimationSpeed = 200;
+            this.searchButton.AutoGenerateColors = false;
+            this.searchButton.AutoRoundBorders = false;
+            this.searchButton.AutoSizeLeftIcon = true;
+            this.searchButton.AutoSizeRightIcon = true;
+            this.searchButton.BackColor = System.Drawing.Color.Transparent;
+            this.searchButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
+            this.searchButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.searchButton.ButtonText = "Search";
+            this.searchButton.ButtonTextMarginLeft = 0;
+            this.searchButton.ColorContrastOnClick = 45;
+            this.searchButton.ColorContrastOnHover = 45;
+            this.searchButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.searchButton.CustomizableEdges = borderEdges2;
+            this.searchButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.searchButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.searchButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.searchButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.searchButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.searchButton.Font = new System.Drawing.Font("Mulish SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.searchButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.searchButton.IconMarginLeft = 11;
+            this.searchButton.IconPadding = 10;
+            this.searchButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.searchButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.searchButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.searchButton.IconSize = 25;
+            this.searchButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.searchButton.IdleBorderRadius = 1;
+            this.searchButton.IdleBorderThickness = 1;
+            this.searchButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.searchButton.IdleIconLeftImage = null;
+            this.searchButton.IdleIconRightImage = null;
+            this.searchButton.IndicateFocus = false;
+            this.searchButton.Location = new System.Drawing.Point(730, 17);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.searchButton.OnDisabledState.BorderRadius = 1;
+            this.searchButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.searchButton.OnDisabledState.BorderThickness = 1;
+            this.searchButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.searchButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.searchButton.OnDisabledState.IconLeftImage = null;
+            this.searchButton.OnDisabledState.IconRightImage = null;
+            this.searchButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.searchButton.onHoverState.BorderRadius = 1;
+            this.searchButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.searchButton.onHoverState.BorderThickness = 1;
+            this.searchButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.searchButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.searchButton.onHoverState.IconLeftImage = null;
+            this.searchButton.onHoverState.IconRightImage = null;
+            this.searchButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.searchButton.OnIdleState.BorderRadius = 1;
+            this.searchButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.searchButton.OnIdleState.BorderThickness = 1;
+            this.searchButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.searchButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.searchButton.OnIdleState.IconLeftImage = null;
+            this.searchButton.OnIdleState.IconRightImage = null;
+            this.searchButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.searchButton.OnPressedState.BorderRadius = 1;
+            this.searchButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.searchButton.OnPressedState.BorderThickness = 1;
+            this.searchButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.searchButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.searchButton.OnPressedState.IconLeftImage = null;
+            this.searchButton.OnPressedState.IconRightImage = null;
+            this.searchButton.Size = new System.Drawing.Size(104, 30);
+            this.searchButton.TabIndex = 78;
+            this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.searchButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchButton.TextMarginLeft = 0;
+            this.searchButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.searchButton.UseDefaultRadiusAndThickness = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // bunifuImageButton1
             // 
@@ -354,6 +359,94 @@ namespace PhBuy
             this.bunifuSeparator1.Size = new System.Drawing.Size(1056, 14);
             this.bunifuSeparator1.TabIndex = 30;
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.AcceptsReturn = false;
+            this.searchTextBox.AcceptsTab = false;
+            this.searchTextBox.AnimationSpeed = 200;
+            this.searchTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.searchTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.searchTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.searchTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchTextBox.BackgroundImage")));
+            this.searchTextBox.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.searchTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.searchTextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.searchTextBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.searchTextBox.BorderRadius = 1;
+            this.searchTextBox.BorderThickness = 1;
+            this.searchTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.searchTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchTextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.searchTextBox.DefaultText = "";
+            this.searchTextBox.FillColor = System.Drawing.Color.White;
+            this.searchTextBox.HideSelection = true;
+            this.searchTextBox.IconLeft = null;
+            this.searchTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchTextBox.IconPadding = 10;
+            this.searchTextBox.IconRight = null;
+            this.searchTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchTextBox.Lines = new string[0];
+            this.searchTextBox.Location = new System.Drawing.Point(172, 16);
+            this.searchTextBox.MaxLength = 32767;
+            this.searchTextBox.MinimumSize = new System.Drawing.Size(1, 1);
+            this.searchTextBox.Modified = false;
+            this.searchTextBox.Multiline = false;
+            this.searchTextBox.Name = "searchTextBox";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchTextBox.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.searchTextBox.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchTextBox.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.searchTextBox.OnIdleState = stateProperties8;
+            this.searchTextBox.Padding = new System.Windows.Forms.Padding(3);
+            this.searchTextBox.PasswordChar = '\0';
+            this.searchTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.searchTextBox.PlaceholderText = "Enter text";
+            this.searchTextBox.ReadOnly = false;
+            this.searchTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.searchTextBox.SelectedText = "";
+            this.searchTextBox.SelectionLength = 0;
+            this.searchTextBox.SelectionStart = 0;
+            this.searchTextBox.ShortcutsEnabled = true;
+            this.searchTextBox.Size = new System.Drawing.Size(446, 32);
+            this.searchTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.searchTextBox.TabIndex = 1;
+            this.searchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchTextBox.TextMarginBottom = 0;
+            this.searchTextBox.TextMarginLeft = 3;
+            this.searchTextBox.TextMarginTop = 0;
+            this.searchTextBox.TextPlaceholder = "Enter text";
+            this.searchTextBox.UseSystemPasswordChar = false;
+            this.searchTextBox.WordWrap = true;
+            // 
+            // homePictureBox
+            // 
+            this.homePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homePictureBox.Image = global::PhBuy.Properties.Resources._125853710_1023677731371154_291525496420872077_n;
+            this.homePictureBox.InitialImage = null;
+            this.homePictureBox.Location = new System.Drawing.Point(39, 13);
+            this.homePictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.homePictureBox.Name = "homePictureBox";
+            this.homePictureBox.Size = new System.Drawing.Size(137, 37);
+            this.homePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homePictureBox.TabIndex = 0;
+            this.homePictureBox.TabStop = false;
+            this.homePictureBox.Click += new System.EventHandler(this.homePictureBox_Click);
+            // 
             // scrollBar
             // 
             this.scrollBar.AllowCursorChanges = true;
@@ -400,9 +493,9 @@ namespace PhBuy
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1056, 667);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.bunifuDropdown1);
+            this.Controls.Add(this.dropDown);
             this.Controls.Add(this.scrollBar);
-            this.Controls.Add(this.bunifuTextBox1);
+            this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.homePictureBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -423,11 +516,11 @@ namespace PhBuy
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox homePictureBox;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextBox searchTextBox;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Panel mainPanel;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuDropdown dropDown;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TabControl customerTabControl;
@@ -439,5 +532,6 @@ namespace PhBuy
         private System.Windows.Forms.TabPage productTab;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         public Bunifu.UI.WinForms.BunifuVScrollBar scrollBar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton searchButton;
     }
 }
