@@ -20,6 +20,7 @@ namespace PhBuy
         public CustomerHomePage CustomerHomePage;
         private ProductSearch _productSearch;
         private PhBuyContext _data = new PhBuyContext();
+        public CartForm CartForm;
         public CustomerDashBoard()
         {
             InitializeComponent();
@@ -59,6 +60,12 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[1]
             };
             _productSearch.Show();
+            CartForm = new CartForm(this)
+            {
+                MdiParent = this,
+                Parent = customerTabControl.TabPages[7]
+            };
+            CartForm.Show();
         }
 
         private void homePictureBox_Click(object sender, EventArgs e)
@@ -79,6 +86,11 @@ namespace PhBuy
                     customerTabControl.SelectedIndex = 1;
                 }
             }
+        }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            customerTabControl.SelectedIndex = 7;
         }
     }
 }

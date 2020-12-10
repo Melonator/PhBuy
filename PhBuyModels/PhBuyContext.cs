@@ -10,8 +10,7 @@ namespace PhBuyModels
         {
         }
 
-        public PhBuyContext(DbContextOptions<PhBuyContext> options)
-            : base(options)
+        public PhBuyContext(DbContextOptions<PhBuyContext> options): base(options)
         {
         }
 
@@ -54,6 +53,10 @@ namespace PhBuyModels
                 entity.Property(e => e.Id)
                     .HasColumnName("ID")
                     .HasColumnType("smallmoney");
+
+                entity.Property(e => e.CustomerAddress)
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.CustomerId)
                     .HasColumnName("CustomerID")

@@ -95,5 +95,10 @@ namespace PhBuy
         {
 
         }
+
+        private void addToCartButton_Click(object sender, EventArgs e)
+        {
+            _dashBoard.CartForm.LoadData(_product, _seller, int.Parse(quantityTextBox.Text));
+        }
     }
 }

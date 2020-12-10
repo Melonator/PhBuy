@@ -12,6 +12,7 @@ namespace PhBuyModels
         public string Status { get; set; }
         public decimal? SellerId { get; set; }
         public decimal? CustomerId { get; set; }
+        public string CustomerAddress { get; set; }
 
         public virtual Customer Customer { get; set; }
         public virtual Products Product { get; set; }

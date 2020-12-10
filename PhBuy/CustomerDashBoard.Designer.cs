@@ -46,11 +46,13 @@ namespace PhBuy
             this.sellerShop = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.productTab = new System.Windows.Forms.TabPage();
+            this.buyPage = new System.Windows.Forms.TabPage();
+            this.cartPage = new System.Windows.Forms.TabPage();
             this.dropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.cartButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.searchTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.homePictureBox = new System.Windows.Forms.PictureBox();
@@ -87,6 +89,8 @@ namespace PhBuy
             this.customerTabControl.Controls.Add(this.sellerShop);
             this.customerTabControl.Controls.Add(this.tabPage1);
             this.customerTabControl.Controls.Add(this.productTab);
+            this.customerTabControl.Controls.Add(this.buyPage);
+            this.customerTabControl.Controls.Add(this.cartPage);
             this.customerTabControl.Location = new System.Drawing.Point(3, -22);
             this.customerTabControl.Name = "customerTabControl";
             this.customerTabControl.SelectedIndex = 0;
@@ -148,6 +152,24 @@ namespace PhBuy
             this.productTab.TabIndex = 5;
             this.productTab.Text = "tabPage2";
             this.productTab.UseVisualStyleBackColor = true;
+            // 
+            // buyPage
+            // 
+            this.buyPage.Location = new System.Drawing.Point(4, 22);
+            this.buyPage.Name = "buyPage";
+            this.buyPage.Size = new System.Drawing.Size(879, 586);
+            this.buyPage.TabIndex = 6;
+            this.buyPage.Text = "buyPage";
+            this.buyPage.UseVisualStyleBackColor = true;
+            // 
+            // cartPage
+            // 
+            this.cartPage.Location = new System.Drawing.Point(4, 22);
+            this.cartPage.Name = "cartPage";
+            this.cartPage.Size = new System.Drawing.Size(879, 586);
+            this.cartPage.TabIndex = 7;
+            this.cartPage.Text = "cartPage";
+            this.cartPage.UseVisualStyleBackColor = true;
             // 
             // dropDown
             // 
@@ -211,7 +233,7 @@ namespace PhBuy
             // panel1
             // 
             this.panel1.Controls.Add(this.searchButton);
-            this.panel1.Controls.Add(this.bunifuImageButton1);
+            this.panel1.Controls.Add(this.cartButton);
             this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.mainPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -310,39 +332,40 @@ namespace PhBuy
             this.searchButton.UseDefaultRadiusAndThickness = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // bunifuImageButton1
+            // cartButton
             // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowToggling = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.AllowZoomingOnFocus = false;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::PhBuy.Properties.Resources.buying_208px;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 5;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(45, 45);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(869, 15);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(45, 45);
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 5;
-            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.cartButton.ActiveImage = null;
+            this.cartButton.AllowAnimations = true;
+            this.cartButton.AllowBuffering = false;
+            this.cartButton.AllowToggling = false;
+            this.cartButton.AllowZooming = true;
+            this.cartButton.AllowZoomingOnFocus = false;
+            this.cartButton.BackColor = System.Drawing.Color.Transparent;
+            this.cartButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cartButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("cartButton.ErrorImage")));
+            this.cartButton.FadeWhenInactive = false;
+            this.cartButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.cartButton.Image = global::PhBuy.Properties.Resources.buying_208px;
+            this.cartButton.ImageActive = null;
+            this.cartButton.ImageLocation = null;
+            this.cartButton.ImageMargin = 5;
+            this.cartButton.ImageSize = new System.Drawing.Size(40, 40);
+            this.cartButton.ImageZoomSize = new System.Drawing.Size(45, 45);
+            this.cartButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("cartButton.InitialImage")));
+            this.cartButton.Location = new System.Drawing.Point(869, 15);
+            this.cartButton.Name = "cartButton";
+            this.cartButton.Rotation = 0;
+            this.cartButton.ShowActiveImage = true;
+            this.cartButton.ShowCursorChanges = true;
+            this.cartButton.ShowImageBorders = true;
+            this.cartButton.ShowSizeMarkers = false;
+            this.cartButton.Size = new System.Drawing.Size(45, 45);
+            this.cartButton.TabIndex = 0;
+            this.cartButton.ToolTipText = "";
+            this.cartButton.WaitOnLoad = false;
+            this.cartButton.Zoom = 5;
+            this.cartButton.ZoomSpeed = 10;
+            this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
             // 
             // bunifuSeparator1
             // 
@@ -530,8 +553,10 @@ namespace PhBuy
         private System.Windows.Forms.TabPage sellerShop;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage productTab;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+        private Bunifu.UI.WinForms.BunifuImageButton cartButton;
         public Bunifu.UI.WinForms.BunifuVScrollBar scrollBar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton searchButton;
+        private System.Windows.Forms.TabPage buyPage;
+        private System.Windows.Forms.TabPage cartPage;
     }
 }
