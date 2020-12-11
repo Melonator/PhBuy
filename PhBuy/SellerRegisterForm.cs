@@ -27,11 +27,12 @@ namespace PhBuy
 		private byte[] _sellerImage;
 		private string _sellerImageLocation;
 		private string _type;
-
-		public SellerRegisterForm(string name, int id)
+		private CustomerSellerForm _cs = null;
+		public SellerRegisterForm(string name, int id, CustomerSellerForm cs)
 		{
 			_id = id;
 			_userName = name;
+			_cs = cs;
 			InitializeComponent();
 		}
 
@@ -122,7 +123,7 @@ namespace PhBuy
 			_data.Seller.Add(s);
 			_data.SaveChanges();
 
-			var main = new MainForm("Seller", null, s);
+			var main = new MainForm(s, _cs);
 			main.Show();
 			Hide();
 		}

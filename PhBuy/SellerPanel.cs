@@ -64,7 +64,10 @@ namespace PhBuy
 		private void PanelVisibility(Panel p)
         {
 			if (p.Visible == true) p.Hide();
-			else p.Show();
+			else
+			{
+				p.Show();
+			}
         }
 
 		private void dropDown_Click(object sender, EventArgs e)

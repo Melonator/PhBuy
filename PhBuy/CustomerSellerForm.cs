@@ -25,14 +25,14 @@ namespace PhBuy
 		{
 			if (isNewSeller())
 			{
-				var reg = new SellerRegisterForm(_userName, _id);
+				var reg = new SellerRegisterForm(_userName, _id, this);
 				reg.ShowDialog();
 				Hide();
 			}
 
             else
             {
-				var main = new MainForm("Seller", null, GetSeller());
+				var main = new MainForm(GetSeller(), this);
 				main.Show();
 				Hide();
 			}
@@ -89,13 +89,13 @@ namespace PhBuy
         {
 			if (isNewCustomer())
             {
-				var register = new CustomerRegisterForm(_id);
+				var register = new CustomerRegisterForm(_id, this);
 				register.Show();
 				Hide();
             }
             else
             {
-				var main = new MainForm("Customer", GetCustomer());
+				var main = new MainForm(GetCustomer(), this);
 				main.Show();
 				Hide();
 			}

@@ -19,9 +19,11 @@ namespace PhBuy
         private PhBuyContext _data = new PhBuyContext();
         private MemoryStream _stream;
         private int _id;
-        public CustomerRegisterForm(int id)
+        private CustomerSellerForm _cs = null;
+        public CustomerRegisterForm(int id, CustomerSellerForm cs)
         {
             _id = id;
+            _cs = cs;
             InitializeComponent();
         }
 
@@ -38,7 +40,7 @@ namespace PhBuy
             _data.Customer.Add(c);
             _data.SaveChanges();
 
-            var main = new MainForm("Customer", c) { TopLevel = true };
+            var main = new MainForm(c, _cs) { TopLevel = true };
             main.Show();
             Hide();
         }

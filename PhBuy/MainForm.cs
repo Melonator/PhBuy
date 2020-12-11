@@ -14,17 +14,23 @@ namespace PhBuy
 		private Customer _currentCustomer;
 		private Seller _currentSeller;
 		private readonly string _type;
-		public MainForm(string type, Customer c = null, Seller s = null)
+		private CustomerSellerForm _cs = null;
+		public MainForm(Seller s, CustomerSellerForm cs)
 		{
-			if (type == "Seller")
-				_currentSeller = s;
-
-			else
-				_currentCustomer = c;
-
-			_type = type;
+			_currentSeller = s;
+			_type = "Seller";
+			_cs = cs;
 			InitializeComponent();
 		}
+
+		public MainForm(Customer c, CustomerSellerForm cs)
+        {
+			_currentCustomer = c;
+			_type = "Customer";
+			_cs = cs;
+			InitializeComponent();
+        }
+
 
 		private void bunifuImageButton1_Click(object sender, EventArgs e)
 		{
@@ -82,5 +88,11 @@ namespace PhBuy
 
             return image;
 		}
+
+        private void gridButton_Click(object sender, EventArgs e)
+        {
+			_cs.Show();
+			Close();
+        }
     }
 }
