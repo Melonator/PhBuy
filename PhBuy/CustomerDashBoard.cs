@@ -23,6 +23,11 @@ namespace PhBuy
         public CartForm CartForm;
         private MainForm _mainForm;
         private Customer _currentCustomer;
+        private CustomerMyOrders _customerOrderPanel;
+
+        private List<Orders> _myOrders;
+        private List<Products> _products;
+        private List<Seller> _sellers;
         public CustomerDashBoard(MainForm f, Customer c)
         {
             _mainForm = f;
@@ -32,6 +37,7 @@ namespace PhBuy
 
         private void CustomerDashBoard_Load(object sender, EventArgs e)
         {
+            LoadData();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             scrollBar.ThumbLength = 100;
             CustomerHomePage = new CustomerHomePage(this, _data)
@@ -70,8 +76,21 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[7]
             };
             CartForm.Show();
+            _customerOrderPanel = new CustomerMyOrders(this)
+            {
+                MdiParent = _mainForm,
+                Parent = customerTabControl.TabPages[8]
+            };
+            _customerOrderPanel.Show();
+            _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
         }
 
+        private void LoadData()
+        {
+            _myOrders = _data.Orders.Where(i => i.CustomerId == _currentCustomer.Id).ToList();
+            _products = _data.Products.ToList();
+            _sellers = _data.Seller.ToList();
+        }
         private void homePictureBox_Click(object sender, EventArgs e)
         { 
             scrollBar.DataBindings.Clear();
@@ -96,6 +115,13 @@ namespace PhBuy
         private void cartButton_Click(object sender, EventArgs e)
         {
             customerTabControl.SelectedIndex = 7;
+        }
+
+        private void TESTBUTTON_Click(object sender, EventArgs e)
+        {
+            customerTabControl.SelectedIndex = 8;
+            _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
+            scrollBar.ThumbLength = 100;
         }
     }
 }

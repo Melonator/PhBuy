@@ -30,12 +30,13 @@ namespace PhBuy
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashBoard));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -48,6 +49,7 @@ namespace PhBuy
             this.productTab = new System.Windows.Forms.TabPage();
             this.buyPage = new System.Windows.Forms.TabPage();
             this.cartPage = new System.Windows.Forms.TabPage();
+            this.myOrders = new System.Windows.Forms.TabPage();
             this.dropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,6 +59,7 @@ namespace PhBuy
             this.searchTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.homePictureBox = new System.Windows.Forms.PictureBox();
             this.scrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.TESTBUTTON = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.mainPanel.SuspendLayout();
             this.customerTabControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,6 +94,7 @@ namespace PhBuy
             this.customerTabControl.Controls.Add(this.productTab);
             this.customerTabControl.Controls.Add(this.buyPage);
             this.customerTabControl.Controls.Add(this.cartPage);
+            this.customerTabControl.Controls.Add(this.myOrders);
             this.customerTabControl.Location = new System.Drawing.Point(3, -22);
             this.customerTabControl.Name = "customerTabControl";
             this.customerTabControl.SelectedIndex = 0;
@@ -171,6 +175,15 @@ namespace PhBuy
             this.cartPage.Text = "cartPage";
             this.cartPage.UseVisualStyleBackColor = true;
             // 
+            // myOrders
+            // 
+            this.myOrders.Location = new System.Drawing.Point(4, 22);
+            this.myOrders.Name = "myOrders";
+            this.myOrders.Size = new System.Drawing.Size(879, 586);
+            this.myOrders.TabIndex = 8;
+            this.myOrders.Text = "myOrders";
+            this.myOrders.UseVisualStyleBackColor = true;
+            // 
             // dropDown
             // 
             this.dropDown.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -222,7 +235,7 @@ namespace PhBuy
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label8.Location = new System.Drawing.Point(919, 24);
+            this.label8.Location = new System.Drawing.Point(914, 21);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 21);
@@ -232,6 +245,8 @@ namespace PhBuy
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.TESTBUTTON);
             this.panel1.Controls.Add(this.searchButton);
             this.panel1.Controls.Add(this.cartButton);
             this.panel1.Controls.Add(this.bunifuSeparator1);
@@ -261,11 +276,11 @@ namespace PhBuy
             this.searchButton.ColorContrastOnClick = 45;
             this.searchButton.ColorContrastOnHover = 45;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.searchButton.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.searchButton.CustomizableEdges = borderEdges2;
             this.searchButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.searchButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.searchButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -349,8 +364,8 @@ namespace PhBuy
             this.cartButton.ImageActive = null;
             this.cartButton.ImageLocation = null;
             this.cartButton.ImageMargin = 5;
-            this.cartButton.ImageSize = new System.Drawing.Size(40, 40);
-            this.cartButton.ImageZoomSize = new System.Drawing.Size(45, 45);
+            this.cartButton.ImageSize = new System.Drawing.Size(35, 35);
+            this.cartButton.ImageZoomSize = new System.Drawing.Size(40, 40);
             this.cartButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("cartButton.InitialImage")));
             this.cartButton.Location = new System.Drawing.Point(869, 15);
             this.cartButton.Name = "cartButton";
@@ -359,7 +374,7 @@ namespace PhBuy
             this.cartButton.ShowCursorChanges = true;
             this.cartButton.ShowImageBorders = true;
             this.cartButton.ShowSizeMarkers = false;
-            this.cartButton.Size = new System.Drawing.Size(45, 45);
+            this.cartButton.Size = new System.Drawing.Size(40, 40);
             this.cartButton.TabIndex = 0;
             this.cartButton.ToolTipText = "";
             this.cartButton.WaitOnLoad = false;
@@ -409,7 +424,7 @@ namespace PhBuy
             this.searchTextBox.IconRight = null;
             this.searchTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.searchTextBox.Lines = new string[0];
-            this.searchTextBox.Location = new System.Drawing.Point(172, 16);
+            this.searchTextBox.Location = new System.Drawing.Point(172, 15);
             this.searchTextBox.MaxLength = 32767;
             this.searchTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.searchTextBox.Modified = false;
@@ -445,7 +460,7 @@ namespace PhBuy
             this.searchTextBox.SelectionLength = 0;
             this.searchTextBox.SelectionStart = 0;
             this.searchTextBox.ShortcutsEnabled = true;
-            this.searchTextBox.Size = new System.Drawing.Size(446, 32);
+            this.searchTextBox.Size = new System.Drawing.Size(446, 34);
             this.searchTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -509,13 +524,102 @@ namespace PhBuy
             this.scrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.scrollBar.Value = 0;
             // 
+            // TESTBUTTON
+            // 
+            this.TESTBUTTON.AllowAnimations = true;
+            this.TESTBUTTON.AllowMouseEffects = true;
+            this.TESTBUTTON.AllowToggling = false;
+            this.TESTBUTTON.AnimationSpeed = 200;
+            this.TESTBUTTON.AutoGenerateColors = false;
+            this.TESTBUTTON.AutoRoundBorders = false;
+            this.TESTBUTTON.AutoSizeLeftIcon = true;
+            this.TESTBUTTON.AutoSizeRightIcon = true;
+            this.TESTBUTTON.BackColor = System.Drawing.Color.Transparent;
+            this.TESTBUTTON.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.TESTBUTTON.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TESTBUTTON.BackgroundImage")));
+            this.TESTBUTTON.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.TESTBUTTON.ButtonText = "LMAO";
+            this.TESTBUTTON.ButtonTextMarginLeft = 0;
+            this.TESTBUTTON.ColorContrastOnClick = 45;
+            this.TESTBUTTON.ColorContrastOnHover = 45;
+            this.TESTBUTTON.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.TESTBUTTON.CustomizableEdges = borderEdges1;
+            this.TESTBUTTON.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.TESTBUTTON.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.TESTBUTTON.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TESTBUTTON.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.TESTBUTTON.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.TESTBUTTON.Font = new System.Drawing.Font("Mulish SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TESTBUTTON.ForeColor = System.Drawing.Color.White;
+            this.TESTBUTTON.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TESTBUTTON.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.TESTBUTTON.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.TESTBUTTON.IconMarginLeft = 11;
+            this.TESTBUTTON.IconPadding = 10;
+            this.TESTBUTTON.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TESTBUTTON.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.TESTBUTTON.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.TESTBUTTON.IconSize = 25;
+            this.TESTBUTTON.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.TESTBUTTON.IdleBorderRadius = 1;
+            this.TESTBUTTON.IdleBorderThickness = 1;
+            this.TESTBUTTON.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.TESTBUTTON.IdleIconLeftImage = null;
+            this.TESTBUTTON.IdleIconRightImage = null;
+            this.TESTBUTTON.IndicateFocus = false;
+            this.TESTBUTTON.Location = new System.Drawing.Point(-17, 165);
+            this.TESTBUTTON.Name = "TESTBUTTON";
+            this.TESTBUTTON.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.TESTBUTTON.OnDisabledState.BorderRadius = 1;
+            this.TESTBUTTON.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.TESTBUTTON.OnDisabledState.BorderThickness = 1;
+            this.TESTBUTTON.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.TESTBUTTON.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.TESTBUTTON.OnDisabledState.IconLeftImage = null;
+            this.TESTBUTTON.OnDisabledState.IconRightImage = null;
+            this.TESTBUTTON.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.TESTBUTTON.onHoverState.BorderRadius = 1;
+            this.TESTBUTTON.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.TESTBUTTON.onHoverState.BorderThickness = 1;
+            this.TESTBUTTON.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.TESTBUTTON.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.TESTBUTTON.onHoverState.IconLeftImage = null;
+            this.TESTBUTTON.onHoverState.IconRightImage = null;
+            this.TESTBUTTON.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.TESTBUTTON.OnIdleState.BorderRadius = 1;
+            this.TESTBUTTON.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.TESTBUTTON.OnIdleState.BorderThickness = 1;
+            this.TESTBUTTON.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.TESTBUTTON.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.TESTBUTTON.OnIdleState.IconLeftImage = null;
+            this.TESTBUTTON.OnIdleState.IconRightImage = null;
+            this.TESTBUTTON.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.TESTBUTTON.OnPressedState.BorderRadius = 1;
+            this.TESTBUTTON.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.TESTBUTTON.OnPressedState.BorderThickness = 1;
+            this.TESTBUTTON.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.TESTBUTTON.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.TESTBUTTON.OnPressedState.IconLeftImage = null;
+            this.TESTBUTTON.OnPressedState.IconRightImage = null;
+            this.TESTBUTTON.Size = new System.Drawing.Size(104, 30);
+            this.TESTBUTTON.TabIndex = 78;
+            this.TESTBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TESTBUTTON.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TESTBUTTON.TextMarginLeft = 0;
+            this.TESTBUTTON.TextPadding = new System.Windows.Forms.Padding(0);
+            this.TESTBUTTON.UseDefaultRadiusAndThickness = true;
+            this.TESTBUTTON.Click += new System.EventHandler(this.TESTBUTTON_Click);
+            // 
             // CustomerDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1056, 667);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.dropDown);
             this.Controls.Add(this.scrollBar);
             this.Controls.Add(this.searchTextBox);
@@ -528,9 +632,9 @@ namespace PhBuy
             this.mainPanel.ResumeLayout(false);
             this.customerTabControl.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homePictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -557,5 +661,7 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton searchButton;
         private System.Windows.Forms.TabPage buyPage;
         private System.Windows.Forms.TabPage cartPage;
+        private System.Windows.Forms.TabPage myOrders;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton TESTBUTTON;
     }
 }

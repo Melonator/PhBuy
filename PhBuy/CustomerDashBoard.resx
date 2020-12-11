@@ -138,11 +138,19 @@
   </data>
   <data name="searchTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAb4AAAAgCAYAAABtlh1uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVHhe7dUxDQMxAARB80fll2EERgDkZclNKHhnpGuO
+        iVBORw0KGgoAAAANSUhEUgAAAb4AAAAiCAYAAAAgXrxlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVHhe7dUxDQMxAARB80fll2EERgDkZclNKHhnpGuO
         wA4AyFlrfeacPzMzs1u3W3eyN8Y+AOBmu3Une8IHwP2ED4AU4QMgRfgASBE+AFKED4AU4QMgRfgASBE+
         AFKED4AU4QMgRfgASBE+AFKED4AU4QMgRfgASBE+AFKED4AU4QMgRfgASBE+AFKED4AU4QMgRfgASBE+
-        AFKED4AU4QMg5S98z/N892FmZnbrdutO9gCgYowXjZiincKOBqYAAAAASUVORK5CYII=
+        AFKED4AU4QMgRfgASBE+AFL+wvc8z3cfZmZmt2637mQPACrGeAHIlXKbV4KhZgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="TESTBUTTON.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAeCAYAAADAZ1t9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dGhEYAwAMDATtMd6P5bMEYNKDg8A7yIeBWZ
+        ca95Xms+8Xxvxl+Io0G4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4
+        BuEahGsQrkG4BuEahBvXMfdfCOCY+wWmSoWVkxJsQQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="searchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

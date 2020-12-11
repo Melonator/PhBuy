@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace PhBuy
 {
 	public partial class SellerRegisterForm : Form
 	{
+		private const string ConnectionString =
+			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+
 		private PhBuyContext _data = new PhBuyContext();
 		private List<string> _selectedTypes = new List<string>();
 		private readonly int _id;
@@ -96,7 +100,6 @@ namespace PhBuy
 			SetImage();
 
 			var s = new Seller();
-			var t = new SellerTypes();
 
 			s.Id = _id;
 			s.Name = _shopName;
@@ -109,7 +112,9 @@ namespace PhBuy
 
 			foreach(var a in _selectedTypes)
             {
+				var t = new SellerTypes();
 				t.SellerId = _id;
+				t.TypeId = (int)GenerateId();
 				t.Type = a;
 				_data.SellerTypes.Add(t);
 			}
@@ -150,6 +155,50 @@ namespace PhBuy
 			SellerTypeControl t = (SellerTypeControl)l.Parent;
 			typeFlowLayoutPanel.Controls.Remove(t);
 			_selectedTypes.Remove(t.Name);
+		}
+
+		private uint GenerateId()
+		{
+			uint id;
+			// Keep on generating the ID until it is a new one
+			do
+			{
+				id = Get5Digits();
+			} while (!IsIdValid(id));
+
+			return id;
+		}
+
+		private uint Get5Digits()
+		{
+			var bytes = new byte[4];
+			var rng = RandomNumberGenerator.Create();
+			rng.GetBytes(bytes);
+			return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
+		}
+
+		private bool IsIdValid(uint id)
+		{
+			var myConnection = new SqlConnection(ConnectionString);
+			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
+
+			myConnection.Open();
+			var param = new SqlParameter { ParameterName = "@ID", Value = (int)id };
+			var cmd = new SqlCommand(queryString, myConnection);
+			cmd.Parameters.Add(param);
+
+			var oReader = cmd.ExecuteReader();
+
+			while (oReader.Read())
+			{
+				if (oReader["ID"].ToString() != id.ToString()) continue;
+
+				myConnection.Close();
+				return false;
+			}
+
+			myConnection.Close();
+			return true;
 		}
 	}
 }

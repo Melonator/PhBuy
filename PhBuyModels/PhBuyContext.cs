@@ -207,7 +207,12 @@ namespace PhBuyModels
 
             modelBuilder.Entity<SellerTypes>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.TypeId)
+                    .HasName("PK__SellerTy__516F0395C0394695");
+
+                entity.Property(e => e.TypeId)
+                    .HasColumnName("TypeID")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
@@ -218,7 +223,7 @@ namespace PhBuyModels
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Seller)
-                    .WithMany()
+                    .WithMany(p => p.SellerTypes)
                     .HasForeignKey(d => d.SellerId)
                     .HasConstraintName("FK__SellerTyp__Selle__38996AB5");
             });
