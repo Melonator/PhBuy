@@ -21,7 +21,8 @@ namespace PhBuy
         {
             foreach(var t in types)
             {
-                typesPanel.Controls[t].Visible = true;
+                if (t == "Health & Beauty") typesPanel.Controls["Health"].Visible = true;
+                else typesPanel.Controls[t].Visible = true;
             }
         }
     }
