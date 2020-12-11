@@ -24,18 +24,7 @@ namespace PhBuy
 
 		private void loginButton_Click(object sender, EventArgs e)
 		{
-			if (!AreEntriesValid())
-			{
-				MessageBox.Show("Please Register", "Non Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-
-			else
-			{
-				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
-				form.Show();
-				Hide();
-			}
+			Login();
 		}
 
 		private void exitButton_Click(object sender, EventArgs e)
@@ -43,6 +32,10 @@ namespace PhBuy
 			Close();
 		}
 
+		private void passTextBox_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData == Keys.Enter)Login();
+		}
 		#endregion
 
 		#region Helper Functions
@@ -64,11 +57,19 @@ namespace PhBuy
 				var oReader = oCmd.ExecuteReader();
 				//Return true if the entries are valid else false
 				while (oReader.Read())
-					if (oReader["Name"].ToString() == username && oReader["Password"].ToString() == password)
+                {
+					if (oReader["Name"].ToString() == username)
 					{
-						myConnection.Close();
-						return true;
+						if (oReader["Password"].ToString() == password)
+						{
+							myConnection.Close();
+							MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
+							return true;
+						}
+						MessageBox.Show("Incorrect Password!", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
+					else MessageBox.Show("Please Register!", "Non-Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 
 			myConnection.Close();
@@ -91,6 +92,16 @@ namespace PhBuy
 			return id;
 		}
 
-		#endregion
-	}
+		private void Login()
+        {
+			if (AreEntriesValid())
+			{
+				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
+				form.Show();
+				Hide();
+			}
+		}
+
+        #endregion
+    }
 }

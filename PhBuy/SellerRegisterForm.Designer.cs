@@ -63,6 +63,7 @@ namespace PhBuy
             this.locationTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.page2 = new System.Windows.Forms.TabPage();
+            this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.backButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -78,7 +79,6 @@ namespace PhBuy
             this.uploadPhotoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.sellerPicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerBackground = new System.Windows.Forms.PictureBox();
-            this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.registerPages.SuspendLayout();
             this.page1.SuspendLayout();
             this.page2.SuspendLayout();
@@ -103,13 +103,14 @@ namespace PhBuy
             this.registerPages.Margin = new System.Windows.Forms.Padding(2);
             this.registerPages.Multiline = true;
             this.registerPages.Name = "registerPages";
-            this.registerPages.Page = this.page2;
-            this.registerPages.PageIndex = 1;
-            this.registerPages.PageName = "page2";
-            this.registerPages.PageTitle = "page2";
+            this.registerPages.Page = this.page1;
+            this.registerPages.PageIndex = 0;
+            this.registerPages.PageName = "page1";
+            this.registerPages.PageTitle = "page1";
             this.registerPages.SelectedIndex = 0;
             this.registerPages.Size = new System.Drawing.Size(754, 500);
             this.registerPages.TabIndex = 3;
+            this.registerPages.TabStop = false;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -171,6 +172,7 @@ namespace PhBuy
             this.nextButton1.Name = "nextButton1";
             this.nextButton1.Size = new System.Drawing.Size(80, 38);
             this.nextButton1.TabIndex = 50;
+            this.nextButton1.TabStop = false;
             this.nextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton1.Click += new System.EventHandler(this.nextButton1_Click);
             // 
@@ -457,6 +459,13 @@ namespace PhBuy
             this.page2.TabIndex = 1;
             this.page2.Text = "page2";
             // 
+            // typeFlowLayoutPanel
+            // 
+            this.typeFlowLayoutPanel.Location = new System.Drawing.Point(388, 228);
+            this.typeFlowLayoutPanel.Name = "typeFlowLayoutPanel";
+            this.typeFlowLayoutPanel.Size = new System.Drawing.Size(208, 108);
+            this.typeFlowLayoutPanel.TabIndex = 72;
+            // 
             // backButton2
             // 
             this.backButton2.ActiveBorderThickness = 1;
@@ -507,6 +516,7 @@ namespace PhBuy
             this.nextButton2.Name = "nextButton2";
             this.nextButton2.Size = new System.Drawing.Size(80, 38);
             this.nextButton2.TabIndex = 51;
+            this.nextButton2.TabStop = false;
             this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
             // 
@@ -556,6 +566,7 @@ namespace PhBuy
             this.typeDropDown.Name = "typeDropDown";
             this.typeDropDown.Size = new System.Drawing.Size(208, 32);
             this.typeDropDown.TabIndex = 6;
+            this.typeDropDown.TabStop = false;
             this.typeDropDown.Text = null;
             this.typeDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.typeDropDown.TextLeftMargin = 5;
@@ -790,6 +801,7 @@ namespace PhBuy
             this.backButton3.Name = "backButton3";
             this.backButton3.Size = new System.Drawing.Size(80, 38);
             this.backButton3.TabIndex = 53;
+            this.backButton3.TabStop = false;
             this.backButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.backButton3.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -817,6 +829,7 @@ namespace PhBuy
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(80, 38);
             this.confirmButton.TabIndex = 52;
+            this.confirmButton.TabStop = false;
             this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
@@ -843,6 +856,7 @@ namespace PhBuy
             this.uploadBackgroundButton.Name = "uploadBackgroundButton";
             this.uploadBackgroundButton.Size = new System.Drawing.Size(124, 38);
             this.uploadBackgroundButton.TabIndex = 49;
+            this.uploadBackgroundButton.TabStop = false;
             this.uploadBackgroundButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uploadBackgroundButton.Click += new System.EventHandler(this.uploadBackgroundButton_Click);
             // 
@@ -869,6 +883,7 @@ namespace PhBuy
             this.uploadPhotoButton.Name = "uploadPhotoButton";
             this.uploadPhotoButton.Size = new System.Drawing.Size(87, 31);
             this.uploadPhotoButton.TabIndex = 49;
+            this.uploadPhotoButton.TabStop = false;
             this.uploadPhotoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uploadPhotoButton.Click += new System.EventHandler(this.uploadPhotoButton_Click);
             // 
@@ -900,13 +915,6 @@ namespace PhBuy
             this.sellerBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sellerBackground.TabIndex = 51;
             this.sellerBackground.TabStop = false;
-            // 
-            // typeFlowLayoutPanel
-            // 
-            this.typeFlowLayoutPanel.Location = new System.Drawing.Point(388, 228);
-            this.typeFlowLayoutPanel.Name = "typeFlowLayoutPanel";
-            this.typeFlowLayoutPanel.Size = new System.Drawing.Size(208, 108);
-            this.typeFlowLayoutPanel.TabIndex = 72;
             // 
             // SellerRegisterForm
             // 

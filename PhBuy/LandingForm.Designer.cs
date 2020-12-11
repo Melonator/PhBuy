@@ -250,6 +250,7 @@ namespace PhBuy
             this.nameTextBox.TextPlaceholder = "Enter text";
             this.nameTextBox.UseSystemPasswordChar = false;
             this.nameTextBox.WordWrap = true;
+            this.nameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTextBox_KeyDown);
             // 
             // label11
             // 
@@ -292,6 +293,7 @@ namespace PhBuy
             this.exitButton.ShowSizeMarkers = false;
             this.exitButton.Size = new System.Drawing.Size(33, 35);
             this.exitButton.TabIndex = 25;
+            this.exitButton.TabStop = false;
             this.exitButton.ToolTipText = "";
             this.exitButton.WaitOnLoad = false;
             this.exitButton.Zoom = 5;
@@ -372,6 +374,7 @@ namespace PhBuy
             this.passTextBox.TextPlaceholder = "Enter your password";
             this.passTextBox.UseSystemPasswordChar = false;
             this.passTextBox.WordWrap = true;
+            this.passTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passTextBox_KeyDown);
             // 
             // registerButton
             // 
@@ -396,6 +399,7 @@ namespace PhBuy
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(112, 32);
             this.registerButton.TabIndex = 21;
+            this.registerButton.TabStop = false;
             this.registerButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
@@ -422,6 +426,7 @@ namespace PhBuy
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(112, 32);
             this.loginButton.TabIndex = 22;
+            this.loginButton.TabStop = false;
             this.loginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 

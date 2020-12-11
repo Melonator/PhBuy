@@ -372,7 +372,7 @@ namespace PhBuy
             this.registerButton.ButtonTextMarginLeft = 0;
             this.registerButton.ColorContrastOnClick = 45;
             this.registerButton.ColorContrastOnHover = 45;
-            this.registerButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -468,7 +468,7 @@ namespace PhBuy
             this.exitButton.ButtonTextMarginLeft = 0;
             this.exitButton.ColorContrastOnClick = 45;
             this.exitButton.ColorContrastOnHover = 45;
-            this.exitButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
