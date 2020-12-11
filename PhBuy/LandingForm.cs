@@ -57,11 +57,19 @@ namespace PhBuy
 				var oReader = oCmd.ExecuteReader();
 				//Return true if the entries are valid else false
 				while (oReader.Read())
-					if (oReader["Name"].ToString() == username && oReader["Password"].ToString() == password)
+                {
+					if (oReader["Name"].ToString() == username)
 					{
-						myConnection.Close();
-						return true;
+						if (oReader["Password"].ToString() == password)
+						{
+							myConnection.Close();
+							MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
+							return true;
+						}
+						MessageBox.Show("Incorrect Password!", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
+					else MessageBox.Show("Please Register!", "Non-Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 
 			myConnection.Close();
@@ -86,14 +94,8 @@ namespace PhBuy
 
 		private void Login()
         {
-			if (!AreEntriesValid())
+			if (AreEntriesValid())
 			{
-				MessageBox.Show("Please Register", "Non Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-
-			else
-			{
-				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
 				form.Show();
 				Hide();
