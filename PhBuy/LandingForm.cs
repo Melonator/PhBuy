@@ -24,18 +24,7 @@ namespace PhBuy
 
 		private void loginButton_Click(object sender, EventArgs e)
 		{
-			if (!AreEntriesValid())
-			{
-				MessageBox.Show("Please Register", "Non Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-
-			else
-			{
-				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
-				form.Show();
-				Hide();
-			}
+			Login();
 		}
 
 		private void exitButton_Click(object sender, EventArgs e)
@@ -43,6 +32,10 @@ namespace PhBuy
 			Close();
 		}
 
+		private void passTextBox_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData == Keys.Enter)Login();
+		}
 		#endregion
 
 		#region Helper Functions
@@ -91,6 +84,22 @@ namespace PhBuy
 			return id;
 		}
 
-		#endregion
-	}
+		private void Login()
+        {
+			if (!AreEntriesValid())
+			{
+				MessageBox.Show("Please Register", "Non Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
+			else
+			{
+				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
+				form.Show();
+				Hide();
+			}
+		}
+
+        #endregion
+    }
 }

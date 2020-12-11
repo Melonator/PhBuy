@@ -20,12 +20,13 @@ namespace PhBuy
 		private void registerButton_Click(object sender, EventArgs e)
 		{
 			var entryStatus = AreEntriesValid();
-
+			bool validEntries = false;
 			switch (entryStatus)
 			{
 				case 0:
 					RegisterUser(nameTextBox.Text, passTextBox.Text); //Valid Entries
 					MessageBox.Show("Yay!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					validEntries = true;
 					break;
 				case 1:
 					MessageBox.Show("Please type a different name", "User already exists!", MessageBoxButtons.OK,
@@ -40,7 +41,7 @@ namespace PhBuy
 						MessageBoxIcon.Error); // Textboxes are empty
 					break;
 			}
-			this.Close();
+			if (validEntries) Close();
 		}
 
 		#endregion
