@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PhBuyModels;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.IO;
@@ -8,12 +10,11 @@ namespace PhBuy
 {
 	public partial class SellerRegisterForm : Form
 	{
-		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
-
+		private PhBuyContext _data = new PhBuyContext();
+		private List<string> _selectedTypes = new List<string>();
 		private readonly int _id;
 		private readonly string _userName;
-		private int _contact;
+		private string _contact;
 		private string _description;
 		private string _link;
 		private string _location;
@@ -69,7 +70,7 @@ namespace PhBuy
 			if (contactTextBox.Text == string.Empty || linkTextBox.Text == string.Empty ||
 			    typeDropDown.Text == string.Empty) return;
 			//Set Values
-			_contact = int.Parse(contactTextBox.Text);
+			_contact = contactTextBox.Text;
 			_link = linkTextBox.Text;
 			_type = typeDropDown.Text;
 			//Switch Page
@@ -93,40 +94,62 @@ namespace PhBuy
 		private void confirmButton_Click(object sender, EventArgs e)
 		{
 			SetImage();
-			var queryString =
-				"INSERT INTO Seller VALUES(@ID, @Name, @Contact, @Pic, @Background, @Link, @Description, @Location);" +
-				"INSERT INTO SellerTypes VALUES (@SellerID, @Type)";
-			var myConnection = new SqlConnection(ConnectionString);
-			myConnection.Open();
-			var param1 = new SqlParameter {ParameterName = "@ID", Value = _id};
-			var param2 = new SqlParameter {ParameterName = "@Name", Value = _shopName };
-			var param3 = new SqlParameter {ParameterName = "@Contact", Value = _contact};
-			var param4 = new SqlParameter {ParameterName = "@Link", Value = _link};
-			var param5 = new SqlParameter {ParameterName = "@Pic", Value = _sellerImage};
-			var param6 = new SqlParameter {ParameterName = "@Background", Value = _sellerCover};
-			var param7 = new SqlParameter {ParameterName = "@Description", Value = _description};
-			var param8 = new SqlParameter {ParameterName = "@Type", Value = _type};
-			var param9 = new SqlParameter {ParameterName = "@SellerID", Value = _id};
-			var param10 = new SqlParameter {ParameterName = "@Location", Value = _location};
-			var cmd = new SqlCommand(queryString, myConnection);
 
-			cmd.Parameters.Add(param1);
-			cmd.Parameters.Add(param2);
-			cmd.Parameters.Add(param3);
-			cmd.Parameters.Add(param4);
-			cmd.Parameters.Add(param5);
-			cmd.Parameters.Add(param6);
-			cmd.Parameters.Add(param7);
-			cmd.Parameters.Add(param8);
-			cmd.Parameters.Add(param9);
-			cmd.Parameters.Add(param10);
-			cmd.ExecuteNonQuery();
-			myConnection.Close();
+			var s = new Seller();
+			var t = new SellerTypes();
 
-			var main = new MainForm(_userName, _id);
+			s.Id = _id;
+			s.Name = _shopName;
+			s.Contact = _contact;
+			s.Fblink = _link;
+			s.Picture = _sellerImage;
+			s.Background = _sellerCover;
+			s.Descrption = _description;
+			s.Location = _location;
+
+			foreach(var a in _selectedTypes)
+            {
+				t.SellerId = _id;
+				t.Type = a;
+				_data.SellerTypes.Add(t);
+			}
+
+			_data.Seller.Add(s);
+			_data.SaveChanges();
+
+			var main = new MainForm("Seller", null, s);
 			main.Show();
+			Hide();
 		}
 
-		#endregion
+        #endregion
+
+        private void typeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			SellerTypeControl type = new SellerTypeControl();
+			type.Name = typeDropDown.Text;
+			type.typeLabel.Text = typeDropDown.Text;
+			type.Width = type.typeLabel.Width + 25;
+			type.Click += sellerTypeControl_Click;
+			type.label1.Click += sellerTypeControl_Click2;
+			type.typeLabel.Click += sellerTypeControl_Click2;
+			_selectedTypes.Add(type.Name);
+			typeFlowLayoutPanel.Controls.Add(type);
+		}
+
+		private void sellerTypeControl_Click(object sender, EventArgs e)
+		{
+			SellerTypeControl t = (SellerTypeControl)sender;
+			typeFlowLayoutPanel.Controls.Remove(t);
+			_selectedTypes.Remove(t.Name);
+		}
+
+		private void sellerTypeControl_Click2(object sender, EventArgs e)
+		{
+			Label l = (Label)sender;
+			SellerTypeControl t = (SellerTypeControl)l.Parent;
+			typeFlowLayoutPanel.Controls.Remove(t);
+			_selectedTypes.Remove(t.Name);
+		}
 	}
 }

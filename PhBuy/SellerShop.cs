@@ -234,7 +234,7 @@ namespace PhBuy
                 _stream = new MemoryStream(p.Picture);
                 product.productPictureBox.Image = Image.FromStream(_stream);
                 product.NameLabel.Text = p.Name;
-                product.PriceLabel.Text = $"₱{1000}";
+                product.PriceLabel.Text = $"₱{p.Price}";
                 product.statusLabel.Text = p.Condition;
                 product.statusPanel.Location = new Point(product.statusLabel.Width + 12, 198);
                 product.Click += product_Click;

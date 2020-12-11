@@ -17,8 +17,6 @@ namespace PhBuy
 {
     public partial class CartForm : Form
     {
-        private Seller _insertedSeller;
-        private Products _insertedProduct;
         private List<Seller> _sellers = new List<Seller>();
         private List<Products> _products = new List<Products>();
 
@@ -26,35 +24,36 @@ namespace PhBuy
         private MemoryStream _stream;
         private PhBuyContext _data = new PhBuyContext();
         private CustomerDashBoard _dashBoard;
-        private int _quantity;
-        private DateTime _dateNow;
-
+        private List<int> _quantities = new List<int>();
+        
         private List<Seller> _sellersToBuy = new List<Seller>();
         private List<Products> _productsToBuy = new List<Products>();
-
+        private List<int> _quantitiesToBuy = new List<int>();
+        private Customer _currentCustomer;
         private const string ConnectionString =
             "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
         private double _total;
-        public CartForm(CustomerDashBoard c)
+        public CartForm(CustomerDashBoard d, Customer c)
         {
-            _dashBoard = c;
+            _dashBoard = d;
+            _currentCustomer = c;
             InitializeComponent();
         }
 
         public void LoadData(Products p, Seller s, int q)
         {
-            _insertedSeller = s;
-            _insertedProduct = p;
-            _quantity = q;
-            if (!_sellers.Contains(s))_sellers.Add(_insertedSeller);
-            _products.Add(_insertedProduct);
+            addresstextBox.Text = _currentCustomer.Address;
+            _quantities.Add(q);
+            if (!_sellers.Contains(s))_sellers.Add(s);
+            _products.Add(p);
 
             LoadOrders();
         }
 
         private void LoadOrders()
         {
+            int index = 0;
             cartFlowLayoutPanel.Controls.Clear();
             foreach (var s in _sellers)
             { 
@@ -73,7 +72,9 @@ namespace PhBuy
                     productCart.productNameLabel.Text = p.Name;
                     productCart.checkBox.CheckedChanged += checkBox_CheckedChanged;
                     productCart.deleteButton.Click += deleteButton_Clicked;
+                    productCart.quantityTextBox.Text = _quantities[index].ToString();
                     cartFlowLayoutPanel.Controls.Add(productCart);
+                    index++;
                 }
             }
         }
@@ -89,11 +90,13 @@ namespace PhBuy
                 _toDelete.Add(p);
                 if (!_sellersToBuy.Contains(associatedSeller)) _sellersToBuy.Add(associatedSeller);
                 _productsToBuy.Add(associatedProduct);
+                _quantitiesToBuy.Add(int.Parse(p.quantityTextBox.Text));
             }
             else
             {
                 _toDelete.Remove(p);
                 _productsToBuy.Remove(associatedProduct);
+                _quantitiesToBuy.Remove(int.Parse(p.quantityTextBox.Text));
             }
 
             if (_toDelete.Count != 0) deleteButton.Enabled = true;
@@ -129,6 +132,7 @@ namespace PhBuy
 
         private void confirmOrderButton_Click(object sender, EventArgs e)
         {
+            int index = 0;
             foreach (var s in _sellersToBuy)
             {
                 foreach (var p in _productsToBuy.Where(i => i.SellerId == s.Id))
@@ -136,13 +140,27 @@ namespace PhBuy
                     Orders o = new Orders();
                     o.Id = GenerateId();
                     o.ProductId = p.ProductId;
-                    o.Quantity = _quantity;
+                    o.Quantity = _quantitiesToBuy[index];
                     o.SellerId = s.Id;
+                    o.DateOrdered = DateTime.Now;
                     o.Status = "Processing";
-                    o.TotalPrice = _quantity * p.Price;
+                    o.CustomerAddress = _currentCustomer.Address;
+                    o.CustomerId = _currentCustomer.Id;
+                    o.TotalPrice = _quantitiesToBuy[index] * p.Price;
+                    p.Stock -= _quantitiesToBuy[index];
+                    _data.Products.Update(p);
                     _data.Orders.Add(o);
+                    index++;
                 }
             }
+            _quantities.Clear();
+            _quantitiesToBuy.Clear();
+            _products.Clear();
+            _sellers.Clear();
+            _sellersToBuy.Clear();
+            _productsToBuy.Clear();
+            cartFlowLayoutPanel.Controls.Clear();
+            _data.Customer.Update(_currentCustomer);
             _data.SaveChanges();
         }
 
@@ -188,6 +206,11 @@ namespace PhBuy
 
             myConnection.Close();
             return true;
+        }
+
+        private void addresstextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentCustomer.Address = addresstextBox.Text;
         }
     }
 }

@@ -54,8 +54,8 @@ namespace PhBuy
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.addToCartButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.subtractQuantityButton = new Bunifu.Framework.UI.BunifuTileButton();
+            this.addQuantityButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.quantityTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -67,6 +67,7 @@ namespace PhBuy
             this.sellerShopLabel = new System.Windows.Forms.Label();
             this.productImagesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.productPictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,6 +84,7 @@ namespace PhBuy
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.panel2);
@@ -387,8 +389,8 @@ namespace PhBuy
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.bunifuButton2);
             this.panel1.Controls.Add(this.addToCartButton);
-            this.panel1.Controls.Add(this.bunifuTileButton2);
-            this.panel1.Controls.Add(this.bunifuTileButton1);
+            this.panel1.Controls.Add(this.subtractQuantityButton);
+            this.panel1.Controls.Add(this.addQuantityButton);
             this.panel1.Controls.Add(this.quantityTextBox);
             this.panel1.Controls.Add(this.bunifuSeparator1);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -584,43 +586,45 @@ namespace PhBuy
             this.addToCartButton.UseDefaultRadiusAndThickness = true;
             this.addToCartButton.Click += new System.EventHandler(this.addToCartButton_Click);
             // 
-            // bunifuTileButton2
+            // subtractQuantityButton
             // 
-            this.bunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuTileButton2.color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuTileButton2.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
-            this.bunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton2.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton2.Image = global::PhBuy.Properties.Resources.subtract_208px;
-            this.bunifuTileButton2.ImagePosition = 9;
-            this.bunifuTileButton2.ImageZoom = 50;
-            this.bunifuTileButton2.LabelPosition = 0;
-            this.bunifuTileButton2.LabelText = "";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(390, 238);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(38, 39);
-            this.bunifuTileButton2.TabIndex = 63;
+            this.subtractQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.subtractQuantityButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.subtractQuantityButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.subtractQuantityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.subtractQuantityButton.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.subtractQuantityButton.ForeColor = System.Drawing.Color.White;
+            this.subtractQuantityButton.Image = global::PhBuy.Properties.Resources.subtract_208px;
+            this.subtractQuantityButton.ImagePosition = 9;
+            this.subtractQuantityButton.ImageZoom = 50;
+            this.subtractQuantityButton.LabelPosition = 0;
+            this.subtractQuantityButton.LabelText = "";
+            this.subtractQuantityButton.Location = new System.Drawing.Point(390, 238);
+            this.subtractQuantityButton.Margin = new System.Windows.Forms.Padding(6);
+            this.subtractQuantityButton.Name = "subtractQuantityButton";
+            this.subtractQuantityButton.Size = new System.Drawing.Size(38, 39);
+            this.subtractQuantityButton.TabIndex = 63;
+            this.subtractQuantityButton.Click += new System.EventHandler(this.subtractQuantityButton_Click);
             // 
-            // bunifuTileButton1
+            // addQuantityButton
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuTileButton1.color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = global::PhBuy.Properties.Resources.plus_math_208px;
-            this.bunifuTileButton1.ImagePosition = 9;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 0;
-            this.bunifuTileButton1.LabelText = "";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(492, 238);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(38, 39);
-            this.bunifuTileButton1.TabIndex = 64;
+            this.addQuantityButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.addQuantityButton.color = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.addQuantityButton.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.addQuantityButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addQuantityButton.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.addQuantityButton.ForeColor = System.Drawing.Color.White;
+            this.addQuantityButton.Image = global::PhBuy.Properties.Resources.plus_math_208px;
+            this.addQuantityButton.ImagePosition = 9;
+            this.addQuantityButton.ImageZoom = 50;
+            this.addQuantityButton.LabelPosition = 0;
+            this.addQuantityButton.LabelText = "";
+            this.addQuantityButton.Location = new System.Drawing.Point(492, 238);
+            this.addQuantityButton.Margin = new System.Windows.Forms.Padding(6);
+            this.addQuantityButton.Name = "addQuantityButton";
+            this.addQuantityButton.Size = new System.Drawing.Size(38, 39);
+            this.addQuantityButton.TabIndex = 64;
+            this.addQuantityButton.Click += new System.EventHandler(this.addQuantityButton_Click);
             // 
             // quantityTextBox
             // 
@@ -828,6 +832,14 @@ namespace PhBuy
             this.productPictureBox.TabIndex = 53;
             this.productPictureBox.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 1064);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 57;
+            // 
             // ProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -840,6 +852,7 @@ namespace PhBuy
             this.Text = "ProductPage";
             this.Load += new System.EventHandler(this.ProductPage_Load);
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -869,8 +882,8 @@ namespace PhBuy
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton addToCartButton;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
+        private Bunifu.Framework.UI.BunifuTileButton subtractQuantityButton;
+        private Bunifu.Framework.UI.BunifuTileButton addQuantityButton;
         private Bunifu.UI.WinForms.BunifuTextBox quantityTextBox;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -883,5 +896,6 @@ namespace PhBuy
         private System.Windows.Forms.PictureBox productPictureBox;
         private System.Windows.Forms.Label stockLabel;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
     }
 }

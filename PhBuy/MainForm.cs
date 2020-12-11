@@ -1,7 +1,9 @@
-﻿using System;
+﻿using PhBuyModels;
+using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PhBuy
@@ -12,12 +14,18 @@ namespace PhBuy
 		private const string _connectionString =
 			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
-		private readonly int _id;
-		private readonly string _userName;
-		public MainForm(string name, int id)
+		private Customer _currentCustomer;
+		private Seller _currentSeller;
+		private readonly string _type;
+		public MainForm(string type, Customer c = null, Seller s = null)
 		{
-			_id = id;
-			_userName = name;
+			if (type == "Seller")
+				_currentSeller = s;
+
+			else
+				_currentCustomer = c;
+
+			_type = type;
 			InitializeComponent();
 		}
 
@@ -36,40 +44,46 @@ namespace PhBuy
 		{
 			//Determine if the user is a seller or not
 			//If seller
-			var form2 = new SellerDashBoard() { TopLevel = false };
-			form2.Show();
-			mainPanel.Controls.Add(form2);
+			if (_type == "Seller")
+			{
+				var form2 = new SellerDashBoard() { TopLevel = false };
+				form2.Show();
+				mainPanel.Controls.Add(form2);
 
-			var form = new SellerPanel(this, _id) { TopLevel = false };
-			form.Show();
-			sidePanel.Controls.Add(form);
-			setInformation();
+				var form = new SellerPanel(this, (int)_currentSeller.Id) { TopLevel = false };
+				form.Show();
+				sidePanel.Controls.Add(form);
+				setInformation();
+			}
+            else
+            {
+				CustomerDashBoard dashBoard = new CustomerDashBoard(this, _currentCustomer) { TopLevel = false};
+				dashBoardPanel.Controls.Clear();
+				dashBoardPanel.Controls.Add(dashBoard);
+				setInformation();
+				dashBoard.Show();
+            }
 		}
 
 		private void setInformation()
         {
 			int panelDistance = 6;
-			userNameLabel.Text = _userName;
+			if(_type == "Seller") userNameLabel.Text = _currentSeller.Name;
+			else userNameLabel.Text = _currentCustomer.Name;
 			userPhoto.Image = getUserImage();
 			userPanel.Location = new Point(bunifuSeparator1.Location.X - panelDistance - userPanel.Width,0);
         }
 
 		private Image getUserImage()
         {
-			Image image = null;
-			var myConnection = new SqlConnection(_connectionString);
-			myConnection.Open();
-			var queryString = $"SELECT * FROM Seller WHERE ID = {_id};";
-			var oCmd = new SqlCommand(queryString, myConnection);
-			var oReader = oCmd.ExecuteReader();
-			while (oReader.Read())
-            {
-				MemoryStream stream = new MemoryStream((byte[])oReader["Picture"]);
-				image = Image.FromStream(stream);
-			}
+            MemoryStream stream;
+			if (_type == "Seller")
+				stream = new MemoryStream(_currentSeller.Picture);
+			else
+				stream = new MemoryStream(_currentCustomer.Picture);
+            Image image = Image.FromStream(stream);
 
-			myConnection.Close();
-			return image;
+            return image;
 		}
     }
 }

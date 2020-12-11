@@ -74,6 +74,7 @@ namespace PhBuy
             this.buyTileButton.Name = "buyTileButton";
             this.buyTileButton.Size = new System.Drawing.Size(199, 216);
             this.buyTileButton.TabIndex = 15;
+            this.buyTileButton.Click += new System.EventHandler(this.buyTileButton_Click);
             // 
             // sellTileButton
             // 

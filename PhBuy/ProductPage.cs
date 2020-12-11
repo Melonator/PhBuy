@@ -19,6 +19,7 @@ namespace PhBuy
         private MemoryStream _stream = new MemoryStream();
         private Seller _seller;
         private CustomerDashBoard _dashBoard;
+        private int _quantity = 1;
         public ProductPage(CustomerDashBoard c)
         {
             _dashBoard = c;
@@ -27,6 +28,7 @@ namespace PhBuy
 
         public void LoadData(Products p, Seller s)
         {
+            _quantity = 1;
             _dashBoard.scrollBar.BindTo(mainPanel);
             _dashBoard.scrollBar.ThumbLength = 100;
             _product = p;
@@ -99,6 +101,18 @@ namespace PhBuy
         private void addToCartButton_Click(object sender, EventArgs e)
         {
             _dashBoard.CartForm.LoadData(_product, _seller, int.Parse(quantityTextBox.Text));
+        }
+
+        private void addQuantityButton_Click(object sender, EventArgs e)
+        {
+            if (_quantity < _product.Stock) _quantity++;
+            quantityTextBox.Text = _quantity.ToString();
+        }
+
+        private void subtractQuantityButton_Click(object sender, EventArgs e)
+        {
+            if(_quantity != 1) _quantity--;
+            quantityTextBox.Text = _quantity.ToString();
         }
     }
 }

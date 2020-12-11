@@ -78,6 +78,7 @@ namespace PhBuy
             this.uploadPhotoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.sellerPicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerBackground = new System.Windows.Forms.PictureBox();
+            this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.registerPages.SuspendLayout();
             this.page1.SuspendLayout();
             this.page2.SuspendLayout();
@@ -99,13 +100,13 @@ namespace PhBuy
             this.registerPages.Controls.Add(this.page2);
             this.registerPages.Controls.Add(this.page3);
             this.registerPages.Location = new System.Drawing.Point(0, 0);
-            this.registerPages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.registerPages.Margin = new System.Windows.Forms.Padding(2);
             this.registerPages.Multiline = true;
             this.registerPages.Name = "registerPages";
-            this.registerPages.Page = this.page3;
-            this.registerPages.PageIndex = 2;
-            this.registerPages.PageName = "page3";
-            this.registerPages.PageTitle = "page3";
+            this.registerPages.Page = this.page2;
+            this.registerPages.PageIndex = 1;
+            this.registerPages.PageName = "page2";
+            this.registerPages.PageTitle = "page2";
             this.registerPages.SelectedIndex = 0;
             this.registerPages.Size = new System.Drawing.Size(754, 500);
             this.registerPages.TabIndex = 3;
@@ -439,6 +440,7 @@ namespace PhBuy
             this.page2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.page2.BackgroundImage = global::PhBuy.Properties.Resources.RegistrationP2_2_;
             this.page2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.page2.Controls.Add(this.typeFlowLayoutPanel);
             this.page2.Controls.Add(this.backButton2);
             this.page2.Controls.Add(this.nextButton2);
             this.page2.Controls.Add(this.typeDropDown);
@@ -542,7 +544,12 @@ namespace PhBuy
             this.typeDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.typeDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.typeDropDown.Items.AddRange(new object[] {
-            "Food"});
+            "Fashion",
+            "Food",
+            "Tech",
+            "Books",
+            "Health & Beauty",
+            "Others"});
             this.typeDropDown.ItemTopMargin = 3;
             this.typeDropDown.Location = new System.Drawing.Point(388, 191);
             this.typeDropDown.Margin = new System.Windows.Forms.Padding(2);
@@ -552,6 +559,7 @@ namespace PhBuy
             this.typeDropDown.Text = null;
             this.typeDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.typeDropDown.TextLeftMargin = 5;
+            this.typeDropDown.SelectedIndexChanged += new System.EventHandler(this.typeDropDown_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -561,9 +569,9 @@ namespace PhBuy
             this.label5.Location = new System.Drawing.Point(383, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 24);
+            this.label5.Size = new System.Drawing.Size(156, 24);
             this.label5.TabIndex = 43;
-            this.label5.Text = "Type of Business";
+            this.label5.Text = "Business Type(s)";
             // 
             // label6
             // 
@@ -893,6 +901,13 @@ namespace PhBuy
             this.sellerBackground.TabIndex = 51;
             this.sellerBackground.TabStop = false;
             // 
+            // typeFlowLayoutPanel
+            // 
+            this.typeFlowLayoutPanel.Location = new System.Drawing.Point(388, 228);
+            this.typeFlowLayoutPanel.Name = "typeFlowLayoutPanel";
+            this.typeFlowLayoutPanel.Size = new System.Drawing.Size(208, 108);
+            this.typeFlowLayoutPanel.TabIndex = 72;
+            // 
             // SellerRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,7 +916,7 @@ namespace PhBuy
             this.ClientSize = new System.Drawing.Size(754, 500);
             this.Controls.Add(this.registerPages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SellerRegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seller_Register";
@@ -945,5 +960,6 @@ namespace PhBuy
         public System.Windows.Forms.PictureBox sellerBackground;
         private Bunifu.Framework.UI.BunifuThinButton2 backButton2;
         private Bunifu.Framework.UI.BunifuThinButton2 backButton3;
+        private System.Windows.Forms.FlowLayoutPanel typeFlowLayoutPanel;
     }
 }

@@ -21,8 +21,12 @@ namespace PhBuy
         private ProductSearch _productSearch;
         private PhBuyContext _data = new PhBuyContext();
         public CartForm CartForm;
-        public CustomerDashBoard()
+        private MainForm _mainForm;
+        private Customer _currentCustomer;
+        public CustomerDashBoard(MainForm f, Customer c)
         {
+            _mainForm = f;
+            _currentCustomer = c;
             InitializeComponent();
         }
 
@@ -32,37 +36,37 @@ namespace PhBuy
             scrollBar.ThumbLength = 100;
             CustomerHomePage = new CustomerHomePage(this, _data)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[0]
             };
             CustomerHomePage.Show();
             DiscoverSellers discoverSellers = new DiscoverSellers(CustomerHomePage._sellers, CustomerHomePage._sellerTypes)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[2]
             };
             discoverSellers.Show();
             SellerShop = new SellerShop(this)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[3]
             };
             SellerShop.Show();
             ProductPage = new ProductPage(this)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[5]
             };
             ProductPage.Show();
             _productSearch = new ProductSearch(this)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[1]
             };
             _productSearch.Show();
-            CartForm = new CartForm(this)
+            CartForm = new CartForm(this, _currentCustomer)
             {
-                MdiParent = this,
+                MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[7]
             };
             CartForm.Show();
@@ -73,6 +77,7 @@ namespace PhBuy
             scrollBar.DataBindings.Clear();
             scrollBar.BindTo(CustomerHomePage.panel);
             scrollBar.ThumbLength = 100;
+            scrollBar.Value = 0;
             customerTabControl.SelectedIndex = 0;
         }
 

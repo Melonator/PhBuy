@@ -465,6 +465,7 @@ namespace PhBuy
             this.addresstextBox.TextPlaceholder = "";
             this.addresstextBox.UseSystemPasswordChar = false;
             this.addresstextBox.WordWrap = true;
+            this.addresstextBox.TextChanged += new System.EventHandler(this.addresstextBox_TextChanged);
             // 
             // editAddressLabel
             // 
