@@ -87,21 +87,21 @@ namespace PhBuy
             this.nameCharCountLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.healthLabel = new System.Windows.Forms.Label();
-            this.othersLabel = new System.Windows.Forms.Label();
-            this.booksLabel = new System.Windows.Forms.Label();
-            this.techLabel = new System.Windows.Forms.Label();
-            this.foodLabel = new System.Windows.Forms.Label();
+            this.HealthLabel = new System.Windows.Forms.Label();
+            this.OthersLabel = new System.Windows.Forms.Label();
+            this.BooksLabel = new System.Windows.Forms.Label();
+            this.TechLabel = new System.Windows.Forms.Label();
+            this.FoodLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.fashionLabel = new System.Windows.Forms.Label();
-            this.others = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.health = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.books = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.tech = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.food = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.fashion = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.FashionLabel = new System.Windows.Forms.Label();
+            this.Others = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Health = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Books = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Tech = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Food = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Fashion = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -138,6 +138,7 @@ namespace PhBuy
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.Cancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.confirmButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.shippingPanel = new System.Windows.Forms.Panel();
@@ -164,7 +165,6 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Cancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -209,10 +209,10 @@ namespace PhBuy
             this.addProductPages.Margin = new System.Windows.Forms.Padding(2);
             this.addProductPages.Multiline = true;
             this.addProductPages.Name = "addProductPages";
-            this.addProductPages.Page = this.tabPage2;
-            this.addProductPages.PageIndex = 1;
-            this.addProductPages.PageName = "tabPage2";
-            this.addProductPages.PageTitle = "tabPage2";
+            this.addProductPages.Page = this.tabPage1;
+            this.addProductPages.PageIndex = 0;
+            this.addProductPages.PageName = "tabPage1";
+            this.addProductPages.PageTitle = "tabPage1";
             this.addProductPages.SelectedIndex = 0;
             this.addProductPages.Size = new System.Drawing.Size(925, 580);
             this.addProductPages.TabIndex = 5;
@@ -542,21 +542,21 @@ namespace PhBuy
             this.productTypePanel.Controls.Add(this.nameCharCountLabel);
             this.productTypePanel.Controls.Add(this.nameTextBox);
             this.productTypePanel.Controls.Add(this.bunifuSeparator1);
-            this.productTypePanel.Controls.Add(this.healthLabel);
-            this.productTypePanel.Controls.Add(this.othersLabel);
-            this.productTypePanel.Controls.Add(this.booksLabel);
-            this.productTypePanel.Controls.Add(this.techLabel);
-            this.productTypePanel.Controls.Add(this.foodLabel);
+            this.productTypePanel.Controls.Add(this.HealthLabel);
+            this.productTypePanel.Controls.Add(this.OthersLabel);
+            this.productTypePanel.Controls.Add(this.BooksLabel);
+            this.productTypePanel.Controls.Add(this.TechLabel);
+            this.productTypePanel.Controls.Add(this.FoodLabel);
             this.productTypePanel.Controls.Add(this.label9);
             this.productTypePanel.Controls.Add(this.label7);
             this.productTypePanel.Controls.Add(this.label6);
-            this.productTypePanel.Controls.Add(this.fashionLabel);
-            this.productTypePanel.Controls.Add(this.others);
-            this.productTypePanel.Controls.Add(this.health);
-            this.productTypePanel.Controls.Add(this.books);
-            this.productTypePanel.Controls.Add(this.tech);
-            this.productTypePanel.Controls.Add(this.food);
-            this.productTypePanel.Controls.Add(this.fashion);
+            this.productTypePanel.Controls.Add(this.FashionLabel);
+            this.productTypePanel.Controls.Add(this.Others);
+            this.productTypePanel.Controls.Add(this.Health);
+            this.productTypePanel.Controls.Add(this.Books);
+            this.productTypePanel.Controls.Add(this.Tech);
+            this.productTypePanel.Controls.Add(this.Food);
+            this.productTypePanel.Controls.Add(this.Fashion);
             this.productTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.productTypePanel.Location = new System.Drawing.Point(0, 0);
             this.productTypePanel.Margin = new System.Windows.Forms.Padding(2);
@@ -683,71 +683,71 @@ namespace PhBuy
             this.bunifuSeparator1.Size = new System.Drawing.Size(713, 14);
             this.bunifuSeparator1.TabIndex = 21;
             // 
-            // healthLabel
+            // HealthLabel
             // 
-            this.healthLabel.AutoSize = true;
-            this.healthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.healthLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.healthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.healthLabel.Location = new System.Drawing.Point(495, 266);
-            this.healthLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.healthLabel.Name = "healthLabel";
-            this.healthLabel.Size = new System.Drawing.Size(76, 78);
-            this.healthLabel.TabIndex = 20;
-            this.healthLabel.Text = "Health \r\n     &\r\nBeauty";
-            this.healthLabel.UseMnemonic = false;
+            this.HealthLabel.AutoSize = true;
+            this.HealthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.HealthLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HealthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.HealthLabel.Location = new System.Drawing.Point(495, 266);
+            this.HealthLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.HealthLabel.Name = "HealthLabel";
+            this.HealthLabel.Size = new System.Drawing.Size(76, 78);
+            this.HealthLabel.TabIndex = 20;
+            this.HealthLabel.Text = "Health \r\n     &\r\nBeauty";
+            this.HealthLabel.UseMnemonic = false;
             // 
-            // othersLabel
+            // OthersLabel
             // 
-            this.othersLabel.AutoSize = true;
-            this.othersLabel.BackColor = System.Drawing.Color.Transparent;
-            this.othersLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.othersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.othersLabel.Location = new System.Drawing.Point(618, 266);
-            this.othersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.othersLabel.Name = "othersLabel";
-            this.othersLabel.Size = new System.Drawing.Size(71, 26);
-            this.othersLabel.TabIndex = 20;
-            this.othersLabel.Text = "Others";
+            this.OthersLabel.AutoSize = true;
+            this.OthersLabel.BackColor = System.Drawing.Color.Transparent;
+            this.OthersLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OthersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.OthersLabel.Location = new System.Drawing.Point(618, 266);
+            this.OthersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OthersLabel.Name = "OthersLabel";
+            this.OthersLabel.Size = new System.Drawing.Size(71, 26);
+            this.OthersLabel.TabIndex = 20;
+            this.OthersLabel.Text = "Others";
             // 
-            // booksLabel
+            // BooksLabel
             // 
-            this.booksLabel.AutoSize = true;
-            this.booksLabel.BackColor = System.Drawing.Color.Transparent;
-            this.booksLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.booksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.booksLabel.Location = new System.Drawing.Point(383, 266);
-            this.booksLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.booksLabel.Name = "booksLabel";
-            this.booksLabel.Size = new System.Drawing.Size(71, 26);
-            this.booksLabel.TabIndex = 20;
-            this.booksLabel.Text = "Books ";
+            this.BooksLabel.AutoSize = true;
+            this.BooksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.BooksLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BooksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.BooksLabel.Location = new System.Drawing.Point(383, 266);
+            this.BooksLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BooksLabel.Name = "BooksLabel";
+            this.BooksLabel.Size = new System.Drawing.Size(71, 26);
+            this.BooksLabel.TabIndex = 20;
+            this.BooksLabel.Text = "Books ";
             // 
-            // techLabel
+            // TechLabel
             // 
-            this.techLabel.AutoSize = true;
-            this.techLabel.BackColor = System.Drawing.Color.Transparent;
-            this.techLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.techLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.techLabel.Location = new System.Drawing.Point(275, 266);
-            this.techLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.techLabel.Name = "techLabel";
-            this.techLabel.Size = new System.Drawing.Size(52, 26);
-            this.techLabel.TabIndex = 20;
-            this.techLabel.Text = "Tech";
+            this.TechLabel.AutoSize = true;
+            this.TechLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TechLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TechLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.TechLabel.Location = new System.Drawing.Point(275, 266);
+            this.TechLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TechLabel.Name = "TechLabel";
+            this.TechLabel.Size = new System.Drawing.Size(52, 26);
+            this.TechLabel.TabIndex = 20;
+            this.TechLabel.Text = "Tech";
             // 
-            // foodLabel
+            // FoodLabel
             // 
-            this.foodLabel.AutoSize = true;
-            this.foodLabel.BackColor = System.Drawing.Color.Transparent;
-            this.foodLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foodLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.foodLabel.Location = new System.Drawing.Point(164, 266);
-            this.foodLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.foodLabel.Name = "foodLabel";
-            this.foodLabel.Size = new System.Drawing.Size(56, 26);
-            this.foodLabel.TabIndex = 20;
-            this.foodLabel.Text = "Food";
+            this.FoodLabel.AutoSize = true;
+            this.FoodLabel.BackColor = System.Drawing.Color.Transparent;
+            this.FoodLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.FoodLabel.Location = new System.Drawing.Point(164, 266);
+            this.FoodLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FoodLabel.Name = "FoodLabel";
+            this.FoodLabel.Size = new System.Drawing.Size(56, 26);
+            this.FoodLabel.TabIndex = 20;
+            this.FoodLabel.Text = "Food";
             // 
             // label9
             // 
@@ -786,228 +786,228 @@ namespace PhBuy
             this.label6.TabIndex = 20;
             this.label6.Text = "Add a New Product";
             // 
-            // fashionLabel
+            // FashionLabel
             // 
-            this.fashionLabel.AutoSize = true;
-            this.fashionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fashionLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fashionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.fashionLabel.Location = new System.Drawing.Point(43, 266);
-            this.fashionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.fashionLabel.Name = "fashionLabel";
-            this.fashionLabel.Size = new System.Drawing.Size(81, 26);
-            this.fashionLabel.TabIndex = 20;
-            this.fashionLabel.Text = "Fashion";
+            this.FashionLabel.AutoSize = true;
+            this.FashionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.FashionLabel.Font = new System.Drawing.Font("Mulish", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FashionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.FashionLabel.Location = new System.Drawing.Point(43, 266);
+            this.FashionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FashionLabel.Name = "FashionLabel";
+            this.FashionLabel.Size = new System.Drawing.Size(81, 26);
+            this.FashionLabel.TabIndex = 20;
+            this.FashionLabel.Text = "Fashion";
             // 
-            // others
+            // Others
             // 
-            this.others.ActiveImage = null;
-            this.others.AllowAnimations = true;
-            this.others.AllowBuffering = false;
-            this.others.AllowToggling = false;
-            this.others.AllowZooming = true;
-            this.others.AllowZoomingOnFocus = false;
-            this.others.BackColor = System.Drawing.Color.Transparent;
-            this.others.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.others.ErrorImage = ((System.Drawing.Image)(resources.GetObject("others.ErrorImage")));
-            this.others.FadeWhenInactive = false;
-            this.others.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.others.Image = global::PhBuy.Properties.Resources.Others;
-            this.others.ImageActive = null;
-            this.others.ImageLocation = null;
-            this.others.ImageMargin = 5;
-            this.others.ImageSize = new System.Drawing.Size(68, 68);
-            this.others.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.others.InitialImage = ((System.Drawing.Image)(resources.GetObject("others.InitialImage")));
-            this.others.Location = new System.Drawing.Point(616, 193);
-            this.others.Name = "others";
-            this.others.Rotation = 0;
-            this.others.ShowActiveImage = true;
-            this.others.ShowCursorChanges = true;
-            this.others.ShowImageBorders = true;
-            this.others.ShowSizeMarkers = false;
-            this.others.Size = new System.Drawing.Size(73, 73);
-            this.others.TabIndex = 0;
-            this.others.ToolTipText = "";
-            this.others.WaitOnLoad = false;
-            this.others.Zoom = 5;
-            this.others.ZoomSpeed = 10;
-            this.others.Click += new System.EventHandler(this.foodtype_Click);
+            this.Others.ActiveImage = null;
+            this.Others.AllowAnimations = true;
+            this.Others.AllowBuffering = false;
+            this.Others.AllowToggling = false;
+            this.Others.AllowZooming = true;
+            this.Others.AllowZoomingOnFocus = false;
+            this.Others.BackColor = System.Drawing.Color.Transparent;
+            this.Others.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Others.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Others.ErrorImage")));
+            this.Others.FadeWhenInactive = false;
+            this.Others.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Others.Image = global::PhBuy.Properties.Resources.Others;
+            this.Others.ImageActive = null;
+            this.Others.ImageLocation = null;
+            this.Others.ImageMargin = 5;
+            this.Others.ImageSize = new System.Drawing.Size(68, 68);
+            this.Others.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Others.InitialImage = ((System.Drawing.Image)(resources.GetObject("Others.InitialImage")));
+            this.Others.Location = new System.Drawing.Point(616, 193);
+            this.Others.Name = "Others";
+            this.Others.Rotation = 0;
+            this.Others.ShowActiveImage = true;
+            this.Others.ShowCursorChanges = true;
+            this.Others.ShowImageBorders = true;
+            this.Others.ShowSizeMarkers = false;
+            this.Others.Size = new System.Drawing.Size(73, 73);
+            this.Others.TabIndex = 0;
+            this.Others.ToolTipText = "";
+            this.Others.WaitOnLoad = false;
+            this.Others.Zoom = 5;
+            this.Others.ZoomSpeed = 10;
+            this.Others.Click += new System.EventHandler(this.foodtype_Click);
             // 
-            // health
+            // Health
             // 
-            this.health.ActiveImage = null;
-            this.health.AllowAnimations = true;
-            this.health.AllowBuffering = false;
-            this.health.AllowToggling = false;
-            this.health.AllowZooming = true;
-            this.health.AllowZoomingOnFocus = false;
-            this.health.BackColor = System.Drawing.Color.Transparent;
-            this.health.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.health.ErrorImage = ((System.Drawing.Image)(resources.GetObject("health.ErrorImage")));
-            this.health.FadeWhenInactive = false;
-            this.health.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.health.Image = global::PhBuy.Properties.Resources.Health_and_Beauty;
-            this.health.ImageActive = null;
-            this.health.ImageLocation = null;
-            this.health.ImageMargin = 5;
-            this.health.ImageSize = new System.Drawing.Size(68, 68);
-            this.health.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.health.InitialImage = ((System.Drawing.Image)(resources.GetObject("health.InitialImage")));
-            this.health.Location = new System.Drawing.Point(495, 193);
-            this.health.Name = "health";
-            this.health.Rotation = 0;
-            this.health.ShowActiveImage = true;
-            this.health.ShowCursorChanges = true;
-            this.health.ShowImageBorders = true;
-            this.health.ShowSizeMarkers = false;
-            this.health.Size = new System.Drawing.Size(73, 73);
-            this.health.TabIndex = 0;
-            this.health.ToolTipText = "";
-            this.health.WaitOnLoad = false;
-            this.health.Zoom = 5;
-            this.health.ZoomSpeed = 10;
-            this.health.Click += new System.EventHandler(this.foodtype_Click);
+            this.Health.ActiveImage = null;
+            this.Health.AllowAnimations = true;
+            this.Health.AllowBuffering = false;
+            this.Health.AllowToggling = false;
+            this.Health.AllowZooming = true;
+            this.Health.AllowZoomingOnFocus = false;
+            this.Health.BackColor = System.Drawing.Color.Transparent;
+            this.Health.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Health.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Health.ErrorImage")));
+            this.Health.FadeWhenInactive = false;
+            this.Health.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Health.Image = global::PhBuy.Properties.Resources.Health_and_Beauty;
+            this.Health.ImageActive = null;
+            this.Health.ImageLocation = null;
+            this.Health.ImageMargin = 5;
+            this.Health.ImageSize = new System.Drawing.Size(68, 68);
+            this.Health.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Health.InitialImage = ((System.Drawing.Image)(resources.GetObject("Health.InitialImage")));
+            this.Health.Location = new System.Drawing.Point(495, 193);
+            this.Health.Name = "Health";
+            this.Health.Rotation = 0;
+            this.Health.ShowActiveImage = true;
+            this.Health.ShowCursorChanges = true;
+            this.Health.ShowImageBorders = true;
+            this.Health.ShowSizeMarkers = false;
+            this.Health.Size = new System.Drawing.Size(73, 73);
+            this.Health.TabIndex = 0;
+            this.Health.ToolTipText = "";
+            this.Health.WaitOnLoad = false;
+            this.Health.Zoom = 5;
+            this.Health.ZoomSpeed = 10;
+            this.Health.Click += new System.EventHandler(this.foodtype_Click);
             // 
-            // books
+            // Books
             // 
-            this.books.ActiveImage = null;
-            this.books.AllowAnimations = true;
-            this.books.AllowBuffering = false;
-            this.books.AllowToggling = false;
-            this.books.AllowZooming = true;
-            this.books.AllowZoomingOnFocus = false;
-            this.books.BackColor = System.Drawing.Color.Transparent;
-            this.books.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.books.ErrorImage = ((System.Drawing.Image)(resources.GetObject("books.ErrorImage")));
-            this.books.FadeWhenInactive = false;
-            this.books.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.books.Image = global::PhBuy.Properties.Resources.Books;
-            this.books.ImageActive = null;
-            this.books.ImageLocation = null;
-            this.books.ImageMargin = 5;
-            this.books.ImageSize = new System.Drawing.Size(68, 68);
-            this.books.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.books.InitialImage = ((System.Drawing.Image)(resources.GetObject("books.InitialImage")));
-            this.books.Location = new System.Drawing.Point(378, 193);
-            this.books.Name = "books";
-            this.books.Rotation = 0;
-            this.books.ShowActiveImage = true;
-            this.books.ShowCursorChanges = true;
-            this.books.ShowImageBorders = true;
-            this.books.ShowSizeMarkers = false;
-            this.books.Size = new System.Drawing.Size(73, 73);
-            this.books.TabIndex = 0;
-            this.books.ToolTipText = "";
-            this.books.WaitOnLoad = false;
-            this.books.Zoom = 5;
-            this.books.ZoomSpeed = 10;
-            this.books.Click += new System.EventHandler(this.foodtype_Click);
+            this.Books.ActiveImage = null;
+            this.Books.AllowAnimations = true;
+            this.Books.AllowBuffering = false;
+            this.Books.AllowToggling = false;
+            this.Books.AllowZooming = true;
+            this.Books.AllowZoomingOnFocus = false;
+            this.Books.BackColor = System.Drawing.Color.Transparent;
+            this.Books.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Books.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Books.ErrorImage")));
+            this.Books.FadeWhenInactive = false;
+            this.Books.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Books.Image = global::PhBuy.Properties.Resources.Books;
+            this.Books.ImageActive = null;
+            this.Books.ImageLocation = null;
+            this.Books.ImageMargin = 5;
+            this.Books.ImageSize = new System.Drawing.Size(68, 68);
+            this.Books.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Books.InitialImage = ((System.Drawing.Image)(resources.GetObject("Books.InitialImage")));
+            this.Books.Location = new System.Drawing.Point(378, 193);
+            this.Books.Name = "Books";
+            this.Books.Rotation = 0;
+            this.Books.ShowActiveImage = true;
+            this.Books.ShowCursorChanges = true;
+            this.Books.ShowImageBorders = true;
+            this.Books.ShowSizeMarkers = false;
+            this.Books.Size = new System.Drawing.Size(73, 73);
+            this.Books.TabIndex = 0;
+            this.Books.ToolTipText = "";
+            this.Books.WaitOnLoad = false;
+            this.Books.Zoom = 5;
+            this.Books.ZoomSpeed = 10;
+            this.Books.Click += new System.EventHandler(this.foodtype_Click);
             // 
-            // tech
+            // Tech
             // 
-            this.tech.ActiveImage = null;
-            this.tech.AllowAnimations = true;
-            this.tech.AllowBuffering = false;
-            this.tech.AllowToggling = false;
-            this.tech.AllowZooming = true;
-            this.tech.AllowZoomingOnFocus = false;
-            this.tech.BackColor = System.Drawing.Color.Transparent;
-            this.tech.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.tech.ErrorImage = ((System.Drawing.Image)(resources.GetObject("tech.ErrorImage")));
-            this.tech.FadeWhenInactive = false;
-            this.tech.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.tech.Image = global::PhBuy.Properties.Resources.Technology1;
-            this.tech.ImageActive = null;
-            this.tech.ImageLocation = null;
-            this.tech.ImageMargin = 5;
-            this.tech.ImageSize = new System.Drawing.Size(68, 68);
-            this.tech.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.tech.InitialImage = ((System.Drawing.Image)(resources.GetObject("tech.InitialImage")));
-            this.tech.Location = new System.Drawing.Point(264, 193);
-            this.tech.Name = "tech";
-            this.tech.Rotation = 0;
-            this.tech.ShowActiveImage = true;
-            this.tech.ShowCursorChanges = true;
-            this.tech.ShowImageBorders = true;
-            this.tech.ShowSizeMarkers = false;
-            this.tech.Size = new System.Drawing.Size(73, 73);
-            this.tech.TabIndex = 0;
-            this.tech.ToolTipText = "";
-            this.tech.WaitOnLoad = false;
-            this.tech.Zoom = 5;
-            this.tech.ZoomSpeed = 10;
-            this.tech.Click += new System.EventHandler(this.foodtype_Click);
+            this.Tech.ActiveImage = null;
+            this.Tech.AllowAnimations = true;
+            this.Tech.AllowBuffering = false;
+            this.Tech.AllowToggling = false;
+            this.Tech.AllowZooming = true;
+            this.Tech.AllowZoomingOnFocus = false;
+            this.Tech.BackColor = System.Drawing.Color.Transparent;
+            this.Tech.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Tech.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Tech.ErrorImage")));
+            this.Tech.FadeWhenInactive = false;
+            this.Tech.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Tech.Image = global::PhBuy.Properties.Resources.Technology1;
+            this.Tech.ImageActive = null;
+            this.Tech.ImageLocation = null;
+            this.Tech.ImageMargin = 5;
+            this.Tech.ImageSize = new System.Drawing.Size(68, 68);
+            this.Tech.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Tech.InitialImage = ((System.Drawing.Image)(resources.GetObject("Tech.InitialImage")));
+            this.Tech.Location = new System.Drawing.Point(264, 193);
+            this.Tech.Name = "Tech";
+            this.Tech.Rotation = 0;
+            this.Tech.ShowActiveImage = true;
+            this.Tech.ShowCursorChanges = true;
+            this.Tech.ShowImageBorders = true;
+            this.Tech.ShowSizeMarkers = false;
+            this.Tech.Size = new System.Drawing.Size(73, 73);
+            this.Tech.TabIndex = 0;
+            this.Tech.ToolTipText = "";
+            this.Tech.WaitOnLoad = false;
+            this.Tech.Zoom = 5;
+            this.Tech.ZoomSpeed = 10;
+            this.Tech.Click += new System.EventHandler(this.foodtype_Click);
             // 
-            // food
+            // Food
             // 
-            this.food.ActiveImage = null;
-            this.food.AllowAnimations = true;
-            this.food.AllowBuffering = false;
-            this.food.AllowToggling = false;
-            this.food.AllowZooming = true;
-            this.food.AllowZoomingOnFocus = false;
-            this.food.BackColor = System.Drawing.Color.Transparent;
-            this.food.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.food.ErrorImage = ((System.Drawing.Image)(resources.GetObject("food.ErrorImage")));
-            this.food.FadeWhenInactive = false;
-            this.food.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.food.Image = global::PhBuy.Properties.Resources.Food;
-            this.food.ImageActive = null;
-            this.food.ImageLocation = null;
-            this.food.ImageMargin = 5;
-            this.food.ImageSize = new System.Drawing.Size(68, 68);
-            this.food.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.food.InitialImage = ((System.Drawing.Image)(resources.GetObject("food.InitialImage")));
-            this.food.Location = new System.Drawing.Point(154, 193);
-            this.food.Name = "food";
-            this.food.Rotation = 0;
-            this.food.ShowActiveImage = true;
-            this.food.ShowCursorChanges = true;
-            this.food.ShowImageBorders = true;
-            this.food.ShowSizeMarkers = false;
-            this.food.Size = new System.Drawing.Size(73, 73);
-            this.food.TabIndex = 0;
-            this.food.ToolTipText = "";
-            this.food.WaitOnLoad = false;
-            this.food.Zoom = 5;
-            this.food.ZoomSpeed = 10;
-            this.food.Click += new System.EventHandler(this.foodtype_Click);
+            this.Food.ActiveImage = null;
+            this.Food.AllowAnimations = true;
+            this.Food.AllowBuffering = false;
+            this.Food.AllowToggling = false;
+            this.Food.AllowZooming = true;
+            this.Food.AllowZoomingOnFocus = false;
+            this.Food.BackColor = System.Drawing.Color.Transparent;
+            this.Food.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Food.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Food.ErrorImage")));
+            this.Food.FadeWhenInactive = false;
+            this.Food.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Food.Image = global::PhBuy.Properties.Resources.Food;
+            this.Food.ImageActive = null;
+            this.Food.ImageLocation = null;
+            this.Food.ImageMargin = 5;
+            this.Food.ImageSize = new System.Drawing.Size(68, 68);
+            this.Food.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Food.InitialImage = ((System.Drawing.Image)(resources.GetObject("Food.InitialImage")));
+            this.Food.Location = new System.Drawing.Point(154, 193);
+            this.Food.Name = "Food";
+            this.Food.Rotation = 0;
+            this.Food.ShowActiveImage = true;
+            this.Food.ShowCursorChanges = true;
+            this.Food.ShowImageBorders = true;
+            this.Food.ShowSizeMarkers = false;
+            this.Food.Size = new System.Drawing.Size(73, 73);
+            this.Food.TabIndex = 0;
+            this.Food.ToolTipText = "";
+            this.Food.WaitOnLoad = false;
+            this.Food.Zoom = 5;
+            this.Food.ZoomSpeed = 10;
+            this.Food.Click += new System.EventHandler(this.foodtype_Click);
             // 
-            // fashion
+            // Fashion
             // 
-            this.fashion.ActiveImage = null;
-            this.fashion.AllowAnimations = true;
-            this.fashion.AllowBuffering = false;
-            this.fashion.AllowToggling = false;
-            this.fashion.AllowZooming = true;
-            this.fashion.AllowZoomingOnFocus = false;
-            this.fashion.BackColor = System.Drawing.Color.Transparent;
-            this.fashion.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.fashion.ErrorImage = ((System.Drawing.Image)(resources.GetObject("fashion.ErrorImage")));
-            this.fashion.FadeWhenInactive = false;
-            this.fashion.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.fashion.Image = global::PhBuy.Properties.Resources.Fashion2;
-            this.fashion.ImageActive = null;
-            this.fashion.ImageLocation = null;
-            this.fashion.ImageMargin = 5;
-            this.fashion.ImageSize = new System.Drawing.Size(68, 68);
-            this.fashion.ImageZoomSize = new System.Drawing.Size(73, 73);
-            this.fashion.InitialImage = ((System.Drawing.Image)(resources.GetObject("fashion.InitialImage")));
-            this.fashion.Location = new System.Drawing.Point(46, 193);
-            this.fashion.Name = "fashion";
-            this.fashion.Rotation = 0;
-            this.fashion.ShowActiveImage = true;
-            this.fashion.ShowCursorChanges = true;
-            this.fashion.ShowImageBorders = false;
-            this.fashion.ShowSizeMarkers = false;
-            this.fashion.Size = new System.Drawing.Size(73, 73);
-            this.fashion.TabIndex = 0;
-            this.fashion.ToolTipText = "";
-            this.fashion.WaitOnLoad = false;
-            this.fashion.Zoom = 5;
-            this.fashion.ZoomSpeed = 10;
-            this.fashion.Click += new System.EventHandler(this.foodtype_Click);
+            this.Fashion.ActiveImage = null;
+            this.Fashion.AllowAnimations = true;
+            this.Fashion.AllowBuffering = false;
+            this.Fashion.AllowToggling = false;
+            this.Fashion.AllowZooming = true;
+            this.Fashion.AllowZoomingOnFocus = false;
+            this.Fashion.BackColor = System.Drawing.Color.Transparent;
+            this.Fashion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Fashion.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Fashion.ErrorImage")));
+            this.Fashion.FadeWhenInactive = false;
+            this.Fashion.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Fashion.Image = global::PhBuy.Properties.Resources.Fashion2;
+            this.Fashion.ImageActive = null;
+            this.Fashion.ImageLocation = null;
+            this.Fashion.ImageMargin = 5;
+            this.Fashion.ImageSize = new System.Drawing.Size(68, 68);
+            this.Fashion.ImageZoomSize = new System.Drawing.Size(73, 73);
+            this.Fashion.InitialImage = ((System.Drawing.Image)(resources.GetObject("Fashion.InitialImage")));
+            this.Fashion.Location = new System.Drawing.Point(46, 193);
+            this.Fashion.Name = "Fashion";
+            this.Fashion.Rotation = 0;
+            this.Fashion.ShowActiveImage = true;
+            this.Fashion.ShowCursorChanges = true;
+            this.Fashion.ShowImageBorders = false;
+            this.Fashion.ShowSizeMarkers = false;
+            this.Fashion.Size = new System.Drawing.Size(73, 73);
+            this.Fashion.TabIndex = 0;
+            this.Fashion.ToolTipText = "";
+            this.Fashion.WaitOnLoad = false;
+            this.Fashion.Zoom = 5;
+            this.Fashion.ZoomSpeed = 10;
+            this.Fashion.Click += new System.EventHandler(this.foodtype_Click);
             // 
             // label8
             // 
@@ -1631,6 +1631,32 @@ namespace PhBuy
             this.label31.TabIndex = 33;
             this.label31.Text = "Basic Info";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Cancel
+            // 
+            this.Cancel.ActiveBorderThickness = 1;
+            this.Cancel.ActiveCornerRadius = 20;
+            this.Cancel.ActiveFillColor = System.Drawing.Color.White;
+            this.Cancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(67)))));
+            this.Cancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.Cancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cancel.BackgroundImage")));
+            this.Cancel.ButtonText = "Cancel";
+            this.Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cancel.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.IdleBorderThickness = 1;
+            this.Cancel.IdleCornerRadius = 20;
+            this.Cancel.IdleFillColor = System.Drawing.Color.White;
+            this.Cancel.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.Cancel.Location = new System.Drawing.Point(396, 268);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(112, 32);
+            this.Cancel.TabIndex = 26;
+            this.Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // bunifuThinButton21
             // 
@@ -2256,32 +2282,6 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
-            // Cancel
-            // 
-            this.Cancel.ActiveBorderThickness = 1;
-            this.Cancel.ActiveCornerRadius = 20;
-            this.Cancel.ActiveFillColor = System.Drawing.Color.White;
-            this.Cancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(195)))), ((int)(((byte)(67)))));
-            this.Cancel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.Cancel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cancel.BackgroundImage")));
-            this.Cancel.ButtonText = "Cancel";
-            this.Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Cancel.Font = new System.Drawing.Font("Mulish", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.Cancel.IdleBorderThickness = 1;
-            this.Cancel.IdleCornerRadius = 20;
-            this.Cancel.IdleFillColor = System.Drawing.Color.White;
-            this.Cancel.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.Cancel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.Cancel.Location = new System.Drawing.Point(396, 268);
-            this.Cancel.Margin = new System.Windows.Forms.Padding(4);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(112, 32);
-            this.Cancel.TabIndex = 26;
-            this.Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2368,21 +2368,21 @@ namespace PhBuy
         private System.Windows.Forms.Panel productTypePanel;
         private Bunifu.UI.WinForms.BunifuTextBox nameTextBox;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label healthLabel;
-        private System.Windows.Forms.Label othersLabel;
-        private System.Windows.Forms.Label booksLabel;
-        private System.Windows.Forms.Label techLabel;
-        private System.Windows.Forms.Label foodLabel;
+        private System.Windows.Forms.Label HealthLabel;
+        private System.Windows.Forms.Label OthersLabel;
+        private System.Windows.Forms.Label BooksLabel;
+        private System.Windows.Forms.Label TechLabel;
+        private System.Windows.Forms.Label FoodLabel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label fashionLabel;
-        private Bunifu.UI.WinForms.BunifuImageButton others;
-        private Bunifu.UI.WinForms.BunifuImageButton health;
-        private Bunifu.UI.WinForms.BunifuImageButton books;
-        private Bunifu.UI.WinForms.BunifuImageButton tech;
-        private Bunifu.UI.WinForms.BunifuImageButton food;
-        private Bunifu.UI.WinForms.BunifuImageButton fashion;
+        private System.Windows.Forms.Label FashionLabel;
+        private Bunifu.UI.WinForms.BunifuImageButton Others;
+        private Bunifu.UI.WinForms.BunifuImageButton Health;
+        private Bunifu.UI.WinForms.BunifuImageButton Books;
+        private Bunifu.UI.WinForms.BunifuImageButton Tech;
+        private Bunifu.UI.WinForms.BunifuImageButton Food;
+        private Bunifu.UI.WinForms.BunifuImageButton Fashion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label imageCountLabel;

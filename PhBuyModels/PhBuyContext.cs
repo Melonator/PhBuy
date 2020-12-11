@@ -73,8 +73,6 @@ namespace PhBuyModels
                     .HasColumnName("ProductID")
                     .HasColumnType("smallmoney");
 
-                entity.Property(e => e.Quantity).HasColumnType("smallmoney");
-
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
                     .HasColumnType("smallmoney");

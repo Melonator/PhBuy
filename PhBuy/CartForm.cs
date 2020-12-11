@@ -140,7 +140,7 @@ namespace PhBuy
                     Orders o = new Orders();
                     o.Id = GenerateId();
                     o.ProductId = p.ProductId;
-                    o.Quantity = _quantitiesToBuy[index];
+                    o.Quantity = (short)_quantitiesToBuy[index];
                     o.SellerId = s.Id;
                     o.DateOrdered = DateTime.Now;
                     o.Status = "Processing";

@@ -1,5 +1,6 @@
 ﻿using PhBuyModels;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -10,10 +11,6 @@ namespace PhBuy
 {
 	public partial class MainForm : Form
 	{
-		//Ill just leave this here
-		private const string _connectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
-
 		private Customer _currentCustomer;
 		private Seller _currentSeller;
 		private readonly string _type;

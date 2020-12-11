@@ -67,7 +67,7 @@ namespace PhBuy
 				type = label.Text;
 
 				//Quickfix
-				if (label.Name == "healthLabel") type = "Health & Beauty";
+				if (label.Name == "HealthLabel") type = "Health & Beauty";
 				//Set the previously clicked type to black
 				if (previousLabel != string.Empty)
 				{
@@ -432,6 +432,12 @@ namespace PhBuy
 
 		public void SetValues(Products p)
         {
+			if (previousLabel != string.Empty)
+			{
+				Label a = (Label)Controls.Find($"{previousLabel}Label", true).First();
+				a.ForeColor = Color.FromArgb(45, 41, 66);
+			}
+
 			imageNo = 0;
 			previousLabel = p.Type;
 			_editedProduct = p;
@@ -453,7 +459,12 @@ namespace PhBuy
 			nameTextBox.Text = p.Name;
 			descriptionTextBox.Text = p.Description;
 			type = p.Type;
-			Label l = (Label)Controls.Find($"{p.Type}Label", true).First();
+			Label l;
+			if (p.Type == "Health & Beauty")
+				 l = (Label)Controls.Find($"HealthLabel", true).First();
+			else
+				l = (Label)Controls.Find($"{p.Type}Label", true).First();
+
 			l.ForeColor = Color.FromArgb(248, 58, 38);
             fdaTextBox.Text = p.FdaNumber;
 			priceTextBox.Text = p.Price.ToString();
@@ -476,6 +487,7 @@ namespace PhBuy
 		public void ClearValues()
         {
 			ClearExcessImages();
+
 			imageNo = 0;
 			previousLabel = string.Empty;
 			weightTextBox.Text = string.Empty;

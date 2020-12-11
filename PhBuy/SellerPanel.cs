@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
+using PhBuyModels;
 
 namespace PhBuy
 {
@@ -14,6 +17,11 @@ namespace PhBuy
 		private bool isPanelOpen4 = true;
 		public SellerDashBoard sellerDashBoard;
 		private MyProducts myProducts;
+		private MyOrders _myOrders;
+		private PhBuyContext _data = new PhBuyContext();
+		private List<Orders> _orders;
+		private List<Products> _products;
+		private List<Customer> _customers;
 
 		public AddProduct addProduct;
 		public SellerPanel(MainForm form, int id)
@@ -24,6 +32,7 @@ namespace PhBuy
 		}
 		private void SellerPanel_Load(object sender, EventArgs e)
 		{
+			LoadData();
 			sellerDashBoard =(SellerDashBoard) _form.mainPanel.Controls[0];
 
 			myProducts = new MyProducts(_id, this)
@@ -40,7 +49,21 @@ namespace PhBuy
 				Parent = sellerDashBoard.sellerTabControl.TabPages[4]
 			};
 			addProduct.Show();
+			_myOrders = new MyOrders()
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[5]
+			};
+			_myOrders.LoadData(_orders, _customers, _products);
+			_myOrders.Show();
 		}
+
+		private void LoadData()
+        {
+			_orders = _data.Orders.Where(i => i.SellerId == _id).ToList();
+			_products = _data.Products.Where(i => i.SellerId == _id).ToList();
+			_customers = _data.Customer.ToList();
+        }
 
 		private void dropDown_Click(object sender, EventArgs e)
 		{
@@ -137,6 +160,7 @@ namespace PhBuy
 		private void ordersButton_Click(object sender, EventArgs e)
 		{
 			//TODO: show orders
+			sellerDashBoard.sellerTabControl.SelectedIndex = 5;
 		}
 
 		private void incomeButton_Click(object sender, EventArgs e)
