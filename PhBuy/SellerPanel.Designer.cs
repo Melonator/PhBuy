@@ -117,7 +117,7 @@ namespace PhBuy
             this.reportButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.reportButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.reportButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.reportButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.reportButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -209,7 +209,7 @@ namespace PhBuy
             this.ratingButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ratingButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ratingButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ratingButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ratingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.ratingButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ratingButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -301,7 +301,7 @@ namespace PhBuy
             this.profileButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.profileButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.profileButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.profileButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.profileButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -404,7 +404,7 @@ namespace PhBuy
             this.addProductButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.addProductButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addProductButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.addProductButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.addProductButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addProductButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -496,7 +496,7 @@ namespace PhBuy
             this.productButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.productButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.productButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.productButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.productButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -599,7 +599,7 @@ namespace PhBuy
             this.incomeButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.incomeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.incomeButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.incomeButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incomeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.incomeButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incomeButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -691,7 +691,7 @@ namespace PhBuy
             this.ordersButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ordersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ordersButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ordersButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.ordersButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ordersButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -794,7 +794,7 @@ namespace PhBuy
             this.inventoryButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.inventoryButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.inventoryButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.inventoryButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.inventoryButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inventoryButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -886,7 +886,7 @@ namespace PhBuy
             this.insightButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.insightButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.insightButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.insightButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insightButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.insightButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.insightButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -977,7 +977,7 @@ namespace PhBuy
             this.databaseButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.databaseButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.databaseButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.databaseButton.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.databaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.databaseButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.databaseButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.databaseButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1070,7 +1070,7 @@ namespace PhBuy
             this.analyticDropDown.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.analyticDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.analyticDropDown.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.analyticDropDown.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.analyticDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.analyticDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.analyticDropDown.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.analyticDropDown.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1163,7 +1163,7 @@ namespace PhBuy
             this.orderDropDown.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.orderDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.orderDropDown.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.orderDropDown.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.orderDropDown.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.orderDropDown.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1256,7 +1256,7 @@ namespace PhBuy
             this.productDropDown.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.productDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.productDropDown.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.productDropDown.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.productDropDown.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.productDropDown.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1349,7 +1349,7 @@ namespace PhBuy
             this.storeDropDown.DisabledForecolor = System.Drawing.Color.White;
             this.storeDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.storeDropDown.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.storeDropDown.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeDropDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storeDropDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(124)))), ((int)(((byte)(134)))));
             this.storeDropDown.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.storeDropDown.IconLeftCursor = System.Windows.Forms.Cursors.Default;

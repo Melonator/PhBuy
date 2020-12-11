@@ -11,10 +11,6 @@ namespace PhBuy
 	{
 		private readonly MainForm _form;
 		private readonly int _id;
-		private bool isPanelOpen1 = true;
-		private bool isPanelOpen2 = true;
-		private bool isPanelOpen3 = true;
-		private bool isPanelOpen4 = true;
 		public SellerDashBoard sellerDashBoard;
 		private MyProducts myProducts;
 		private MyOrders _myOrders;
@@ -65,6 +61,12 @@ namespace PhBuy
 			_customers = _data.Customer.ToList();
         }
 
+		private void PanelVisibility(Panel p)
+        {
+			if (p.Visible == true) p.Hide();
+			else p.Show();
+        }
+
 		private void dropDown_Click(object sender, EventArgs e)
 		{
 			var btn = (BunifuButton) sender;
@@ -73,58 +75,22 @@ namespace PhBuy
 			{
 				case "storeDropDown":
 				{
-					if (isPanelOpen1)
-					{
-						isPanelOpen1 = false;
-						panel1.Hide();
-					}
-					else
-					{
-						isPanelOpen1 = true;
-						panel1.Show();
-					}
+						PanelVisibility(panel1);
 				}
 					break;
 				case "productDropDown":
 				{
-					if (isPanelOpen2)
-					{
-						isPanelOpen2 = false;
-						panel2.Hide();
-					}
-					else
-					{
-						isPanelOpen2 = true;
-						panel2.Show();
-					}
+						PanelVisibility(panel2);
 				}
 					break;
 				case "orderDropDown":
 				{
-					if (isPanelOpen3)
-					{
-						isPanelOpen3 = false;
-						panel3.Hide();
-					}
-					else
-					{
-						isPanelOpen3 = true;
-						panel3.Show();
-					}
+						PanelVisibility(panel3);
 				}
 					break;
 				case "analyticDropDown":
 				{
-					if (isPanelOpen4)
-					{
-						isPanelOpen4 = false;
-						panel4.Hide();
-					}
-					else
-					{
-						isPanelOpen4 = true;
-						panel4.Show();
-					}
+						PanelVisibility(panel4);
 				}
 					break;
 			}
