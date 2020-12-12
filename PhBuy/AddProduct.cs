@@ -491,6 +491,7 @@ namespace PhBuy
 			ClearExcessImages();
 			if (previousLabel != string.Empty)
 			{
+				if (previousLabel == "Health & Beauty") previousLabel = "Health";
 				Label a = (Label)Controls.Find($"{previousLabel}Label", true).First();
 				a.ForeColor = Color.FromArgb(45, 41, 66);
 			}
