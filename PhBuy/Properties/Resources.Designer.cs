@@ -593,16 +593,6 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap male_user_208px {
-            get {
-                object obj = ResourceManager.GetObject("male_user_208px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mohammad_alizade_XgeZu2jBaVI_unsplash {
             get {
                 object obj = ResourceManager.GetObject("mohammad_alizade_XgeZu2jBaVI_unsplash", resourceCulture);
@@ -816,6 +806,26 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap Register_Account {
             get {
                 object obj = ResourceManager.GetObject("Register_Account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registration_208px_1 {
+            get {
+                object obj = ResourceManager.GetObject("registration_208px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registration_208px_orange {
+            get {
+                object obj = ResourceManager.GetObject("registration_208px_orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
