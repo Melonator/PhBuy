@@ -50,6 +50,7 @@ namespace PhBuy
             this.buyPage = new System.Windows.Forms.TabPage();
             this.cartPage = new System.Windows.Forms.TabPage();
             this.myOrders = new System.Windows.Forms.TabPage();
+            this.myProfile = new System.Windows.Forms.TabPage();
             this.dropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,7 +61,6 @@ namespace PhBuy
             this.searchTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.homePictureBox = new System.Windows.Forms.PictureBox();
             this.scrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.myProfile = new System.Windows.Forms.TabPage();
             this.mainPanel.SuspendLayout();
             this.customerTabControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -185,6 +185,15 @@ namespace PhBuy
             this.myOrders.TabIndex = 8;
             this.myOrders.Text = "myOrders";
             this.myOrders.UseVisualStyleBackColor = true;
+            // 
+            // myProfile
+            // 
+            this.myProfile.Location = new System.Drawing.Point(4, 22);
+            this.myProfile.Name = "myProfile";
+            this.myProfile.Size = new System.Drawing.Size(879, 524);
+            this.myProfile.TabIndex = 9;
+            this.myProfile.Text = "myProfile";
+            this.myProfile.UseVisualStyleBackColor = true;
             // 
             // dropDown
             // 
@@ -397,7 +406,7 @@ namespace PhBuy
             this.searchButton.IdleIconLeftImage = null;
             this.searchButton.IdleIconRightImage = null;
             this.searchButton.IndicateFocus = false;
-            this.searchButton.Location = new System.Drawing.Point(730, 17);
+            this.searchButton.Location = new System.Drawing.Point(730, 16);
             this.searchButton.Name = "searchButton";
             this.searchButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.searchButton.OnDisabledState.BorderRadius = 1;
@@ -431,7 +440,7 @@ namespace PhBuy
             this.searchButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.searchButton.OnPressedState.IconLeftImage = null;
             this.searchButton.OnPressedState.IconRightImage = null;
-            this.searchButton.Size = new System.Drawing.Size(104, 30);
+            this.searchButton.Size = new System.Drawing.Size(104, 32);
             this.searchButton.TabIndex = 78;
             this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -616,15 +625,6 @@ namespace PhBuy
             this.scrollBar.ThumbMargin = 2;
             this.scrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.scrollBar.Value = 0;
-            // 
-            // myProfile
-            // 
-            this.myProfile.Location = new System.Drawing.Point(4, 22);
-            this.myProfile.Name = "myProfile";
-            this.myProfile.Size = new System.Drawing.Size(879, 524);
-            this.myProfile.TabIndex = 9;
-            this.myProfile.Text = "myProfile";
-            this.myProfile.UseVisualStyleBackColor = true;
             // 
             // CustomerDashBoard
             // 

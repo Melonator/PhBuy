@@ -209,10 +209,10 @@ namespace PhBuy
             this.addProductPages.Margin = new System.Windows.Forms.Padding(2);
             this.addProductPages.Multiline = true;
             this.addProductPages.Name = "addProductPages";
-            this.addProductPages.Page = this.tabPage1;
-            this.addProductPages.PageIndex = 0;
-            this.addProductPages.PageName = "tabPage1";
-            this.addProductPages.PageTitle = "tabPage1";
+            this.addProductPages.Page = this.tabPage3;
+            this.addProductPages.PageIndex = 2;
+            this.addProductPages.PageName = "tabPage3";
+            this.addProductPages.PageTitle = "tabPage3";
             this.addProductPages.SelectedIndex = 0;
             this.addProductPages.Size = new System.Drawing.Size(925, 580);
             this.addProductPages.TabIndex = 5;
@@ -261,10 +261,10 @@ namespace PhBuy
             this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.bunifuSeparator8.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator8.LineThickness = 3;
-            this.bunifuSeparator8.Location = new System.Drawing.Point(763, 47);
+            this.bunifuSeparator8.Location = new System.Drawing.Point(763, 35);
             this.bunifuSeparator8.Name = "bunifuSeparator8";
             this.bunifuSeparator8.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator8.Size = new System.Drawing.Size(10, 31);
+            this.bunifuSeparator8.Size = new System.Drawing.Size(10, 57);
             this.bunifuSeparator8.TabIndex = 9;
             // 
             // bunifuSeparator7
@@ -1101,10 +1101,10 @@ namespace PhBuy
             this.bunifuSeparator12.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.bunifuSeparator12.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator12.LineThickness = 3;
-            this.bunifuSeparator12.Location = new System.Drawing.Point(763, 114);
+            this.bunifuSeparator12.Location = new System.Drawing.Point(763, 102);
             this.bunifuSeparator12.Name = "bunifuSeparator12";
             this.bunifuSeparator12.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator12.Size = new System.Drawing.Size(10, 31);
+            this.bunifuSeparator12.Size = new System.Drawing.Size(10, 57);
             this.bunifuSeparator12.TabIndex = 27;
             // 
             // bunifuSeparator14
@@ -1119,7 +1119,7 @@ namespace PhBuy
             this.bunifuSeparator14.Location = new System.Drawing.Point(763, 24);
             this.bunifuSeparator14.Name = "bunifuSeparator14";
             this.bunifuSeparator14.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator14.Size = new System.Drawing.Size(10, 243);
+            this.bunifuSeparator14.Size = new System.Drawing.Size(10, 215);
             this.bunifuSeparator14.TabIndex = 29;
             // 
             // label26
@@ -1572,10 +1572,10 @@ namespace PhBuy
             this.bunifuSeparator10.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.bunifuSeparator10.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator10.LineThickness = 3;
-            this.bunifuSeparator10.Location = new System.Drawing.Point(764, 179);
+            this.bunifuSeparator10.Location = new System.Drawing.Point(763, 167);
             this.bunifuSeparator10.Name = "bunifuSeparator10";
             this.bunifuSeparator10.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator10.Size = new System.Drawing.Size(10, 31);
+            this.bunifuSeparator10.Size = new System.Drawing.Size(10, 57);
             this.bunifuSeparator10.TabIndex = 27;
             // 
             // bunifuSeparator13
@@ -1587,10 +1587,10 @@ namespace PhBuy
             this.bunifuSeparator13.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.bunifuSeparator13.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator13.LineThickness = 1;
-            this.bunifuSeparator13.Location = new System.Drawing.Point(764, 23);
+            this.bunifuSeparator13.Location = new System.Drawing.Point(763, 24);
             this.bunifuSeparator13.Name = "bunifuSeparator13";
             this.bunifuSeparator13.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator13.Size = new System.Drawing.Size(10, 243);
+            this.bunifuSeparator13.Size = new System.Drawing.Size(10, 215);
             this.bunifuSeparator13.TabIndex = 30;
             // 
             // label29
@@ -1598,7 +1598,7 @@ namespace PhBuy
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label29.Location = new System.Drawing.Point(773, 183);
+            this.label29.Location = new System.Drawing.Point(772, 184);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(71, 20);
@@ -1611,7 +1611,7 @@ namespace PhBuy
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label30.Location = new System.Drawing.Point(773, 118);
+            this.label30.Location = new System.Drawing.Point(772, 119);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(124, 20);
@@ -1624,7 +1624,7 @@ namespace PhBuy
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label31.Location = new System.Drawing.Point(773, 51);
+            this.label31.Location = new System.Drawing.Point(772, 52);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(77, 20);
