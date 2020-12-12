@@ -28,7 +28,7 @@ namespace PhBuy
         List<string> months = new List<string>();
 
         private bool isMonth = false;
-        private string filterType;
+        private string filterType = "sales";
         public DataAnalytics()
         {
             InitializeComponent();
@@ -44,26 +44,8 @@ namespace PhBuy
 
         private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
         {
-            var monthlyData = _orders.Where(i => i.DateOrdered.Value.Month == datePicker.Value.Month).ToList();
-
-            foreach(var i in monthlyData)
-            {
-                values.Add((double) i.TotalPrice);
-                months.Add(i.DateOrdered.Value.ToString("MMMM"));
-            }
-            generalChart.Series.Add(income);
-
-            generalChart.AxisX.Add(new Axis
-            {
-                Title = "Month",
-                Labels = months
-            });
-
-            generalChart.AxisY.Add(new Axis
-            {
-                Title = "Income",
-                LabelFormatter = value => value.ToString("C")
-            });
+            isMonth = true;
+            FilterValues(filterType);
         }
 
         private void filter_Click(object sender, EventArgs e)
@@ -158,11 +140,11 @@ namespace PhBuy
 
         private void ClearData()
         {
+            values.Clear();
+            months.Clear();
             generalChart.Series.Clear();
             generalChart.AxisX.Clear();
             generalChart.AxisY.Clear();
-            values.Clear();
-            months.Clear();
         }
 
         private void SetData()

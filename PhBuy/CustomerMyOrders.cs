@@ -32,7 +32,8 @@ namespace PhBuy
 
         public void LoadData(List<Orders> o, List<Seller> s, List<Products> p)
         {
-            _orders = o;
+            PhBuyContext _data = new PhBuyContext();
+            _orders = _data.Orders.ToList();
             _sellers = s;
             _products = p;
             DisplayOrders();
@@ -90,6 +91,8 @@ namespace PhBuy
             var c = (CustomerOrderPanel) button.Parent;
             c.rateButton.Enabled = true;
             Orders o = _orders.Find(i => i.Id == decimal.Parse(c.Name));
+            Products p = _data.Products.Where(i => i.Name == c.productNameLabel.Text).FirstOrDefault();
+            p.Sales++;
             o.Status = "Delivered";
             _data.Orders.Update(o);
             _data.SaveChanges();

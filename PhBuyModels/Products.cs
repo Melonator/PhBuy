@@ -27,6 +27,7 @@ namespace PhBuyModels
         public string FdaNumber { get; set; }
         public string Type { get; set; }
         public double? Rating { get; set; }
+        public int? Sales { get; set; }
 
         public virtual Seller Seller { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
