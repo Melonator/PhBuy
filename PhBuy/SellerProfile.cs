@@ -52,9 +52,8 @@ namespace PhBuy
             sellerBackgroundPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
             _currentSeller.Background = _stream.ToArray();
 
-            _data.Seller.Update(_currentSeller);
             _data.SaveChanges();
-            _mainForm.ReloadData();
+            _mainForm.ReloadData("Seller");
         }
 
         private void sellerPictureBox_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace PhBuy
 		public Seller CurrentSeller;
 		private readonly string _type;
 		private CustomerSellerForm _cs = null;
+		private CustomerDashBoard _dashBoard;
 		public MainForm(Seller s, CustomerSellerForm cs)
 		{
 			CurrentSeller = s;
@@ -32,10 +33,11 @@ namespace PhBuy
 			InitializeComponent();
         }
 
-		public void ReloadData()
+		public void ReloadData(string type)
         {
 			PhBuyContext _data = new PhBuyContext();
-			CurrentSeller = _data.Seller.Find(CurrentSeller);
+			if(type == "Seller") CurrentSeller = _data.Seller.Find(CurrentSeller);
+			else _currentCustomer = _data.Customer.Find(_currentCustomer);
 			setInformation();
         }
 
@@ -64,15 +66,17 @@ namespace PhBuy
 				form.Show();
 				sidePanel.Controls.Add(form);
 				setInformation();
+				
 			}
             else
             {
-				CustomerDashBoard dashBoard = new CustomerDashBoard(this, _currentCustomer) { TopLevel = false};
+				_dashBoard = new CustomerDashBoard(this, _currentCustomer) { TopLevel = false};
 				dashBoardPanel.Controls.Clear();
-				dashBoardPanel.Controls.Add(dashBoard);
+				dashBoardPanel.Controls.Add(_dashBoard);
 				setInformation();
-				dashBoard.Show();
-            }
+				_dashBoard.Show();
+				userPhoto.Click += showCustomerProfile;
+			}
 		}
 
 		private void setInformation()
@@ -102,7 +106,12 @@ namespace PhBuy
 			Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+		private void showCustomerProfile(object sender, EventArgs e)
+		{
+			_dashBoard.customerTabControl.SelectedIndex = 9;
+		}
+
+		private void button1_Click(object sender, EventArgs e)
         {
 			LandingForm lf = new LandingForm();
 			lf.Show();

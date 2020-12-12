@@ -60,6 +60,7 @@ namespace PhBuy
             this.searchTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.homePictureBox = new System.Windows.Forms.PictureBox();
             this.scrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.myProfile = new System.Windows.Forms.TabPage();
             this.mainPanel.SuspendLayout();
             this.customerTabControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,6 +96,7 @@ namespace PhBuy
             this.customerTabControl.Controls.Add(this.buyPage);
             this.customerTabControl.Controls.Add(this.cartPage);
             this.customerTabControl.Controls.Add(this.myOrders);
+            this.customerTabControl.Controls.Add(this.myProfile);
             this.customerTabControl.Location = new System.Drawing.Point(3, -22);
             this.customerTabControl.Name = "customerTabControl";
             this.customerTabControl.SelectedIndex = 0;
@@ -116,7 +118,7 @@ namespace PhBuy
             this.productQuery.Location = new System.Drawing.Point(4, 22);
             this.productQuery.Name = "productQuery";
             this.productQuery.Padding = new System.Windows.Forms.Padding(3);
-            this.productQuery.Size = new System.Drawing.Size(879, 586);
+            this.productQuery.Size = new System.Drawing.Size(879, 524);
             this.productQuery.TabIndex = 1;
             this.productQuery.Text = "productQuery";
             this.productQuery.UseVisualStyleBackColor = true;
@@ -125,7 +127,7 @@ namespace PhBuy
             // 
             this.sellerQuery.Location = new System.Drawing.Point(4, 22);
             this.sellerQuery.Name = "sellerQuery";
-            this.sellerQuery.Size = new System.Drawing.Size(879, 586);
+            this.sellerQuery.Size = new System.Drawing.Size(879, 524);
             this.sellerQuery.TabIndex = 2;
             this.sellerQuery.Text = "sellerQuery";
             this.sellerQuery.UseVisualStyleBackColor = true;
@@ -134,7 +136,7 @@ namespace PhBuy
             // 
             this.sellerShop.Location = new System.Drawing.Point(4, 22);
             this.sellerShop.Name = "sellerShop";
-            this.sellerShop.Size = new System.Drawing.Size(879, 586);
+            this.sellerShop.Size = new System.Drawing.Size(879, 524);
             this.sellerShop.TabIndex = 3;
             this.sellerShop.Text = "sellerShop";
             this.sellerShop.UseVisualStyleBackColor = true;
@@ -143,7 +145,7 @@ namespace PhBuy
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(879, 586);
+            this.tabPage1.Size = new System.Drawing.Size(879, 524);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "productTab";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -152,7 +154,7 @@ namespace PhBuy
             // 
             this.productTab.Location = new System.Drawing.Point(4, 22);
             this.productTab.Name = "productTab";
-            this.productTab.Size = new System.Drawing.Size(879, 586);
+            this.productTab.Size = new System.Drawing.Size(879, 524);
             this.productTab.TabIndex = 5;
             this.productTab.Text = "tabPage2";
             this.productTab.UseVisualStyleBackColor = true;
@@ -161,7 +163,7 @@ namespace PhBuy
             // 
             this.buyPage.Location = new System.Drawing.Point(4, 22);
             this.buyPage.Name = "buyPage";
-            this.buyPage.Size = new System.Drawing.Size(879, 586);
+            this.buyPage.Size = new System.Drawing.Size(879, 524);
             this.buyPage.TabIndex = 6;
             this.buyPage.Text = "buyPage";
             this.buyPage.UseVisualStyleBackColor = true;
@@ -170,7 +172,7 @@ namespace PhBuy
             // 
             this.cartPage.Location = new System.Drawing.Point(4, 22);
             this.cartPage.Name = "cartPage";
-            this.cartPage.Size = new System.Drawing.Size(879, 586);
+            this.cartPage.Size = new System.Drawing.Size(879, 524);
             this.cartPage.TabIndex = 7;
             this.cartPage.Text = "cartPage";
             this.cartPage.UseVisualStyleBackColor = true;
@@ -179,7 +181,7 @@ namespace PhBuy
             // 
             this.myOrders.Location = new System.Drawing.Point(4, 22);
             this.myOrders.Name = "myOrders";
-            this.myOrders.Size = new System.Drawing.Size(879, 586);
+            this.myOrders.Size = new System.Drawing.Size(879, 524);
             this.myOrders.TabIndex = 8;
             this.myOrders.Text = "myOrders";
             this.myOrders.UseVisualStyleBackColor = true;
@@ -615,6 +617,15 @@ namespace PhBuy
             this.scrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.scrollBar.Value = 0;
             // 
+            // myProfile
+            // 
+            this.myProfile.Location = new System.Drawing.Point(4, 22);
+            this.myProfile.Name = "myProfile";
+            this.myProfile.Size = new System.Drawing.Size(879, 524);
+            this.myProfile.TabIndex = 9;
+            this.myProfile.Text = "myProfile";
+            this.myProfile.UseVisualStyleBackColor = true;
+            // 
             // CustomerDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -664,5 +675,6 @@ namespace PhBuy
         private System.Windows.Forms.TabPage cartPage;
         private System.Windows.Forms.TabPage myOrders;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton TESTBUTTON;
+        private System.Windows.Forms.TabPage myProfile;
     }
 }

@@ -25,6 +25,7 @@ namespace PhBuy
         private Customer _currentCustomer;
         private CustomerMyOrders _customerOrderPanel;
         public DiscoverSellers DiscoverSellers;
+        private CustomerProfile _customerProfile;
 
         private List<Orders> _myOrders;
         private List<Products> _products;
@@ -85,6 +86,12 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[8]
             };
             _customerOrderPanel.Show();
+            _customerProfile = new CustomerProfile(_mainForm, _currentCustomer)
+            {
+                MdiParent = _mainForm,
+                Parent = customerTabControl.TabPages[9]
+            };
+            _customerProfile.Show();
             _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
         }
 

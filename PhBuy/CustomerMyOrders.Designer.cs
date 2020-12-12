@@ -33,22 +33,22 @@ namespace PhBuy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerMyOrders));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userNameLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ConfirmedSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.DeliveredSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.ProcessingSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.AllSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.Delivered = new System.Windows.Forms.Label();
             this.Confirmed = new System.Windows.Forms.Label();
             this.Processing = new System.Windows.Forms.Label();
             this.All = new System.Windows.Forms.Label();
             this.ordersFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ConfirmedSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.DeliveredSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.ProcessingSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.AllSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -65,16 +65,6 @@ namespace PhBuy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 68);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PhBuy.Properties.Resources.shopping_basket_208px;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // userNameLabel
             // 
@@ -106,6 +96,73 @@ namespace PhBuy
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(922, 54);
             this.panel2.TabIndex = 2;
+            // 
+            // Delivered
+            // 
+            this.Delivered.AutoSize = true;
+            this.Delivered.BackColor = System.Drawing.Color.Transparent;
+            this.Delivered.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delivered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.Delivered.Location = new System.Drawing.Point(723, 12);
+            this.Delivered.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Delivered.Name = "Delivered";
+            this.Delivered.Size = new System.Drawing.Size(121, 33);
+            this.Delivered.TabIndex = 9;
+            this.Delivered.Text = "Delivered";
+            this.Delivered.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Delivered.Click += new System.EventHandler(this.category_Click);
+            // 
+            // Confirmed
+            // 
+            this.Confirmed.AutoSize = true;
+            this.Confirmed.BackColor = System.Drawing.Color.Transparent;
+            this.Confirmed.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirmed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.Confirmed.Location = new System.Drawing.Point(451, 12);
+            this.Confirmed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Confirmed.Name = "Confirmed";
+            this.Confirmed.Size = new System.Drawing.Size(131, 33);
+            this.Confirmed.TabIndex = 9;
+            this.Confirmed.Text = "Confirmed";
+            this.Confirmed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Confirmed.Click += new System.EventHandler(this.category_Click);
+            // 
+            // Processing
+            // 
+            this.Processing.AutoSize = true;
+            this.Processing.BackColor = System.Drawing.Color.Transparent;
+            this.Processing.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Processing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.Processing.Location = new System.Drawing.Point(182, 12);
+            this.Processing.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Processing.Name = "Processing";
+            this.Processing.Size = new System.Drawing.Size(138, 33);
+            this.Processing.TabIndex = 9;
+            this.Processing.Text = "Processing";
+            this.Processing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Processing.Click += new System.EventHandler(this.category_Click);
+            // 
+            // All
+            // 
+            this.All.AutoSize = true;
+            this.All.BackColor = System.Drawing.Color.Transparent;
+            this.All.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.All.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            this.All.Location = new System.Drawing.Point(40, 12);
+            this.All.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(45, 33);
+            this.All.TabIndex = 9;
+            this.All.Text = "All";
+            this.All.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.All.Click += new System.EventHandler(this.category_Click);
+            // 
+            // ordersFlowLayoutPanel
+            // 
+            this.ordersFlowLayoutPanel.Location = new System.Drawing.Point(0, 150);
+            this.ordersFlowLayoutPanel.Name = "ordersFlowLayoutPanel";
+            this.ordersFlowLayoutPanel.Size = new System.Drawing.Size(876, 436);
+            this.ordersFlowLayoutPanel.TabIndex = 3;
             // 
             // ConfirmedSeparator
             // 
@@ -182,72 +239,15 @@ namespace PhBuy
             this.bunifuSeparator1.Size = new System.Drawing.Size(922, 14);
             this.bunifuSeparator1.TabIndex = 1;
             // 
-            // Delivered
+            // pictureBox1
             // 
-            this.Delivered.AutoSize = true;
-            this.Delivered.BackColor = System.Drawing.Color.Transparent;
-            this.Delivered.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delivered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.Delivered.Location = new System.Drawing.Point(723, 12);
-            this.Delivered.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Delivered.Name = "Delivered";
-            this.Delivered.Size = new System.Drawing.Size(121, 33);
-            this.Delivered.TabIndex = 9;
-            this.Delivered.Text = "Delivered";
-            this.Delivered.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delivered.Click += new System.EventHandler(this.category_Click);
-            // 
-            // Confirmed
-            // 
-            this.Confirmed.AutoSize = true;
-            this.Confirmed.BackColor = System.Drawing.Color.Transparent;
-            this.Confirmed.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Confirmed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.Confirmed.Location = new System.Drawing.Point(451, 12);
-            this.Confirmed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Confirmed.Name = "Confirmed";
-            this.Confirmed.Size = new System.Drawing.Size(131, 33);
-            this.Confirmed.TabIndex = 9;
-            this.Confirmed.Text = "Confirmed";
-            this.Confirmed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Confirmed.Click += new System.EventHandler(this.category_Click);
-            // 
-            // Processing
-            // 
-            this.Processing.AutoSize = true;
-            this.Processing.BackColor = System.Drawing.Color.Transparent;
-            this.Processing.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Processing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.Processing.Location = new System.Drawing.Point(182, 12);
-            this.Processing.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Processing.Name = "Processing";
-            this.Processing.Size = new System.Drawing.Size(138, 33);
-            this.Processing.TabIndex = 9;
-            this.Processing.Text = "Processing";
-            this.Processing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Processing.Click += new System.EventHandler(this.category_Click);
-            // 
-            // All
-            // 
-            this.All.AutoSize = true;
-            this.All.BackColor = System.Drawing.Color.Transparent;
-            this.All.Font = new System.Drawing.Font("Mulish SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.All.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.All.Location = new System.Drawing.Point(40, 12);
-            this.All.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.All.Name = "All";
-            this.All.Size = new System.Drawing.Size(45, 33);
-            this.All.TabIndex = 9;
-            this.All.Text = "All";
-            this.All.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.All.Click += new System.EventHandler(this.category_Click);
-            // 
-            // ordersFlowLayoutPanel
-            // 
-            this.ordersFlowLayoutPanel.Location = new System.Drawing.Point(0, 150);
-            this.ordersFlowLayoutPanel.Name = "ordersFlowLayoutPanel";
-            this.ordersFlowLayoutPanel.Size = new System.Drawing.Size(876, 436);
-            this.ordersFlowLayoutPanel.TabIndex = 3;
+            this.pictureBox1.Image = global::PhBuy.Properties.Resources.shopping_basket_208px;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // CustomerMyOrders
             // 
@@ -263,9 +263,9 @@ namespace PhBuy
             this.Load += new System.EventHandler(this.CustomerMyOrders_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
