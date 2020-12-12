@@ -164,6 +164,18 @@ namespace PhBuy
 			return true;
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private void passTextBox_TextChange(object sender, EventArgs e)
+        {
+			if (passTextBox.Text == "") passTextBox.UseSystemPasswordChar = false;
+			else passTextBox.UseSystemPasswordChar = true;
+        }
+
+        private void confirmTextBox_TextChange(object sender, EventArgs e)
+        {
+			if (confirmTextBox.Text == "") confirmTextBox.UseSystemPasswordChar = false;
+			else confirmTextBox.UseSystemPasswordChar = true;
+        }
+    }
 }

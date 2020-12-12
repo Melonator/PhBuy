@@ -55,25 +55,18 @@ namespace PhBuy
             {
 				case 1:
                     {
-						if (nameTextBox.Text != string.Empty || locationTextBox.Text != string.Empty ||
-							descriptionTextBox.Text == string.Empty) return true;
-
+						if (nameTextBox.Text != string.Empty && locationTextBox.Text != string.Empty &&
+							descriptionTextBox.Text != string.Empty) return true;
 					}
 					break;
 				case 2:
                     {
-						if (contactTextBox.Text != string.Empty || linkTextBox.Text != string.Empty ||
-							typeDropDown.Text != string.Empty) return true;
-
+						if (contactTextBox.Text != string.Empty && linkTextBox.Text != string.Empty &&
+							typeDropDown.Text != string.Empty && _selectedTypes.Count > 0) return true;
 					}
 					break;
-				default:
-                    {
-						bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
-                    }
-					break;
             }
-
+			bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
 			return false;
         }
 
@@ -155,9 +148,9 @@ namespace PhBuy
 			_data.SaveChanges();
 
 			var main = new MainForm(s, _cs);
+			Hide();
 			bunifuSnackbar1.Show(main, "Account successfully created!", BunifuSnackbar.MessageTypes.Success);
 			main.Show();
-			Hide();
 		}
 
         #endregion

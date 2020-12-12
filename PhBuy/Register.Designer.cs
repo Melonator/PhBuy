@@ -204,6 +204,7 @@ namespace PhBuy
             this.confirmTextBox.TextPlaceholder = "Enter your password";
             this.confirmTextBox.UseSystemPasswordChar = false;
             this.confirmTextBox.WordWrap = true;
+            this.confirmTextBox.TextChange += new System.EventHandler(this.confirmTextBox_TextChange);
             // 
             // passTextBox
             // 
@@ -279,6 +280,7 @@ namespace PhBuy
             this.passTextBox.TextPlaceholder = "Enter your password";
             this.passTextBox.UseSystemPasswordChar = false;
             this.passTextBox.WordWrap = true;
+            this.passTextBox.TextChange += new System.EventHandler(this.passTextBox_TextChange);
             // 
             // nameTextBox
             // 
