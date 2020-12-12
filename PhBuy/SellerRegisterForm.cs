@@ -6,6 +6,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -48,6 +49,34 @@ namespace PhBuy
 			_sellerImage = stream.ToArray();
 		}
 
+		private bool IsComplete(int page)
+        {
+			switch (page)
+            {
+				case 1:
+                    {
+						if (nameTextBox.Text != string.Empty || locationTextBox.Text != string.Empty ||
+							descriptionTextBox.Text == string.Empty) return true;
+
+					}
+					break;
+				case 2:
+                    {
+						if (contactTextBox.Text != string.Empty || linkTextBox.Text != string.Empty ||
+							typeDropDown.Text != string.Empty) return true;
+
+					}
+					break;
+				default:
+                    {
+						bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
+                    }
+					break;
+            }
+
+			return false;
+        }
+
 		#endregion
 
 		private void backButton_Click(object sender, EventArgs e)
@@ -60,26 +89,28 @@ namespace PhBuy
 
 		private void nextButton1_Click(object sender, EventArgs e)
 		{
-			if (nameTextBox.Text == string.Empty || locationTextBox.Text == string.Empty ||
-			    descriptionTextBox.Text == string.Empty) return;
-			//Set Values
-			_shopName = nameTextBox.Text;
-			_location = locationTextBox.Text;
-			_description = descriptionTextBox.Text;
-			//Switch Page
-			registerPages.PageIndex++;
+			if (IsComplete(1))
+            {
+				//Set Values
+				_shopName = nameTextBox.Text;
+				_location = locationTextBox.Text;
+				_description = descriptionTextBox.Text;
+				//Switch Page
+				registerPages.PageIndex++;
+			}
 		}
 
 		private void nextButton2_Click(object sender, EventArgs e)
 		{
-			if (contactTextBox.Text == string.Empty || linkTextBox.Text == string.Empty ||
-			    typeDropDown.Text == string.Empty) return;
-			//Set Values
-			_contact = contactTextBox.Text;
-			_link = linkTextBox.Text;
-			_type = typeDropDown.Text;
-			//Switch Page
-			registerPages.PageIndex++;
+			if (IsComplete(2))
+            {
+				//Set Values
+				_contact = contactTextBox.Text;
+				_link = linkTextBox.Text;
+				_type = typeDropDown.Text;
+				//Switch Page
+				registerPages.PageIndex++;
+			}
 		}
 
 		private void uploadPhotoButton_Click(object sender, EventArgs e)
@@ -124,6 +155,7 @@ namespace PhBuy
 			_data.SaveChanges();
 
 			var main = new MainForm(s, _cs);
+			bunifuSnackbar1.Show(main, "Account successfully created!", BunifuSnackbar.MessageTypes.Success);
 			main.Show();
 			Hide();
 		}

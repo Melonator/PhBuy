@@ -74,7 +74,7 @@ namespace PhBuy
 
 					while (oReader.Read())
 					{
-						if (oReader["Name"].ToString() != username) continue;
+						if (oReader["Name"].ToString().ToLower() != username.ToLower()) continue;
 						myConnection.Close();
 						return 1; // Username exists
 					}

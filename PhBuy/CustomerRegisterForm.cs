@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -27,23 +28,37 @@ namespace PhBuy
             InitializeComponent();
         }
 
+        private bool CompleteFields()
+        {
+            return (firstNameTextBox.Text != "" && lastNameTextBox.Text != "" && addressTextBox.Text != "");
+        }
+
+        private void Confirm()
+        {
+            if (CompleteFields())
+            {
+                Customer c = new Customer();
+                c.Name = $"{firstNameTextBox.Text} {lastNameTextBox.Text}";
+                c.Id = _id;
+                c.Contact = contactTextBox.Text;
+                _stream = new MemoryStream();
+                Resources.ProPicIcon22.Save(_stream, ImageFormat.Jpeg);
+                c.Picture = _stream.ToArray();
+                _stream.Close();
+                _data.Customer.Add(c);
+                _data.SaveChanges();
+
+                var main = new MainForm(c, _cs) { TopLevel = true };
+                bunifuSnackbar1.Show(main, "Registered Successfully!", BunifuSnackbar.MessageTypes.Success);
+                main.Show();
+                Close();
+            }
+            else bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
+        }
+
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Customer c = new Customer();
-            c.Name = $"{firstNameTextBox.Text} {lastNameTextBox.Text}";
-            c.Id = _id;
-            c.Contact = contactTextBox.Text;
-            _stream = new MemoryStream();
-            Resources.ProPicIcon22.Save(_stream, ImageFormat.Jpeg);
-            c.Picture = _stream.ToArray();
-            _stream.Close();
-            _data.Customer.Add(c);
-            _data.SaveChanges();
-
-            MessageBox.Show("Registered Successfully!", "Registered!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            var main = new MainForm(c, _cs) { TopLevel = true };
-            main.Show();
-            Hide();
+            Confirm();
         }
     }
 }
