@@ -67,11 +67,14 @@ namespace PhBuy
             type.Name = typeDropDown.Text;
             type.typeLabel.Text = typeDropDown.Text;
             type.Width = type.typeLabel.Width + 25;
-            type.Click += sellerTypeControl_Click;
-            type.label1.Click += sellerTypeControl_Click2;
-            type.typeLabel.Click += sellerTypeControl_Click2;
-            _selectedTypes.Add(type.Name);
-            typeFlowLayoutPanel.Controls.Add(type);
+            if (!_selectedTypes.Contains(type.Name))
+            {
+                type.Click += sellerTypeControl_Click;
+                type.label1.Click += sellerTypeControl_Click2;
+                type.typeLabel.Click += sellerTypeControl_Click2;
+                _selectedTypes.Add(type.Name);
+                typeFlowLayoutPanel.Controls.Add(type);
+            }
         }
 
         private void sellerTypeControl_Click(object sender, EventArgs e)

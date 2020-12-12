@@ -48,7 +48,7 @@ namespace PhBuy
         private void DisplayOrders(string status = "All")
         {
             ordersFlowLayoutPanel.Controls.Clear();
-            _ordersQuery = _orders;
+            _ordersQuery = _orders.OrderByDescending(i => i.DateOrdered).ToList();
 
             if (status != "All")
                 _ordersQuery = _ordersQuery.Where(p => p.Status == status).ToList();
@@ -58,7 +58,7 @@ namespace PhBuy
                 CustomerOrderPanel co = new CustomerOrderPanel();
                 co.Name = o.Id.ToString();
                 Products currentProduct = _products.Find(i => i.ProductId == o.ProductId);
-                Seller currenSeller = _sellers.Find(i => i.Id == o.CustomerId);
+                Seller currenSeller = _sellers.Find(i => i.Id == currentProduct.SellerId);
                 co.productNameLabel.Text = currentProduct.Name;
                 _stream = new MemoryStream(currenSeller.Picture);
                 co.sellerPictureBox.Image = Image.FromStream(_stream);

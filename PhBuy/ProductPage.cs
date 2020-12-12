@@ -15,13 +15,14 @@ namespace PhBuy
     public partial class ProductPage : Form
     {
         private Products _product;
-        private PhBuyContext _data = new PhBuyContext();
         private MemoryStream _stream = new MemoryStream();
         private Seller _seller;
         private CustomerDashBoard _dashBoard;
+        private List<ProductImages> _productImages;
         private int _quantity = 1;
-        public ProductPage(CustomerDashBoard c)
+        public ProductPage(CustomerDashBoard c, List<ProductImages> i)
         {
+            _productImages = i;
             _dashBoard = c;
             InitializeComponent();
         }
@@ -65,7 +66,7 @@ namespace PhBuy
             };
             productCover.Click += productPictureBox_Click;
             productImagesFlowPanel.Controls.Add(productCover);
-            foreach (var i in _data.ProductImages.Where(d => d.ProductId == _product.ProductId).ToList())
+            foreach (var i in _productImages.Where(d => d.ProductId == _product.ProductId).ToList())
             {
                 _stream = new MemoryStream(i.Picture);
                 PictureBox p = new PictureBox
@@ -100,7 +101,7 @@ namespace PhBuy
 
         private void addToCartButton_Click(object sender, EventArgs e)
         {
-            _dashBoard.CartForm.LoadData(_product, _seller, int.Parse(quantityTextBox.Text));
+            _dashBoard.CartForm.LoadData(_product, _seller, _quantity);
         }
 
         private void addQuantityButton_Click(object sender, EventArgs e)
@@ -113,6 +114,24 @@ namespace PhBuy
         {
             if(_quantity != 1) _quantity--;
             quantityTextBox.Text = _quantity.ToString();
+        }
+
+        private void quantityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(int.Parse(quantityTextBox.Text) > _product.Stock)
+            {
+                quantityTextBox.Text = _product.Stock.ToString();
+            }
+            else
+            {
+                _quantity = int.Parse(quantityTextBox.Text);
+            }
+        }
+
+        private void buyNowButton_Click(object sender, EventArgs e)
+        {
+            _dashBoard.CartForm.BuyNow(_product, _seller, _quantity);
+            _dashBoard.customerTabControl.SelectedIndex = 7;
         }
     }
 }

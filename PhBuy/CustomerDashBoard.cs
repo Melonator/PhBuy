@@ -18,16 +18,19 @@ namespace PhBuy
         public SellerShop SellerShop;
         public ProductPage ProductPage;
         public CustomerHomePage CustomerHomePage;
-        private ProductSearch _productSearch;
+        public ProductSearch ProductSearch;
         private PhBuyContext _data = new PhBuyContext();
         public CartForm CartForm;
         private MainForm _mainForm;
         private Customer _currentCustomer;
         private CustomerMyOrders _customerOrderPanel;
+        public DiscoverSellers DiscoverSellers;
 
         private List<Orders> _myOrders;
         private List<Products> _products;
         private List<Seller> _sellers;
+        private List<SellerTypes> _sellerTypes;
+        private List<ProductImages> _productImages;
         public CustomerDashBoard(MainForm f, Customer c)
         {
             _mainForm = f;
@@ -40,36 +43,36 @@ namespace PhBuy
             LoadData();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             scrollBar.ThumbLength = 100;
-            CustomerHomePage = new CustomerHomePage(this, _data)
+            CustomerHomePage = new CustomerHomePage(this, _products, _sellers, _sellerTypes)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[0]
             };
             CustomerHomePage.Show();
-            DiscoverSellers discoverSellers = new DiscoverSellers(CustomerHomePage._sellers, CustomerHomePage._sellerTypes)
+            DiscoverSellers = new DiscoverSellers(_sellers, _sellerTypes, _products, this)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[2]
             };
-            discoverSellers.Show();
+            DiscoverSellers.Show();
             SellerShop = new SellerShop(this)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[3]
             };
             SellerShop.Show();
-            ProductPage = new ProductPage(this)
+            ProductPage = new ProductPage(this, _productImages)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[5]
             };
             ProductPage.Show();
-            _productSearch = new ProductSearch(this)
+            ProductSearch = new ProductSearch(this)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[1]
             };
-            _productSearch.Show();
+            ProductSearch.Show();
             CartForm = new CartForm(this, _currentCustomer)
             {
                 MdiParent = _mainForm,
@@ -90,6 +93,8 @@ namespace PhBuy
             _myOrders = _data.Orders.Where(i => i.CustomerId == _currentCustomer.Id).ToList();
             _products = _data.Products.ToList();
             _sellers = _data.Seller.ToList();
+            _sellerTypes = _data.SellerTypes.ToList();
+            _productImages = _data.ProductImages.ToList();
         }
         private void homePictureBox_Click(object sender, EventArgs e)
         { 
@@ -104,10 +109,20 @@ namespace PhBuy
         {
             if (dropDown.Text == "Product")
             {
-                _productSearch.CustomSearch(CustomerHomePage._products.Where(s => s.Name.Contains($"{searchTextBox.Text}")).ToList(), CustomerHomePage._sellers);
+                ProductSearch.CustomSearch(CustomerHomePage._products
+                    .Where(s => s.Name.Contains($"{searchTextBox.Text}")).ToList(), CustomerHomePage._sellers);
                 if (customerTabControl.SelectedIndex != 1)
                 {
                     customerTabControl.SelectedIndex = 1;
+                }
+            }
+            else
+            {
+                DiscoverSellers.CustomSearch(_sellers
+                    .Where(s => s.Name.Contains($"{searchTextBox.Text}")).ToList());
+                if (customerTabControl.SelectedIndex != 2)
+                {
+                    customerTabControl.SelectedIndex = 2;
                 }
             }
         }
@@ -115,10 +130,13 @@ namespace PhBuy
         private void cartButton_Click(object sender, EventArgs e)
         {
             customerTabControl.SelectedIndex = 7;
+            scrollBar.BindTo(CartForm.panel);
+            scrollBar.ThumbLength = 100;
         }
 
         private void TESTBUTTON_Click(object sender, EventArgs e)
         {
+            LoadData();
             customerTabControl.SelectedIndex = 8;
             _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
             scrollBar.ThumbLength = 100;

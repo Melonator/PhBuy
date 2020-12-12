@@ -17,32 +17,26 @@ namespace PhBuy
     public partial class CustomerHomePage : Form
     {
         private CustomerDashBoard _cd;
-        private PhBuyContext _data;
         public List<Products> _products = new List<Products>();
         public List<Seller> _sellers = new List<Seller>();
         public List<SellerTypes> _sellerTypes = new List<SellerTypes>();
         private Seller _currentSeller;
         private MemoryStream _stream;
-        public CustomerHomePage(CustomerDashBoard form, PhBuyContext d)
+        public CustomerHomePage(CustomerDashBoard form, List<Products> p, List<Seller> s, List<SellerTypes> t)
         {
-            _data = d;
             _cd = form;
+            _sellerTypes = t;
+            _sellers = s;
+            _products = p;
             InitializeComponent();
         }
         private void CustomerHomePage_Load(object sender, EventArgs e)
         { 
             _cd.scrollBar.BindTo(panel);
-            LoadData();
             LoadProducts();
             LoadSellers();
         }
 
-        private void LoadData()
-        {
-            _products = _data.Products.ToList();
-            _sellers = _data.Seller.ToList();
-            _sellerTypes = _data.SellerTypes.ToList();
-        }
 
         private void LoadProducts()
         {
@@ -84,12 +78,15 @@ namespace PhBuy
         private void discoverSellersLabel_Click(object sender, EventArgs e)
         {
             //Switch to the discover sellers page 
-            _cd.customerTabControl.SelectedIndex = 2;
+            _cd.DiscoverSellers.DisplaySellers();
+            _cd.customerTabControl.SelectedIndex = 2;   
         }
 
         private void moreProductsLabel_Click(object sender, EventArgs e)
         {
             //Switch to the products query page 
+            _cd.ProductSearch.LoadData(_products, _sellers);
+            _cd.customerTabControl.SelectedIndex = 1;
         }
 
         private void productPicture_click(object sender, EventArgs e)
@@ -150,6 +147,14 @@ namespace PhBuy
             _currentSeller = _sellers.Find(a => a.Id == p.SellerId);
             _cd.ProductPage.LoadData(p, _currentSeller);
             _cd.customerTabControl.SelectedIndex = 5;
+        }
+
+        private void typeButton_Click(object sender, EventArgs e)
+        {
+            var b = (BunifuImageButton)sender;
+            if (b.Name == "Health") _cd.ProductSearch.CustomSearch(_products, _sellers, "Health & Beauty");
+            else _cd.ProductSearch.CustomSearch(_products, _sellers, b.Name);
+            _cd.customerTabControl.SelectedIndex = 1;
         }
     }
 }

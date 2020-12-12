@@ -41,6 +41,7 @@ namespace PhBuy
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.descLabel = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@ namespace PhBuy
             this.label6 = new System.Windows.Forms.Label();
             this.sellerNameLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.buyNowButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.addToCartButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.subtractQuantityButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.addQuantityButton = new Bunifu.Framework.UI.BunifuTileButton();
@@ -67,7 +68,6 @@ namespace PhBuy
             this.sellerShopLabel = new System.Windows.Forms.Label();
             this.productImagesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.productPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -93,6 +93,14 @@ namespace PhBuy
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(876, 587);
             this.mainPanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 1064);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 57;
             // 
             // panel4
             // 
@@ -387,7 +395,7 @@ namespace PhBuy
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.bunifuButton2);
+            this.panel1.Controls.Add(this.buyNowButton);
             this.panel1.Controls.Add(this.addToCartButton);
             this.panel1.Controls.Add(this.subtractQuantityButton);
             this.panel1.Controls.Add(this.addQuantityButton);
@@ -407,94 +415,95 @@ namespace PhBuy
             this.panel1.Size = new System.Drawing.Size(870, 416);
             this.panel1.TabIndex = 53;
             // 
-            // bunifuButton2
+            // buyNowButton
             // 
-            this.bunifuButton2.AllowAnimations = true;
-            this.bunifuButton2.AllowMouseEffects = true;
-            this.bunifuButton2.AllowToggling = false;
-            this.bunifuButton2.AnimationSpeed = 200;
-            this.bunifuButton2.AutoGenerateColors = false;
-            this.bunifuButton2.AutoRoundBorders = false;
-            this.bunifuButton2.AutoSizeLeftIcon = true;
-            this.bunifuButton2.AutoSizeRightIcon = true;
-            this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
-            this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
-            this.bunifuButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton2.ButtonText = "Buy Now";
-            this.bunifuButton2.ButtonTextMarginLeft = 0;
-            this.bunifuButton2.ColorContrastOnClick = 45;
-            this.bunifuButton2.ColorContrastOnHover = 45;
-            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buyNowButton.AllowAnimations = true;
+            this.buyNowButton.AllowMouseEffects = true;
+            this.buyNowButton.AllowToggling = false;
+            this.buyNowButton.AnimationSpeed = 200;
+            this.buyNowButton.AutoGenerateColors = false;
+            this.buyNowButton.AutoRoundBorders = false;
+            this.buyNowButton.AutoSizeLeftIcon = true;
+            this.buyNowButton.AutoSizeRightIcon = true;
+            this.buyNowButton.BackColor = System.Drawing.Color.Transparent;
+            this.buyNowButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
+            this.buyNowButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buyNowButton.BackgroundImage")));
+            this.buyNowButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.buyNowButton.ButtonText = "Buy Now";
+            this.buyNowButton.ButtonTextMarginLeft = 0;
+            this.buyNowButton.ColorContrastOnClick = 45;
+            this.buyNowButton.ColorContrastOnHover = 45;
+            this.buyNowButton.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
             borderEdges3.TopRight = true;
-            this.bunifuButton2.CustomizableEdges = borderEdges3;
-            this.bunifuButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton2.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton2.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton2.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.bunifuButton2.IconMarginLeft = 11;
-            this.bunifuButton2.IconPadding = 10;
-            this.bunifuButton2.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.bunifuButton2.IconSize = 25;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
-            this.bunifuButton2.IdleBorderRadius = 1;
-            this.bunifuButton2.IdleBorderThickness = 1;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
-            this.bunifuButton2.IdleIconLeftImage = null;
-            this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(590, 337);
-            this.bunifuButton2.Name = "bunifuButton2";
-            this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton2.OnDisabledState.BorderRadius = 1;
-            this.bunifuButton2.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton2.OnDisabledState.BorderThickness = 1;
-            this.bunifuButton2.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton2.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton2.OnDisabledState.IconLeftImage = null;
-            this.bunifuButton2.OnDisabledState.IconRightImage = null;
-            this.bunifuButton2.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton2.onHoverState.BorderRadius = 1;
-            this.bunifuButton2.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton2.onHoverState.BorderThickness = 1;
-            this.bunifuButton2.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton2.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.onHoverState.IconLeftImage = null;
-            this.bunifuButton2.onHoverState.IconRightImage = null;
-            this.bunifuButton2.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
-            this.bunifuButton2.OnIdleState.BorderRadius = 1;
-            this.bunifuButton2.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton2.OnIdleState.BorderThickness = 1;
-            this.bunifuButton2.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
-            this.bunifuButton2.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.OnIdleState.IconLeftImage = null;
-            this.bunifuButton2.OnIdleState.IconRightImage = null;
-            this.bunifuButton2.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton2.OnPressedState.BorderRadius = 1;
-            this.bunifuButton2.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton2.OnPressedState.BorderThickness = 1;
-            this.bunifuButton2.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton2.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.OnPressedState.IconLeftImage = null;
-            this.bunifuButton2.OnPressedState.IconRightImage = null;
-            this.bunifuButton2.Size = new System.Drawing.Size(171, 49);
-            this.bunifuButton2.TabIndex = 65;
-            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bunifuButton2.TextMarginLeft = 0;
-            this.bunifuButton2.TextPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuButton2.UseDefaultRadiusAndThickness = true;
+            this.buyNowButton.CustomizableEdges = borderEdges3;
+            this.buyNowButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.buyNowButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.buyNowButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.buyNowButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.buyNowButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.buyNowButton.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyNowButton.ForeColor = System.Drawing.Color.White;
+            this.buyNowButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buyNowButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.buyNowButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.buyNowButton.IconMarginLeft = 11;
+            this.buyNowButton.IconPadding = 10;
+            this.buyNowButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buyNowButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.buyNowButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.buyNowButton.IconSize = 25;
+            this.buyNowButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
+            this.buyNowButton.IdleBorderRadius = 1;
+            this.buyNowButton.IdleBorderThickness = 1;
+            this.buyNowButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
+            this.buyNowButton.IdleIconLeftImage = null;
+            this.buyNowButton.IdleIconRightImage = null;
+            this.buyNowButton.IndicateFocus = false;
+            this.buyNowButton.Location = new System.Drawing.Point(590, 337);
+            this.buyNowButton.Name = "buyNowButton";
+            this.buyNowButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.buyNowButton.OnDisabledState.BorderRadius = 1;
+            this.buyNowButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.buyNowButton.OnDisabledState.BorderThickness = 1;
+            this.buyNowButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.buyNowButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.buyNowButton.OnDisabledState.IconLeftImage = null;
+            this.buyNowButton.OnDisabledState.IconRightImage = null;
+            this.buyNowButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.buyNowButton.onHoverState.BorderRadius = 1;
+            this.buyNowButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.buyNowButton.onHoverState.BorderThickness = 1;
+            this.buyNowButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.buyNowButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.buyNowButton.onHoverState.IconLeftImage = null;
+            this.buyNowButton.onHoverState.IconRightImage = null;
+            this.buyNowButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
+            this.buyNowButton.OnIdleState.BorderRadius = 1;
+            this.buyNowButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.buyNowButton.OnIdleState.BorderThickness = 1;
+            this.buyNowButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(68)))));
+            this.buyNowButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.buyNowButton.OnIdleState.IconLeftImage = null;
+            this.buyNowButton.OnIdleState.IconRightImage = null;
+            this.buyNowButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.buyNowButton.OnPressedState.BorderRadius = 1;
+            this.buyNowButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.buyNowButton.OnPressedState.BorderThickness = 1;
+            this.buyNowButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.buyNowButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.buyNowButton.OnPressedState.IconLeftImage = null;
+            this.buyNowButton.OnPressedState.IconRightImage = null;
+            this.buyNowButton.Size = new System.Drawing.Size(171, 49);
+            this.buyNowButton.TabIndex = 65;
+            this.buyNowButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buyNowButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.buyNowButton.TextMarginLeft = 0;
+            this.buyNowButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.buyNowButton.UseDefaultRadiusAndThickness = true;
+            this.buyNowButton.Click += new System.EventHandler(this.buyNowButton_Click);
             // 
             // addToCartButton
             // 
@@ -700,6 +709,7 @@ namespace PhBuy
             this.quantityTextBox.TextPlaceholder = "";
             this.quantityTextBox.UseSystemPasswordChar = false;
             this.quantityTextBox.WordWrap = true;
+            this.quantityTextBox.TextChanged += new System.EventHandler(this.quantityTextBox_TextChanged);
             // 
             // bunifuSeparator1
             // 
@@ -828,17 +838,9 @@ namespace PhBuy
             this.productPictureBox.Location = new System.Drawing.Point(6, 3);
             this.productPictureBox.Name = "productPictureBox";
             this.productPictureBox.Size = new System.Drawing.Size(372, 303);
-            this.productPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.productPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.productPictureBox.TabIndex = 53;
             this.productPictureBox.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 1064);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 57;
             // 
             // ProductPage
             // 
@@ -880,7 +882,7 @@ namespace PhBuy
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label sellerNameLabel;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton buyNowButton;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton addToCartButton;
         private Bunifu.Framework.UI.BunifuTileButton subtractQuantityButton;
         private Bunifu.Framework.UI.BunifuTileButton addQuantityButton;

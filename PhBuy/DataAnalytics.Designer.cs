@@ -43,7 +43,7 @@ namespace PhBuy
             // generalChart
             // 
             this.generalChart.BackColor = System.Drawing.Color.White;
-            this.generalChart.Location = new System.Drawing.Point(28, 151);
+            this.generalChart.Location = new System.Drawing.Point(28, 146);
             this.generalChart.Name = "generalChart";
             this.generalChart.Size = new System.Drawing.Size(847, 348);
             this.generalChart.TabIndex = 0;

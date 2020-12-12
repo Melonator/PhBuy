@@ -41,32 +41,139 @@ namespace PhBuy
             InitializeComponent();
         }
 
+        public void BuyNow(Products p, Seller s, int q)
+        {
+            if (!_sellers.Contains(s)) _sellers.Add(s);
+            if (!_products.Contains(p))
+            {
+                _products.Add(p);
+                _quantities.Add(q);
+            }
+            else
+            {
+                _quantities[_products.IndexOf(p)] += q;
+            }
+
+            LoadOrders();
+            DeSelectAllSellers();
+            SelectAll(s.Name, p.Name);
+            bunifuPages2.SelectedIndex = 1;
+        }
+
+        private void SelectAll(string currentSeller, string productName = "")
+        {
+            foreach (var c in cartFlowLayoutPanel.Controls)
+            {
+                if (c is ProductCart)
+                {
+                    var p = (ProductCart)c;
+                    if (p.Seller == currentSeller && productName == "")
+                    {
+                        p.checkBox.Checked = true;
+                    }
+
+                    else if (productName != "")
+                    {
+                        if (p.productNameLabel.Text == productName)
+                        {
+                            p.checkBox.Checked = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void DeSelectAll(string currentSeller)
+        {
+            foreach (var c in cartFlowLayoutPanel.Controls)
+            {
+                if (c is ProductCart)
+                {
+                    var p = (ProductCart)c;
+                    if (p.Seller == currentSeller)
+                    {
+                        p.checkBox.Checked = false;
+                    }
+                    else
+                        break;
+                }
+            }
+        }
+
+        private void DeSelectAllSellers()
+        {
+            _total = 0;
+            foreach(var c in cartFlowLayoutPanel.Controls)
+            {
+                if (c is SellerCart)
+                {
+                    var o = (SellerCart)c;
+                    o.checkBox.Checked = false;
+                }
+                else
+                {
+                    var o = (ProductCart)c;
+                    o.checkBox.Checked = false;
+                }
+            }
+        }
+
+        private void checkAll_CheckChanged(object sender, EventArgs e)
+        {
+            var c = (CheckBox)sender;
+            if (c.Checked)
+            {
+                var o = (SellerCart)c.Parent;
+                SelectAll(o.Name);
+            }
+            else
+            {
+                var o = (SellerCart)c.Parent;
+                DeSelectAll(o.Name);
+            }
+        }
+
         public void LoadData(Products p, Seller s, int q)
         {
             addresstextBox.Text = _currentCustomer.Address;
-            _quantities.Add(q);
-            if (!_sellers.Contains(s))_sellers.Add(s);
-            _products.Add(p);
+            if (!_sellers.Contains(s)) 
+                _sellers.Add(s);
 
+            if (!_products.Contains(p))
+            {
+                _products.Add(p);
+                _quantities.Add(q);
+            }
+
+            else
+                _quantities[_products.IndexOf(p)] += q;
+            
             LoadOrders();
         }
 
         private void LoadOrders()
         {
             int index = 0;
+            _productsToBuy.Clear();
+            _sellersToBuy.Clear();
+            _toDelete.Clear();
+            
             cartFlowLayoutPanel.Controls.Clear();
             foreach (var s in _sellers)
             { 
                 SellerCart sellerCart = new SellerCart();
+                sellerCart.Name = s.Name;
                 _stream = new MemoryStream(s.Picture);
                 sellerCart.sellerPictureBox.Image = Image.FromStream(_stream);
                 sellerCart.sellerNameLabel.Text = s.Name;
+                sellerCart.checkBox.CheckedChanged += checkAll_CheckChanged;
                 cartFlowLayoutPanel.Controls.Add(sellerCart);
                 foreach(var p in _products.Where(i => i.SellerId == s.Id))
                 {
                     ProductCart productCart = new ProductCart();
                     _stream = new MemoryStream(p.Picture);
                     productCart.productPictureBox.Image = Image.FromStream(_stream);
+                    productCart.Seller = s.Name;
                     productCart.Name = p.Name;
                     productCart.priceLabel.Text = $"₱{p.Price}";
                     productCart.productNameLabel.Text = p.Name;
@@ -87,16 +194,20 @@ namespace PhBuy
             Seller associatedSeller = _sellers.Find(i => i.Id == associatedProduct.SellerId);
             if (c.Checked)
             {
+                _total += (double)associatedProduct.Price * _quantities.Find(i => i == int.Parse(p.quantityTextBox.Text));
                 _toDelete.Add(p);
                 if (!_sellersToBuy.Contains(associatedSeller)) _sellersToBuy.Add(associatedSeller);
                 _productsToBuy.Add(associatedProduct);
                 _quantitiesToBuy.Add(int.Parse(p.quantityTextBox.Text));
+                totalPriceLabel.Text = $"₱{_total}";
             }
             else
             {
+                _total -= (double)associatedProduct.Price * _quantities.Find(i => i == int.Parse(p.quantityTextBox.Text));
                 _toDelete.Remove(p);
                 _productsToBuy.Remove(associatedProduct);
                 _quantitiesToBuy.Remove(int.Parse(p.quantityTextBox.Text));
+                totalPriceLabel.Text = $"₱{_total}";
             }
 
             if (_toDelete.Count != 0) deleteButton.Enabled = true;
@@ -107,7 +218,23 @@ namespace PhBuy
         {
             BunifuTileButton b = (BunifuTileButton)sender;
             ProductCart p = (ProductCart)b.Parent;
-            cartFlowLayoutPanel.Controls.Remove(p);
+           
+            Seller associatedSeller = _sellers.Find(i => i.Name == p.Seller);
+            if (_products.Where(i => i.SellerId == associatedSeller.Id).Count() == 1)
+            {
+                cartFlowLayoutPanel.Controls.RemoveAt(cartFlowLayoutPanel.Controls.IndexOf(p) - 1);
+                _sellersToBuy.Remove(associatedSeller);
+                _sellers.Remove(associatedSeller);
+            }
+
+            if(p.checkBox.Checked)
+            {
+                _productsToBuy.Remove(_products.Find(i => i.Name == p.productNameLabel.Text));
+            }
+
+            _quantities.RemoveAt(_products.IndexOf(_products.Find(i => i.Name == p.productNameLabel.Text)));
+            _products.Remove(_products.Find(i => i.Name == p.productNameLabel.Text));
+            cartFlowLayoutPanel.Controls.Remove(p);     
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -117,7 +244,21 @@ namespace PhBuy
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+            foreach (var d in _toDelete)
+            {
+                cartFlowLayoutPanel.Controls.Remove(d);
+                Seller s = _sellers.Find(i => i.Name == d.Seller);
+                Products p = _products.Find(i => i.Name == d.productNameLabel.Text);
+                _productsToBuy.Remove(p);
+                _products.Remove(p);
+                if (_products.Where(i => i.SellerId == s.Id).Count() == 0)
+                {
+                    _sellers.Remove(s);
+                    _sellersToBuy.Remove(s);
+                    cartFlowLayoutPanel.Controls.Remove(cartFlowLayoutPanel.Controls.Find(s.Name, true).First());
+                }
+            }
+            _toDelete.Clear();
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -153,15 +294,34 @@ namespace PhBuy
                     index++;
                 }
             }
-            _quantities.Clear();
+            _total = 0;
+            totalPriceLabel.Text = $"₱{_total}";
             _quantitiesToBuy.Clear();
-            _products.Clear();
-            _sellers.Clear();
+            RemoveOrders();
             _sellersToBuy.Clear();
             _productsToBuy.Clear();
-            cartFlowLayoutPanel.Controls.Clear();
             _data.Customer.Update(_currentCustomer);
             _data.SaveChanges();
+        }
+
+        private void RemoveOrders()
+        {
+            foreach(var s in _sellersToBuy)
+            {
+                foreach (var p in _productsToBuy.Where(i => i.SellerId == s.Id))
+                {
+                    var c = (ProductCart)cartFlowLayoutPanel.Controls.Find(p.Name, true).First();
+                    cartFlowLayoutPanel.Controls.Remove(c);
+                    _quantities.Remove(_products.IndexOf(p));
+                    _products.Remove(p);
+                    if (_products.Where(i => i.SellerId == s.Id).Count() == 0)
+                    {
+                        _sellers.Remove(s);
+                        var sc = (SellerCart)cartFlowLayoutPanel.Controls.Find(s.Name, true).First();
+                        cartFlowLayoutPanel.Controls.Remove(sc);
+                    }
+                }
+            }
         }
 
         private uint GenerateId()
@@ -186,31 +346,21 @@ namespace PhBuy
 
         private bool IsIdValid(uint id)
         {
-            var myConnection = new SqlConnection(ConnectionString);
-            const string queryString = "SELECT ID FROM Orders WHERE Id = @ID";
+            PhBuyContext data = new PhBuyContext();
 
-            myConnection.Open();
-            var param = new SqlParameter { ParameterName = "@ID", Value = (int)id };
-            var cmd = new SqlCommand(queryString, myConnection);
-            cmd.Parameters.Add(param);
-
-            var oReader = cmd.ExecuteReader();
-
-            while (oReader.Read())
-            {
-                if (oReader["ID"].ToString() != id.ToString()) continue;
-
-                myConnection.Close();
-                return false;
-            }
-
-            myConnection.Close();
-            return true;
+            if (data.Orders.Select(i => i.Id).Where(d => d == id).Count() == 1) return false;
+            else return true;
         }
 
         private void addresstextBox_TextChanged(object sender, EventArgs e)
         {
             _currentCustomer.Address = addresstextBox.Text;
+        }
+
+        private void CartForm_Load(object sender, EventArgs e)
+        {
+            _dashBoard.scrollBar.BindTo(panel);
+            _dashBoard.scrollBar.ThumbLength = 100;
         }
     }
 }

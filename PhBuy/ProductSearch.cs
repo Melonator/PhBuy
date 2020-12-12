@@ -27,8 +27,8 @@ namespace PhBuy
 
         private string _previousPanel = string.Empty;
         private ProductQuery _queryInput = new ProductQuery();
-        private bool _customQuery = false;
-        public ProductSearch(CustomerDashBoard d)
+
+        public ProductSearch (CustomerDashBoard d)
         {
             _dashBoard = d;
             InitializeComponent();
@@ -45,10 +45,24 @@ namespace PhBuy
             _sellers = s;
         }
 
-        public void CustomSearch(List<Products> products, List<Seller> sellers)
+        public void CustomSearch(List<Products> products, List<Seller> sellers, string type = "")
         {
+            _selectedTypes.Clear();
+            typeFlowLayoutPanel.Controls.Clear();
             if (products != null)
             {
+                if (type != "")
+                {
+                    SellerTypeControl t = new SellerTypeControl();
+                    t.Name = type;
+                    t.typeLabel.Text = type;
+                    t.Width = t.typeLabel.Width + 25;
+                    t.Click += sellerTypeControl_Click;
+                    t.label1.Click += sellerTypeControl_Click2;
+                    t.typeLabel.Click += sellerTypeControl_Click2;
+                    _selectedTypes.Add(t.Name);
+                    typeFlowLayoutPanel.Controls.Add(t);
+                }
                 _sellers = sellers;
                 _allProducts = products;
                 DisplayProducts();
@@ -155,11 +169,14 @@ namespace PhBuy
             type.Name = typeDropDown.Text;
             type.typeLabel.Text = typeDropDown.Text;
             type.Width = type.typeLabel.Width + 25;
-            type.Click += sellerTypeControl_Click;
-            type.label1.Click += sellerTypeControl_Click2;
-            type.typeLabel.Click += sellerTypeControl_Click2;
-            _selectedTypes.Add(type.Name);
-            typeFlowLayoutPanel.Controls.Add(type);
+            if (!_selectedTypes.Contains(type.Name))
+            {
+                type.Click += sellerTypeControl_Click;
+                type.label1.Click += sellerTypeControl_Click2;
+                type.typeLabel.Click += sellerTypeControl_Click2;
+                _selectedTypes.Add(type.Name);
+                typeFlowLayoutPanel.Controls.Add(type);
+            }
         }
 
         private void sellerTypeControl_Click(object sender, EventArgs e)

@@ -487,6 +487,11 @@ namespace PhBuy
 		public void ClearValues()
         {
 			ClearExcessImages();
+			if (previousLabel != string.Empty)
+			{
+				Label a = (Label)Controls.Find($"{previousLabel}Label", true).First();
+				a.ForeColor = Color.FromArgb(45, 41, 66);
+			}
 
 			imageNo = 0;
 			previousLabel = string.Empty;

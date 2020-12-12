@@ -32,15 +32,15 @@ namespace PhBuy
             this.components = new System.ComponentModel.Container();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPages2 = new Bunifu.UI.WinForms.BunifuPages();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -59,11 +59,13 @@ namespace PhBuy
             this.cancelButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.backButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.confirmOrderButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.panel = new System.Windows.Forms.Panel();
             this.bunifuPages2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -77,14 +79,13 @@ namespace PhBuy
             this.bunifuPages2.AllowTransitions = true;
             this.bunifuPages2.Controls.Add(this.tabPage3);
             this.bunifuPages2.Controls.Add(this.tabPage4);
-            this.bunifuPages2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPages2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPages2.Location = new System.Drawing.Point(3, 0);
             this.bunifuPages2.Multiline = true;
             this.bunifuPages2.Name = "bunifuPages2";
-            this.bunifuPages2.Page = this.tabPage4;
-            this.bunifuPages2.PageIndex = 1;
-            this.bunifuPages2.PageName = "tabPage4";
-            this.bunifuPages2.PageTitle = "tabPage4";
+            this.bunifuPages2.Page = this.tabPage3;
+            this.bunifuPages2.PageIndex = 0;
+            this.bunifuPages2.PageName = "tabPage3";
+            this.bunifuPages2.PageTitle = "tabPage3";
             this.bunifuPages2.SelectedIndex = 0;
             this.bunifuPages2.Size = new System.Drawing.Size(879, 586);
             this.bunifuPages2.TabIndex = 81;
@@ -131,9 +132,9 @@ namespace PhBuy
             this.totalPriceLabel.Location = new System.Drawing.Point(68, 520);
             this.totalPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(65, 29);
+            this.totalPriceLabel.Size = new System.Drawing.Size(39, 29);
             this.totalPriceLabel.TabIndex = 34;
-            this.totalPriceLabel.Text = "₱100";
+            this.totalPriceLabel.Text = "₱0";
             this.totalPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -169,11 +170,11 @@ namespace PhBuy
             this.deleteButton.ColorContrastOnClick = 45;
             this.deleteButton.ColorContrastOnHover = 45;
             this.deleteButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.deleteButton.CustomizableEdges = borderEdges1;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.deleteButton.CustomizableEdges = borderEdges11;
             this.deleteButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.deleteButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.deleteButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -260,11 +261,11 @@ namespace PhBuy
             this.checkoutButton.ColorContrastOnClick = 45;
             this.checkoutButton.ColorContrastOnHover = 45;
             this.checkoutButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.checkoutButton.CustomizableEdges = borderEdges2;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.checkoutButton.CustomizableEdges = borderEdges12;
             this.checkoutButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.checkoutButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.checkoutButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -425,26 +426,26 @@ namespace PhBuy
             this.addresstextBox.Modified = false;
             this.addresstextBox.Multiline = true;
             this.addresstextBox.Name = "addresstextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addresstextBox.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.addresstextBox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addresstextBox.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.addresstextBox.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addresstextBox.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.addresstextBox.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addresstextBox.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.addresstextBox.OnIdleState = stateProperties12;
             this.addresstextBox.Padding = new System.Windows.Forms.Padding(3);
             this.addresstextBox.PasswordChar = '\0';
             this.addresstextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -517,11 +518,11 @@ namespace PhBuy
             this.cancelButton.ColorContrastOnClick = 45;
             this.cancelButton.ColorContrastOnHover = 45;
             this.cancelButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.cancelButton.CustomizableEdges = borderEdges3;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.cancelButton.CustomizableEdges = borderEdges13;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.cancelButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.cancelButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -607,11 +608,11 @@ namespace PhBuy
             this.backButton.ColorContrastOnClick = 45;
             this.backButton.ColorContrastOnHover = 45;
             this.backButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.backButton.CustomizableEdges = borderEdges4;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.backButton.CustomizableEdges = borderEdges14;
             this.backButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.backButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.backButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -697,11 +698,11 @@ namespace PhBuy
             this.confirmOrderButton.ColorContrastOnClick = 45;
             this.confirmOrderButton.ColorContrastOnHover = 45;
             this.confirmOrderButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.confirmOrderButton.CustomizableEdges = borderEdges5;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.confirmOrderButton.CustomizableEdges = borderEdges15;
             this.confirmOrderButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.confirmOrderButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.confirmOrderButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -768,16 +769,26 @@ namespace PhBuy
             this.confirmOrderButton.UseDefaultRadiusAndThickness = true;
             this.confirmOrderButton.Click += new System.EventHandler(this.confirmOrderButton_Click);
             // 
+            // panel
+            // 
+            this.panel.Controls.Add(this.bunifuPages2);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(879, 516);
+            this.panel.TabIndex = 84;
+            // 
             // CartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(879, 586);
-            this.Controls.Add(this.bunifuPages2);
+            this.ClientSize = new System.Drawing.Size(879, 522);
+            this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CartForm";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.CartForm_Load);
             this.bunifuPages2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -786,6 +797,7 @@ namespace PhBuy
             this.tabPage4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -810,5 +822,6 @@ namespace PhBuy
         private System.Windows.Forms.Label totalPriceLabel;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuTextBox addresstextBox;
+        public System.Windows.Forms.Panel panel;
     }
 }
