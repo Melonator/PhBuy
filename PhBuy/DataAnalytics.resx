@@ -121,7 +121,26 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuDatePicker1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="orders.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAlCAYAAAAHgqbCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC1SURBVHhe7dUxasNAFEVRlV5GypReipeQ0svQyqWMogET
+        EBf3PgceA7+/zAK8Yd/3r7HVzPbvmcVpHO5jwMtj5vEXyFEN8LLOPAQCFwQCQSAQBAJBIBAEAkEgEAQC
+        QSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAuFfII/z
+        Bhy2bXvOPE7j9jN2/CRmH70jjvHeZhrAtWX5Ba058BA5BYZjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="sales.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAlCAYAAAAHgqbCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADpSURBVHhe7dOhSgRRGIbhcym2iWIYdtEiIgwW789qFWxb
+        vQaDeZNYTKZ1ZN3jDBwQRT4vYJ4HvvL/+S3AP3ar7uhj6O/G066aLX5X683cRMujlOnwsL+9qUCt+819
+        HYd+2/KYApmqAb7NTbQ8BAK/CQQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQ
+        CAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIPgZyNBvP58e2wuW7fDyXMeL47eWRym7s+58
+        vDx5nasxW/ymON6H1XXLA/hbKV8FtOgKapo4/QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="datePicker.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAADEnSURBVHhe7Z0/z2X5VWYbDEZDSDCTIIJRd1WpZQdMC1N/

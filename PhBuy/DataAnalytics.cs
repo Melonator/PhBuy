@@ -1,4 +1,5 @@
-﻿using LiveCharts;
+﻿using Bunifu.UI.WinForms;
+using LiveCharts;
 using LiveCharts.Wpf;
 using PhBuyModels;
 using System;
@@ -20,35 +21,152 @@ namespace PhBuy
         private List<Products> _products;
         private List<Orders> _orders;
         private Seller _currentSeller;
-        private int _id = 65376;
+        private int _id = 21629;
 
-        private LineSeries sales = new LineSeries();
+        private LineSeries income = new LineSeries();
+        ChartValues<double> values = new ChartValues<double>();
+        List<string> months = new List<string>();
+
+        private bool isMonth = false;
+        private string filterType;
         public DataAnalytics()
         {
             InitializeComponent();
         }
 
+
         private void DataAnalytics_Load(object sender, EventArgs e)
         {
             _products = _data.Products.Where(i => i.SellerId == _id).ToList();
             _orders = _data.Orders.Where(i => i.SellerId == _id).ToList();
+            FilterValues();
+        }
 
-            ChartValues<double> values = new ChartValues<double>();
-            List<string> months = new List<string>();
+        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            var monthlyData = _orders.Where(i => i.DateOrdered.Value.Month == datePicker.Value.Month).ToList();
 
-            var something = _orders.Select(i => new { i.DateOrdered, i.TotalPrice })
-                .GroupBy(a => a.DateOrdered.Value.ToString("MMMM"), (key, group) => new
-                {
-                    sales = group.Sum(k => k.TotalPrice),
-                    month = key
-                }).ToList();
-
-            foreach(var o in something)
+            foreach(var i in monthlyData)
             {
-                values.Add((double)o.sales);
-                months.Add(o.month);
+                values.Add((double) i.TotalPrice);
+                months.Add(i.DateOrdered.Value.ToString("MMMM"));
+            }
+            generalChart.Series.Add(income);
+
+            generalChart.AxisX.Add(new Axis
+            {
+                Title = "Month",
+                Labels = months
+            });
+
+            generalChart.AxisY.Add(new Axis
+            {
+                Title = "Income",
+                LabelFormatter = value => value.ToString("C")
+            });
+        }
+
+        private void filter_Click(object sender, EventArgs e)
+        {
+            var panel = (BunifuPanel)sender;
+            filterType = panel.Name;
+            if(panel.Name == "sales")
+            {
+                var p = (BunifuPanel)Controls.Find("orders", true).First();
+                p.BorderColor = System.Drawing.Color.Transparent;
+            }
+            else
+            {
+                var p = (BunifuPanel)Controls.Find("sales", true).First();
+                p.BorderColor = System.Drawing.Color.Transparent;
             }
 
+            FilterValues(filterType);
+        }
+
+        private void FilterValues(string type = "sales")
+        {
+            ClearData();
+            if(type == "sales")
+            {
+                if(!isMonth)
+                {
+                    var monthlyData = _orders.Select(i => new { i.DateOrdered, i.TotalPrice })
+                        .GroupBy(a => a.DateOrdered.Value.ToString("MMMM"), (key, group) => new
+                        {
+                            sales = group.Sum(k => k.TotalPrice),
+                            month = key
+                        }).ToList();
+
+                    foreach (var o in monthlyData)
+                    {
+                        values.Add((double)o.sales);
+                        months.Add(o.month);
+                    }
+
+                    SetData();
+                }
+                else
+                {
+                    var monthlyData = _orders.Where(i => i.DateOrdered.Value.Month == datePicker.Value.Month).ToList();
+
+                    foreach (var i in monthlyData)
+                    {
+                        values.Add((double)i.TotalPrice);
+                        months.Add(i.DateOrdered.Value.ToString("MMMM"));
+                    }
+                    SetData();
+                }
+            }
+            else
+            {
+                if (!isMonth)
+                {
+                    var monthlyData = _orders.Select(i => new { i.DateOrdered, i.TotalPrice })
+                        .GroupBy(a => a.DateOrdered.Value.ToString("MMMM"), (key, group) => new
+                        {
+                            orders = group.Count(),
+                            month = key
+                        }).ToList();
+
+                    foreach(var i in monthlyData)
+                    {
+                        values.Add(i.orders);
+                        months.Add(i.month);
+                    }
+
+                    SetData();
+                }
+                else
+                {
+                    var monthlyData = _orders.Select(i => i.DateOrdered)
+                        .Where(j => j.Value.Month == datePicker.Value.Month)
+                        .GroupBy(a => a.Value.ToString("dddd"), (key, group) => new {
+                            orders = group.Count(),
+                            date = key
+                        }).ToList();
+                    
+                    foreach (var i in monthlyData)
+                    {
+                        values.Add(i.orders);
+                        months.Add(i.date);
+                    }
+                    SetData();
+                }
+            }
+        }
+
+        private void ClearData()
+        {
+            generalChart.Series.Clear();
+            generalChart.AxisX.Clear();
+            generalChart.AxisY.Clear();
+            values.Clear();
+            months.Clear();
+        }
+
+        private void SetData()
+        {
             generalChart.AxisY.Add(new Axis
             {
                 Title = "Income",
@@ -59,14 +177,16 @@ namespace PhBuy
             {
                 Title = "Month",
                 Labels = months
-            }); 
+            });
 
-            sales.Values = values;
+            income.Values = values;
 
-            generalChart.Series.Add(sales);
-
-     
-
+            generalChart.Series.Add(income);
+        }
+        private void viewDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            isMonth = viewDropDown.Text == "Month";
+            FilterValues(filterType);
         }
     }
 }
