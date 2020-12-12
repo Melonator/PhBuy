@@ -13,12 +13,12 @@ namespace PhBuy
 	public partial class MainForm : Form
 	{
 		private Customer _currentCustomer;
-		private Seller _currentSeller;
+		public Seller CurrentSeller;
 		private readonly string _type;
 		private CustomerSellerForm _cs = null;
 		public MainForm(Seller s, CustomerSellerForm cs)
 		{
-			_currentSeller = s;
+			CurrentSeller = s;
 			_type = "Seller";
 			_cs = cs;
 			InitializeComponent();
@@ -32,6 +32,12 @@ namespace PhBuy
 			InitializeComponent();
         }
 
+		public void ReloadData()
+        {
+			PhBuyContext _data = new PhBuyContext();
+			CurrentSeller = _data.Seller.Find(CurrentSeller);
+			setInformation();
+        }
 
 		private void bunifuImageButton1_Click(object sender, EventArgs e)
 		{
@@ -54,7 +60,7 @@ namespace PhBuy
 				form2.Show();
 				mainPanel.Controls.Add(form2);
 
-				var form = new SellerPanel(this, (int)_currentSeller.Id) { TopLevel = false };
+				var form = new SellerPanel(this, (int)CurrentSeller.Id) { TopLevel = false };
 				form.Show();
 				sidePanel.Controls.Add(form);
 				setInformation();
@@ -72,7 +78,7 @@ namespace PhBuy
 		private void setInformation()
         {
 			int panelDistance = 6;
-			if(_type == "Seller") userNameLabel.Text = _currentSeller.Name;
+			if(_type == "Seller") userNameLabel.Text = CurrentSeller.Name;
 			else userNameLabel.Text = _currentCustomer.Name;
 			userPhoto.Image = getUserImage();
 			userPanel.Location = new Point(bunifuSeparator1.Location.X - panelDistance - userPanel.Width,0);
@@ -82,7 +88,7 @@ namespace PhBuy
         {
             MemoryStream stream;
 			if (_type == "Seller")
-				stream = new MemoryStream(_currentSeller.Picture);
+				stream = new MemoryStream(CurrentSeller.Picture);
 			else
 				stream = new MemoryStream(_currentCustomer.Picture);
             Image image = Image.FromStream(stream);

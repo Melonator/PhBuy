@@ -49,40 +49,12 @@ namespace PhBuy
 		}
 		private bool isNewSeller()
         {
-			var myConnection = new SqlConnection(ConnectionString);
-			myConnection.Open();
-			var queryString = $"SELECT ID FROM Seller";
-			var oCmd = new SqlCommand(queryString, myConnection);
-			var oReader = oCmd.ExecuteReader();
-
-			while (oReader.Read())
-            {
-				float id = float.Parse(oReader["id"].ToString());
-				if ((int)id == _id) 
-					return false;
-            }
-
-			myConnection.Close();
-			return true;
+			return _data.Customer.Find(GetSeller()) == null;
         }
 
 		private bool isNewCustomer()
         {
-			var myConnection = new SqlConnection(ConnectionString);
-			myConnection.Open();
-			var queryString = $"SELECT ID FROM Customer";
-			var oCmd = new SqlCommand(queryString, myConnection);
-			var oReader = oCmd.ExecuteReader();
-
-			while (oReader.Read())
-			{
-				float id = float.Parse(oReader["id"].ToString());
-				if ((int)id == _id)
-					return false;
-			}
-
-			myConnection.Close();
-			return true;
+			return _data.Customer.Find(GetCustomer()) == null;
 		}
 
         private void buyTileButton_Click(object sender, EventArgs e)

@@ -31,6 +31,13 @@ namespace PhBuy
 			LoadData();
 			sellerDashBoard =(SellerDashBoard) _form.mainPanel.Controls[0];
 
+			SellerProfile profile = new SellerProfile(_form, _form.CurrentSeller)
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[0]
+			};
+			profile.Show();
+
 			myProducts = new MyProducts(_id, this)
 			{
 				MdiParent = _form,
@@ -101,7 +108,7 @@ namespace PhBuy
 
 		private void profileButton_Click(object sender, EventArgs e)
 		{
-			//TODO: show seller profile
+			sellerDashBoard.sellerTabControl.SelectedIndex = 0;
 		}
 
 		private void ratingButton_Click(object sender, EventArgs e)
