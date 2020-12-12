@@ -81,7 +81,7 @@ namespace PhBuy
             this.mainPanel.Controls.Add(this.customerTabControl);
             this.mainPanel.Location = new System.Drawing.Point(86, 67);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(890, 593);
+            this.mainPanel.Size = new System.Drawing.Size(890, 528);
             this.mainPanel.TabIndex = 31;
             // 
             // customerTabControl
@@ -98,7 +98,7 @@ namespace PhBuy
             this.customerTabControl.Location = new System.Drawing.Point(3, -22);
             this.customerTabControl.Name = "customerTabControl";
             this.customerTabControl.SelectedIndex = 0;
-            this.customerTabControl.Size = new System.Drawing.Size(887, 612);
+            this.customerTabControl.Size = new System.Drawing.Size(887, 550);
             this.customerTabControl.TabIndex = 34;
             // 
             // homePage
@@ -107,7 +107,7 @@ namespace PhBuy
             this.homePage.Location = new System.Drawing.Point(4, 22);
             this.homePage.Name = "homePage";
             this.homePage.Padding = new System.Windows.Forms.Padding(3);
-            this.homePage.Size = new System.Drawing.Size(879, 586);
+            this.homePage.Size = new System.Drawing.Size(879, 524);
             this.homePage.TabIndex = 0;
             this.homePage.Text = "homePage";
             // 
@@ -255,7 +255,7 @@ namespace PhBuy
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1056, 667);
+            this.panel1.Size = new System.Drawing.Size(1056, 598);
             this.panel1.TabIndex = 35;
             // 
             // TESTBUTTON
@@ -606,11 +606,11 @@ namespace PhBuy
             this.scrollBar.ScrollBarBorderColor = System.Drawing.Color.Silver;
             this.scrollBar.ScrollBarColor = System.Drawing.Color.Silver;
             this.scrollBar.ShrinkSizeLimit = 3;
-            this.scrollBar.Size = new System.Drawing.Size(17, 593);
+            this.scrollBar.Size = new System.Drawing.Size(20, 528);
             this.scrollBar.SmallChange = 1;
             this.scrollBar.TabIndex = 0;
             this.scrollBar.ThumbColor = System.Drawing.Color.Gray;
-            this.scrollBar.ThumbLength = 58;
+            this.scrollBar.ThumbLength = 51;
             this.scrollBar.ThumbMargin = 2;
             this.scrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.scrollBar.Value = 0;
@@ -620,7 +620,7 @@ namespace PhBuy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1056, 667);
+            this.ClientSize = new System.Drawing.Size(1056, 598);
             this.Controls.Add(this.dropDown);
             this.Controls.Add(this.scrollBar);
             this.Controls.Add(this.searchTextBox);

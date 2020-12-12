@@ -56,6 +56,7 @@ namespace PhBuy
             this.label2 = new System.Windows.Forms.Label();
             this.adPictureBox2 = new System.Windows.Forms.PictureBox();
             this.adPictureBox = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,6 +72,7 @@ namespace PhBuy
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.label9);
             this.panel.Controls.Add(this.productsFlowLayoutPanel);
             this.panel.Controls.Add(this.panel4);
             this.panel.Controls.Add(this.panel1);
@@ -515,6 +517,14 @@ namespace PhBuy
             this.adPictureBox.TabIndex = 0;
             this.adPictureBox.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(71, 1085);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 0;
+            // 
             // CustomerHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +537,7 @@ namespace PhBuy
             this.Text = "CustomerHomePage";
             this.Load += new System.EventHandler(this.CustomerHomePage_Load);
             this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -566,5 +577,6 @@ namespace PhBuy
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
     }
 }

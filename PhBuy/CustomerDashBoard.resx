@@ -123,17 +123,17 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="scrollBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABEAAAJRCAYAAACjqly/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH3SURBVHhe7dCxLgRRHEbxKZXKLZUeQan0GBqJRq9UKFUK
-        LyHRaWd2K1HtG6ioSBYbJBR8l5GsOcOa/tzkZ8y993/EVN3VNM0o9uN8PB7fxnt55r2Og1hvr/avXNjJ
-        wN1kMnlrh/s85N5RO/Jzlb+UC/edgd/M4zIzK+34Z2Avm48Ll5aq6/olz+PvwFpeZosXBphlfqNEDvPy
-        1zdY5vT7W/Qd/kvmr0rkue9wiKpvcygjZISMkBEyQkbICBkhI2SEjJARMkJGyAgZISNkhIyQETJCRsgI
-        GSEjZISMkBEyQkbICBkhI2SEjJARMkJGyAgZISNkhIyQETJCRsgIGSEjZISMkBEyQkbICBkhI2SEjJAR
-        MkJGyAgZISNkhIyQETJCRsgIGSEjZISMkBEyQkbICBkhI2SEjJARMkJGyAgZISNkhIyQETJCRsgIGSEj
-        ZISMkBEyQkbICBkhI2SEjJARMkJGyAgZISNkhIyQETJCRsgIGSEjZISMkBEyQkbICBkhI2SEjJARMkJG
-        yAgZISNkhIyQETJCRsgIGaESeetuDlUi0+7mQLclctLZHKRpmrrKj828zLqH/zTP/HZVVn45i9eeS8tM
-        PwNlJbASNwND17k/ahNfKxurcZbDZf/aU0wRWFw53MqlizwfFgbLB3xuh3fbq+2qqg/TYFW8NUTwEAAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAIQCAYAAACBh04yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVHhe7dChTsNQHEbxSiRyEskjIJE8BoYEg0cikCgE
+        L0GCw7abIqi9AQrUSMZYgAQEfIWSbKWEbUdybvJb6b33f8hWtFdVVb04jMt+vz+K95ZRzso4is1mrHvl
+        wl4G7geDwVsr8ptJZk6a8flV/9dceGgNLGIa15lfa1KfsYNsPs5cWkpZli95nn7HNvIynr2wonFaW3Xw
+        OC+L/mZ/Of/+7boOl5bWTR187jpcVdG1SRjkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIG
+        OYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIG
+        OYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIG
+        OYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5AzyBnkDHIG
+        OYOcQc4gZ5AzyBnkDHIGOYOcQc4gZ5D7p8G39iZRB4ftTWBUB89amyurqqos8rGdl3H7cAXTtHaLeuWP
+        i3jtuLSM4WesXomtxR2I3ma21+S+VjbW4yKHy3z9pxj+iM2uHO7k0lWek5nBOTl7zrMO7TdjzSqKD08E
+        aPeGSoE0AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="searchTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
