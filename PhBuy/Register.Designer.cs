@@ -88,9 +88,9 @@ namespace PhBuy
             this.label1.Location = new System.Drawing.Point(60, 169);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Name";
+            this.label1.Text = "Username";
             // 
             // label3
             // 
@@ -337,7 +337,7 @@ namespace PhBuy
             this.nameTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.nameTextBox.PasswordChar = '\0';
             this.nameTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.nameTextBox.PlaceholderText = "Enter your name";
+            this.nameTextBox.PlaceholderText = "Enter your username";
             this.nameTextBox.ReadOnly = false;
             this.nameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.nameTextBox.SelectedText = "";
@@ -351,7 +351,7 @@ namespace PhBuy
             this.nameTextBox.TextMarginBottom = 0;
             this.nameTextBox.TextMarginLeft = 3;
             this.nameTextBox.TextMarginTop = 0;
-            this.nameTextBox.TextPlaceholder = "Enter your name";
+            this.nameTextBox.TextPlaceholder = "Enter your username";
             this.nameTextBox.UseSystemPasswordChar = false;
             this.nameTextBox.WordWrap = true;
             // 
