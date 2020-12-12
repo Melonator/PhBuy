@@ -40,21 +40,50 @@ namespace PhBuy
 
 		private Customer GetCustomer()
         {
-			return _data.Customer.Where(i => i.Id == (decimal)_id).FirstOrDefault();
+			return _data.Customer.Where(i => i.Id == _id).FirstOrDefault();
         }
 
 		private Seller GetSeller()
         {
-			return _data.Seller.Where(i => i.Id == (decimal)_id).FirstOrDefault();
+			return _data.Seller.Where(i => i.Id == _id).FirstOrDefault();
 		}
+
 		private bool isNewSeller()
         {
-			return _data.Customer.Find(GetSeller()) == null;
-        }
+			var myConnection = new SqlConnection(ConnectionString); 
+			myConnection.Open();
+			var queryString = $"SELECT ID FROM Seller";
+			var oCmd = new SqlCommand(queryString, myConnection);
+			var oReader = oCmd.ExecuteReader();
+
+			while (oReader.Read())
+			{
+				float id = float.Parse(oReader["id"].ToString());
+				if ((int)id == _id)
+					return false;
+			}
+
+			myConnection.Close();
+			return true;
+		}
 
 		private bool isNewCustomer()
         {
-			return _data.Customer.Find(GetCustomer()) == null;
+			var myConnection = new SqlConnection(ConnectionString); 
+			myConnection.Open();
+			var queryString = $"SELECT ID FROM Customer";
+			var oCmd = new SqlCommand(queryString, myConnection);
+			var oReader = oCmd.ExecuteReader();
+
+			while (oReader.Read())
+			{
+				float id = float.Parse(oReader["id"].ToString());
+				if ((int)id == _id)
+					return false;
+			}
+
+			myConnection.Close();
+			return true;
 		}
 
         private void buyTileButton_Click(object sender, EventArgs e)
