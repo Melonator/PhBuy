@@ -155,10 +155,10 @@
   </data>
   <data name="searchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAeCAYAAADAZ1t9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVGhD7dGhEYAwAMDATtMd6P5bMEYNKDg8A7yIeBWZ
+        iVBORw0KGgoAAAANSUhEUgAAAGgAAAAgCAYAAAD+Fz2gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB4SURBVGhD7dGhEYAwAMDATtMd6P5bMEYNKDg8A7yIeBWZ
         ca95Xms+8Xxvxl+Io0G4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4BuEahGsQrkG4
-        BuEahGsQrkG4BuEahBvXMfdfCOCY+wWmSoWVkxJsQQAAAABJRU5ErkJggg==
+        BuEahGsQrkG4BuEahGsQrkG4cR1z/4UAjrlfNrNsY6VFUfMAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="cartButton.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
