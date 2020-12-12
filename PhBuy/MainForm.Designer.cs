@@ -34,23 +34,23 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.topPanel = new System.Windows.Forms.Panel();
             this.userPanel = new System.Windows.Forms.Panel();
-            this.userPhoto = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.userNameLabel = new System.Windows.Forms.Label();
-            this.gridButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dashBoardPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.userPhoto = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.gridButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.topPanel.SuspendLayout();
             this.userPanel.SuspendLayout();
+            this.dashBoardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.dashBoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -69,7 +69,7 @@
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
             this.topPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.topPanel.Controls.Add(this.button1);
+            this.topPanel.Controls.Add(this.bunifuImageButton2);
             this.topPanel.Controls.Add(this.userPanel);
             this.topPanel.Controls.Add(this.gridButton);
             this.topPanel.Controls.Add(this.bunifuSeparator1);
@@ -92,23 +92,6 @@
             this.userPanel.Size = new System.Drawing.Size(69, 45);
             this.userPanel.TabIndex = 0;
             // 
-            // userPhoto
-            // 
-            this.userPhoto.AllowFocused = false;
-            this.userPhoto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.userPhoto.AutoSizeHeight = true;
-            this.userPhoto.BorderRadius = 16;
-            this.userPhoto.Image = ((System.Drawing.Image)(resources.GetObject("userPhoto.Image")));
-            this.userPhoto.IsCircle = true;
-            this.userPhoto.Location = new System.Drawing.Point(2, 6);
-            this.userPhoto.Margin = new System.Windows.Forms.Padding(2);
-            this.userPhoto.Name = "userPhoto";
-            this.userPhoto.Size = new System.Drawing.Size(33, 33);
-            this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPhoto.TabIndex = 2;
-            this.userPhoto.TabStop = false;
-            this.userPhoto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
@@ -122,104 +105,6 @@
             this.userNameLabel.TabIndex = 8;
             this.userNameLabel.Text = "JD";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // gridButton
-            // 
-            this.gridButton.ActiveImage = null;
-            this.gridButton.AllowAnimations = true;
-            this.gridButton.AllowBuffering = false;
-            this.gridButton.AllowToggling = false;
-            this.gridButton.AllowZooming = true;
-            this.gridButton.AllowZoomingOnFocus = false;
-            this.gridButton.BackColor = System.Drawing.Color.Transparent;
-            this.gridButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gridButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("gridButton.ErrorImage")));
-            this.gridButton.FadeWhenInactive = false;
-            this.gridButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.gridButton.Image = global::PhBuy.Properties.Resources.grid_view_208px;
-            this.gridButton.ImageActive = null;
-            this.gridButton.ImageLocation = null;
-            this.gridButton.ImageMargin = 0;
-            this.gridButton.ImageSize = new System.Drawing.Size(29, 29);
-            this.gridButton.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.gridButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("gridButton.InitialImage")));
-            this.gridButton.Location = new System.Drawing.Point(928, 8);
-            this.gridButton.Margin = new System.Windows.Forms.Padding(0);
-            this.gridButton.Name = "gridButton";
-            this.gridButton.Rotation = 0;
-            this.gridButton.ShowActiveImage = true;
-            this.gridButton.ShowCursorChanges = true;
-            this.gridButton.ShowImageBorders = true;
-            this.gridButton.ShowSizeMarkers = false;
-            this.gridButton.Size = new System.Drawing.Size(30, 30);
-            this.gridButton.TabIndex = 9;
-            this.gridButton.ToolTipText = "";
-            this.gridButton.WaitOnLoad = false;
-            this.gridButton.Zoom = 0;
-            this.gridButton.ZoomSpeed = 10;
-            this.gridButton.Click += new System.EventHandler(this.gridButton_Click);
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.White;
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(908, 4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 38);
-            this.bunifuSeparator1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PhBuy.Properties.Resources.Logo_WHITE;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowToggling = false;
-            this.bunifuImageButton1.AllowZooming = false;
-            this.bunifuImageButton1.AllowZoomingOnFocus = false;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::PhBuy.Properties.Resources.exit_208pxw;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 0;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(25, 25);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1019, 10);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(25, 25);
-            this.bunifuImageButton1.TabIndex = 2;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 0;
-            this.bunifuImageButton1.ZoomSpeed = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuDragControl2
             // 
@@ -254,16 +139,6 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(118, 583);
             this.sidePanel.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(962, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bunifuSnackbar1
             // 
@@ -334,6 +209,156 @@
             this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbar1.ZoomCloseIcon = true;
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.ActiveImage = null;
+            this.bunifuImageButton2.AllowAnimations = true;
+            this.bunifuImageButton2.AllowBuffering = false;
+            this.bunifuImageButton2.AllowToggling = false;
+            this.bunifuImageButton2.AllowZooming = true;
+            this.bunifuImageButton2.AllowZoomingOnFocus = false;
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.ErrorImage")));
+            this.bunifuImageButton2.FadeWhenInactive = false;
+            this.bunifuImageButton2.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton2.Image = global::PhBuy.Properties.Resources.exit_208pxw;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.ImageLocation = null;
+            this.bunifuImageButton2.ImageMargin = 0;
+            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(29, 29);
+            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
+            this.bunifuImageButton2.Location = new System.Drawing.Point(974, 8);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Rotation = 0;
+            this.bunifuImageButton2.ShowActiveImage = true;
+            this.bunifuImageButton2.ShowCursorChanges = true;
+            this.bunifuImageButton2.ShowImageBorders = true;
+            this.bunifuImageButton2.ShowSizeMarkers = false;
+            this.bunifuImageButton2.Size = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton2.TabIndex = 11;
+            this.bunifuImageButton2.ToolTipText = "Logout";
+            this.bunifuImageButton2.WaitOnLoad = false;
+            this.bunifuImageButton2.Zoom = 0;
+            this.bunifuImageButton2.ZoomSpeed = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // userPhoto
+            // 
+            this.userPhoto.AllowFocused = false;
+            this.userPhoto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.userPhoto.AutoSizeHeight = true;
+            this.userPhoto.BorderRadius = 16;
+            this.userPhoto.Image = ((System.Drawing.Image)(resources.GetObject("userPhoto.Image")));
+            this.userPhoto.IsCircle = true;
+            this.userPhoto.Location = new System.Drawing.Point(2, 6);
+            this.userPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.userPhoto.Name = "userPhoto";
+            this.userPhoto.Size = new System.Drawing.Size(33, 33);
+            this.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPhoto.TabIndex = 2;
+            this.userPhoto.TabStop = false;
+            this.userPhoto.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // gridButton
+            // 
+            this.gridButton.ActiveImage = null;
+            this.gridButton.AllowAnimations = true;
+            this.gridButton.AllowBuffering = false;
+            this.gridButton.AllowToggling = false;
+            this.gridButton.AllowZooming = true;
+            this.gridButton.AllowZoomingOnFocus = false;
+            this.gridButton.BackColor = System.Drawing.Color.Transparent;
+            this.gridButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gridButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("gridButton.ErrorImage")));
+            this.gridButton.FadeWhenInactive = false;
+            this.gridButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.gridButton.Image = global::PhBuy.Properties.Resources.grid_view_208px;
+            this.gridButton.ImageActive = null;
+            this.gridButton.ImageLocation = null;
+            this.gridButton.ImageMargin = 0;
+            this.gridButton.ImageSize = new System.Drawing.Size(29, 29);
+            this.gridButton.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.gridButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("gridButton.InitialImage")));
+            this.gridButton.Location = new System.Drawing.Point(928, 8);
+            this.gridButton.Margin = new System.Windows.Forms.Padding(0);
+            this.gridButton.Name = "gridButton";
+            this.gridButton.Rotation = 0;
+            this.gridButton.ShowActiveImage = true;
+            this.gridButton.ShowCursorChanges = true;
+            this.gridButton.ShowImageBorders = true;
+            this.gridButton.ShowSizeMarkers = false;
+            this.gridButton.Size = new System.Drawing.Size(30, 30);
+            this.gridButton.TabIndex = 9;
+            this.gridButton.ToolTipText = "Main Menu";
+            this.gridButton.WaitOnLoad = false;
+            this.gridButton.Zoom = 0;
+            this.gridButton.ZoomSpeed = 10;
+            this.gridButton.Click += new System.EventHandler(this.gridButton_Click);
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.White;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(908, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 38);
+            this.bunifuSeparator1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PhBuy.Properties.Resources.Logo_WHITE;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowBuffering = false;
+            this.bunifuImageButton1.AllowToggling = false;
+            this.bunifuImageButton1.AllowZooming = false;
+            this.bunifuImageButton1.AllowZoomingOnFocus = false;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = global::PhBuy.Properties.Resources.quit_program;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 0;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1015, 8);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = true;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 30);
+            this.bunifuImageButton1.TabIndex = 2;
+            this.bunifuImageButton1.ToolTipText = "Exit";
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 0;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,9 +377,9 @@
             this.topPanel.PerformLayout();
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
+            this.dashBoardPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.dashBoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -375,8 +400,8 @@
         private System.Windows.Forms.Panel dashBoardPanel;
         public System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel sidePanel;
-        private System.Windows.Forms.Button button1;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
     }
 }
 
