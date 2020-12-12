@@ -40,6 +40,7 @@ namespace PhBuy
             _data.Customer.Add(c);
             _data.SaveChanges();
 
+            MessageBox.Show("Registered Successfully!", "Registered!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             var main = new MainForm(c, _cs) { TopLevel = true };
             main.Show();
             Hide();
