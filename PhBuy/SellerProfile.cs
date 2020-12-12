@@ -19,6 +19,8 @@ namespace PhBuy
         private MemoryStream _stream;
         private MainForm _mainForm;
         private PhBuyContext _data = new PhBuyContext();
+        private bool uploadCover = false;
+        private bool uploadPhoto = false;
         public SellerProfile(MainForm m, Seller s)
         {
             _currentSeller = s;
@@ -43,17 +45,27 @@ namespace PhBuy
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            _currentSeller = _data.Seller.Where(i => i.Id == _currentSeller.Id).FirstOrDefault();
             _currentSeller.Name = nameTextBox.Text;
             _currentSeller.Contact = contactTextBox.Text;
             _currentSeller.Descrption = descriptionTextBox.Text;
             _stream = new MemoryStream();
-            sellerPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
-            _currentSeller.Picture = _stream.ToArray();
-            sellerBackgroundPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
-            _currentSeller.Background = _stream.ToArray();
+            if (uploadPhoto)
+            {
+                sellerPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
+                _currentSeller.Picture = _stream.ToArray();
+            }
 
+            if (uploadCover)
+            {
+                sellerBackgroundPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
+                _currentSeller.Background = _stream.ToArray();
+            }
+
+            uploadCover = false;
+            uploadPhoto = false;
             _data.SaveChanges();
-            _mainForm.ReloadData("Seller");
+            _mainForm.ReloadData("Seller", (int)_currentSeller.Id);
         }
 
         private void sellerPictureBox_Click(object sender, EventArgs e)
@@ -61,6 +73,7 @@ namespace PhBuy
             var dlg = new OpenFileDialog { Title = "Choose your shop image" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
             sellerPictureBox.ImageLocation = dlg.FileName;
+            uploadPhoto = true;
         }
 
         private void sellerBackgroundPictureBox_Click(object sender, EventArgs e)
@@ -68,6 +81,7 @@ namespace PhBuy
             var dlg = new OpenFileDialog { Title = "Choose your shop background" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
             sellerBackgroundPictureBox.ImageLocation = dlg.FileName;
+            uploadPhoto = false;
         }
     }
 }

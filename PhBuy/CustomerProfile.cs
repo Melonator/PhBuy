@@ -19,6 +19,7 @@ namespace PhBuy
         private PhBuyContext _data = new PhBuyContext();
         private MainForm _mainForm;
         private Customer _customer;
+        private bool hasUpload = false;
 
         public CustomerProfile(MainForm m, Customer c)
         {
@@ -44,14 +45,19 @@ namespace PhBuy
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            _customer = _data.Customer.Where(i => i.Id == _customer.Id).FirstOrDefault();
             _customer.Name = $"{firstNameTextBox.Text} {lastNameTextBox.Text}";
             _customer.Address = addressTextBox.Text;
             _customer.Contact = contactTextBox.Text;
             _stream = new MemoryStream();
-            customerPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
-            _customer.Picture = _stream.ToArray();
+            if (hasUpload)
+            {
+                customerPictureBox.Image.Save(_stream, ImageFormat.Jpeg);
+                _customer.Picture = _stream.ToArray();
+            }
+            hasUpload = false;
             _data.SaveChanges();
-            _mainForm.ReloadData("Customer");
+            _mainForm.ReloadData("Customer", (int)_customer.Id);
             //SNACKBAR NOTIF
         }
 
@@ -60,6 +66,7 @@ namespace PhBuy
             var dlg = new OpenFileDialog { Title = "Choose your profile picture" };
             if (dlg.ShowDialog() != DialogResult.OK) return;
             customerPictureBox.ImageLocation = dlg.FileName;
+            hasUpload = true;
         }
     }
 }

@@ -17,6 +17,7 @@ namespace PhBuy
 		private readonly string _type;
 		private CustomerSellerForm _cs = null;
 		private CustomerDashBoard _dashBoard;
+		private SellerPanel _sellerPanel;
 		public MainForm(Seller s, CustomerSellerForm cs)
 		{
 			CurrentSeller = s;
@@ -33,11 +34,11 @@ namespace PhBuy
 			InitializeComponent();
         }
 
-		public void ReloadData(string type)
+		public void ReloadData(string type, int id)
         {
 			PhBuyContext _data = new PhBuyContext();
-			if(type == "Seller") CurrentSeller = _data.Seller.Find(CurrentSeller);
-			else _currentCustomer = _data.Customer.Find(_currentCustomer);
+			if(type == "Seller") _data.Seller.Where(i => i.Id == id).FirstOrDefault();
+			else _currentCustomer = _data.Customer.Where(i => i.Id == id).FirstOrDefault();
 			setInformation();
         }
 
@@ -62,11 +63,11 @@ namespace PhBuy
 				form2.Show();
 				mainPanel.Controls.Add(form2);
 
-				var form = new SellerPanel(this, (int)CurrentSeller.Id) { TopLevel = false };
-				form.Show();
-				sidePanel.Controls.Add(form);
+			     _sellerPanel = new SellerPanel(this, (int)CurrentSeller.Id) { TopLevel = false };
+				_sellerPanel.Show();
+				sidePanel.Controls.Add(_sellerPanel);
 				setInformation();
-				
+				userPhoto.Click += showSellerProfile;
 			}
             else
             {
@@ -109,6 +110,11 @@ namespace PhBuy
 		private void showCustomerProfile(object sender, EventArgs e)
 		{
 			_dashBoard.customerTabControl.SelectedIndex = 9;
+		}
+
+		private void showSellerProfile(object sender, EventArgs e)
+		{
+			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 0;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
