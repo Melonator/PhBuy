@@ -20,6 +20,7 @@ namespace PhBuyModels
         public string Fblink { get; set; }
         public string Descrption { get; set; }
         public string Location { get; set; }
+        public double? Rating { get; set; }
 
         public virtual ICollection<Orders> Orders { get; set; }
         public virtual ICollection<Products> Products { get; set; }

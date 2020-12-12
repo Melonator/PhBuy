@@ -195,7 +195,7 @@ namespace PhBuy
 				var myConnection = new SqlConnection(ConnectionString);
 				//Add new entries
 				var queryString = "INSERT INTO Products VALUES(@ProductID, @SellerID, @Name" +
-				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type);";
+				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type, @Rating);";
 
 
 				if (_edit)
@@ -237,6 +237,7 @@ namespace PhBuy
 				var param12 = new SqlParameter {ParameterName = "@Description", Value = description};
 				var param13 = new SqlParameter {ParameterName = "@FDANumber", Value = fdanum};
 				var param14 = new SqlParameter {ParameterName = "@Type", Value = type};
+				var param15 = new SqlParameter { ParameterName = "@Rating", Value = 1 };
 
 				var cmd = new SqlCommand(queryString, myConnection);
 
@@ -258,6 +259,7 @@ namespace PhBuy
 				cmd.Parameters.Add(param12);
 				cmd.Parameters.Add(param13);
 				cmd.Parameters.Add(param14);
+				cmd.Parameters.Add(param15);
 
 				cmd.ExecuteNonQuery();
 

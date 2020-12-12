@@ -1,5 +1,4 @@
 ﻿using Bunifu.UI.WinForms;
-using Bunifu.UI.WinForms.BunifuButton;
 using PhBuyModels;
 using System;
 using System.Collections.Generic;
@@ -71,9 +70,14 @@ namespace PhBuy
 
                 if (o.Status == "Confirmed")
                 {
-                    co.deliveredButton.Enabled = false;
+                    co.deliveredButton.Enabled = true;
                     co.deliveredButton.Click += deliveredButton_Click;
                     co.rateButton.Click += rateButton_Click;
+                }
+                else if(o.Status == "Processing")
+                {
+                    co.cancelButton.Enabled = true;
+                    co.cancelButton.Click += cancelButton_Click;
                 }
                 ordersFlowLayoutPanel.Controls.Add(co);
             }
@@ -81,7 +85,7 @@ namespace PhBuy
 
         private void deliveredButton_Click(object sender, EventArgs e)
         {
-            var button = (BunifuButton)sender;
+            var button = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
             button.Enabled = false;
             var c = (CustomerOrderPanel) button.Parent;
             c.rateButton.Enabled = true;
@@ -94,7 +98,21 @@ namespace PhBuy
 
         private void rateButton_Click(object sender, EventArgs e)
         {
-           //RATE THE PRODUCT
+            //RATE THE PRODUCT
+            var button = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
+            var a = (CustomerOrderPanel)button.Parent;
+            RateForm form = new RateForm(_products.Find(i => i.Name == a.productNameLabel.Text).Name);
+            form.Show();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            //CANCEL THE PRODUCT
+            var button = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            var c = (CustomerOrderPanel)button.Parent;
+            Orders o = _orders.Find(i => i.Id == decimal.Parse(c.Name));
+            _data.Orders.Remove(o);
+            _data.SaveChanges();
         }
 
         private void category_Click(object sender, EventArgs e)

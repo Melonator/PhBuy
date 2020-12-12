@@ -18,6 +18,7 @@ namespace PhBuyModels
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
+        public virtual DbSet<ProductRatings> ProductRatings { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<Profiles> Profiles { get; set; }
         public virtual DbSet<Seller> Seller { get; set; }
@@ -112,6 +113,20 @@ namespace PhBuyModels
                     .WithMany(p => p.ProductImages)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__ProductIm__Produ__34C8D9D1");
+            });
+
+            modelBuilder.Entity<ProductRatings>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.ProductId)
+                    .HasColumnName("ProductID")
+                    .HasColumnType("smallmoney");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.ProductRatings)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK__ProductRa__Produ__46E78A0C");
             });
 
             modelBuilder.Entity<Products>(entity =>

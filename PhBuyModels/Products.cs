@@ -9,6 +9,7 @@ namespace PhBuyModels
         {
             Orders = new HashSet<Orders>();
             ProductImages = new HashSet<ProductImages>();
+            ProductRatings = new HashSet<ProductRatings>();
         }
 
         public decimal ProductId { get; set; }
@@ -25,9 +26,11 @@ namespace PhBuyModels
         public string Description { get; set; }
         public string FdaNumber { get; set; }
         public string Type { get; set; }
+        public double? Rating { get; set; }
 
         public virtual Seller Seller { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
         public virtual ICollection<ProductImages> ProductImages { get; set; }
+        public virtual ICollection<ProductRatings> ProductRatings { get; set; }
     }
 }

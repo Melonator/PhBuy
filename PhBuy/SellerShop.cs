@@ -58,6 +58,8 @@ namespace PhBuy
             descLabel.Text = _currentSeller.Descrption;
             sellerShopLabel.Text = _currentSeller.Name;
             productCountLabel.Text = $"Products: {_products.Count}";
+            if (_currentSeller.Rating != null) ratingLabel.Text = $"Rating: {_currentSeller.Rating}";
+            else ratingLabel.Text = "Rating: 0";
         }
         #region Events
 
