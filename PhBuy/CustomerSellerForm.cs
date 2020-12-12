@@ -40,12 +40,12 @@ namespace PhBuy
 
 		private Customer GetCustomer()
         {
-			return _data.Customer.Where(i => i.Id == _id).FirstOrDefault();
+			return _data.Customer.Where(i => i.Id == (decimal)_id).FirstOrDefault();
         }
 
 		private Seller GetSeller()
         {
-			return _data.Seller.Where(i => i.Id == _id).FirstOrDefault();
+			return _data.Seller.Where(i => i.Id == (decimal)_id).FirstOrDefault();
 		}
 		private bool isNewSeller()
         {
