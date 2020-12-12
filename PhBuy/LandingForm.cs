@@ -68,11 +68,11 @@ namespace PhBuy
 							myConnection.Close();
 							return true;
 						}
-						bunifuSnackbar1.Show(this, "Incorrect Password!", BunifuSnackbar.MessageTypes.Error);
+						bunifuSnackbar1.Show(this, "Incorrect Username/Password!", BunifuSnackbar.MessageTypes.Error);
 						return false;
 					}
 				}
-				bunifuSnackbar1.Show(this, "Please Register!", BunifuSnackbar.MessageTypes.Error);
+				bunifuSnackbar1.Show(this, "Account does not exist!", BunifuSnackbar.MessageTypes.Error);
 			}
 			else bunifuSnackbar1.Show(this, "Please enter a Username and Password!", BunifuSnackbar.MessageTypes.Error);
 			myConnection.Close();
@@ -101,7 +101,7 @@ namespace PhBuy
 			{
 				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
 				form.Show();
-				bunifuSnackbar1.Show(form, "Successfully Logged In!");
+				bunifuSnackbar1.Show(form, "Successfully Logged In!", BunifuSnackbar.MessageTypes.Success);
 				Hide();
 			}
 		}

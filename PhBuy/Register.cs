@@ -28,7 +28,7 @@ namespace PhBuy
 			{
 				case 0:
 					RegisterUser(nameTextBox.Text, passTextBox.Text); //Valid Entries
-					bunifuSnackbar1.Show(_lf,"Success!");
+					bunifuSnackbar1.Show(_lf,"Success!", BunifuSnackbar.MessageTypes.Success);
 					validEntries = true;
 					break;
 				case 1:
