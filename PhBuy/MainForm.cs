@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -92,6 +93,15 @@ namespace PhBuy
         private void gridButton_Click(object sender, EventArgs e)
         {
 			_cs.Show();
+			Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			LandingForm lf = new LandingForm();
+			lf.Show();
+			bunifuSnackbar1.Show(lf, "Successfully Logged Out!");
+			_cs.Close();
 			Close();
         }
     }

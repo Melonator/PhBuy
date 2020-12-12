@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -8,6 +9,7 @@ namespace PhBuy
 	{
 		private const string ConnectionString =
 			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+
 
 		public LandingForm()
 		{
@@ -18,7 +20,7 @@ namespace PhBuy
 
 		private void registerButton_Click(object sender, EventArgs e)
 		{
-			var register = new Register();
+			var register = new Register(this);
 			register.Show();
 		}
 
@@ -29,13 +31,14 @@ namespace PhBuy
 
 		private void exitButton_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.Exit();
 		}
 
-		private void passTextBox_KeyDown(object sender, KeyEventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			if (e.KeyData == Keys.Enter)Login();
+			Login();
 		}
+
 		#endregion
 
 		#region Helper Functions
@@ -63,15 +66,15 @@ namespace PhBuy
 						if (oReader["Password"].ToString() == password)
 						{
 							myConnection.Close();
-							MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
 							return true;
 						}
-						MessageBox.Show("Incorrect Password!", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+						bunifuSnackbar1.Show(this, "Incorrect Password!", BunifuSnackbar.MessageTypes.Error);
+						return false;
 					}
-					else MessageBox.Show("Please Register!", "Non-Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
+				bunifuSnackbar1.Show(this, "Please Register!", BunifuSnackbar.MessageTypes.Error);
 			}
-
+			else bunifuSnackbar1.Show(this, "Please enter a Username and Password!", BunifuSnackbar.MessageTypes.Error);
 			myConnection.Close();
 			return false;
 		}
@@ -98,6 +101,7 @@ namespace PhBuy
 			{
 				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
 				form.Show();
+				bunifuSnackbar1.Show(form, "Successfully Logged In!");
 				Hide();
 			}
 		}

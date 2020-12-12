@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -10,9 +11,11 @@ namespace PhBuy
 		private const string ConnectionString =
 			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
-		public Register()
+		private LandingForm _lf = null;
+		public Register(LandingForm lf)
 		{
 			InitializeComponent();
+			_lf = lf;
 		}
 
 		#region Events
@@ -25,20 +28,17 @@ namespace PhBuy
 			{
 				case 0:
 					RegisterUser(nameTextBox.Text, passTextBox.Text); //Valid Entries
-					MessageBox.Show("Yay!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					bunifuSnackbar1.Show(_lf,"Success!");
 					validEntries = true;
 					break;
 				case 1:
-					MessageBox.Show("Please type a different name", "User already exists!", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // User already exists
+					bunifuSnackbar1.Show(this, "Please type a different Username!", BunifuSnackbar.MessageTypes.Error);
 					break;
 				case 2:
-					MessageBox.Show("Please type matching passwords", "Passwords do not match!", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // Passwords do not match
+					bunifuSnackbar1.Show(this, "Passwords do not match!", BunifuSnackbar.MessageTypes.Error);
 					break;
 				case 3:
-					MessageBox.Show("Please fill in all the textboxes", "Empty Textbox", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // Textboxes are empty
+					bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
 					break;
 			}
 			if (validEntries) Close();

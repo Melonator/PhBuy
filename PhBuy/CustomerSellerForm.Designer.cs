@@ -35,6 +35,7 @@ namespace PhBuy
             this.buyTileButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.sellTileButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@ namespace PhBuy
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.Controls.Add(this.button1);
             this.mainPanel.Controls.Add(this.buyTileButton);
             this.mainPanel.Controls.Add(this.sellTileButton);
             this.mainPanel.Controls.Add(this.label4);
@@ -108,6 +110,16 @@ namespace PhBuy
             this.label4.TabIndex = 12;
             this.label4.Text = "Would you like to...";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(658, 136);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CustomerSellerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,5 +147,6 @@ namespace PhBuy
         private System.Windows.Forms.Panel mainPanel;
 		private Bunifu.Framework.UI.BunifuTileButton buyTileButton;
 		private Bunifu.Framework.UI.BunifuTileButton sellTileButton;
-	}
+        private System.Windows.Forms.Button button1;
+    }
 }
