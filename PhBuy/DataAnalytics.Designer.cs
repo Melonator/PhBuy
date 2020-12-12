@@ -37,7 +37,6 @@ namespace PhBuy
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.generalChart = new LiveCharts.WinForms.CartesianChart();
-            this.bunifuColorTransition1 = new Bunifu.UI.WinForms.BunifuColorTransition(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -119,19 +118,6 @@ namespace PhBuy
             this.generalChart.TabIndex = 0;
             this.generalChart.Text = "cartesianChart1";
             // 
-            // bunifuColorTransition1
-            // 
-            this.bunifuColorTransition1.AutoTransition = false;
-            this.bunifuColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.Purple,
-        System.Drawing.Color.LightBlue,
-        System.Drawing.Color.Orange};
-            this.bunifuColorTransition1.EndColor = System.Drawing.Color.White;
-            this.bunifuColorTransition1.Interval = 10;
-            this.bunifuColorTransition1.ProgessValue = 0;
-            this.bunifuColorTransition1.StartColor = System.Drawing.Color.White;
-            this.bunifuColorTransition1.TransitionControl = null;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -194,7 +180,6 @@ namespace PhBuy
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private LiveCharts.WinForms.CartesianChart generalChart;
-        private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition1;
         private System.Windows.Forms.Panel panel3;
     }
 }
