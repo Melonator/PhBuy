@@ -41,6 +41,7 @@ namespace PhBuy
                 c.Name = $"{firstNameTextBox.Text} {lastNameTextBox.Text}";
                 c.Id = _id;
                 c.Contact = contactTextBox.Text;
+                c.Address = addressTextBox.Text;
                 _stream = new MemoryStream();
                 Resources.ProPicIcon22.Save(_stream, ImageFormat.Jpeg);
                 c.Picture = _stream.ToArray();
