@@ -493,6 +493,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_500px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_calendar_500px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img4 {
             get {
                 object obj = ResourceManager.GetObject("img4", resourceCulture);
@@ -506,6 +516,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap increase_208px {
             get {
                 object obj = ResourceManager.GetObject("increase_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap line_chart_480px {
+            get {
+                object obj = ResourceManager.GetObject("line_chart_480px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
