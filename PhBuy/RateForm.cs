@@ -85,7 +85,6 @@ namespace PhBuy
         private bool IsIdValid(uint id)
         {
             PhBuyContext data = new PhBuyContext();
-
             if (data.Orders.Select(i => i.Id).Where(d => d == id).Count() == 1) return false;
             else return true;
         }
@@ -93,7 +92,6 @@ namespace PhBuy
         private void okButton_Click(object sender, EventArgs e)
         {
             UpdateDataBase(value);
-            bunifuSnackbar1.Show(this, "Thank you for your rating!", BunifuSnackbar.MessageTypes.Success);
             Close();
         }
 

@@ -25,6 +25,7 @@ namespace PhBuy
 
         private string _previousPanel = string.Empty;
 
+        private int ratingMin = 0;
         private CustomerDashBoard _dashBoard;
         public SellerShop(CustomerDashBoard main)
         {
@@ -32,13 +33,16 @@ namespace PhBuy
             InitializeComponent();
         }
 
-        public void LoadData(List<Products> p, Seller s)
+        public void LoadData(List<Products> p, Seller s, string profileName)
         {
             ResetPage();
             _products = p;
             _currentSeller = s;
+            profileNameLabel.Text = $"@{profileName}";
             LoadSellerInfo();
             DisplayProducts();
+
+            DisplayTopProducts();
         }
 
         private void ResetPage()
@@ -48,7 +52,34 @@ namespace PhBuy
             homeSeparator.LineThickness = 2;
             allSeparator.LineColor = Color.FromArgb(248, 58, 38);
             allSeparator.LineThickness = 1;
+
+            if (_previousPanel != string.Empty)
+            {
+                var previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
+                previous.BorderColor = Color.Transparent;
+            }
         }
+
+        private void DisplayTopProducts()
+        {
+            _productsQuery = _products.OrderByDescending(o => o.Sales).ToList();
+            int count = _productsQuery.Count < 5 ? _productsQuery.Count : 5;
+            for (int i = 0; i < count; i++) 
+            {
+                ProductDisplaySeller product = new ProductDisplaySeller();
+                _stream = new MemoryStream(_productsQuery[i].Picture);
+                product.productPictureBox.Image = Image.FromStream(_stream);
+                product.NameLabel.Text = _productsQuery[i].Name;
+                product.PriceLabel.Text = $"₱{_productsQuery[i].Price}";
+                product.statusLabel.Text = _productsQuery[i].Condition;
+                product.ratingLabel.Text = string.Format("{0:0.00}", _productsQuery[i].Rating);
+                product.statusPanel.Location = new Point(product.statusLabel.Width + 12, 198);
+                product.Click += product_Click;
+                product.productPictureBox.Click += product_Click2;
+                topProductsFlowPanel.Controls.Add(product);
+            }
+        }
+
         private void LoadSellerInfo()
         {
             _stream = new MemoryStream(_currentSeller.Picture);
@@ -58,7 +89,7 @@ namespace PhBuy
             descLabel.Text = _currentSeller.Descrption;
             sellerShopLabel.Text = _currentSeller.Name;
             productCountLabel.Text = $"Products: {_products.Count}";
-            if (_currentSeller.Rating != null) ratingLabel.Text = $"Rating: {_currentSeller.Rating}";
+            if (_currentSeller.Rating != null) ratingLabel.Text = "Rating: " + string.Format("{0:0.00}", _currentSeller.Rating);
             else ratingLabel.Text = "Rating: 0";
         }
         #region Events
@@ -96,31 +127,51 @@ namespace PhBuy
 
         private void star_Click(object sender, EventArgs e)
         {
-            BunifuPictureBox a = (BunifuPictureBox)sender;
-            BunifuPanel p = (BunifuPanel)a.Parent;
-            p.BorderColor = Color.FromArgb(248, 58, 38);
-
-            if (_previousPanel != string.Empty)
+            var a = (BunifuPictureBox)sender;
+            var p = (BunifuPanel)a.Parent;
+            if (_previousPanel != p.Name)
             {
-                BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.Transparent;
-            }
+                p.BorderColor = Color.FromArgb(248, 58, 38);
 
-            _previousPanel = $"panel{p.Tag}";
+                if (_previousPanel != string.Empty)
+                {
+                    BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
+                    previous.BorderColor = Color.Transparent;
+                }
+
+                ratingMin = int.Parse(p.Tag.ToString());
+                _previousPanel = $"panel{p.Tag}";
+            }
+            else
+            {
+                p.BorderColor = Color.Transparent;
+                _previousPanel = string.Empty;
+                ratingMin = 0;
+            }
         }
 
         private void ratingPanel_Click(object sender, EventArgs e)
         {
-            BunifuPanel p = (BunifuPanel)sender;
-            p.BorderColor = Color.FromArgb(248, 58, 38);
-
-            if (_previousPanel != string.Empty)
+            var p = (BunifuPanel)sender;
+            if (_previousPanel != p.Name)
             {
-                BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.Transparent;
-            }
+                p.BorderColor = Color.FromArgb(248, 58, 38);
 
-            _previousPanel = $"panel{p.Tag}";
+                if (_previousPanel != string.Empty)
+                {
+                    BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
+                    previous.BorderColor = Color.Transparent;
+                }
+
+                ratingMin = int.Parse(p.Tag.ToString());
+                _previousPanel = $"panel{p.Tag}";
+            }
+            else
+            {
+                p.BorderColor = Color.Transparent;
+                _previousPanel = string.Empty;
+                ratingMin = 0;
+            }
         }
 
         private void startFilterButton_Click(object sender, EventArgs e)
@@ -132,7 +183,7 @@ namespace PhBuy
             
             //ADD PRODUCT RATINGS
             //_queryInput.Rating = rating stuff
-            DisplayProducts("", _queryInput.PriceMin, _queryInput.PriceMax, sortDropDown.Text);
+            DisplayProducts("", _queryInput.PriceMin, _queryInput.PriceMax, sortDropDown.Text, ratingMin);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -177,6 +228,8 @@ namespace PhBuy
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
+            _dashBoard.scrollBar.ThumbLength = 100;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void product_Click2(object sender, EventArgs e)
@@ -186,12 +239,14 @@ namespace PhBuy
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
+            _dashBoard.scrollBar.ThumbLength = 100;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         #endregion
 
         #region Helper Functions
-        private void DisplayProducts(string productName = "", double priceMin = -1, double priceMax = -1, string sort = "Top Sales", double rating = 1)
+        private void DisplayProducts(string productName = "", double priceMin = -1, double priceMax = -1, string sort = "Top Sales", double rating = 0)
         {
             productsFlowLayoutPanel.Controls.Clear();
             _productsQuery = _products.ToList();
@@ -208,7 +263,9 @@ namespace PhBuy
                     _productsQuery = _productsQuery.Where(p => p.Price >= priceMin).ToList();
                 if (priceMax != -1)
                     _productsQuery = _productsQuery.Where(p => p.Price <= priceMax).ToList();
-                switch(sort)
+
+                _productsQuery = _productsQuery.Where(p => p.Rating >= rating).ToList();
+                switch (sort)
                 {
                     case "Top Sales":
                         {
@@ -241,7 +298,7 @@ namespace PhBuy
                 product.NameLabel.Text = p.Name;
                 product.PriceLabel.Text = $"₱{p.Price}";
                 product.statusLabel.Text = p.Condition;
-                product.ratingLabel.Text = p.Rating.ToString();
+                product.ratingLabel.Text = string.Format("{0:0.00}", p.Rating);
                 product.statusPanel.Location = new Point(product.statusLabel.Width + 12, 198);
                 product.Click += product_Click;
                 product.productPictureBox.Click += product_Click2;

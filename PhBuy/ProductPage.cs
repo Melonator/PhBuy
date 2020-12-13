@@ -19,9 +19,12 @@ namespace PhBuy
         private Seller _seller;
         private CustomerDashBoard _dashBoard;
         private List<ProductImages> _productImages;
+        private List<Profiles> _profiles;
+        private string _profileName;
         private int _quantity = 1;
-        public ProductPage(CustomerDashBoard c, List<ProductImages> i)
+        public ProductPage(CustomerDashBoard c, List<ProductImages> i, List<Profiles> pf)
         {
+            _profiles = pf;
             _productImages = i;
             _dashBoard = c;
             InitializeComponent();
@@ -29,19 +32,22 @@ namespace PhBuy
 
         public void LoadData(Products p, Seller s)
         {
+            _profileName = _profiles.Where(i => i.Id == s.Id).Select(j => j.Name).FirstOrDefault();
             _quantity = 1;
             _dashBoard.scrollBar.BindTo(mainPanel);
             _dashBoard.scrollBar.ThumbLength = 100;
             _product = p;
             _seller = s;
 
+            quantityTextBox.Text = "1";
             SetPhotos();
             productNameLabel.Text = _product.Name;
             salesLabel.Text = $"{_product.Sales} Sold";
+            profileNameLabel.Text = $"@{_profileName}";
             priceLabel.Text = $"₱{p.Price}";
             descLabel.Text = _product.Description;
             stockLabel.Text = $"{_product.Stock} Available";
-            ratingLabel.Text = _product.Rating.ToString();
+            ratingLabel.Text = string.Format("{0:0.00}", _product.Rating);
             _stream = new MemoryStream(_seller.Picture);
             sellerPictureBox.Image = Image.FromStream(_stream);
             sellerNameLabel.Text = _seller.Name;   
@@ -49,6 +55,7 @@ namespace PhBuy
 
         private void ProductPage_Load(object sender, EventArgs e)
         {
+
             _dashBoard.scrollBar.BindTo(mainPanel);
             _dashBoard.scrollBar.ThumbLength = 100;
         }
@@ -89,7 +96,9 @@ namespace PhBuy
         private void viewShopButton_Click(object sender, EventArgs e)
         {
             List<Products> Products = _dashBoard.CustomerHomePage._products;
-            _dashBoard.SellerShop.LoadData(Products.Where(s => s.SellerId == _product.SellerId).ToList(),_seller);
+            _dashBoard.SellerShop.LoadData(Products.Where(s => s.SellerId == _product.SellerId).ToList(),_seller,
+                _profileName);
+            _dashBoard.scrollBar.Value = 0;
             _dashBoard.customerTabControl.SelectedIndex = 3;
             _dashBoard.scrollBar.ThumbLength = 100;
         }
@@ -102,6 +111,7 @@ namespace PhBuy
         private void addToCartButton_Click(object sender, EventArgs e)
         {
             _dashBoard.CartForm.LoadData(_product, _seller, _quantity);
+            bunifuSnackbar1.Show(_dashBoard._mainForm, "Added to cart", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
         }
 
         private void addQuantityButton_Click(object sender, EventArgs e)

@@ -40,7 +40,7 @@ namespace PhBuy
             this.Health = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Others = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
             this.shopNameLabel = new System.Windows.Forms.Label();
             this.sellerProfilePicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerCoverPicture = new System.Windows.Forms.PictureBox();
@@ -294,19 +294,19 @@ namespace PhBuy
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // ratingLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(149, 233);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 21);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "5.0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratingLabel.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.ratingLabel.Location = new System.Drawing.Point(149, 233);
+            this.ratingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(34, 21);
+            this.ratingLabel.TabIndex = 45;
+            this.ratingLabel.Text = "5.0";
+            this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // shopNameLabel
             // 
@@ -354,7 +354,7 @@ namespace PhBuy
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.typesPanel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ratingLabel);
             this.Controls.Add(this.shopNameLabel);
             this.Controls.Add(this.sellerProfilePicture);
             this.Controls.Add(this.sellerCoverPicture);
@@ -379,7 +379,7 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuImageButton Health;
         private Bunifu.UI.WinForms.BunifuImageButton Others;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label ratingLabel;
         public System.Windows.Forms.Label shopNameLabel;
         public Bunifu.UI.WinForms.BunifuPictureBox sellerProfilePicture;
         public System.Windows.Forms.PictureBox sellerCoverPicture;

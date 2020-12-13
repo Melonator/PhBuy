@@ -21,13 +21,13 @@ namespace PhBuy
         public ProductSearch ProductSearch;
         private PhBuyContext _data = new PhBuyContext();
         public CartForm CartForm;
-        private MainForm _mainForm;
+        public MainForm _mainForm;
         public Customer _currentCustomer;
         private CustomerMyOrders _customerOrderPanel;
         public DiscoverSellers DiscoverSellers;
         private CustomerProfile _customerProfile;
 
-        private List<Orders> _myOrders;
+        private List<Profiles> _profiles;
         private List<Products> _products;
         private List<Seller> _sellers;
         private List<SellerTypes> _sellerTypes;
@@ -44,13 +44,13 @@ namespace PhBuy
             LoadData();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             scrollBar.ThumbLength = 100;
-            CustomerHomePage = new CustomerHomePage(this, _products, _sellers, _sellerTypes)
+            CustomerHomePage = new CustomerHomePage(this, _products, _sellers, _sellerTypes, _profiles)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[0]
             };
             CustomerHomePage.Show();
-            DiscoverSellers = new DiscoverSellers(_sellers, _sellerTypes, _products, this)
+            DiscoverSellers = new DiscoverSellers(_sellers, _sellerTypes, _products, this, _profiles)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[2]
@@ -62,7 +62,7 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[3]
             };
             SellerShop.Show();
-            ProductPage = new ProductPage(this, _productImages)
+            ProductPage = new ProductPage(this, _productImages, _profiles)
             {
                 MdiParent = _mainForm,
                 Parent = customerTabControl.TabPages[5]
@@ -92,12 +92,12 @@ namespace PhBuy
                 Parent = customerTabControl.TabPages[9]
             };
             _customerProfile.Show();
-            _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
+            _customerOrderPanel.LoadData(_sellers, _products);
         }
 
         private void LoadData()
         {
-            _myOrders = _data.Orders.Where(i => i.CustomerId == _currentCustomer.Id).ToList();
+            _profiles = _data.Profiles.ToList();
             _products = _data.Products.Where(i => i.Status == "Listed" && i.Stock > 0).ToList();
             _sellers = _data.Seller.ToList();
             _sellerTypes = _data.SellerTypes.ToList();
@@ -139,14 +139,16 @@ namespace PhBuy
             customerTabControl.SelectedIndex = 7;
             scrollBar.BindTo(CartForm.panel);
             scrollBar.ThumbLength = 100;
+            scrollBar.Value = 0;
         }
 
         private void TESTBUTTON_Click(object sender, EventArgs e)
         {
             LoadData();
             customerTabControl.SelectedIndex = 8;
-            _customerOrderPanel.LoadData(_myOrders, _sellers, _products);
+            _customerOrderPanel.LoadData(_sellers, _products);
             scrollBar.ThumbLength = 100;
+            scrollBar.Value = 0;
         }
     }
 }

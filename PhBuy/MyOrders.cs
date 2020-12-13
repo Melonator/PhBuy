@@ -97,7 +97,7 @@ namespace PhBuy
                 op.priceLabel.Text = $"₱{o.TotalPrice}";
                 op.statusDropDown.Text = o.Status;
                 op.statusDropDown.SelectedIndexChanged += statusDropDown_SelectedIndexChanged;
-                if (o.Status == "Confirmed") op.statusDropDown.Enabled = false;
+                if (o.Status == "Delivered") op.statusDropDown.Enabled = false;
                 ordersFlowLayoutPanel.Controls.Add(op);
             }
         }

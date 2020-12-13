@@ -30,9 +30,7 @@ namespace PhBuy
         private List<Products> _productsToBuy = new List<Products>();
         private List<int> _quantitiesToBuy = new List<int>();
         private Customer _currentCustomer;
-        private const string ConnectionString =
-            "Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
-
+     
         private double _total;
         public CartForm(CustomerDashBoard d, Customer c)
         {
@@ -53,7 +51,7 @@ namespace PhBuy
             {
                 _quantities[_products.IndexOf(p)] += q;
             }
-
+            addresstextBox.Text = _currentCustomer.Address;
             LoadOrders();
             DeSelectAllSellers();
             SelectAll(s.Name, p.Name);

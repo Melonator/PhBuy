@@ -22,8 +22,10 @@ namespace PhBuy
         public List<SellerTypes> _sellerTypes = new List<SellerTypes>();
         private Seller _currentSeller;
         private MemoryStream _stream;
-        public CustomerHomePage(CustomerDashBoard form, List<Products> p, List<Seller> s, List<SellerTypes> t)
+        private List<Profiles> _profiles;
+        public CustomerHomePage(CustomerDashBoard form, List<Products> p, List<Seller> s, List<SellerTypes> t, List<Profiles> pf)
         {
+            _profiles = pf;
             _cd = form;
             _sellerTypes = t;
             _sellers = s;
@@ -53,7 +55,7 @@ namespace PhBuy
                 product.sellerNameLabel.Text = currentSeller.Name;
                 product.statusLabel.Text = p.Condition;
                 product.productPictureBox.Click += productPicture_click;
-                product.ratingLabel.Text = p.Rating.ToString();
+                product.ratingLabel.Text = string.Format("{0:0.00}", p.Rating);
                 product.Click += productPanel_Click;
                 productsFlowLayoutPanel.Controls.Add(product);
             }
@@ -72,6 +74,7 @@ namespace PhBuy
                 seller.SetTypes(_sellerTypes.Where(t => t.SellerId == s.Id).Select(i => i.Type).ToArray());
                 seller.Click += sellerPanel_Click;
                 seller.sellerCoverPicture.Click += sellerPanel_Click2;
+                seller.ratingLabel.Text = string.Format("{0:0.00}", s.Rating);
                 sellerFlowLayoutPanel.Controls.Add(seller);
             }
         }
@@ -81,6 +84,7 @@ namespace PhBuy
             //Switch to the discover sellers page 
             _cd.DiscoverSellers.DisplaySellers();
             _cd.customerTabControl.SelectedIndex = 2;   
+            _cd.scrollBar.Value = 0;
         }
 
         private void moreProductsLabel_Click(object sender, EventArgs e)
@@ -88,6 +92,7 @@ namespace PhBuy
             //Switch to the products query page 
             _cd.ProductSearch.LoadData(_products, _sellers);
             _cd.customerTabControl.SelectedIndex = 1;
+            _cd.scrollBar.Value = 0;
         }
 
         private void productPicture_click(object sender, EventArgs e)
@@ -99,7 +104,8 @@ namespace PhBuy
             _cd.scrollBar.ThumbLength = 100;
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _cd.ProductPage.LoadData(p, _sellers.Find(s => s.Id == p.SellerId));
-            _cd.customerTabControl.SelectedIndex = 5;
+            _cd.scrollBar.Value = 0;
+            _cd.customerTabControl.SelectedIndex = 5;   
         }
 
         private void productPanel_Click(object sender, EventArgs e)
@@ -110,15 +116,18 @@ namespace PhBuy
             _cd.scrollBar.ThumbLength = 100;
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _cd.ProductPage.LoadData(p, _sellers.Find(s => s.Id == p.SellerId));
-            _cd.customerTabControl.SelectedIndex = 5;
+            _cd.scrollBar.Value = 0;
+            _cd.customerTabControl.SelectedIndex = 5;      
         }
         private void sellerPanel_Click(object sender, EventArgs e)
         {
             SellerDisplay p = (SellerDisplay)sender;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
+            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(),
+                seller, _profiles.Where(i => i.Id == seller.Id).Select(j => j.Name).FirstOrDefault());
             _cd.scrollBar.ThumbLength = 100;
-            _cd.customerTabControl.SelectedIndex = 3;
+            _cd.scrollBar.Value = 0;
+            _cd.customerTabControl.SelectedIndex = 3;        
         }
 
         private void sellerPanel_Click2(object sender, EventArgs e)
@@ -126,9 +135,11 @@ namespace PhBuy
             PictureBox b = (PictureBox)sender;
             SellerDisplay p = (SellerDisplay)b.Parent;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
+            _cd.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller,
+                _profiles.Where(i => i.Id == seller.Id).Select(j => j.Name).FirstOrDefault());
             _cd.scrollBar.ThumbLength = 100;
-            _cd.customerTabControl.SelectedIndex = 3;
+            _cd.scrollBar.Value = 0;
+            _cd.customerTabControl.SelectedIndex = 3;   
         }
 
         private void product_Click(object sender, EventArgs e)
@@ -138,6 +149,7 @@ namespace PhBuy
             _currentSeller = _sellers.Find(s => s.Id == p.SellerId);
             _cd.ProductPage.LoadData(p, _currentSeller);
             _cd.customerTabControl.SelectedIndex = 5;
+            _cd.scrollBar.Value = 0;
         }
 
         private void product_Click2(object sender, EventArgs e)
@@ -147,6 +159,7 @@ namespace PhBuy
             Products p = _products.Find(i => i.Name == d.NameLabel.Text);
             _currentSeller = _sellers.Find(a => a.Id == p.SellerId);
             _cd.ProductPage.LoadData(p, _currentSeller);
+            _cd.scrollBar.Value = 0;   
             _cd.customerTabControl.SelectedIndex = 5;
         }
 
@@ -155,7 +168,8 @@ namespace PhBuy
             var b = (BunifuImageButton)sender;
             if (b.Name == "Health") _cd.ProductSearch.CustomSearch(_products, _sellers, "Health & Beauty");
             else _cd.ProductSearch.CustomSearch(_products, _sellers, b.Name);
-            _cd.customerTabControl.SelectedIndex = 1;
+            _cd.scrollBar.Value = 0;
+            _cd.customerTabControl.SelectedIndex = 1;       
         }
     }
 }

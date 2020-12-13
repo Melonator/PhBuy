@@ -256,7 +256,7 @@ namespace PhBuy
             this.bunifuSnackbar1.AllowMultipleViews = true;
             this.bunifuSnackbar1.ClickToClose = true;
             this.bunifuSnackbar1.DoubleClickToClose = true;
-            this.bunifuSnackbar1.DurationAfterIdle = 3000;
+            this.bunifuSnackbar1.DurationAfterIdle = 100;
             this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 1;

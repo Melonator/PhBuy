@@ -338,7 +338,7 @@ namespace PhBuy
             this.cartFlowLayoutPanel.AutoScroll = true;
             this.cartFlowLayoutPanel.Location = new System.Drawing.Point(3, 81);
             this.cartFlowLayoutPanel.Name = "cartFlowLayoutPanel";
-            this.cartFlowLayoutPanel.Size = new System.Drawing.Size(879, 429);
+            this.cartFlowLayoutPanel.Size = new System.Drawing.Size(862, 429);
             this.cartFlowLayoutPanel.TabIndex = 81;
             // 
             // panel1

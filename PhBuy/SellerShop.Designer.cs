@@ -30,21 +30,21 @@ namespace PhBuy
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerShop));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties61 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties62 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties63 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties64 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties65 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties66 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties67 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties68 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties69 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -75,7 +75,7 @@ namespace PhBuy
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.productsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPictureBox22 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox23 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPictureBox25 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -115,7 +115,7 @@ namespace PhBuy
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.sellerShopLabel = new System.Windows.Forms.Label();
             this.profileNameLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.allSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.homeSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.all = new System.Windows.Forms.Label();
@@ -132,7 +132,7 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox25)).BeginInit();
@@ -162,7 +162,7 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox35)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,7 +176,7 @@ namespace PhBuy
             this.mainPanel.Controls.Add(this.tabControl1);
             this.mainPanel.Location = new System.Drawing.Point(0, 229);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(879, 355);
+            this.mainPanel.Size = new System.Drawing.Size(879, 357);
             this.mainPanel.TabIndex = 41;
             // 
             // tabControl1
@@ -218,15 +218,16 @@ namespace PhBuy
             this.panel8.Controls.Add(this.label7);
             this.panel8.Location = new System.Drawing.Point(18, 429);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(799, 215);
+            this.panel8.Size = new System.Drawing.Size(799, 336);
             this.panel8.TabIndex = 10;
             // 
             // topProductsFlowPanel
             // 
-            this.topProductsFlowPanel.BackColor = System.Drawing.Color.White;
+            this.topProductsFlowPanel.AutoScroll = true;
+            this.topProductsFlowPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.topProductsFlowPanel.Location = new System.Drawing.Point(20, 49);
             this.topProductsFlowPanel.Name = "topProductsFlowPanel";
-            this.topProductsFlowPanel.Size = new System.Drawing.Size(759, 152);
+            this.topProductsFlowPanel.Size = new System.Drawing.Size(759, 263);
             this.topProductsFlowPanel.TabIndex = 37;
             // 
             // label7
@@ -397,7 +398,7 @@ namespace PhBuy
             this.tabPage2.Controls.Add(this.typeDropDown);
             this.tabPage2.Controls.Add(this.productsFlowLayoutPanel);
             this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.bunifuPanel1);
+            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel4);
@@ -605,26 +606,26 @@ namespace PhBuy
             this.label10.Text = "Filter";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // bunifuPanel1
+            // panel1
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox22);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox23);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox25);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox24);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox26);
-            this.bunifuPanel1.Location = new System.Drawing.Point(6, 620);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(250, 27);
-            this.bunifuPanel1.TabIndex = 0;
-            this.bunifuPanel1.Tag = "1";
-            this.bunifuPanel1.Click += new System.EventHandler(this.ratingPanel_Click);
+            this.panel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderRadius = 3;
+            this.panel1.BorderThickness = 1;
+            this.panel1.Controls.Add(this.bunifuPictureBox22);
+            this.panel1.Controls.Add(this.bunifuPictureBox23);
+            this.panel1.Controls.Add(this.bunifuPictureBox25);
+            this.panel1.Controls.Add(this.bunifuPictureBox24);
+            this.panel1.Controls.Add(this.bunifuPictureBox26);
+            this.panel1.Location = new System.Drawing.Point(6, 620);
+            this.panel1.Name = "panel1";
+            this.panel1.ShowBorders = true;
+            this.panel1.Size = new System.Drawing.Size(250, 27);
+            this.panel1.TabIndex = 0;
+            this.panel1.Tag = "1";
+            this.panel1.Click += new System.EventHandler(this.ratingPanel_Click);
             // 
             // bunifuPictureBox22
             // 
@@ -1149,11 +1150,11 @@ namespace PhBuy
             this.searchButton.ColorContrastOnClick = 45;
             this.searchButton.ColorContrastOnHover = 45;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.searchButton.CustomizableEdges = borderEdges1;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.searchButton.CustomizableEdges = borderEdges11;
             this.searchButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.searchButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.searchButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1239,11 +1240,11 @@ namespace PhBuy
             this.startFilterButton.ColorContrastOnClick = 45;
             this.startFilterButton.ColorContrastOnHover = 45;
             this.startFilterButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.startFilterButton.CustomizableEdges = borderEdges2;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.startFilterButton.CustomizableEdges = borderEdges12;
             this.startFilterButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.startFilterButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.startFilterButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1373,26 +1374,26 @@ namespace PhBuy
             this.priceMaxTextBox.Modified = false;
             this.priceMaxTextBox.Multiline = false;
             this.priceMaxTextBox.Name = "priceMaxTextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMaxTextBox.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.priceMaxTextBox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMaxTextBox.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMaxTextBox.OnIdleState = stateProperties4;
+            stateProperties61.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties61.FillColor = System.Drawing.Color.Empty;
+            stateProperties61.ForeColor = System.Drawing.Color.Empty;
+            stateProperties61.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMaxTextBox.OnActiveState = stateProperties61;
+            stateProperties62.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties62.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties62.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.priceMaxTextBox.OnDisabledState = stateProperties62;
+            stateProperties63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties63.FillColor = System.Drawing.Color.Empty;
+            stateProperties63.ForeColor = System.Drawing.Color.Empty;
+            stateProperties63.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMaxTextBox.OnHoverState = stateProperties63;
+            stateProperties64.BorderColor = System.Drawing.Color.Silver;
+            stateProperties64.FillColor = System.Drawing.Color.White;
+            stateProperties64.ForeColor = System.Drawing.Color.Empty;
+            stateProperties64.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMaxTextBox.OnIdleState = stateProperties64;
             this.priceMaxTextBox.Padding = new System.Windows.Forms.Padding(3);
             this.priceMaxTextBox.PasswordChar = '\0';
             this.priceMaxTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1447,26 +1448,26 @@ namespace PhBuy
             this.productNametextBox.Modified = false;
             this.productNametextBox.Multiline = false;
             this.productNametextBox.Name = "productNametextBox";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.productNametextBox.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.productNametextBox.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.productNametextBox.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.productNametextBox.OnIdleState = stateProperties8;
+            stateProperties65.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties65.FillColor = System.Drawing.Color.Empty;
+            stateProperties65.ForeColor = System.Drawing.Color.Empty;
+            stateProperties65.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.productNametextBox.OnActiveState = stateProperties65;
+            stateProperties66.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties66.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties66.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.productNametextBox.OnDisabledState = stateProperties66;
+            stateProperties67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties67.FillColor = System.Drawing.Color.Empty;
+            stateProperties67.ForeColor = System.Drawing.Color.Empty;
+            stateProperties67.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.productNametextBox.OnHoverState = stateProperties67;
+            stateProperties68.BorderColor = System.Drawing.Color.Silver;
+            stateProperties68.FillColor = System.Drawing.Color.White;
+            stateProperties68.ForeColor = System.Drawing.Color.Empty;
+            stateProperties68.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.productNametextBox.OnIdleState = stateProperties68;
             this.productNametextBox.Padding = new System.Windows.Forms.Padding(3);
             this.productNametextBox.PasswordChar = '\0';
             this.productNametextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1521,26 +1522,26 @@ namespace PhBuy
             this.priceMinTextBox.Modified = false;
             this.priceMinTextBox.Multiline = false;
             this.priceMinTextBox.Name = "priceMinTextBox";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMinTextBox.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.priceMinTextBox.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMinTextBox.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.priceMinTextBox.OnIdleState = stateProperties12;
+            stateProperties69.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties69.FillColor = System.Drawing.Color.Empty;
+            stateProperties69.ForeColor = System.Drawing.Color.Empty;
+            stateProperties69.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMinTextBox.OnActiveState = stateProperties69;
+            stateProperties70.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties70.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties70.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.priceMinTextBox.OnDisabledState = stateProperties70;
+            stateProperties71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties71.FillColor = System.Drawing.Color.Empty;
+            stateProperties71.ForeColor = System.Drawing.Color.Empty;
+            stateProperties71.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMinTextBox.OnHoverState = stateProperties71;
+            stateProperties72.BorderColor = System.Drawing.Color.Silver;
+            stateProperties72.FillColor = System.Drawing.Color.White;
+            stateProperties72.ForeColor = System.Drawing.Color.Empty;
+            stateProperties72.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.priceMinTextBox.OnIdleState = stateProperties72;
             this.priceMinTextBox.Padding = new System.Windows.Forms.Padding(3);
             this.priceMinTextBox.PasswordChar = '\0';
             this.priceMinTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1608,17 +1609,17 @@ namespace PhBuy
             this.profileNameLabel.Text = "@User Name";
             this.profileNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.allSeparator);
-            this.panel1.Controls.Add(this.homeSeparator);
-            this.panel1.Controls.Add(this.all);
-            this.panel1.Controls.Add(this.home);
-            this.panel1.Location = new System.Drawing.Point(2, 198);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 48);
-            this.panel1.TabIndex = 6;
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.panel.Controls.Add(this.allSeparator);
+            this.panel.Controls.Add(this.homeSeparator);
+            this.panel.Controls.Add(this.all);
+            this.panel.Controls.Add(this.home);
+            this.panel.Location = new System.Drawing.Point(2, 198);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(906, 48);
+            this.panel.TabIndex = 6;
             // 
             // allSeparator
             // 
@@ -1707,7 +1708,7 @@ namespace PhBuy
             this.Controls.Add(this.sellerProfilePicture);
             this.Controls.Add(this.profileNameLabel);
             this.Controls.Add(this.sellerShopLabel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.bunifuShapes1);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1730,7 +1731,7 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.bunifuPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox25)).EndInit();
@@ -1760,8 +1761,8 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox35)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1774,7 +1775,7 @@ namespace PhBuy
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel panel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox22;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox23;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox25;
@@ -1824,7 +1825,7 @@ namespace PhBuy
         private System.Windows.Forms.Label profileNameLabel;
         private System.Windows.Forms.Label sellerShopLabel;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
         private Bunifu.UI.WinForms.BunifuSeparator allSeparator;
         private Bunifu.UI.WinForms.BunifuSeparator homeSeparator;
         private System.Windows.Forms.Label all;

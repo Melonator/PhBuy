@@ -33,6 +33,7 @@ namespace PhBuy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerHomePage));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.productsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.moreProductsLabel = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@ namespace PhBuy
             this.label2 = new System.Windows.Forms.Label();
             this.adPictureBox2 = new System.Windows.Forms.PictureBox();
             this.adPictureBox = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -72,6 +73,7 @@ namespace PhBuy
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.label10);
             this.panel.Controls.Add(this.label9);
             this.panel.Controls.Add(this.productsFlowLayoutPanel);
             this.panel.Controls.Add(this.panel4);
@@ -82,11 +84,20 @@ namespace PhBuy
             this.panel.Controls.Add(this.adPictureBox);
             this.panel.Location = new System.Drawing.Point(1, 1);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(877, 581);
+            this.panel.Size = new System.Drawing.Size(877, 584);
             this.panel.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(71, 1085);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 0;
             // 
             // productsFlowLayoutPanel
             // 
+            this.productsFlowLayoutPanel.AutoScroll = true;
             this.productsFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.productsFlowLayoutPanel.Location = new System.Drawing.Point(11, 765);
             this.productsFlowLayoutPanel.Name = "productsFlowLayoutPanel";
@@ -517,13 +528,13 @@ namespace PhBuy
             this.adPictureBox.TabIndex = 0;
             this.adPictureBox.TabStop = false;
             // 
-            // label9
+            // label10
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(71, 1085);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
-            this.label9.TabIndex = 0;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 1115);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 35;
             // 
             // CustomerHomePage
             // 
@@ -578,5 +589,6 @@ namespace PhBuy
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -76,6 +76,7 @@ namespace PhBuy
             this.priceMaxTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.priceMinTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,7 +84,6 @@ namespace PhBuy
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.productsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox22)).BeginInit();
@@ -948,6 +948,19 @@ namespace PhBuy
             this.typeFlowLayoutPanel.Size = new System.Drawing.Size(250, 94);
             this.typeFlowLayoutPanel.TabIndex = 71;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label2.Location = new System.Drawing.Point(5, 754);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 21);
+            this.label2.TabIndex = 69;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1107,19 +1120,6 @@ namespace PhBuy
             this.label10.TabIndex = 68;
             this.label10.Text = "Filter";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(5, 754);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
-            this.label2.TabIndex = 69;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ProductSearch
             // 

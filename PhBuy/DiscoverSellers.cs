@@ -22,8 +22,10 @@ namespace PhBuy
         private MemoryStream _stream;
         private CustomerDashBoard _dashBoard;
         private List<Products> _products;
-        public DiscoverSellers(List<Seller> s, List<SellerTypes> t, List<Products> p, CustomerDashBoard c)
+        private List<Profiles> _profiles;
+        public DiscoverSellers(List<Seller> s, List<SellerTypes> t, List<Products> p, CustomerDashBoard c, List<Profiles> pf)
         {
+            _profiles = pf;
             _products = p;
             _dashBoard = c;
             _sellers = s;
@@ -39,6 +41,8 @@ namespace PhBuy
 
         private void DiscoverSellers_Load(object sender, EventArgs e)
         {
+            _dashBoard.scrollBar.BindTo(sellerFlowLayoutPanel);
+            _dashBoard.scrollBar.ThumbLength = 100;
             _sellerQuery = _sellers.ToList();
         }
 
@@ -107,6 +111,7 @@ namespace PhBuy
                 seller.SetTypes(_sellerTypes.Where(t => t.SellerId == s.Id).Select(i => i.Type).ToArray());
                 seller.Click += sellerPanel_Click;
                 seller.sellerCoverPicture.Click += sellerPanel_Click2;
+                seller.ratingLabel.Text = string.Format("{0:0.00}", s.Rating);
                 sellerFlowLayoutPanel.Controls.Add(seller);
             }
         }
@@ -115,9 +120,11 @@ namespace PhBuy
         {
             SellerDisplay p = (SellerDisplay)sender;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _dashBoard.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
+            _dashBoard.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller,
+                _profiles.Where(i => i.Id == seller.Id).Select(j => j.Name).FirstOrDefault());
             _dashBoard.scrollBar.ThumbLength = 100;
             _dashBoard.customerTabControl.SelectedIndex = 3;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void sellerPanel_Click2(object sender, EventArgs e)
@@ -125,9 +132,11 @@ namespace PhBuy
             PictureBox b = (PictureBox)sender;
             SellerDisplay p = (SellerDisplay)b.Parent;
             Seller seller = _sellers.Where(s => s.Name == p.shopNameLabel.Text).First();
-            _dashBoard.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller);
+            _dashBoard.SellerShop.LoadData(_products.Where(i => i.SellerId == seller.Id).ToList(), seller,
+                _profiles.Where(i => i.Id == seller.Id).Select(j => j.Name).FirstOrDefault());
             _dashBoard.scrollBar.ThumbLength = 100;
             _dashBoard.customerTabControl.SelectedIndex = 3;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void filterTypes(Seller currentSeller)

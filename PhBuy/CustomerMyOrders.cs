@@ -31,12 +31,21 @@ namespace PhBuy
             InitializeComponent();
         }
 
-        public void LoadData(List<Orders> o, List<Seller> s, List<Products> p)
+        public void LoadData(List<Seller> s, List<Products> p)
         {
             PhBuyContext _data = new PhBuyContext();
             _orders = _data.Orders.Where(i => i.Id == _dashBoard._currentCustomer.Id).ToList();
             _sellers = s;
             _products = p;
+            if(_previousLabel != string.Empty)
+            {
+                var l = (BunifuSeparator)Controls.Find($"{_previousLabel}Separator", true).First();
+                l.LineThickness = 1;
+                l.LineColor = Color.DarkGray;
+            }
+            var q = (BunifuSeparator)Controls.Find("AllSeparator", true).First();
+            q.LineThickness = 2;
+            q.LineColor = Color.FromArgb(249, 58, 39);
             DisplayOrders();
         }
 
@@ -107,6 +116,7 @@ namespace PhBuy
             var a = (CustomerOrderPanel)button.Parent;
             RateForm form = new RateForm(_products.Find(i => i.Name == a.productNameLabel.Text).Name);
             form.ShowDialog();
+            bunifuSnackbar1.Show(_dashBoard._mainForm, "Product rated, thank you for your review", BunifuSnackbar.MessageTypes.Success);
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -115,6 +125,7 @@ namespace PhBuy
             var button = (Bunifu.Framework.UI.BunifuTileButton)sender;
             var c = (CustomerOrderPanel)button.Parent;
             Orders o = _orders.Find(i => i.Id == decimal.Parse(c.Name));
+            ordersFlowLayoutPanel.Controls.Remove(c);
             _data.Orders.Remove(o);
             _data.SaveChanges();
         }

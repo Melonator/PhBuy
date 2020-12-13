@@ -27,7 +27,7 @@ namespace PhBuy
 
         private string _previousPanel = string.Empty;
         private ProductQuery _queryInput = new ProductQuery();
-
+        private int ratingMin = 0;
         public ProductSearch (CustomerDashBoard d)
         {
             _dashBoard = d;
@@ -37,6 +37,7 @@ namespace PhBuy
         {
             _dashBoard.scrollBar.BindTo(mainPanel);
             _dashBoard.scrollBar.ThumbLength = 100;
+            DisplayProducts();
         }
 
         public void LoadData(List<Products> p, List<Seller>s)
@@ -78,10 +79,10 @@ namespace PhBuy
 
             //ADD PRODUCT RATINGS
             //_queryInput.Rating = rating stuff
-            DisplayProducts(_queryInput.PriceMin, _queryInput.PriceMax, sortDropDown.Text);
+            DisplayProducts(_queryInput.PriceMin, _queryInput.PriceMax, sortDropDown.Text, ratingMin);
         }
 
-        private void DisplayProducts(double priceMin = -1, double priceMax = -1, string sort = "Top Sales", double rating = 1)
+        private void DisplayProducts(double priceMin = -1, double priceMax = -1, string sort = "Top Sales", double rating = 0)
         {
             productsFlowLayoutPanel.Controls.Clear();
             _productsQuery = _allProducts.ToList();
@@ -97,6 +98,9 @@ namespace PhBuy
                 _productsQuery = _productsQuery.Where(p => p.Price >= priceMin).ToList();
             if (priceMax != -1)
                 _productsQuery = _productsQuery.Where(p => p.Price <= priceMax).ToList();
+
+            _productsQuery = _productsQuery.Where(p => p.Rating >= rating).ToList();
+
             switch (sort)
             {
                 case "Top Sales":
@@ -128,7 +132,7 @@ namespace PhBuy
                 _stream = new MemoryStream(currentSeller.Picture);
                 product.sellerProfilePicture.Image = Image.FromStream(_stream);
                 product.sellerNameLabel.Text = currentSeller.Name;
-                product.ratingLabel.Text = p.Rating.ToString();
+                product.ratingLabel.Text = string.Format("{0:0.00}", p.Rating);
                 product.statusLabel.Text = p.Condition;
                 product.Click += product_Click;
                 product.productPictureBox.Click += product_Click2;
@@ -140,7 +144,10 @@ namespace PhBuy
         {
             for (int i = 0; i < _selectedTypes.Count; i++)
             {
-                if (p.Type == _selectedTypes[i]) return;
+                if (p.Type == _selectedTypes[i])
+                {
+                    return;
+                }
             }
             _productsQuery.Remove(p);
         }
@@ -152,6 +159,7 @@ namespace PhBuy
             _currentSeller = _sellers.Find(s => s.Id == p.SellerId);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void product_Click2(object sender, EventArgs e)
@@ -162,6 +170,7 @@ namespace PhBuy
             _currentSeller = _sellers.Find(a => a.Id == p.SellerId);
             _dashBoard.ProductPage.LoadData(p, _currentSeller);
             _dashBoard.customerTabControl.SelectedIndex = 5;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void typeDropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -197,31 +206,52 @@ namespace PhBuy
 
         private void star_Click(object sender, EventArgs e)
         {
-            BunifuPictureBox a = (BunifuPictureBox)sender;
-            BunifuPanel p = (BunifuPanel)a.Parent;
-            p.BorderColor = Color.FromArgb(248, 58, 38);
-
-            if (_previousPanel != string.Empty)
+            var a = (BunifuPictureBox)sender;
+            var p = (BunifuPanel)a.Parent;
+            if (_previousPanel != p.Name)
             {
-                BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.Transparent;
-            }
+                p.BorderColor = Color.FromArgb(248, 58, 38);
 
-            _previousPanel = $"panel{p.Tag}";
+                if (_previousPanel != string.Empty)
+                {
+                    BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
+                    previous.BorderColor = Color.Transparent;
+                }
+
+                ratingMin = int.Parse(p.Tag.ToString());
+                _previousPanel = $"panel{p.Tag}";
+            }
+            else
+            {
+                p.BorderColor = Color.Transparent;
+                _previousPanel = string.Empty;
+                ratingMin = 0;
+            }
         }
 
         private void ratingPanel_Click(object sender, EventArgs e)
         {
-            BunifuPanel p = (BunifuPanel)sender;
-            p.BorderColor = Color.FromArgb(248, 58, 38);
-
-            if (_previousPanel != string.Empty)
+            var p = (BunifuPanel)sender;
+            if (_previousPanel != p.Name)
             {
-                BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
-                previous.BorderColor = Color.Transparent;
+                p.BorderColor = Color.FromArgb(248, 58, 38);
+
+                if (_previousPanel != string.Empty)
+                {
+                    BunifuPanel previous = (BunifuPanel)Controls.Find(_previousPanel, true).First();
+                    previous.BorderColor = Color.Transparent;
+                }
+
+                ratingMin = int.Parse(p.Tag.ToString());
+                _previousPanel = $"panel{p.Tag}";
+            }
+            else
+            {
+                p.BorderColor = Color.Transparent;
+                _previousPanel = string.Empty;
+                ratingMin = 0;
             }
 
-            _previousPanel = $"panel{p.Tag}";
         }
     }
 }

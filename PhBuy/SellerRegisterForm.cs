@@ -134,6 +134,7 @@ namespace PhBuy
 			s.Background = _sellerCover;
 			s.Descrption = _description;
 			s.Location = _location;
+			s.Rating = 0;
 
 			foreach(var a in _selectedTypes)
             {
