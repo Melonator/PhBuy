@@ -143,7 +143,7 @@ namespace PhBuyModels
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(300)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FdaNumber)
@@ -162,6 +162,10 @@ namespace PhBuyModels
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
                     .HasColumnType("smallmoney");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Type)
                     .HasMaxLength(20)
@@ -203,7 +207,7 @@ namespace PhBuyModels
                     .IsUnicode(false);
 
                 entity.Property(e => e.Descrption)
-                    .HasMaxLength(150)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Fblink)

@@ -84,7 +84,7 @@ namespace PhBuy
 			if (fdaTextBox.Text != string.Empty) fdanum = fdaTextBox.Text;
 
 			if (type != null && nameTextBox.Text != string.Empty && descriptionTextBox.Text != string.Empty &&
-			    nameTextBox.Text.Count() <= 50 && descriptionTextBox.Text.Count() <= 300)
+			    nameTextBox.Text.Count() <= 50 && descriptionTextBox.Text.Count() <= 500)
 			{
 				name = nameTextBox.Text;
 				description = descriptionTextBox.Text;
@@ -195,7 +195,7 @@ namespace PhBuy
 				var myConnection = new SqlConnection(ConnectionString);
 				//Add new entries
 				var queryString = "INSERT INTO Products VALUES(@ProductID, @SellerID, @Name" +
-				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type, @Rating);";
+				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type, @Rating, @Sales, @Status);";
 
 
 				if (_edit)
@@ -204,7 +204,7 @@ namespace PhBuy
 						"Name = @Name, Price = @Price, Picture = @Cover, " +
 						"Stock = @Stock, Weight = @Weight, Length = @Length, " +
 						"Width = @Width, Height = @Height, Condition = @Condition, " +
-						"Description = @Description, FDA_Number = @FDANumber, Type = @Type " +
+						"Description = @Description, FDA_Number = @FDANumber, Type = @Type, Status = @Status " +
 						$"WHERE ProductID = {_editedProduct.ProductId}";
 
 					productID = (int)_editedProduct.ProductId;
@@ -222,7 +222,6 @@ namespace PhBuy
 				}
 				myConnection.Open();
 
-				//Crap ton of parameters aaaa
 				var param1 = new SqlParameter {ParameterName = "@ProductID", Value = productID};
 				var param2 = new SqlParameter {ParameterName = "@SellerID", Value = _sellerID};
 				var param3 = new SqlParameter {ParameterName = "@Name", Value = name};
@@ -237,7 +236,9 @@ namespace PhBuy
 				var param12 = new SqlParameter {ParameterName = "@Description", Value = description};
 				var param13 = new SqlParameter {ParameterName = "@FDANumber", Value = fdanum};
 				var param14 = new SqlParameter {ParameterName = "@Type", Value = type};
-				var param15 = new SqlParameter { ParameterName = "@Rating", Value = 1 };
+				var param15 = new SqlParameter { ParameterName = "@Rating", Value = 0 };
+				var param16 = new SqlParameter { ParameterName = "@Sales", Value = 0 };
+				var param17 = new SqlParameter { ParameterName = "@Status", Value = bunifuDropdown1.Text };
 
 				var cmd = new SqlCommand(queryString, myConnection);
 
@@ -260,6 +261,8 @@ namespace PhBuy
 				cmd.Parameters.Add(param13);
 				cmd.Parameters.Add(param14);
 				cmd.Parameters.Add(param15);
+				cmd.Parameters.Add(param16);
+				cmd.Parameters.Add(param17);
 
 				cmd.ExecuteNonQuery();
 
@@ -274,8 +277,9 @@ namespace PhBuy
 
 			//Go back to my products after editing
 			ClearValues();
-
+			_sellerPanel.MyProducts.LoadProducts();
 			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
+			
             
 		}
 
@@ -380,7 +384,7 @@ namespace PhBuy
 		}
 		private void descriptionTextBox_TextChange(object sender, EventArgs e)
 		{
-			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 300";
+			descCharCountLabel.Text = $"{descriptionTextBox.Text.Count()} / 500";
 			// TODO: Notify the user when it is empty or beyond the count
 		}
 
@@ -436,12 +440,12 @@ namespace PhBuy
         {
 			if (previousLabel != string.Empty)
 			{
-				Label a = (Label)Controls.Find($"{previousLabel}Label", true).First();
+				Label a = (Label)Controls.Find(previousLabel, true).First();
 				a.ForeColor = Color.FromArgb(45, 41, 66);
 			}
 
 			imageNo = 0;
-			previousLabel = p.Type;
+			previousLabel = $"{p.Type}Label";
 			_editedProduct = p;
 			_edit = true;
 			ClearExcessImages();
@@ -492,7 +496,7 @@ namespace PhBuy
 			if (previousLabel != string.Empty)
 			{
 				if (previousLabel == "Health & Beauty") previousLabel = "Health";
-				Label a = (Label)Controls.Find($"{previousLabel}Label", true).First();
+				Label a = (Label)Controls.Find(previousLabel, true).First();
 				a.ForeColor = Color.FromArgb(45, 41, 66);
 			}
 

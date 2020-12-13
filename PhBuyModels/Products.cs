@@ -28,6 +28,7 @@ namespace PhBuyModels
         public string Type { get; set; }
         public double? Rating { get; set; }
         public int? Sales { get; set; }
+        public string Status { get; set; }
 
         public virtual Seller Seller { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }

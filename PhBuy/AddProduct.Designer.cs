@@ -165,6 +165,8 @@ namespace PhBuy
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label32 = new System.Windows.Forms.Label();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.addProductPages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.registryPanel.SuspendLayout();
@@ -1713,6 +1715,7 @@ namespace PhBuy
             // shippingPanel
             // 
             this.shippingPanel.BackColor = System.Drawing.Color.White;
+            this.shippingPanel.Controls.Add(this.bunifuDropdown1);
             this.shippingPanel.Controls.Add(this.bunifuSeparator6);
             this.shippingPanel.Controls.Add(this.bunifuSeparator5);
             this.shippingPanel.Controls.Add(this.bunifuSeparator4);
@@ -1729,6 +1732,7 @@ namespace PhBuy
             this.shippingPanel.Controls.Add(this.weightTextBox);
             this.shippingPanel.Controls.Add(this.label21);
             this.shippingPanel.Controls.Add(this.label20);
+            this.shippingPanel.Controls.Add(this.label32);
             this.shippingPanel.Controls.Add(this.label19);
             this.shippingPanel.Controls.Add(this.label18);
             this.shippingPanel.Controls.Add(this.label17);
@@ -1736,7 +1740,7 @@ namespace PhBuy
             this.shippingPanel.Location = new System.Drawing.Point(4, 6);
             this.shippingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.shippingPanel.Name = "shippingPanel";
-            this.shippingPanel.Size = new System.Drawing.Size(750, 239);
+            this.shippingPanel.Size = new System.Drawing.Size(750, 256);
             this.shippingPanel.TabIndex = 0;
             // 
             // bunifuSeparator6
@@ -1805,7 +1809,7 @@ namespace PhBuy
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label22.Location = new System.Drawing.Point(544, 108);
+            this.label22.Location = new System.Drawing.Point(544, 117);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(32, 21);
@@ -1819,7 +1823,7 @@ namespace PhBuy
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label11.Location = new System.Drawing.Point(365, 108);
+            this.label11.Location = new System.Drawing.Point(365, 117);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 21);
@@ -1833,7 +1837,7 @@ namespace PhBuy
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(188, 108);
+            this.label5.Location = new System.Drawing.Point(188, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 21);
@@ -1864,7 +1868,7 @@ namespace PhBuy
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(556, 54);
+            this.label4.Location = new System.Drawing.Point(556, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 21);
@@ -2282,6 +2286,64 @@ namespace PhBuy
             this.bunifuElipse6.ElipseRadius = 25;
             this.bunifuElipse6.TargetControl = this.shippingPanel;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            this.label32.Location = new System.Drawing.Point(29, 207);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 21);
+            this.label32.TabIndex = 25;
+            this.label32.Text = "Status";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.BorderRadius = 1;
+            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.FillDropDown = true;
+            this.bunifuDropdown1.FillIndicator = false;
+            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.FormattingEnabled = true;
+            this.bunifuDropdown1.Icon = null;
+            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.ItemHeight = 26;
+            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.Items.AddRange(new object[] {
+            "Listed",
+            "Unlisted"});
+            this.bunifuDropdown1.ItemTopMargin = 3;
+            this.bunifuDropdown1.Location = new System.Drawing.Point(98, 201);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.Size = new System.Drawing.Size(183, 32);
+            this.bunifuDropdown1.TabIndex = 31;
+            this.bunifuDropdown1.Text = "Listed";
+            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.TextLeftMargin = 5;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2422,5 +2484,7 @@ namespace PhBuy
         private System.Windows.Forms.Label label31;
         private Bunifu.Framework.UI.BunifuThinButton2 Cancel;
         public Bunifu.UI.WinForms.BunifuPages addProductPages;
+        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private System.Windows.Forms.Label label32;
     }
 }

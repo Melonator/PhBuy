@@ -12,7 +12,7 @@ namespace PhBuy
 		private readonly MainForm _form;
 		private readonly int _id;
 		public SellerDashBoard sellerDashBoard;
-		private MyProducts myProducts;
+		public MyProducts MyProducts;
 		private MyOrders _myOrders;
 		private PhBuyContext _data = new PhBuyContext();
 		private List<Orders> _orders;
@@ -38,15 +38,15 @@ namespace PhBuy
 			};
 			profile.Show();
 
-			myProducts = new MyProducts(_id, this)
+			MyProducts = new MyProducts(_id, this)
 			{
 				MdiParent = _form,
 				Parent = sellerDashBoard.sellerTabControl.TabPages[3]
 			};
-			myProducts.Show();
-			myProducts.LoadProducts();
+			MyProducts.Show();
+			MyProducts.LoadProducts();
 
-			addProduct = new AddProduct(_id, myProducts, this)
+			addProduct = new AddProduct(_id, MyProducts, this)
 			{
 				MdiParent = _form,
 				Parent = sellerDashBoard.sellerTabControl.TabPages[4]
