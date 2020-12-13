@@ -193,11 +193,11 @@ namespace PhBuy
             this.okButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.okButton.OnDisabledState.IconLeftImage = null;
             this.okButton.OnDisabledState.IconRightImage = null;
-            this.okButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.okButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
             this.okButton.onHoverState.BorderRadius = 1;
             this.okButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.okButton.onHoverState.BorderThickness = 1;
-            this.okButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.okButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
             this.okButton.onHoverState.ForeColor = System.Drawing.Color.White;
             this.okButton.onHoverState.IconLeftImage = null;
             this.okButton.onHoverState.IconRightImage = null;
@@ -209,11 +209,11 @@ namespace PhBuy
             this.okButton.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.okButton.OnIdleState.IconLeftImage = null;
             this.okButton.OnIdleState.IconRightImage = null;
-            this.okButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.okButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
             this.okButton.OnPressedState.BorderRadius = 1;
             this.okButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.okButton.OnPressedState.BorderThickness = 1;
-            this.okButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.okButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
             this.okButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.okButton.OnPressedState.IconLeftImage = null;
             this.okButton.OnPressedState.IconRightImage = null;

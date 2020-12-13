@@ -612,11 +612,11 @@ namespace PhBuy
             this.saveButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.saveButton.OnDisabledState.IconLeftImage = null;
             this.saveButton.OnDisabledState.IconRightImage = null;
-            this.saveButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
             this.saveButton.onHoverState.BorderRadius = 1;
             this.saveButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.saveButton.onHoverState.BorderThickness = 1;
-            this.saveButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.saveButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
             this.saveButton.onHoverState.ForeColor = System.Drawing.Color.White;
             this.saveButton.onHoverState.IconLeftImage = null;
             this.saveButton.onHoverState.IconRightImage = null;
@@ -628,11 +628,11 @@ namespace PhBuy
             this.saveButton.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.saveButton.OnIdleState.IconLeftImage = null;
             this.saveButton.OnIdleState.IconRightImage = null;
-            this.saveButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
             this.saveButton.OnPressedState.BorderRadius = 1;
             this.saveButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.saveButton.OnPressedState.BorderThickness = 1;
-            this.saveButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.saveButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
             this.saveButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.saveButton.OnPressedState.IconLeftImage = null;
             this.saveButton.OnPressedState.IconRightImage = null;

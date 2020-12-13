@@ -121,14 +121,14 @@
   <data name="database_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shopping_basket_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping_basket_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_window_208px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_window_208px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gradienta_LeG68PrXA6Y_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gradienta-LeG68PrXA6Y-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="online_store_480px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\online_store_480px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,9 @@
   </data>
   <data name="exit_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Others" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Others.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +166,11 @@
   <data name="Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="star_orange_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\star_orange_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_125772240_1088967664894229_5760288061086223140_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125772240_1088967664894229_5760288061086223140_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sean_sinclair_C_NJKfnTR5A_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sean-sinclair-C_NJKfnTR5A-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerSellerForm3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerSellerForm3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +183,9 @@
   </data>
   <data name="Sky" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerSellerForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerSellerForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,9 +229,6 @@
   <data name="TopPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TopPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RegistrationP2_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RegistrationP2(2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="user_account_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_account_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,9 +268,6 @@
   <data name="free_shipping_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\free_shipping_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Technology1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Technology1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -298,11 +298,11 @@
   <data name="ProPicIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProPicIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shop_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="buy_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buy_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trees" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trees.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mulish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mulish-VariableFont_wght.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -325,14 +325,14 @@
   <data name="quit program" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quit program.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EpnMhl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EpnMhl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="registration_208px_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\registration_208px_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_125882841_2838879412994219_3149737760896158500_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\125882841_2838879412994219_3149737760896158500_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RegistrationP2_2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RegistrationP2(2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="road_sunset_marking_trees_116194_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\road_sunset_marking_trees_116194_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,14 +358,20 @@
   <data name="heart_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heart_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_125904862_789271368646202_2880759978547485106_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\125904862_789271368646202_2880759978547485106_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EpnMhl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EpnMhl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sean_sinclair_C_NJKfnTR5A_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sean-sinclair-C_NJKfnTR5A-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gradienta_LeG68PrXA6Y_unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradienta-LeG68PrXA6Y-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ProPicIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProPicIcon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male_user_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male_user_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="star_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,8 +394,8 @@
   <data name="password_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Trees" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trees.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="star_filled_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\star_filled_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,8 +415,8 @@
   <data name="exit_208pxw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_208pxw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="star_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\star_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shop_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomerSellerForm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomerSellerForm2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -418,8 +424,8 @@
   <data name="starry_sky_night_milky_way_143696_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\starry_sky_night_milky_way_143696_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shopping_basket_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping_basket_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star_orange_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_orange_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Health_and_Beauty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Health-and-Beauty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,10 +433,7 @@
   <data name="moon_sky_night_135728_1920x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moon_sky_night_135728_1920x1080.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registration_208px_orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registration_208px_orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="male_user_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male_user_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="my_orders_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\my_orders_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
