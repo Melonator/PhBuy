@@ -50,8 +50,8 @@ namespace PhBuy
                 _data.SaveChanges();
 
                 var main = new MainForm(c, _cs) { TopLevel = true };
-                bunifuSnackbar1.Show(main, "Registered Successfully!", BunifuSnackbar.MessageTypes.Success);
                 main.Show();
+                bunifuSnackbar1.Show(main, "Registered Successfully!", BunifuSnackbar.MessageTypes.Success);
                 Close();
             }
             else bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);

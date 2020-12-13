@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -105,7 +106,7 @@ namespace PhBuy
             var button = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
             var a = (CustomerOrderPanel)button.Parent;
             RateForm form = new RateForm(_products.Find(i => i.Name == a.productNameLabel.Text).Name);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

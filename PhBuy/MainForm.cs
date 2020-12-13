@@ -34,6 +34,11 @@ namespace PhBuy
 			InitializeComponent();
         }
 
+		public MainForm()
+        {
+
+        }
+
 		public void ReloadData(string type, int id)
         {
 			PhBuyContext _data = new PhBuyContext();
