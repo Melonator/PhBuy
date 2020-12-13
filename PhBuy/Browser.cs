@@ -15,7 +15,7 @@ namespace PhBuy
     {
         public Browser()
         {
-            var browser = new ChromiumWebBrowser("www.google.com");
+            var browser = new ChromiumWebBrowser("https://app.element.io/");
             Controls.Add(browser);
             InitializeComponent();
         }

@@ -71,8 +71,8 @@ namespace PhBuy
 			{
 				MdiParent = _form,
 				Parent = sellerDashBoard.sellerTabControl.TabPages[8]
-			};
-			Chat.Show();
+            };
+            Chat.Show();
 		}
 
 		private void LoadData()

@@ -11,7 +11,6 @@ namespace PhBuy
 		[STAThread]
 		private static void Main()
 		{
-			//MainForm("JD", 21629)
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new LandingForm());
