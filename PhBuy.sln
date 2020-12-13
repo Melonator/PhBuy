@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhBuy", "PhBuy\PhBuy.csproj", "{31E8F8F4-AC55-45BF-8EF5-2396AADD757A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhBuyModels", "PhBuyModels\PhBuyModels.csproj", "{CA843D27-7889-4858-9AD4-136856AF88AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhBuyModels", "PhBuyModels\PhBuyModels.csproj", "{CA843D27-7889-4858-9AD4-136856AF88AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
