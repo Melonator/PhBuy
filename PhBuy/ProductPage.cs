@@ -40,11 +40,10 @@ namespace PhBuy
             priceLabel.Text = $"₱{p.Price}";
             descLabel.Text = _product.Description;
             stockLabel.Text = $"{_product.Stock} Available";
-            /*ADD RATING AND SALES8*/
+            ratingLabel.Text = _product.Rating.ToString();
             _stream = new MemoryStream(_seller.Picture);
             sellerPictureBox.Image = Image.FromStream(_stream);
-            sellerNameLabel.Text = _seller.Name;
-            /*ADD SELLER INFO N STUFF*/
+            sellerNameLabel.Text = _seller.Name;   
         }
 
         private void ProductPage_Load(object sender, EventArgs e)

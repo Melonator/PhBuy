@@ -62,7 +62,7 @@ namespace PhBuy
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.priceLabel = new System.Windows.Forms.Label();
             this.salesLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
             this.productNameLabel = new System.Windows.Forms.Label();
             this.stockLabel = new System.Windows.Forms.Label();
             this.sellerShopLabel = new System.Windows.Forms.Label();
@@ -404,7 +404,7 @@ namespace PhBuy
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.priceLabel);
             this.panel1.Controls.Add(this.salesLabel);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.ratingLabel);
             this.panel1.Controls.Add(this.productNameLabel);
             this.panel1.Controls.Add(this.stockLabel);
             this.panel1.Controls.Add(this.sellerShopLabel);
@@ -766,20 +766,20 @@ namespace PhBuy
             this.salesLabel.Text = "100 Sold";
             this.salesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // ratingLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Mulish", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.label2.Location = new System.Drawing.Point(435, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 33);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "5.0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.BackColor = System.Drawing.Color.White;
+            this.ratingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratingLabel.Font = new System.Drawing.Font("Mulish", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.ratingLabel.Location = new System.Drawing.Point(435, 14);
+            this.ratingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(29, 33);
+            this.ratingLabel.TabIndex = 57;
+            this.ratingLabel.Text = "0";
+            this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // productNameLabel
             // 
@@ -891,7 +891,7 @@ namespace PhBuy
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label salesLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ratingLabel;
         private System.Windows.Forms.Label productNameLabel;
         private System.Windows.Forms.Label sellerShopLabel;
         private System.Windows.Forms.FlowLayoutPanel productImagesFlowPanel;

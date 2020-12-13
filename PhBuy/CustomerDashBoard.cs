@@ -98,7 +98,7 @@ namespace PhBuy
         private void LoadData()
         {
             _myOrders = _data.Orders.Where(i => i.CustomerId == _currentCustomer.Id).ToList();
-            _products = _data.Products.ToList();
+            _products = _data.Products.Where(i => i.Status == "Listed" && i.Stock > 0).ToList();
             _sellers = _data.Seller.ToList();
             _sellerTypes = _data.SellerTypes.ToList();
             _productImages = _data.ProductImages.ToList();
