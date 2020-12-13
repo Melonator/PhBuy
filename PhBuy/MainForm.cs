@@ -37,7 +37,7 @@ namespace PhBuy
 		public void ReloadData(string type, int id)
         {
 			PhBuyContext _data = new PhBuyContext();
-			if(type == "Seller") _data.Seller.Where(i => i.Id == id).FirstOrDefault();
+			if(type == "Seller") CurrentSeller =  _data.Seller.Where(i => i.Id == id).FirstOrDefault();
 			else _currentCustomer = _data.Customer.Where(i => i.Id == id).FirstOrDefault();
 			setInformation();
         }
