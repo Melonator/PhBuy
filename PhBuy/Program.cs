@@ -14,7 +14,7 @@ namespace PhBuy
 			//MainForm("JD", 21629)
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new LandingForm());
+			Application.Run(new Browser());
 		}
 	}
 }

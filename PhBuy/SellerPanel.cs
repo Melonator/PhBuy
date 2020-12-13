@@ -90,11 +90,6 @@ namespace PhBuy
 
 			switch (btn.Name)
 			{
-				case "storeDropDown":
-				{
-						PanelVisibility(panel1);
-				}
-					break;
 				case "productDropDown":
 				{
 						PanelVisibility(panel2);
@@ -103,11 +98,6 @@ namespace PhBuy
 				case "orderDropDown":
 				{
 						PanelVisibility(panel3);
-				}
-					break;
-				case "analyticDropDown":
-				{
-						PanelVisibility(panel4);
 				}
 					break;
 			}
