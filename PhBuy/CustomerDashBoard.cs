@@ -22,7 +22,7 @@ namespace PhBuy
         private PhBuyContext _data = new PhBuyContext();
         public CartForm CartForm;
         private MainForm _mainForm;
-        private Customer _currentCustomer;
+        public Customer _currentCustomer;
         private CustomerMyOrders _customerOrderPanel;
         public DiscoverSellers DiscoverSellers;
         private CustomerProfile _customerProfile;

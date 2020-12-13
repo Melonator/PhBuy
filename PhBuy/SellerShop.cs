@@ -241,6 +241,7 @@ namespace PhBuy
                 product.NameLabel.Text = p.Name;
                 product.PriceLabel.Text = $"₱{p.Price}";
                 product.statusLabel.Text = p.Condition;
+                product.ratingLabel.Text = p.Rating.ToString();
                 product.statusPanel.Location = new Point(product.statusLabel.Width + 12, 198);
                 product.Click += product_Click;
                 product.productPictureBox.Click += product_Click2;

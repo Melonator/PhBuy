@@ -53,6 +53,7 @@ namespace PhBuy
                 product.sellerNameLabel.Text = currentSeller.Name;
                 product.statusLabel.Text = p.Condition;
                 product.productPictureBox.Click += productPicture_click;
+                product.ratingLabel.Text = p.Rating.ToString();
                 product.Click += productPanel_Click;
                 productsFlowLayoutPanel.Controls.Add(product);
             }

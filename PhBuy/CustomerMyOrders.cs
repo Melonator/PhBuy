@@ -33,7 +33,7 @@ namespace PhBuy
         public void LoadData(List<Orders> o, List<Seller> s, List<Products> p)
         {
             PhBuyContext _data = new PhBuyContext();
-            _orders = _data.Orders.ToList();
+            _orders = _data.Orders.Where(i => i.Id == _dashBoard._currentCustomer.Id).ToList();
             _sellers = s;
             _products = p;
             DisplayOrders();

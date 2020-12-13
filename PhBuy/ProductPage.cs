@@ -37,6 +37,7 @@ namespace PhBuy
 
             SetPhotos();
             productNameLabel.Text = _product.Name;
+            salesLabel.Text = $"{_product.Sales} Sold";
             priceLabel.Text = $"₱{p.Price}";
             descLabel.Text = _product.Description;
             stockLabel.Text = $"{_product.Stock} Available";
@@ -117,13 +118,16 @@ namespace PhBuy
 
         private void quantityTextBox_TextChanged(object sender, EventArgs e)
         {
-            if(int.Parse(quantityTextBox.Text) > _product.Stock)
+            if (quantityTextBox.Text != string.Empty)
             {
-                quantityTextBox.Text = _product.Stock.ToString();
-            }
-            else
-            {
-                _quantity = int.Parse(quantityTextBox.Text);
+                if (int.Parse(quantityTextBox.Text) > _product.Stock)
+                {
+                    quantityTextBox.Text = _product.Stock.ToString();
+                }
+                else
+                {
+                    _quantity = int.Parse(quantityTextBox.Text);
+                }
             }
         }
 

@@ -128,6 +128,7 @@ namespace PhBuy
                 _stream = new MemoryStream(currentSeller.Picture);
                 product.sellerProfilePicture.Image = Image.FromStream(_stream);
                 product.sellerNameLabel.Text = currentSeller.Name;
+                product.ratingLabel.Text = p.Rating.ToString();
                 product.statusLabel.Text = p.Condition;
                 product.Click += product_Click;
                 product.productPictureBox.Click += product_Click2;
