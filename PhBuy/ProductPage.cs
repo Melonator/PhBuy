@@ -105,7 +105,9 @@ namespace PhBuy
 
         private void chatNowButton_Click(object sender, EventArgs e)
         {
-
+            _dashBoard.Chat.LoadElementIo(sellerNameLabel.Text);
+            _dashBoard.customerTabControl.SelectedIndex = 10;
+            _dashBoard.scrollBar.Value = 0;
         }
 
         private void addToCartButton_Click(object sender, EventArgs e)

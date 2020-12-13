@@ -26,7 +26,7 @@ namespace PhBuy
         private CustomerMyOrders _customerOrderPanel;
         public DiscoverSellers DiscoverSellers;
         private CustomerProfile _customerProfile;
-
+        public CustomerBrowser Chat;
         private List<Profiles> _profiles;
         private List<Products> _products;
         private List<Seller> _sellers;
@@ -93,6 +93,12 @@ namespace PhBuy
             };
             _customerProfile.Show();
             _customerOrderPanel.LoadData(_sellers, _products);
+            Chat = new CustomerBrowser
+            {
+                MdiParent = _mainForm,
+                Parent = customerTabControl.TabPages[10]
+            };
+            Chat.Show();
         }
 
         private void LoadData()
