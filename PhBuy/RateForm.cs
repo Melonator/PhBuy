@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -92,6 +93,8 @@ namespace PhBuy
         private void okButton_Click(object sender, EventArgs e)
         {
             UpdateDataBase(value);
+            bunifuSnackbar1.Show(this, "Thank you for your rating!", BunifuSnackbar.MessageTypes.Success);
+            Close();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

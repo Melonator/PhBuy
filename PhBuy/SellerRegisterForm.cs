@@ -117,7 +117,7 @@ namespace PhBuy
 		private void uploadBackgroundButton_Click(object sender, EventArgs e)
 		{
 			var form = new CoverForm(this);
-			form.Show();
+			form.ShowDialog();
 		}
 
 		private void confirmButton_Click(object sender, EventArgs e)
@@ -149,8 +149,8 @@ namespace PhBuy
 
 			var main = new MainForm(s, _cs);
 			Hide();
-			bunifuSnackbar1.Show(main, "Account successfully created!", BunifuSnackbar.MessageTypes.Success);
 			main.Show();
+			bunifuSnackbar1.Show(main, "Account successfully created!", BunifuSnackbar.MessageTypes.Success);
 		}
 
         #endregion
