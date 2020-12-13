@@ -300,7 +300,7 @@ namespace PhBuy
             _productsToBuy.Clear();
             _data.Customer.Update(_currentCustomer);
             _data.SaveChanges();
-            bunifuSnackbar1.Show(this, "Order Confirmed!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
+            bunifuSnackbar1.Show(_dashBoard._mainForm, "Order Placed!", Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success);
         }
 
         private void RemoveOrders()
