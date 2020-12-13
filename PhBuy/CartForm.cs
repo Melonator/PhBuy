@@ -175,13 +175,32 @@ namespace PhBuy
                     productCart.Name = p.Name;
                     productCart.priceLabel.Text = $"₱{p.Price}";
                     productCart.productNameLabel.Text = p.Name;
+                    productCart.Stock =(int)p.Stock;
                     productCart.checkBox.CheckedChanged += checkBox_CheckedChanged;
                     productCart.deleteButton.Click += deleteButton_Clicked;
+                    productCart.addButton.Click += AddQuantity;
+                    productCart.deleteButton.Click += SubtractQuantity;
                     productCart.quantityTextBox.Text = _quantities[index].ToString();
                     cartFlowLayoutPanel.Controls.Add(productCart);
                     index++;
                 }
             }
+        }
+
+        private void AddQuantity(object sender, EventArgs e)
+        {
+            var s = (BunifuTileButton)sender;
+            var p = (ProductCart)s.Parent;
+            int quantity = int.Parse(p.quantityTextBox.Text) + 1;
+            if (quantity <= p.Stock) p.quantityTextBox.Text = quantity.ToString();
+        }
+
+        private void SubtractQuantity(object sender, EventArgs e)
+        {
+            var s = (BunifuTileButton)sender;
+            var p = (ProductCart)s.Parent;
+            int quantity = int.Parse(p.quantityTextBox.Text) - 1;
+            if (quantity <= p.Stock && quantity > 0) p.quantityTextBox.Text = quantity.ToString();
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
@@ -210,14 +229,19 @@ namespace PhBuy
 
             if (_toDelete.Count != 0) deleteButton.Enabled = true;
             else deleteButton.Enabled = false;
+
+            if (_productsToBuy.Count == 0) checkoutButton.Enabled = false;
+            else checkoutButton.Enabled = true;
         }
 
         private void deleteButton_Clicked(object sender, EventArgs e)
         {
             BunifuTileButton b = (BunifuTileButton)sender;
             ProductCart p = (ProductCart)b.Parent;
-           
+            Products pr = _products.Find(i => i.Name == p.productNameLabel.Text);
             Seller associatedSeller = _sellers.Find(i => i.Name == p.Seller);
+            _total -= (double)pr.Price * _quantities[_products.IndexOf(pr)];
+            totalPriceLabel.Text = $"₱{_total}";
             if (_products.Where(i => i.SellerId == associatedSeller.Id).Count() == 1)
             {
                 cartFlowLayoutPanel.Controls.RemoveAt(cartFlowLayoutPanel.Controls.IndexOf(p) - 1);
@@ -232,7 +256,9 @@ namespace PhBuy
 
             _quantities.RemoveAt(_products.IndexOf(_products.Find(i => i.Name == p.productNameLabel.Text)));
             _products.Remove(_products.Find(i => i.Name == p.productNameLabel.Text));
-            cartFlowLayoutPanel.Controls.Remove(p);     
+            cartFlowLayoutPanel.Controls.Remove(p);
+
+            if (_productsToBuy.Count == 0) checkoutButton.Enabled = false;
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -247,6 +273,9 @@ namespace PhBuy
                 cartFlowLayoutPanel.Controls.Remove(d);
                 Seller s = _sellers.Find(i => i.Name == d.Seller);
                 Products p = _products.Find(i => i.Name == d.productNameLabel.Text);
+
+                _total -=(double) p.Price * _quantities[_products.IndexOf(p)];
+                totalPriceLabel.Text = $"₱{_total}";
                 _productsToBuy.Remove(p);
                 _products.Remove(p);
                 if (_products.Where(i => i.SellerId == s.Id).Count() == 0)
@@ -257,6 +286,12 @@ namespace PhBuy
                 }
             }
             _toDelete.Clear();
+
+            if (_productsToBuy.Count == 0)
+            {
+                checkoutButton.Enabled = false;
+                deleteButton.Enabled = false;
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -360,6 +395,7 @@ namespace PhBuy
         {
             _dashBoard.scrollBar.BindTo(panel);
             _dashBoard.scrollBar.ThumbLength = 100;
+            addresstextBox.Text = _currentCustomer.Address;
         }
     }
 }

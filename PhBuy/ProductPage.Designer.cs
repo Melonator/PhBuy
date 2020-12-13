@@ -742,12 +742,12 @@ namespace PhBuy
             this.priceLabel.AutoSize = true;
             this.priceLabel.BackColor = System.Drawing.Color.White;
             this.priceLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.priceLabel.Font = new System.Drawing.Font("Mulish", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel.Font = new System.Drawing.Font("Mulish", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
-            this.priceLabel.Location = new System.Drawing.Point(383, 106);
+            this.priceLabel.Location = new System.Drawing.Point(383, 132);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(111, 40);
+            this.priceLabel.Size = new System.Drawing.Size(92, 33);
             this.priceLabel.TabIndex = 55;
             this.priceLabel.Text = "₱ Price";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -787,15 +787,16 @@ namespace PhBuy
             this.productNameLabel.AutoSize = true;
             this.productNameLabel.BackColor = System.Drawing.Color.White;
             this.productNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.productNameLabel.Font = new System.Drawing.Font("Mulish", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productNameLabel.Font = new System.Drawing.Font("Mulish", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.productNameLabel.Location = new System.Drawing.Point(382, 62);
             this.productNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.productNameLabel.MaximumSize = new System.Drawing.Size(500, 0);
             this.productNameLabel.Name = "productNameLabel";
-            this.productNameLabel.Size = new System.Drawing.Size(323, 44);
+            this.productNameLabel.Size = new System.Drawing.Size(271, 37);
             this.productNameLabel.TabIndex = 58;
             this.productNameLabel.Text = "Product Name Here";
-            this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // stockLabel
             // 

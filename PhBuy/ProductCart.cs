@@ -13,6 +13,7 @@ namespace PhBuy
     public partial class ProductCart : UserControl
     {
         public string Seller { get; set; }
+        public int Stock;
         public ProductCart()
         {
             InitializeComponent();

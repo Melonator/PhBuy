@@ -145,6 +145,8 @@ namespace PhBuy
         {
             _dashBoard.CartForm.BuyNow(_product, _seller, _quantity);
             _dashBoard.customerTabControl.SelectedIndex = 7;
+            _dashBoard.scrollBar.ThumbLength = 100;
+            _dashBoard.scrollBar.Value = 0;
         }
     }
 }
