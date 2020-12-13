@@ -21,6 +21,7 @@ namespace PhBuy
 		private DataAnalytics _dataAnalytics;
 
 		public AddProduct addProduct;
+		public Browser Chat;
 		public SellerPanel(MainForm form, int id)
 		{
 			_form = form;
@@ -66,6 +67,12 @@ namespace PhBuy
 				Parent = sellerDashBoard.sellerTabControl.TabPages[7]
 			};
 			_dataAnalytics.Show();
+			Chat = new Browser
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[8]
+			};
+			Chat.Show();
 		}
 
 		private void LoadData()
@@ -155,6 +162,11 @@ namespace PhBuy
 		{
 			var form = new DatabaseForm();
 			form.Show();
+		}
+
+        private void chatButton_Click(object sender, EventArgs e)
+        {
+			sellerDashBoard.sellerTabControl.SelectedIndex = 8;
 		}
     }
 }
