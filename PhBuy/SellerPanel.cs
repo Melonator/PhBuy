@@ -18,6 +18,7 @@ namespace PhBuy
 		private List<Orders> _orders;
 		private List<Products> _products;
 		private List<Customer> _customers;
+		private DataAnalytics _dataAnalytics;
 
 		public AddProduct addProduct;
 		public SellerPanel(MainForm form, int id)
@@ -59,6 +60,12 @@ namespace PhBuy
 			};
 			_myOrders.LoadData(_orders, _customers, _products);
 			_myOrders.Show();
+			_dataAnalytics = new DataAnalytics()
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[7]
+			};
+			_dataAnalytics.Show();
 		}
 
 		private void LoadData()
@@ -146,7 +153,7 @@ namespace PhBuy
 
 		private void insightButton_Click(object sender, EventArgs e)
 		{
-			//TODO: show insights
+			sellerDashBoard.sellerTabControl.SelectedIndex = 7;
 		}
 
 		private void inventoryButton_Click(object sender, EventArgs e)

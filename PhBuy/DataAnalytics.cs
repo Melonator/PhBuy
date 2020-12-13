@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,8 @@ namespace PhBuy
         private int _id = 21629;
 
         private LineSeries income = new LineSeries();
-        ChartValues<double> values = new ChartValues<double>();
+        private ChartValues<double> values = new ChartValues<double>();
+        private MemoryStream _stream;
         List<string> months = new List<string>();
 
         private bool isMonth = false;
@@ -34,12 +36,18 @@ namespace PhBuy
             InitializeComponent();
         }
 
-
         private void DataAnalytics_Load(object sender, EventArgs e)
         {
             _products = _data.Products.Where(i => i.SellerId == _id).ToList();
             _orders = _data.Orders.Where(i => i.SellerId == _id).ToList();
             FilterValues();
+            AddTopProducts();
+            LoadPieSeries();
+
+            mainPanel.HorizontalScroll.Maximum = 0;
+            mainPanel.AutoScroll = false;
+            mainPanel.VerticalScroll.Visible = false;
+            mainPanel.AutoScroll = true;
         }
 
         private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
@@ -48,10 +56,51 @@ namespace PhBuy
             FilterValues(filterType);
         }
 
+        private void AddTopProducts()
+        {
+            _products = _products.OrderByDescending(o => o.Sales).ToList();
+            int counter = _products.Count < 10 ? _products.Count : 10;
+            for (int i = 0; i < counter; i++)
+            {
+                TopProduct t = new TopProduct();
+                t.nameLabel.Text = _products[i].Name;
+                _stream = new MemoryStream(_products[i].Picture);
+                t.productPictureBox.Image = Image.FromStream(_stream);
+                t.salesLabel.Text = _products[i].Sales.ToString();
+                t.rankLabel.Text = $"{i + 1}";
+                topProductsFlowLayoutPanel.Controls.Add(t);
+            }
+        }
+
+        private void LoadPieSeries()
+        {
+            var data = _orders.Select(i => new { i.ProductId, i.TotalPrice })
+                        .GroupBy(a => a.ProductId, (key, group) => new
+                        {
+                            total = group.Sum(k => k.TotalPrice),
+                            productID = key
+                        }).ToList();
+
+            foreach(var o in data)
+            {
+                string productName = _products.Where(i => i.ProductId == o.productID).Select(d => d.Name).FirstOrDefault();
+                PieSeries p = new PieSeries
+                {
+                    Title = productName,
+                    Values = new ChartValues<double> {(double) o.total},
+                    DataLabels = true
+                };
+                pieChart.Series.Add(p);
+            }
+
+            pieChart.LegendLocation = LegendLocation.Bottom;
+        }
+
         private void filter_Click(object sender, EventArgs e)
         {
             var panel = (BunifuPanel)sender;
             filterType = panel.Name;
+            panel.BorderColor = System.Drawing.Color.FromArgb(249, 58, 39);
             if(panel.Name == "sales")
             {
                 var p = (BunifuPanel)Controls.Find("orders", true).First();
@@ -90,12 +139,18 @@ namespace PhBuy
                 }
                 else
                 {
-                    var monthlyData = _orders.Where(i => i.DateOrdered.Value.Month == datePicker.Value.Month).ToList();
+                    var monthlyData = _orders.Where(i => i.DateOrdered.Value.Month == datePicker.Value.Month)
+                        .Select(j => new { j.TotalPrice, j.DateOrdered }).GroupBy(k => k.DateOrdered.Value.ToString("dddd")
+                        , (key, group) => new
+                        {
+                            totalIncome = group.Sum(l => l.TotalPrice),
+                            day = key
+                        });
 
                     foreach (var i in monthlyData)
                     {
-                        values.Add((double)i.TotalPrice);
-                        months.Add(i.DateOrdered.Value.ToString("MMMM"));
+                        values.Add((double)i.totalIncome);
+                        months.Add(i.day);
                     }
                     SetData();
                 }
@@ -149,11 +204,21 @@ namespace PhBuy
 
         private void SetData()
         {
-            generalChart.AxisY.Add(new Axis
+            if (filterType == "sales")
             {
-                Title = "Income",
-                LabelFormatter = value => value.ToString("C")
-            });
+                generalChart.AxisY.Add(new Axis
+                {
+                    Title = "Income",
+                    LabelFormatter = value => value.ToString("C")
+                });
+            }
+            else
+            {
+                generalChart.AxisY.Add(new Axis
+                {
+                    Title = "Orders"
+                });
+            }
 
             generalChart.AxisX.Add(new Axis
             {

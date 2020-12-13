@@ -34,7 +34,7 @@ namespace PhBuy
         public void LoadData(List<Seller> s, List<Products> p)
         {
             PhBuyContext _data = new PhBuyContext();
-            _orders = _data.Orders.Where(i => i.Id == _dashBoard._currentCustomer.Id).ToList();
+            _orders = _data.Orders.Where(i => i.CustomerId == _dashBoard._currentCustomer.Id).ToList();
             _sellers = s;
             _products = p;
             if(_previousLabel != string.Empty)
@@ -122,7 +122,7 @@ namespace PhBuy
         private void cancelButton_Click(object sender, EventArgs e)
         {
             //CANCEL THE PRODUCT
-            var button = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            var button = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
             var c = (CustomerOrderPanel)button.Parent;
             Orders o = _orders.Find(i => i.Id == decimal.Parse(c.Name));
             ordersFlowLayoutPanel.Controls.Remove(c);

@@ -62,7 +62,8 @@ namespace PhBuy
 
         private void DisplayTopProducts()
         {
-            _productsQuery = _products.OrderByDescending(o => o.Sales).ToList();
+            topProductsFlowPanel.Controls.Clear();
+          _productsQuery = _products.OrderByDescending(o => o.Sales).ToList();
             int count = _productsQuery.Count < 5 ? _productsQuery.Count : 5;
             for (int i = 0; i < count; i++) 
             {
