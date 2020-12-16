@@ -318,5 +318,12 @@ namespace PhBuy
 
 
         #endregion
+
+        private void chatNowButton_Click(object sender, EventArgs e)
+        {
+            _dashBoard.customerTabControl.SelectedIndex = 10;
+            _dashBoard.scrollBar.Value = 0;
+            _dashBoard.Chat.LoadElementIo(_currentSeller.Name);
+        }
     }
 }

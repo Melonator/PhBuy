@@ -102,11 +102,6 @@ namespace PhBuy
 						PanelVisibility(panel2);
 				}
 					break;
-				case "orderDropDown":
-				{
-						PanelVisibility(panel3);
-				}
-					break;
 			}
 		}
 

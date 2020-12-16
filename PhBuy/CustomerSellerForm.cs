@@ -11,7 +11,7 @@ namespace PhBuy
 		private readonly int _id;
 		private readonly string _userName;
 		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+"REDACTED";
 		private PhBuyContext _data = new PhBuyContext();
 
 		public CustomerSellerForm(string name, int id)
@@ -105,6 +105,11 @@ namespace PhBuy
         private void button1_Click(object sender, EventArgs e)
         {
 			Application.Exit();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

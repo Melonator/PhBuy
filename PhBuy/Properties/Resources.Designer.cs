@@ -403,6 +403,16 @@ namespace PhBuy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Facebook_208px {
+            get {
+                object obj = ResourceManager.GetObject("Facebook_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fashion2 {
             get {
                 object obj = ResourceManager.GetObject("Fashion2", resourceCulture);
@@ -426,6 +436,16 @@ namespace PhBuy.Properties {
         internal static System.Drawing.Bitmap free_shipping_208px {
             get {
                 object obj = ResourceManager.GetObject("free_shipping_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google_mobile_208px {
+            get {
+                object obj = ResourceManager.GetObject("google_mobile_208px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

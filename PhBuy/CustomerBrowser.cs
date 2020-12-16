@@ -20,6 +20,9 @@ namespace PhBuy
 
         public void LoadElementIo(string sellerName)
         {
+            Controls.Clear();
+            string[] name = sellerName.Split(' ');
+            sellerName = name[0] + name[1];
             var browser = new ChromiumWebBrowser($"https://app.element.io/#/room/#{sellerName}:matrix.org");
             Controls.Add(browser);
         }

@@ -39,8 +39,6 @@ namespace PhBuy
             this.sortDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.locationDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.startFilterButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -194,62 +192,6 @@ namespace PhBuy
             this.label2.Text = "Filter";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label3.Location = new System.Drawing.Point(3, 337);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 21);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Location";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // locationDropDown
-            // 
-            this.locationDropDown.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.locationDropDown.BackgroundColor = System.Drawing.Color.White;
-            this.locationDropDown.BorderColor = System.Drawing.Color.Silver;
-            this.locationDropDown.BorderRadius = 1;
-            this.locationDropDown.Color = System.Drawing.Color.Silver;
-            this.locationDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.locationDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.locationDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.locationDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.locationDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.locationDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.locationDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.locationDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.locationDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.locationDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.locationDropDown.FillDropDown = true;
-            this.locationDropDown.FillIndicator = false;
-            this.locationDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.locationDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.locationDropDown.ForeColor = System.Drawing.Color.Black;
-            this.locationDropDown.FormattingEnabled = true;
-            this.locationDropDown.Icon = null;
-            this.locationDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.locationDropDown.IndicatorColor = System.Drawing.Color.Gray;
-            this.locationDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.locationDropDown.ItemBackColor = System.Drawing.Color.White;
-            this.locationDropDown.ItemBorderColor = System.Drawing.Color.White;
-            this.locationDropDown.ItemForeColor = System.Drawing.Color.Black;
-            this.locationDropDown.ItemHeight = 26;
-            this.locationDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.locationDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.locationDropDown.ItemTopMargin = 3;
-            this.locationDropDown.Location = new System.Drawing.Point(7, 361);
-            this.locationDropDown.Name = "locationDropDown";
-            this.locationDropDown.Size = new System.Drawing.Size(147, 32);
-            this.locationDropDown.TabIndex = 1;
-            this.locationDropDown.Text = null;
-            this.locationDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.locationDropDown.TextLeftMargin = 5;
-            // 
             // typeFlowLayoutPanel
             // 
             this.typeFlowLayoutPanel.Location = new System.Drawing.Point(7, 122);
@@ -304,7 +246,7 @@ namespace PhBuy
             this.startFilterButton.IdleIconLeftImage = null;
             this.startFilterButton.IdleIconRightImage = null;
             this.startFilterButton.IndicateFocus = false;
-            this.startFilterButton.Location = new System.Drawing.Point(7, 433);
+            this.startFilterButton.Location = new System.Drawing.Point(7, 341);
             this.startFilterButton.Name = "startFilterButton";
             this.startFilterButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.startFilterButton.OnDisabledState.BorderRadius = 1;
@@ -373,9 +315,7 @@ namespace PhBuy
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.locationDropDown);
             this.Controls.Add(this.sortDropDown);
             this.Controls.Add(this.typeDropDown);
             this.Controls.Add(this.sellerFlowLayoutPanel);
@@ -396,11 +336,9 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuDropdown sortDropDown;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton startFilterButton;
         private System.Windows.Forms.FlowLayoutPanel typeFlowLayoutPanel;
-        private Bunifu.UI.WinForms.BunifuDropdown locationDropDown;
     }
 }

@@ -31,8 +31,8 @@ namespace PhBuy
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellerShop));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties61 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties62 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties63 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,6 +45,7 @@ namespace PhBuy
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -58,8 +59,6 @@ namespace PhBuy
             this.descLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.favoritesLabel = new System.Windows.Forms.Label();
             this.ratingLabel = new System.Windows.Forms.Label();
             this.productCountLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -116,6 +115,7 @@ namespace PhBuy
             this.sellerShopLabel = new System.Windows.Forms.Label();
             this.profileNameLabel = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.chatNowButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.allSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.homeSeparator = new Bunifu.UI.WinForms.BunifuSeparator();
             this.all = new System.Windows.Forms.Label();
@@ -128,7 +128,6 @@ namespace PhBuy
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellerBackground)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -299,8 +298,6 @@ namespace PhBuy
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.favoritesLabel);
             this.panel6.Controls.Add(this.ratingLabel);
             this.panel6.Controls.Add(this.productCountLabel);
             this.panel6.Controls.Add(this.pictureBox2);
@@ -310,31 +307,6 @@ namespace PhBuy
             this.panel6.Size = new System.Drawing.Size(796, 100);
             this.panel6.TabIndex = 8;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::PhBuy.Properties.Resources.heart_filled;
-            this.pictureBox3.Location = new System.Drawing.Point(545, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
-            // favoritesLabel
-            // 
-            this.favoritesLabel.AutoSize = true;
-            this.favoritesLabel.BackColor = System.Drawing.Color.Transparent;
-            this.favoritesLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.favoritesLabel.Font = new System.Drawing.Font("Mulish", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.favoritesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.favoritesLabel.Location = new System.Drawing.Point(590, 32);
-            this.favoritesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.favoritesLabel.Name = "favoritesLabel";
-            this.favoritesLabel.Size = new System.Drawing.Size(191, 37);
-            this.favoritesLabel.TabIndex = 38;
-            this.favoritesLabel.Text = "Favorites: 120";
-            this.favoritesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // ratingLabel
             // 
             this.ratingLabel.AutoSize = true;
@@ -342,7 +314,7 @@ namespace PhBuy
             this.ratingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingLabel.Font = new System.Drawing.Font("Mulish", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ratingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.ratingLabel.Location = new System.Drawing.Point(333, 32);
+            this.ratingLabel.Location = new System.Drawing.Point(495, 30);
             this.ratingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ratingLabel.Name = "ratingLabel";
             this.ratingLabel.Size = new System.Drawing.Size(128, 37);
@@ -357,7 +329,7 @@ namespace PhBuy
             this.productCountLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productCountLabel.Font = new System.Drawing.Font("Mulish", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.productCountLabel.Location = new System.Drawing.Point(60, 32);
+            this.productCountLabel.Location = new System.Drawing.Point(237, 30);
             this.productCountLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.productCountLabel.Name = "productCountLabel";
             this.productCountLabel.Size = new System.Drawing.Size(172, 37);
@@ -368,7 +340,7 @@ namespace PhBuy
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PhBuy.Properties.Resources.star_orange;
-            this.pictureBox2.Location = new System.Drawing.Point(288, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(432, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -378,7 +350,7 @@ namespace PhBuy
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PhBuy.Properties.Resources.shop_orange;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(174, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1150,11 +1122,11 @@ namespace PhBuy
             this.searchButton.ColorContrastOnClick = 45;
             this.searchButton.ColorContrastOnHover = 45;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges11.BottomLeft = true;
-            borderEdges11.BottomRight = true;
-            borderEdges11.TopLeft = true;
-            borderEdges11.TopRight = true;
-            this.searchButton.CustomizableEdges = borderEdges11;
+            borderEdges16.BottomLeft = true;
+            borderEdges16.BottomRight = true;
+            borderEdges16.TopLeft = true;
+            borderEdges16.TopRight = true;
+            this.searchButton.CustomizableEdges = borderEdges16;
             this.searchButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.searchButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.searchButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1240,11 +1212,11 @@ namespace PhBuy
             this.startFilterButton.ColorContrastOnClick = 45;
             this.startFilterButton.ColorContrastOnHover = 45;
             this.startFilterButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges12.BottomLeft = true;
-            borderEdges12.BottomRight = true;
-            borderEdges12.TopLeft = true;
-            borderEdges12.TopRight = true;
-            this.startFilterButton.CustomizableEdges = borderEdges12;
+            borderEdges17.BottomLeft = true;
+            borderEdges17.BottomRight = true;
+            borderEdges17.TopLeft = true;
+            borderEdges17.TopRight = true;
+            this.startFilterButton.CustomizableEdges = borderEdges17;
             this.startFilterButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.startFilterButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.startFilterButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1612,6 +1584,7 @@ namespace PhBuy
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(58)))), ((int)(((byte)(38)))));
+            this.panel.Controls.Add(this.chatNowButton);
             this.panel.Controls.Add(this.allSeparator);
             this.panel.Controls.Add(this.homeSeparator);
             this.panel.Controls.Add(this.all);
@@ -1620,6 +1593,96 @@ namespace PhBuy
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(906, 48);
             this.panel.TabIndex = 6;
+            // 
+            // chatNowButton
+            // 
+            this.chatNowButton.AllowAnimations = true;
+            this.chatNowButton.AllowMouseEffects = true;
+            this.chatNowButton.AllowToggling = false;
+            this.chatNowButton.AnimationSpeed = 200;
+            this.chatNowButton.AutoGenerateColors = false;
+            this.chatNowButton.AutoRoundBorders = false;
+            this.chatNowButton.AutoSizeLeftIcon = true;
+            this.chatNowButton.AutoSizeRightIcon = true;
+            this.chatNowButton.BackColor = System.Drawing.Color.Transparent;
+            this.chatNowButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.chatNowButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chatNowButton.BackgroundImage")));
+            this.chatNowButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.chatNowButton.ButtonText = "Chat Now";
+            this.chatNowButton.ButtonTextMarginLeft = 0;
+            this.chatNowButton.ColorContrastOnClick = 45;
+            this.chatNowButton.ColorContrastOnHover = 45;
+            this.chatNowButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges18.BottomLeft = true;
+            borderEdges18.BottomRight = true;
+            borderEdges18.TopLeft = true;
+            borderEdges18.TopRight = true;
+            this.chatNowButton.CustomizableEdges = borderEdges18;
+            this.chatNowButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.chatNowButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.chatNowButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.chatNowButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.chatNowButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.chatNowButton.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold);
+            this.chatNowButton.ForeColor = System.Drawing.Color.White;
+            this.chatNowButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chatNowButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.chatNowButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.chatNowButton.IconMarginLeft = 11;
+            this.chatNowButton.IconPadding = 10;
+            this.chatNowButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chatNowButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.chatNowButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.chatNowButton.IconSize = 25;
+            this.chatNowButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.chatNowButton.IdleBorderRadius = 1;
+            this.chatNowButton.IdleBorderThickness = 1;
+            this.chatNowButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.chatNowButton.IdleIconLeftImage = global::PhBuy.Properties.Resources.chat_bubble_512px;
+            this.chatNowButton.IdleIconRightImage = null;
+            this.chatNowButton.IndicateFocus = false;
+            this.chatNowButton.Location = new System.Drawing.Point(706, -1);
+            this.chatNowButton.Name = "chatNowButton";
+            this.chatNowButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.chatNowButton.OnDisabledState.BorderRadius = 1;
+            this.chatNowButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.chatNowButton.OnDisabledState.BorderThickness = 1;
+            this.chatNowButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.chatNowButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.chatNowButton.OnDisabledState.IconLeftImage = null;
+            this.chatNowButton.OnDisabledState.IconRightImage = null;
+            this.chatNowButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.chatNowButton.onHoverState.BorderRadius = 1;
+            this.chatNowButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.chatNowButton.onHoverState.BorderThickness = 1;
+            this.chatNowButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.chatNowButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.chatNowButton.onHoverState.IconLeftImage = null;
+            this.chatNowButton.onHoverState.IconRightImage = null;
+            this.chatNowButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.chatNowButton.OnIdleState.BorderRadius = 1;
+            this.chatNowButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.chatNowButton.OnIdleState.BorderThickness = 1;
+            this.chatNowButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(150)))), ((int)(((byte)(94)))));
+            this.chatNowButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.chatNowButton.OnIdleState.IconLeftImage = global::PhBuy.Properties.Resources.chat_bubble_512px;
+            this.chatNowButton.OnIdleState.IconRightImage = null;
+            this.chatNowButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.chatNowButton.OnPressedState.BorderRadius = 1;
+            this.chatNowButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.chatNowButton.OnPressedState.BorderThickness = 1;
+            this.chatNowButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(92)))), ((int)(((byte)(55)))));
+            this.chatNowButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.chatNowButton.OnPressedState.IconLeftImage = null;
+            this.chatNowButton.OnPressedState.IconRightImage = null;
+            this.chatNowButton.Size = new System.Drawing.Size(171, 49);
+            this.chatNowButton.TabIndex = 67;
+            this.chatNowButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chatNowButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chatNowButton.TextMarginLeft = 0;
+            this.chatNowButton.TextPadding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.chatNowButton.UseDefaultRadiusAndThickness = true;
+            this.chatNowButton.Click += new System.EventHandler(this.chatNowButton_Click);
             // 
             // allSeparator
             // 
@@ -1726,7 +1789,6 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.sellerBackground)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -1838,8 +1900,6 @@ namespace PhBuy
         private System.Windows.Forms.Label descLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label favoritesLabel;
         private System.Windows.Forms.Label ratingLabel;
         private System.Windows.Forms.Label productCountLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1847,5 +1907,6 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuPictureBox sellerProfilePicture;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton chatNowButton;
     }
 }

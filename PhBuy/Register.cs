@@ -9,7 +9,7 @@ namespace PhBuy
 	public partial class Register : Form
 	{
 		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+"REDACTED";
 
 		private LandingForm _lf = null;
 		public Register(LandingForm lf)

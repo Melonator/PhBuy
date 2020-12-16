@@ -55,10 +55,6 @@ namespace PhBuy
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ratingLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.favoritesLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,8 +71,6 @@ namespace PhBuy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.bunifuPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -212,55 +206,6 @@ namespace PhBuy
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Shop Rating";
-            // 
-            // bunifuPanel3
-            // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.DarkGray;
-            this.bunifuPanel3.BorderRadius = 3;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.pictureBox4);
-            this.bunifuPanel3.Controls.Add(this.favoritesLabel);
-            this.bunifuPanel3.Controls.Add(this.label5);
-            this.bunifuPanel3.Location = new System.Drawing.Point(23, 396);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(384, 43);
-            this.bunifuPanel3.TabIndex = 2;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::PhBuy.Properties.Resources.heart_208px;
-            this.pictureBox4.Location = new System.Drawing.Point(11, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // favoritesLabel
-            // 
-            this.favoritesLabel.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.favoritesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            this.favoritesLabel.Location = new System.Drawing.Point(286, 13);
-            this.favoritesLabel.Name = "favoritesLabel";
-            this.favoritesLabel.Size = new System.Drawing.Size(95, 20);
-            this.favoritesLabel.TabIndex = 3;
-            this.favoritesLabel.Text = "0";
-            this.favoritesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(43, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Favorites";
             // 
             // label2
             // 
@@ -657,7 +602,6 @@ namespace PhBuy
             this.Controls.Add(this.contactTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.label2);
@@ -676,9 +620,6 @@ namespace PhBuy
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.bunifuPanel3.ResumeLayout(false);
-            this.bunifuPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -694,16 +635,12 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPictureBox sellerPictureBox;
         private System.Windows.Forms.PictureBox sellerBackgroundPictureBox;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label ratingLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label productsLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label favoritesLabel;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuTextBox contactTextBox;
         private Bunifu.UI.WinForms.BunifuTextBox nameTextBox;

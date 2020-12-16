@@ -42,6 +42,7 @@ namespace PhBuy
         private void MyOrders_Load(object sender, EventArgs e)
         {
             DisplayOrders();
+            ordersFlowLayoutPanel.AutoScroll = true;
         }
 
         private void DisplayOrders(string status = "All", bool useDate = false, string sort = "Date: New to Old")
