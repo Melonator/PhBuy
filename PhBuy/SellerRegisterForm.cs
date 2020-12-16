@@ -1,8 +1,12 @@
-﻿using System;
+﻿using PhBuyModels;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Cryptography;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -11,9 +15,11 @@ namespace PhBuy
 		private const string ConnectionString =
 			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
 
+		private PhBuyContext _data = new PhBuyContext();
+		private List<string> _selectedTypes = new List<string>();
 		private readonly int _id;
 		private readonly string _userName;
-		private int _contact;
+		private string _contact;
 		private string _description;
 		private string _link;
 		private string _location;
@@ -22,11 +28,12 @@ namespace PhBuy
 		private byte[] _sellerImage;
 		private string _sellerImageLocation;
 		private string _type;
-
-		public SellerRegisterForm(string name, int id)
+		private CustomerSellerForm _cs = null;
+		public SellerRegisterForm(string name, int id, CustomerSellerForm cs)
 		{
 			_id = id;
 			_userName = name;
+			_cs = cs;
 			InitializeComponent();
 		}
 
@@ -42,6 +49,27 @@ namespace PhBuy
 			_sellerImage = stream.ToArray();
 		}
 
+		private bool IsComplete(int page)
+        {
+			switch (page)
+            {
+				case 1:
+                    {
+						if (nameTextBox.Text != string.Empty && locationTextBox.Text != string.Empty &&
+							descriptionTextBox.Text != string.Empty) return true;
+					}
+					break;
+				case 2:
+                    {
+						if (contactTextBox.Text != string.Empty && linkTextBox.Text != string.Empty &&
+							typeDropDown.Text != string.Empty && _selectedTypes.Count > 0) return true;
+					}
+					break;
+            }
+			bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
+			return false;
+        }
+
 		#endregion
 
 		private void backButton_Click(object sender, EventArgs e)
@@ -54,26 +82,28 @@ namespace PhBuy
 
 		private void nextButton1_Click(object sender, EventArgs e)
 		{
-			if (nameTextBox.Text == string.Empty || locationTextBox.Text == string.Empty ||
-			    descriptionTextBox.Text == string.Empty) return;
-			//Set Values
-			_shopName = nameTextBox.Text;
-			_location = locationTextBox.Text;
-			_description = descriptionTextBox.Text;
-			//Switch Page
-			registerPages.PageIndex++;
+			if (IsComplete(1))
+            {
+				//Set Values
+				_shopName = nameTextBox.Text;
+				_location = locationTextBox.Text;
+				_description = descriptionTextBox.Text;
+				//Switch Page
+				registerPages.PageIndex++;
+			}
 		}
 
 		private void nextButton2_Click(object sender, EventArgs e)
 		{
-			if (contactTextBox.Text == string.Empty || linkTextBox.Text == string.Empty ||
-			    typeDropDown.Text == string.Empty) return;
-			//Set Values
-			_contact = int.Parse(contactTextBox.Text);
-			_link = linkTextBox.Text;
-			_type = typeDropDown.Text;
-			//Switch Page
-			registerPages.PageIndex++;
+			if (IsComplete(2))
+            {
+				//Set Values
+				_contact = contactTextBox.Text;
+				_link = linkTextBox.Text;
+				_type = typeDropDown.Text;
+				//Switch Page
+				registerPages.PageIndex++;
+			}
 		}
 
 		private void uploadPhotoButton_Click(object sender, EventArgs e)
@@ -87,46 +117,115 @@ namespace PhBuy
 		private void uploadBackgroundButton_Click(object sender, EventArgs e)
 		{
 			var form = new CoverForm(this);
-			form.Show();
+			form.ShowDialog();
 		}
 
 		private void confirmButton_Click(object sender, EventArgs e)
 		{
 			SetImage();
-			var queryString =
-				"INSERT INTO Seller VALUES(@ID, @Name, @Contact, @Pic, @Background, @Link, @Description, @Location);" +
-				"INSERT INTO SellerTypes VALUES (@SellerID, @Type)";
-			var myConnection = new SqlConnection(ConnectionString);
-			myConnection.Open();
-			var param1 = new SqlParameter {ParameterName = "@ID", Value = _id};
-			var param2 = new SqlParameter {ParameterName = "@Name", Value = _shopName };
-			var param3 = new SqlParameter {ParameterName = "@Contact", Value = _contact};
-			var param4 = new SqlParameter {ParameterName = "@Link", Value = _link};
-			var param5 = new SqlParameter {ParameterName = "@Pic", Value = _sellerImage};
-			var param6 = new SqlParameter {ParameterName = "@Background", Value = _sellerCover};
-			var param7 = new SqlParameter {ParameterName = "@Description", Value = _description};
-			var param8 = new SqlParameter {ParameterName = "@Type", Value = _type};
-			var param9 = new SqlParameter {ParameterName = "@SellerID", Value = _id};
-			var param10 = new SqlParameter {ParameterName = "@Location", Value = _location};
-			var cmd = new SqlCommand(queryString, myConnection);
 
-			cmd.Parameters.Add(param1);
-			cmd.Parameters.Add(param2);
-			cmd.Parameters.Add(param3);
-			cmd.Parameters.Add(param4);
-			cmd.Parameters.Add(param5);
-			cmd.Parameters.Add(param6);
-			cmd.Parameters.Add(param7);
-			cmd.Parameters.Add(param8);
-			cmd.Parameters.Add(param9);
-			cmd.Parameters.Add(param10);
-			cmd.ExecuteNonQuery();
-			myConnection.Close();
+			var s = new Seller();
 
-			var main = new MainForm(_userName, _id);
+			s.Id = _id;
+			s.Name = _shopName;
+			s.Contact = _contact;
+			s.Fblink = _link;
+			s.Picture = _sellerImage;
+			s.Background = _sellerCover;
+			s.Descrption = _description;
+			s.Location = _location;
+			s.Rating = 0;
+
+			foreach(var a in _selectedTypes)
+            {
+				var t = new SellerTypes();
+				t.SellerId = _id;
+				t.TypeId = (int)GenerateId();
+				t.Type = a;
+				_data.SellerTypes.Add(t);
+			}
+
+			_data.Seller.Add(s);
+			_data.SaveChanges();
+
+			var main = new MainForm(s, _cs);
+			Hide();
 			main.Show();
+			bunifuSnackbar1.Show(main, "Account successfully created!", BunifuSnackbar.MessageTypes.Success);
 		}
 
-		#endregion
+        #endregion
+
+        private void typeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			SellerTypeControl type = new SellerTypeControl();
+			type.Name = typeDropDown.Text;
+			type.typeLabel.Text = typeDropDown.Text;
+			type.Width = type.typeLabel.Width + 25;
+			type.Click += sellerTypeControl_Click;
+			type.label1.Click += sellerTypeControl_Click2;
+			type.typeLabel.Click += sellerTypeControl_Click2;
+			_selectedTypes.Add(type.Name);
+			typeFlowLayoutPanel.Controls.Add(type);
+		}
+
+		private void sellerTypeControl_Click(object sender, EventArgs e)
+		{
+			SellerTypeControl t = (SellerTypeControl)sender;
+			typeFlowLayoutPanel.Controls.Remove(t);
+			_selectedTypes.Remove(t.Name);
+		}
+
+		private void sellerTypeControl_Click2(object sender, EventArgs e)
+		{
+			Label l = (Label)sender;
+			SellerTypeControl t = (SellerTypeControl)l.Parent;
+			typeFlowLayoutPanel.Controls.Remove(t);
+			_selectedTypes.Remove(t.Name);
+		}
+
+		private uint GenerateId()
+		{
+			uint id;
+			// Keep on generating the ID until it is a new one
+			do
+			{
+				id = Get5Digits();
+			} while (!IsIdValid(id));
+
+			return id;
+		}
+
+		private uint Get5Digits()
+		{
+			var bytes = new byte[4];
+			var rng = RandomNumberGenerator.Create();
+			rng.GetBytes(bytes);
+			return 10000 + BitConverter.ToUInt32(bytes, 0) % 90000;
+		}
+
+		private bool IsIdValid(uint id)
+		{
+			var myConnection = new SqlConnection(ConnectionString);
+			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
+
+			myConnection.Open();
+			var param = new SqlParameter { ParameterName = "@ID", Value = (int)id };
+			var cmd = new SqlCommand(queryString, myConnection);
+			cmd.Parameters.Add(param);
+
+			var oReader = cmd.ExecuteReader();
+
+			while (oReader.Read())
+			{
+				if (oReader["ID"].ToString() != id.ToString()) continue;
+
+				myConnection.Close();
+				return false;
+			}
+
+			myConnection.Close();
+			return true;
+		}
 	}
 }

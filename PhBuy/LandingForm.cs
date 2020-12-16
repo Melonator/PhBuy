@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
@@ -8,6 +9,7 @@ namespace PhBuy
 	{
 		private const string ConnectionString =
 			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+
 
 		public LandingForm()
 		{
@@ -18,29 +20,23 @@ namespace PhBuy
 
 		private void registerButton_Click(object sender, EventArgs e)
 		{
-			var register = new Register();
+			var register = new Register(this);
 			register.Show();
 		}
 
 		private void loginButton_Click(object sender, EventArgs e)
 		{
-			if (!AreEntriesValid())
-			{
-				MessageBox.Show("Please Register", "Non Existent User", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-
-			else
-			{
-				MessageBox.Show("You may now rest", "User Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
-				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
-				form.Show();
-				Hide();
-			}
+			Login();
 		}
 
 		private void exitButton_Click(object sender, EventArgs e)
 		{
-			Close();
+			Application.Exit();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Login();
 		}
 
 		#endregion
@@ -64,13 +60,21 @@ namespace PhBuy
 				var oReader = oCmd.ExecuteReader();
 				//Return true if the entries are valid else false
 				while (oReader.Read())
-					if (oReader["Name"].ToString() == username && oReader["Password"].ToString() == password)
+                {
+					if (oReader["Name"].ToString() == username)
 					{
-						myConnection.Close();
-						return true;
+						if (oReader["Password"].ToString() == password)
+						{
+							myConnection.Close();
+							return true;
+						}
+						bunifuSnackbar1.Show(this, "Incorrect Username/Password!", BunifuSnackbar.MessageTypes.Error);
+						return false;
 					}
+				}
+				bunifuSnackbar1.Show(this, "Account does not exist!", BunifuSnackbar.MessageTypes.Error);
 			}
-
+			else bunifuSnackbar1.Show(this, "Please enter a Username and Password!", BunifuSnackbar.MessageTypes.Error);
 			myConnection.Close();
 			return false;
 		}
@@ -91,6 +95,23 @@ namespace PhBuy
 			return id;
 		}
 
-		#endregion
-	}
+		private void Login()
+        {
+			if (AreEntriesValid())
+			{
+				var form = new CustomerSellerForm(nameTextBox.Text, GetUserId());
+				form.Show();
+				bunifuSnackbar1.Show(form, "Successfully Logged In!", BunifuSnackbar.MessageTypes.Success);
+				Hide();
+			}
+		}
+
+        #endregion
+
+        private void passTextBox_TextChange(object sender, EventArgs e)
+        {
+			if (passTextBox.Text == "") passTextBox.UseSystemPasswordChar = false;
+			else passTextBox.UseSystemPasswordChar = true;
+		}
+    }
 }

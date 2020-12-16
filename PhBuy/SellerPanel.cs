@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
+using PhBuyModels;
 
 namespace PhBuy
 {
@@ -8,14 +11,17 @@ namespace PhBuy
 	{
 		private readonly MainForm _form;
 		private readonly int _id;
-		private bool isPanelOpen1 = true;
-		private bool isPanelOpen2 = true;
-		private bool isPanelOpen3 = true;
-		private bool isPanelOpen4 = true;
 		public SellerDashBoard sellerDashBoard;
-		private MyProducts myProducts;
+		public MyProducts MyProducts;
+		private MyOrders _myOrders;
+		private PhBuyContext _data = new PhBuyContext();
+		private List<Orders> _orders;
+		private List<Products> _products;
+		private List<Customer> _customers;
+		private DataAnalytics _dataAnalytics;
 
 		public AddProduct addProduct;
+		public Browser Chat;
 		public SellerPanel(MainForm form, int id)
 		{
 			_form = form;
@@ -24,23 +30,66 @@ namespace PhBuy
 		}
 		private void SellerPanel_Load(object sender, EventArgs e)
 		{
+			LoadData();
 			sellerDashBoard =(SellerDashBoard) _form.mainPanel.Controls[0];
 
-			myProducts = new MyProducts(_id, this)
+			SellerProfile profile = new SellerProfile(_form, _form.CurrentSeller)
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[0]
+			};
+			profile.Show();
+
+			MyProducts = new MyProducts(_id, this)
 			{
 				MdiParent = _form,
 				Parent = sellerDashBoard.sellerTabControl.TabPages[3]
 			};
-			myProducts.Show();
-			myProducts.LoadProducts();
+			MyProducts.Show();
+			MyProducts.LoadProducts();
 
-			addProduct = new AddProduct(_id, myProducts, this)
+			addProduct = new AddProduct(_id, MyProducts, this)
 			{
 				MdiParent = _form,
 				Parent = sellerDashBoard.sellerTabControl.TabPages[4]
 			};
 			addProduct.Show();
+			_myOrders = new MyOrders()
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[5]
+			};
+			_myOrders.LoadData(_orders, _customers, _products);
+			_myOrders.Show();
+			_dataAnalytics = new DataAnalytics()
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[7]
+			};
+			_dataAnalytics.Show();
+			Chat = new Browser
+			{
+				MdiParent = _form,
+				Parent = sellerDashBoard.sellerTabControl.TabPages[8]
+            };
+            Chat.Show();
 		}
+
+		private void LoadData()
+        {
+			_orders = _data.Orders.Where(i => i.SellerId == _id).ToList();
+			_products = _data.Products.Where(i => i.SellerId == _id).ToList();
+			_customers = _data.Customer.ToList();
+        }
+
+		private void PanelVisibility(Panel p)
+        {
+			if (p.Visible == true) p.Hide();
+			else
+			{
+				p.Show();
+			}
+        }
 
 		private void dropDown_Click(object sender, EventArgs e)
 		{
@@ -48,60 +97,9 @@ namespace PhBuy
 
 			switch (btn.Name)
 			{
-				case "storeDropDown":
-				{
-					if (isPanelOpen1)
-					{
-						isPanelOpen1 = false;
-						panel1.Hide();
-					}
-					else
-					{
-						isPanelOpen1 = true;
-						panel1.Show();
-					}
-				}
-					break;
 				case "productDropDown":
 				{
-					if (isPanelOpen2)
-					{
-						isPanelOpen2 = false;
-						panel2.Hide();
-					}
-					else
-					{
-						isPanelOpen2 = true;
-						panel2.Show();
-					}
-				}
-					break;
-				case "orderDropDown":
-				{
-					if (isPanelOpen3)
-					{
-						isPanelOpen3 = false;
-						panel3.Hide();
-					}
-					else
-					{
-						isPanelOpen3 = true;
-						panel3.Show();
-					}
-				}
-					break;
-				case "analyticDropDown":
-				{
-					if (isPanelOpen4)
-					{
-						isPanelOpen4 = false;
-						panel4.Hide();
-					}
-					else
-					{
-						isPanelOpen4 = true;
-						panel4.Show();
-					}
+						PanelVisibility(panel2);
 				}
 					break;
 			}
@@ -109,7 +107,7 @@ namespace PhBuy
 
 		private void profileButton_Click(object sender, EventArgs e)
 		{
-			//TODO: show seller profile
+			sellerDashBoard.sellerTabControl.SelectedIndex = 0;
 		}
 
 		private void ratingButton_Click(object sender, EventArgs e)
@@ -137,6 +135,7 @@ namespace PhBuy
 		private void ordersButton_Click(object sender, EventArgs e)
 		{
 			//TODO: show orders
+			sellerDashBoard.sellerTabControl.SelectedIndex = 5;
 		}
 
 		private void incomeButton_Click(object sender, EventArgs e)
@@ -146,7 +145,7 @@ namespace PhBuy
 
 		private void insightButton_Click(object sender, EventArgs e)
 		{
-			//TODO: show insights
+			sellerDashBoard.sellerTabControl.SelectedIndex = 7;
 		}
 
 		private void inventoryButton_Click(object sender, EventArgs e)
@@ -158,6 +157,11 @@ namespace PhBuy
 		{
 			var form = new DatabaseForm();
 			form.Show();
+		}
+
+        private void chatButton_Click(object sender, EventArgs e)
+        {
+			sellerDashBoard.sellerTabControl.SelectedIndex = 8;
 		}
     }
 }

@@ -9,6 +9,7 @@ namespace PhBuyModels
         {
             Orders = new HashSet<Orders>();
             ProductImages = new HashSet<ProductImages>();
+            ProductRatings = new HashSet<ProductRatings>();
         }
 
         public decimal ProductId { get; set; }
@@ -16,7 +17,7 @@ namespace PhBuyModels
         public string Name { get; set; }
         public double? Price { get; set; }
         public byte[] Picture { get; set; }
-        public decimal? Stock { get; set; }
+        public int? Stock { get; set; }
         public decimal? Weight { get; set; }
         public decimal? Length { get; set; }
         public decimal? Width { get; set; }
@@ -25,9 +26,13 @@ namespace PhBuyModels
         public string Description { get; set; }
         public string FdaNumber { get; set; }
         public string Type { get; set; }
+        public double? Rating { get; set; }
+        public int? Sales { get; set; }
+        public string Status { get; set; }
 
         public virtual Seller Seller { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
         public virtual ICollection<ProductImages> ProductImages { get; set; }
+        public virtual ICollection<ProductRatings> ProductRatings { get; set; }
     }
 }

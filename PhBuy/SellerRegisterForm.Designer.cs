@@ -63,6 +63,7 @@ namespace PhBuy
             this.locationTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.page2 = new System.Windows.Forms.TabPage();
+            this.typeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.backButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.nextButton2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.typeDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -78,6 +79,7 @@ namespace PhBuy
             this.uploadPhotoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.sellerPicture = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.sellerBackground = new System.Windows.Forms.PictureBox();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.registerPages.SuspendLayout();
             this.page1.SuspendLayout();
             this.page2.SuspendLayout();
@@ -99,7 +101,7 @@ namespace PhBuy
             this.registerPages.Controls.Add(this.page2);
             this.registerPages.Controls.Add(this.page3);
             this.registerPages.Location = new System.Drawing.Point(0, 0);
-            this.registerPages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.registerPages.Margin = new System.Windows.Forms.Padding(2);
             this.registerPages.Multiline = true;
             this.registerPages.Name = "registerPages";
             this.registerPages.Page = this.page3;
@@ -109,6 +111,7 @@ namespace PhBuy
             this.registerPages.SelectedIndex = 0;
             this.registerPages.Size = new System.Drawing.Size(754, 500);
             this.registerPages.TabIndex = 3;
+            this.registerPages.TabStop = false;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -158,7 +161,7 @@ namespace PhBuy
             this.nextButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton1.BackgroundImage")));
             this.nextButton1.ButtonText = "Next";
             this.nextButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextButton1.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton1.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.nextButton1.IdleBorderThickness = 1;
             this.nextButton1.IdleCornerRadius = 20;
@@ -170,18 +173,19 @@ namespace PhBuy
             this.nextButton1.Name = "nextButton1";
             this.nextButton1.Size = new System.Drawing.Size(80, 38);
             this.nextButton1.TabIndex = 50;
+            this.nextButton1.TabStop = false;
             this.nextButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton1.Click += new System.EventHandler(this.nextButton1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label3.Location = new System.Drawing.Point(383, 162);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.Size = new System.Drawing.Size(165, 26);
             this.label3.TabIndex = 30;
             this.label3.Text = "Shop Description";
             // 
@@ -202,7 +206,7 @@ namespace PhBuy
             this.descriptionTextBox.BorderThickness = 2;
             this.descriptionTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.descriptionTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionTextBox.DefaultFont = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionTextBox.DefaultText = "";
             this.descriptionTextBox.FillColor = System.Drawing.Color.White;
             this.descriptionTextBox.HideSelection = true;
@@ -263,24 +267,24 @@ namespace PhBuy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(53, 269);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 24);
+            this.label2.Size = new System.Drawing.Size(141, 26);
             this.label2.TabIndex = 28;
             this.label2.Text = "Shop Location";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label1.Location = new System.Drawing.Point(53, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(116, 26);
             this.label1.TabIndex = 28;
             this.label1.Text = "Shop Name";
             // 
@@ -301,7 +305,7 @@ namespace PhBuy
             this.locationTextBox.BorderThickness = 2;
             this.locationTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.locationTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.locationTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationTextBox.DefaultFont = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationTextBox.DefaultText = "";
             this.locationTextBox.FillColor = System.Drawing.Color.White;
             this.locationTextBox.HideSelection = true;
@@ -348,7 +352,7 @@ namespace PhBuy
             this.locationTextBox.SelectionLength = 0;
             this.locationTextBox.SelectionStart = 0;
             this.locationTextBox.ShortcutsEnabled = true;
-            this.locationTextBox.Size = new System.Drawing.Size(261, 38);
+            this.locationTextBox.Size = new System.Drawing.Size(261, 41);
             this.locationTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.locationTextBox.TabIndex = 2;
             this.locationTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -376,7 +380,7 @@ namespace PhBuy
             this.nameTextBox.BorderThickness = 2;
             this.nameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.nameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.DefaultFont = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameTextBox.DefaultText = "";
             this.nameTextBox.FillColor = System.Drawing.Color.White;
             this.nameTextBox.HideSelection = true;
@@ -423,7 +427,7 @@ namespace PhBuy
             this.nameTextBox.SelectionLength = 0;
             this.nameTextBox.SelectionStart = 0;
             this.nameTextBox.ShortcutsEnabled = true;
-            this.nameTextBox.Size = new System.Drawing.Size(261, 38);
+            this.nameTextBox.Size = new System.Drawing.Size(261, 41);
             this.nameTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.nameTextBox.TabIndex = 1;
             this.nameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -439,6 +443,7 @@ namespace PhBuy
             this.page2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.page2.BackgroundImage = global::PhBuy.Properties.Resources.RegistrationP2_2_;
             this.page2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.page2.Controls.Add(this.typeFlowLayoutPanel);
             this.page2.Controls.Add(this.backButton2);
             this.page2.Controls.Add(this.nextButton2);
             this.page2.Controls.Add(this.typeDropDown);
@@ -455,6 +460,13 @@ namespace PhBuy
             this.page2.TabIndex = 1;
             this.page2.Text = "page2";
             // 
+            // typeFlowLayoutPanel
+            // 
+            this.typeFlowLayoutPanel.Location = new System.Drawing.Point(388, 228);
+            this.typeFlowLayoutPanel.Name = "typeFlowLayoutPanel";
+            this.typeFlowLayoutPanel.Size = new System.Drawing.Size(208, 108);
+            this.typeFlowLayoutPanel.TabIndex = 72;
+            // 
             // backButton2
             // 
             this.backButton2.ActiveBorderThickness = 1;
@@ -467,7 +479,7 @@ namespace PhBuy
             this.backButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backButton2.ButtonText = "Back";
             this.backButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton2.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton2.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.backButton2.IdleBorderThickness = 1;
             this.backButton2.IdleCornerRadius = 20;
@@ -493,7 +505,7 @@ namespace PhBuy
             this.nextButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextButton2.BackgroundImage")));
             this.nextButton2.ButtonText = "Next";
             this.nextButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextButton2.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton2.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.nextButton2.IdleBorderThickness = 1;
             this.nextButton2.IdleCornerRadius = 20;
@@ -505,6 +517,7 @@ namespace PhBuy
             this.nextButton2.Name = "nextButton2";
             this.nextButton2.Size = new System.Drawing.Size(80, 38);
             this.nextButton2.TabIndex = 51;
+            this.nextButton2.TabStop = false;
             this.nextButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nextButton2.Click += new System.EventHandler(this.nextButton2_Click);
             // 
@@ -528,7 +541,7 @@ namespace PhBuy
             this.typeDropDown.FillDropDown = true;
             this.typeDropDown.FillIndicator = false;
             this.typeDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.typeDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.typeDropDown.Font = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeDropDown.ForeColor = System.Drawing.Color.Black;
             this.typeDropDown.FormattingEnabled = true;
             this.typeDropDown.Icon = null;
@@ -542,50 +555,57 @@ namespace PhBuy
             this.typeDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.typeDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.typeDropDown.Items.AddRange(new object[] {
-            "Food"});
+            "Fashion",
+            "Food",
+            "Tech",
+            "Books",
+            "Health & Beauty",
+            "Others"});
             this.typeDropDown.ItemTopMargin = 3;
             this.typeDropDown.Location = new System.Drawing.Point(388, 191);
             this.typeDropDown.Margin = new System.Windows.Forms.Padding(2);
             this.typeDropDown.Name = "typeDropDown";
             this.typeDropDown.Size = new System.Drawing.Size(208, 32);
             this.typeDropDown.TabIndex = 6;
+            this.typeDropDown.TabStop = false;
             this.typeDropDown.Text = null;
             this.typeDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.typeDropDown.TextLeftMargin = 5;
+            this.typeDropDown.SelectedIndexChanged += new System.EventHandler(this.typeDropDown_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label5.Location = new System.Drawing.Point(383, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 24);
+            this.label5.Size = new System.Drawing.Size(164, 26);
             this.label5.TabIndex = 43;
-            this.label5.Text = "Type of Business";
+            this.label5.Text = "Business Type(s)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label6.Location = new System.Drawing.Point(53, 269);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 24);
+            this.label6.Size = new System.Drawing.Size(267, 26);
             this.label6.TabIndex = 39;
             this.label6.Text = "Facebook Link to Shop Page";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Muli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label7.Location = new System.Drawing.Point(53, 162);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 24);
+            this.label7.Size = new System.Drawing.Size(159, 26);
             this.label7.TabIndex = 40;
             this.label7.Text = "Contact Number";
             // 
@@ -606,7 +626,7 @@ namespace PhBuy
             this.linkTextBox.BorderThickness = 2;
             this.linkTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.linkTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.linkTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkTextBox.DefaultFont = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkTextBox.DefaultText = "";
             this.linkTextBox.FillColor = System.Drawing.Color.White;
             this.linkTextBox.HideSelection = true;
@@ -653,7 +673,7 @@ namespace PhBuy
             this.linkTextBox.SelectionLength = 0;
             this.linkTextBox.SelectionStart = 0;
             this.linkTextBox.ShortcutsEnabled = true;
-            this.linkTextBox.Size = new System.Drawing.Size(261, 38);
+            this.linkTextBox.Size = new System.Drawing.Size(261, 41);
             this.linkTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.linkTextBox.TabIndex = 5;
             this.linkTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -681,7 +701,7 @@ namespace PhBuy
             this.contactTextBox.BorderThickness = 2;
             this.contactTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.contactTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.contactTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactTextBox.DefaultFont = new System.Drawing.Font("Muli", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactTextBox.DefaultText = "";
             this.contactTextBox.FillColor = System.Drawing.Color.White;
             this.contactTextBox.HideSelection = true;
@@ -728,7 +748,7 @@ namespace PhBuy
             this.contactTextBox.SelectionLength = 0;
             this.contactTextBox.SelectionStart = 0;
             this.contactTextBox.ShortcutsEnabled = true;
-            this.contactTextBox.Size = new System.Drawing.Size(261, 38);
+            this.contactTextBox.Size = new System.Drawing.Size(261, 41);
             this.contactTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.contactTextBox.TabIndex = 4;
             this.contactTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -770,7 +790,7 @@ namespace PhBuy
             this.backButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backButton3.ButtonText = "Back";
             this.backButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton3.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton3.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.backButton3.IdleBorderThickness = 1;
             this.backButton3.IdleCornerRadius = 20;
@@ -782,6 +802,7 @@ namespace PhBuy
             this.backButton3.Name = "backButton3";
             this.backButton3.Size = new System.Drawing.Size(80, 38);
             this.backButton3.TabIndex = 53;
+            this.backButton3.TabStop = false;
             this.backButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.backButton3.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -797,7 +818,7 @@ namespace PhBuy
             this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.confirmButton.ButtonText = "Confirm";
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.confirmButton.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.confirmButton.IdleBorderThickness = 1;
             this.confirmButton.IdleCornerRadius = 20;
@@ -809,6 +830,7 @@ namespace PhBuy
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(80, 38);
             this.confirmButton.TabIndex = 52;
+            this.confirmButton.TabStop = false;
             this.confirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
@@ -823,7 +845,7 @@ namespace PhBuy
             this.uploadBackgroundButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadBackgroundButton.BackgroundImage")));
             this.uploadBackgroundButton.ButtonText = "Change Cover";
             this.uploadBackgroundButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadBackgroundButton.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadBackgroundButton.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadBackgroundButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.uploadBackgroundButton.IdleBorderThickness = 1;
             this.uploadBackgroundButton.IdleCornerRadius = 20;
@@ -835,6 +857,7 @@ namespace PhBuy
             this.uploadBackgroundButton.Name = "uploadBackgroundButton";
             this.uploadBackgroundButton.Size = new System.Drawing.Size(124, 38);
             this.uploadBackgroundButton.TabIndex = 49;
+            this.uploadBackgroundButton.TabStop = false;
             this.uploadBackgroundButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uploadBackgroundButton.Click += new System.EventHandler(this.uploadBackgroundButton_Click);
             // 
@@ -849,7 +872,7 @@ namespace PhBuy
             this.uploadPhotoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadPhotoButton.BackgroundImage")));
             this.uploadPhotoButton.ButtonText = "Upload";
             this.uploadPhotoButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadPhotoButton.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadPhotoButton.Font = new System.Drawing.Font("Muli", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadPhotoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.uploadPhotoButton.IdleBorderThickness = 1;
             this.uploadPhotoButton.IdleCornerRadius = 20;
@@ -861,6 +884,7 @@ namespace PhBuy
             this.uploadPhotoButton.Name = "uploadPhotoButton";
             this.uploadPhotoButton.Size = new System.Drawing.Size(87, 31);
             this.uploadPhotoButton.TabIndex = 49;
+            this.uploadPhotoButton.TabStop = false;
             this.uploadPhotoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.uploadPhotoButton.Click += new System.EventHandler(this.uploadPhotoButton_Click);
             // 
@@ -893,6 +917,75 @@ namespace PhBuy
             this.sellerBackground.TabIndex = 51;
             this.sellerBackground.TabStop = false;
             // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = true;
+            this.bunifuSnackbar1.ClickToClose = true;
+            this.bunifuSnackbar1.DoubleClickToClose = true;
+            this.bunifuSnackbar1.DurationAfterIdle = 100;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = false;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = false;
+            this.bunifuSnackbar1.ShowCloseIcon = false;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
             // SellerRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,7 +994,7 @@ namespace PhBuy
             this.ClientSize = new System.Drawing.Size(754, 500);
             this.Controls.Add(this.registerPages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SellerRegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seller_Register";
@@ -945,5 +1038,7 @@ namespace PhBuy
         public System.Windows.Forms.PictureBox sellerBackground;
         private Bunifu.Framework.UI.BunifuThinButton2 backButton2;
         private Bunifu.Framework.UI.BunifuThinButton2 backButton3;
+        private System.Windows.Forms.FlowLayoutPanel typeFlowLayoutPanel;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
     }
 }

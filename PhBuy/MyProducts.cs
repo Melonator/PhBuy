@@ -44,11 +44,24 @@ namespace PhBuy
         {
             data = new PhBuyContext();
             products = data.Products.Where(p => p.SellerId == _id).ToList();
+
+            if(_previousLabel != string.Empty)
+            {
+                var a = (BunifuSeparator)Controls.Find($"{_previousLabel}Separator", true).First();
+                a.LineThickness = 1;
+                a.LineColor = Color.FromArgb(45, 41, 66);         
+            }
+
+            var s = (BunifuSeparator)Controls.Find("allSeparator", true).First();
+            s.LineThickness = 2;
+            s.LineColor = Color.FromArgb(248, 58, 38);
+            _previousLabel = "all";
+
             ChangeCategory("all");
         }
 
         #region Helper Functions
-        private void ChangeCategory(string SelectedLabel, string productName = "", int stockMin = -1, int stockMax = -1, string type = null)
+        private void ChangeCategory(string SelectedLabel, string productName = "", int stockMin = -1, int stockMax = -1, string type = "All")
         {
             switch (SelectedLabel)
             {
@@ -64,18 +77,18 @@ namespace PhBuy
                     }
                 case "unlisted":
                     {
-                        DisplayProducts(productName, -1, -1, type, "Unlisted");
+                        DisplayProducts(productName, stockMin, stockMax, type, "Unlisted");
                         break;
                     }
                 case "listed":
                     {
-                        DisplayProducts(productName, -1,-1,type);
+                        DisplayProducts(productName, stockMin, stockMax, type, "Listed");
                         break;
                     }
             }
         }
        
-        private void DisplayProducts(string productName = "", int stockMin = -1, int stockMax = -1, string type = null, string status = "Listed")
+        private void DisplayProducts(string productName = "", int stockMin = -1, int stockMax = -1, string type = "All", string status = "")
         {
             //Reset the display
             productsFlowLayoutPanel.Controls.Clear();
@@ -83,15 +96,15 @@ namespace PhBuy
 
             //Code block for specific queries
             if (productName != "")
-                displayQuery = displayQuery.Where(p => p.Name == productName).ToList();
+                displayQuery = displayQuery.Where(p => p.Name.Contains(productName)).ToList();
             if (stockMin != -1)
                 displayQuery = displayQuery.Where(p => p.Stock >= stockMin).ToList();
             if (stockMax != -1)
                 displayQuery = displayQuery.Where(p => p.Stock <= stockMax).ToList();
-            if (type != null)
+            if (type != "All")
                 displayQuery = displayQuery.Where(p => p.Type == type).ToList();
-            //if (type != "Listed")
-                //TODO: Update the database to add status (god i hate this part)
+            if (status != "")
+                displayQuery = displayQuery.Where(p => p.Status == status).ToList();
             
 
             foreach(var p in displayQuery)
@@ -127,12 +140,16 @@ namespace PhBuy
         {
             if (stockMinTextBox.Text != string.Empty)
                 _sellerQuery.StockMin = int.Parse(stockMinTextBox.Text);
+            else
+                _sellerQuery.StockMin = -1;
+
             if (stockMaxTextBox.Text != string.Empty)
                 _sellerQuery.StockMax = int.Parse(stockMaxTextBox.Text);
-            if (nameTextBox.Text != string.Empty)
-                _sellerQuery.ProductName = nameTextBox.Text;
-            if (categoryDropDown.Text != string.Empty)
-                _sellerQuery.Type = categoryDropDown.Text;
+            else
+                _sellerQuery.StockMax = -1;
+
+            _sellerQuery.Type = categoryDropDown.Text;
+            _sellerQuery.ProductName = nameTextBox.Text;
 
             ChangeCategory(_previousLabel, _sellerQuery.ProductName, _sellerQuery.StockMin, _sellerQuery.StockMax, _sellerQuery.Type);
         }
@@ -248,5 +265,13 @@ namespace PhBuy
             RemoveDeletedProducts();
         }
         #endregion
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = string.Empty;
+            stockMinTextBox.Text = string.Empty;
+            stockMaxTextBox.Text = string.Empty;
+            categoryDropDown.Text = "All";
+        }
     }
 }

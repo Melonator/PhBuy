@@ -7,6 +7,7 @@ namespace PhBuyModels
     {
         public decimal? SellerId { get; set; }
         public string Type { get; set; }
+        public int TypeId { get; set; }
 
         public virtual Seller Seller { get; set; }
     }

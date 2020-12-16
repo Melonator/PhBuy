@@ -18,6 +18,7 @@ namespace PhBuyModels
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
+        public virtual DbSet<ProductRatings> ProductRatings { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<Profiles> Profiles { get; set; }
         public virtual DbSet<Seller> Seller { get; set; }
@@ -44,11 +45,13 @@ namespace PhBuyModels
                     .HasMaxLength(200)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Contact)
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Picture).HasColumnType("image");
             });
 
             modelBuilder.Entity<Orders>(entity =>
@@ -57,15 +60,19 @@ namespace PhBuyModels
                     .HasColumnName("ID")
                     .HasColumnType("smallmoney");
 
+                entity.Property(e => e.CustomerAddress)
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.CustomerId)
                     .HasColumnName("CustomerID")
                     .HasColumnType("smallmoney");
 
+                entity.Property(e => e.DateOrdered).HasColumnType("datetime");
+
                 entity.Property(e => e.ProductId)
                     .HasColumnName("ProductID")
                     .HasColumnType("smallmoney");
-
-                entity.Property(e => e.Quantity).HasColumnType("smallmoney");
 
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
@@ -98,8 +105,6 @@ namespace PhBuyModels
 
                 entity.Property(e => e.ImageiD).ValueGeneratedNever();
 
-                entity.Property(e => e.Picture).HasColumnType("image");
-
                 entity.Property(e => e.ProductId)
                     .HasColumnName("ProductID")
                     .HasColumnType("smallmoney");
@@ -108,6 +113,20 @@ namespace PhBuyModels
                     .WithMany(p => p.ProductImages)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__ProductIm__Produ__34C8D9D1");
+            });
+
+            modelBuilder.Entity<ProductRatings>(entity =>
+            {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.ProductId)
+                    .HasColumnName("ProductID")
+                    .HasColumnType("smallmoney");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.ProductRatings)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK__ProductRa__Produ__46E78A0C");
             });
 
             modelBuilder.Entity<Products>(entity =>
@@ -124,7 +143,7 @@ namespace PhBuyModels
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .HasMaxLength(300)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FdaNumber)
@@ -140,13 +159,13 @@ namespace PhBuyModels
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Picture).HasColumnType("image");
-
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
                     .HasColumnType("smallmoney");
 
-                entity.Property(e => e.Stock).HasColumnType("smallmoney");
+                entity.Property(e => e.Status)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Type)
                     .HasMaxLength(20)
@@ -183,10 +202,12 @@ namespace PhBuyModels
                     .HasColumnName("ID")
                     .HasColumnType("smallmoney");
 
-                entity.Property(e => e.Background).HasColumnType("image");
+                entity.Property(e => e.Contact)
+                    .HasMaxLength(14)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Descrption)
-                    .HasMaxLength(150)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Fblink)
@@ -201,13 +222,16 @@ namespace PhBuyModels
                 entity.Property(e => e.Name)
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Picture).HasColumnType("image");
             });
 
             modelBuilder.Entity<SellerTypes>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.TypeId)
+                    .HasName("PK__SellerTy__516F0395C0394695");
+
+                entity.Property(e => e.TypeId)
+                    .HasColumnName("TypeID")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.SellerId)
                     .HasColumnName("SellerID")
@@ -218,7 +242,7 @@ namespace PhBuyModels
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Seller)
-                    .WithMany()
+                    .WithMany(p => p.SellerTypes)
                     .HasForeignKey(d => d.SellerId)
                     .HasConstraintName("FK__SellerTyp__Selle__38996AB5");
             });

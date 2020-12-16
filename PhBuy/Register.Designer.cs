@@ -57,6 +57,7 @@ namespace PhBuy
             this.registerButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.exitButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,12 +70,12 @@ namespace PhBuy
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(60, 240);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Password";
             // 
@@ -82,25 +83,25 @@ namespace PhBuy
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label1.Location = new System.Drawing.Point(60, 169);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 19);
+            this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Name";
+            this.label1.Text = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.label3.Location = new System.Drawing.Point(60, 316);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 19);
+            this.label3.Size = new System.Drawing.Size(141, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "Confirm Password";
             // 
@@ -108,12 +109,12 @@ namespace PhBuy
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Product Sans", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Mulish", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            this.label4.Location = new System.Drawing.Point(106, 77);
+            this.label4.Location = new System.Drawing.Point(105, 77);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 34);
+            this.label4.Size = new System.Drawing.Size(169, 37);
             this.label4.TabIndex = 11;
             this.label4.Text = "Welcome to";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,7 +147,7 @@ namespace PhBuy
             this.confirmTextBox.BorderThickness = 2;
             this.confirmTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.confirmTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.confirmTextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.confirmTextBox.DefaultFont = new System.Drawing.Font("Mulish", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmTextBox.DefaultText = "";
             this.confirmTextBox.FillColor = System.Drawing.Color.White;
             this.confirmTextBox.HideSelection = true;
@@ -193,7 +194,7 @@ namespace PhBuy
             this.confirmTextBox.SelectionLength = 0;
             this.confirmTextBox.SelectionStart = 0;
             this.confirmTextBox.ShortcutsEnabled = true;
-            this.confirmTextBox.Size = new System.Drawing.Size(261, 33);
+            this.confirmTextBox.Size = new System.Drawing.Size(261, 41);
             this.confirmTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.confirmTextBox.TabIndex = 3;
             this.confirmTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -203,6 +204,7 @@ namespace PhBuy
             this.confirmTextBox.TextPlaceholder = "Enter your password";
             this.confirmTextBox.UseSystemPasswordChar = false;
             this.confirmTextBox.WordWrap = true;
+            this.confirmTextBox.TextChange += new System.EventHandler(this.confirmTextBox_TextChange);
             // 
             // passTextBox
             // 
@@ -221,7 +223,7 @@ namespace PhBuy
             this.passTextBox.BorderThickness = 2;
             this.passTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.passTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passTextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.passTextBox.DefaultFont = new System.Drawing.Font("Mulish", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passTextBox.DefaultText = "";
             this.passTextBox.FillColor = System.Drawing.Color.White;
             this.passTextBox.HideSelection = true;
@@ -268,7 +270,7 @@ namespace PhBuy
             this.passTextBox.SelectionLength = 0;
             this.passTextBox.SelectionStart = 0;
             this.passTextBox.ShortcutsEnabled = true;
-            this.passTextBox.Size = new System.Drawing.Size(261, 33);
+            this.passTextBox.Size = new System.Drawing.Size(261, 41);
             this.passTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.passTextBox.TabIndex = 2;
             this.passTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -278,6 +280,7 @@ namespace PhBuy
             this.passTextBox.TextPlaceholder = "Enter your password";
             this.passTextBox.UseSystemPasswordChar = false;
             this.passTextBox.WordWrap = true;
+            this.passTextBox.TextChange += new System.EventHandler(this.passTextBox_TextChange);
             // 
             // nameTextBox
             // 
@@ -296,7 +299,7 @@ namespace PhBuy
             this.nameTextBox.BorderThickness = 2;
             this.nameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.nameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameTextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.nameTextBox.DefaultFont = new System.Drawing.Font("Mulish", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameTextBox.DefaultText = "";
             this.nameTextBox.FillColor = System.Drawing.Color.White;
             this.nameTextBox.HideSelection = true;
@@ -336,21 +339,21 @@ namespace PhBuy
             this.nameTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.nameTextBox.PasswordChar = '\0';
             this.nameTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.nameTextBox.PlaceholderText = "Enter your name";
+            this.nameTextBox.PlaceholderText = "Enter your username";
             this.nameTextBox.ReadOnly = false;
             this.nameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.nameTextBox.SelectedText = "";
             this.nameTextBox.SelectionLength = 0;
             this.nameTextBox.SelectionStart = 0;
             this.nameTextBox.ShortcutsEnabled = true;
-            this.nameTextBox.Size = new System.Drawing.Size(261, 33);
+            this.nameTextBox.Size = new System.Drawing.Size(261, 41);
             this.nameTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.nameTextBox.TabIndex = 1;
             this.nameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nameTextBox.TextMarginBottom = 0;
             this.nameTextBox.TextMarginLeft = 3;
             this.nameTextBox.TextMarginTop = 0;
-            this.nameTextBox.TextPlaceholder = "Enter your name";
+            this.nameTextBox.TextPlaceholder = "Enter your username";
             this.nameTextBox.UseSystemPasswordChar = false;
             this.nameTextBox.WordWrap = true;
             // 
@@ -372,7 +375,7 @@ namespace PhBuy
             this.registerButton.ButtonTextMarginLeft = 0;
             this.registerButton.ColorContrastOnClick = 45;
             this.registerButton.ColorContrastOnHover = 45;
-            this.registerButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -383,7 +386,7 @@ namespace PhBuy
             this.registerButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.registerButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.registerButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.registerButton.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.Font = new System.Drawing.Font("Mulish", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.registerButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.registerButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -468,7 +471,7 @@ namespace PhBuy
             this.exitButton.ButtonTextMarginLeft = 0;
             this.exitButton.ColorContrastOnClick = 45;
             this.exitButton.ColorContrastOnHover = 45;
-            this.exitButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -479,7 +482,7 @@ namespace PhBuy
             this.exitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.exitButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.exitButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.exitButton.Font = new System.Drawing.Font("Product Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Mulish", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
             this.exitButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -497,7 +500,7 @@ namespace PhBuy
             this.exitButton.IdleIconLeftImage = null;
             this.exitButton.IdleIconRightImage = null;
             this.exitButton.IndicateFocus = false;
-            this.exitButton.Location = new System.Drawing.Point(334, 12);
+            this.exitButton.Location = new System.Drawing.Point(336, 9);
             this.exitButton.Name = "exitButton";
             this.exitButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.exitButton.OnDisabledState.BorderRadius = 1;
@@ -540,6 +543,75 @@ namespace PhBuy
             this.exitButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.exitButton.UseDefaultRadiusAndThickness = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = true;
+            this.bunifuSnackbar1.ClickToClose = true;
+            this.bunifuSnackbar1.DoubleClickToClose = true;
+            this.bunifuSnackbar1.DurationAfterIdle = 100;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = false;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = false;
+            this.bunifuSnackbar1.ShowCloseIcon = false;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
             // 
             // Register
             // 
@@ -586,5 +658,6 @@ namespace PhBuy
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton registerButton;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton exitButton;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
     }
 }

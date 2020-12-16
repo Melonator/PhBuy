@@ -13,7 +13,7 @@ namespace PhBuyModels
         public decimal Id { get; set; }
         public string Name { get; set; }
         public byte[] Picture { get; set; }
-        public int? Contact { get; set; }
+        public string Contact { get; set; }
         public string Address { get; set; }
 
         public virtual ICollection<Orders> Orders { get; set; }

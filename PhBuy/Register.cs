@@ -2,17 +2,20 @@
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 
 namespace PhBuy
 {
 	public partial class Register : Form
 	{
 		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+"REDACTED";
 
-		public Register()
+		private LandingForm _lf = null;
+		public Register(LandingForm lf)
 		{
 			InitializeComponent();
+			_lf = lf;
 		}
 
 		#region Events
@@ -20,27 +23,25 @@ namespace PhBuy
 		private void registerButton_Click(object sender, EventArgs e)
 		{
 			var entryStatus = AreEntriesValid();
-
+			bool validEntries = false;
 			switch (entryStatus)
 			{
 				case 0:
 					RegisterUser(nameTextBox.Text, passTextBox.Text); //Valid Entries
-					MessageBox.Show("Yay!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					bunifuSnackbar1.Show(_lf,"Success!", BunifuSnackbar.MessageTypes.Success);
+					validEntries = true;
 					break;
 				case 1:
-					MessageBox.Show("Please type a different name", "User already exists!", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // User already exists
+					bunifuSnackbar1.Show(this, "Please type a different Username!", BunifuSnackbar.MessageTypes.Error);
 					break;
 				case 2:
-					MessageBox.Show("Please type matching passwords", "Passwords do not match!", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // Passwords do not match
+					bunifuSnackbar1.Show(this, "Passwords do not match!", BunifuSnackbar.MessageTypes.Error);
 					break;
 				case 3:
-					MessageBox.Show("Please fill in all the textboxes", "Empty Textbox", MessageBoxButtons.OK,
-						MessageBoxIcon.Error); // Textboxes are empty
+					bunifuSnackbar1.Show(this, "Please fill in all fields!", BunifuSnackbar.MessageTypes.Error);
 					break;
 			}
-			this.Close();
+			if (validEntries) Close();
 		}
 
 		#endregion
@@ -73,7 +74,7 @@ namespace PhBuy
 
 					while (oReader.Read())
 					{
-						if (oReader["Name"].ToString() != username) continue;
+						if (oReader["Name"].ToString().ToLower() != username.ToLower()) continue;
 						myConnection.Close();
 						return 1; // Username exists
 					}
@@ -163,6 +164,18 @@ namespace PhBuy
 			return true;
 		}
 
-		#endregion
-	}
+        #endregion
+
+        private void passTextBox_TextChange(object sender, EventArgs e)
+        {
+			if (passTextBox.Text == "") passTextBox.UseSystemPasswordChar = false;
+			else passTextBox.UseSystemPasswordChar = true;
+        }
+
+        private void confirmTextBox_TextChange(object sender, EventArgs e)
+        {
+			if (confirmTextBox.Text == "") confirmTextBox.UseSystemPasswordChar = false;
+			else confirmTextBox.UseSystemPasswordChar = true;
+        }
+    }
 }

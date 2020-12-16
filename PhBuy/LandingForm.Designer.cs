@@ -31,14 +31,14 @@ namespace PhBuy
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LandingForm));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.leftPanel = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@ namespace PhBuy
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.nameTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace PhBuy
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -92,6 +94,7 @@ namespace PhBuy
             this.leftPanel.Controls.Add(this.label3);
             this.leftPanel.Controls.Add(this.label2);
             this.leftPanel.Controls.Add(this.label1);
+            this.leftPanel.Controls.Add(this.button1);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftPanel.Location = new System.Drawing.Point(2, 2);
             this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -159,6 +162,21 @@ namespace PhBuy
             this.label1.TabIndex = 8;
             this.label1.Text = "Rediscover";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(221)))), ((int)(((byte)(222)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(286, 367);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1, 1);
+            this.button1.TabIndex = 13;
+            this.button1.TabStop = false;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // rightPanel
             // 
             this.rightPanel.Controls.Add(this.nameTextBox);
@@ -210,26 +228,26 @@ namespace PhBuy
             this.nameTextBox.Modified = false;
             this.nameTextBox.Multiline = false;
             this.nameTextBox.Name = "nameTextBox";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameTextBox.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.nameTextBox.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameTextBox.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.nameTextBox.OnIdleState = stateProperties12;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameTextBox.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.nameTextBox.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameTextBox.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.nameTextBox.OnIdleState = stateProperties4;
             this.nameTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.nameTextBox.PasswordChar = '\0';
             this.nameTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -276,25 +294,26 @@ namespace PhBuy
             this.exitButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("exitButton.ErrorImage")));
             this.exitButton.FadeWhenInactive = false;
             this.exitButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.exitButton.Image = global::PhBuy.Properties.Resources.exit_208px;
+            this.exitButton.Image = global::PhBuy.Properties.Resources.close_window_208px_1;
             this.exitButton.ImageActive = null;
             this.exitButton.ImageLocation = null;
-            this.exitButton.ImageMargin = 5;
-            this.exitButton.ImageSize = new System.Drawing.Size(28, 30);
-            this.exitButton.ImageZoomSize = new System.Drawing.Size(33, 35);
+            this.exitButton.ImageMargin = 0;
+            this.exitButton.ImageSize = new System.Drawing.Size(34, 34);
+            this.exitButton.ImageZoomSize = new System.Drawing.Size(35, 35);
             this.exitButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("exitButton.InitialImage")));
-            this.exitButton.Location = new System.Drawing.Point(338, 9);
+            this.exitButton.Location = new System.Drawing.Point(334, 9);
             this.exitButton.Name = "exitButton";
             this.exitButton.Rotation = 0;
             this.exitButton.ShowActiveImage = true;
             this.exitButton.ShowCursorChanges = true;
             this.exitButton.ShowImageBorders = true;
             this.exitButton.ShowSizeMarkers = false;
-            this.exitButton.Size = new System.Drawing.Size(33, 35);
+            this.exitButton.Size = new System.Drawing.Size(35, 35);
             this.exitButton.TabIndex = 25;
-            this.exitButton.ToolTipText = "";
+            this.exitButton.TabStop = false;
+            this.exitButton.ToolTipText = "Exit";
             this.exitButton.WaitOnLoad = false;
-            this.exitButton.Zoom = 5;
+            this.exitButton.Zoom = 0;
             this.exitButton.ZoomSpeed = 10;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
@@ -332,26 +351,26 @@ namespace PhBuy
             this.passTextBox.Modified = false;
             this.passTextBox.Multiline = false;
             this.passTextBox.Name = "passTextBox";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.passTextBox.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.passTextBox.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.passTextBox.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.passTextBox.OnIdleState = stateProperties16;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.passTextBox.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.passTextBox.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(58)))), ((int)(((byte)(39)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.passTextBox.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(66)))));
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.passTextBox.OnIdleState = stateProperties8;
             this.passTextBox.Padding = new System.Windows.Forms.Padding(2);
             this.passTextBox.PasswordChar = '\0';
             this.passTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -372,6 +391,7 @@ namespace PhBuy
             this.passTextBox.TextPlaceholder = "Enter your password";
             this.passTextBox.UseSystemPasswordChar = false;
             this.passTextBox.WordWrap = true;
+            this.passTextBox.TextChange += new System.EventHandler(this.passTextBox_TextChange);
             // 
             // registerButton
             // 
@@ -396,6 +416,7 @@ namespace PhBuy
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(112, 32);
             this.registerButton.TabIndex = 21;
+            this.registerButton.TabStop = false;
             this.registerButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
@@ -422,6 +443,7 @@ namespace PhBuy
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(112, 32);
             this.loginButton.TabIndex = 22;
+            this.loginButton.TabStop = false;
             this.loginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
@@ -461,8 +483,78 @@ namespace PhBuy
             this.label9.TabIndex = 19;
             this.label9.Text = "Name";
             // 
+            // bunifuSnackbar1
+            // 
+            this.bunifuSnackbar1.AllowDragging = false;
+            this.bunifuSnackbar1.AllowMultipleViews = true;
+            this.bunifuSnackbar1.ClickToClose = true;
+            this.bunifuSnackbar1.DoubleClickToClose = true;
+            this.bunifuSnackbar1.DurationAfterIdle = 10;
+            this.bunifuSnackbar1.ErrorOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.ErrorOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.ErrorOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.ErrorOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.ErrorOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(199)))));
+            this.bunifuSnackbar1.ErrorOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.ErrorOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.ErrorOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon")));
+            this.bunifuSnackbar1.ErrorOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.FadeCloseIcon = false;
+            this.bunifuSnackbar1.Host = Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner;
+            this.bunifuSnackbar1.InformationOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.InformationOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.InformationOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.InformationOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.InformationOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.InformationOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.InformationOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon1")));
+            this.bunifuSnackbar1.InformationOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.Margin = 10;
+            this.bunifuSnackbar1.MaximumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.MaximumViews = 7;
+            this.bunifuSnackbar1.MessageRightMargin = 15;
+            this.bunifuSnackbar1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.bunifuSnackbar1.ShowBorders = false;
+            this.bunifuSnackbar1.ShowCloseIcon = false;
+            this.bunifuSnackbar1.ShowIcon = true;
+            this.bunifuSnackbar1.ShowShadows = true;
+            this.bunifuSnackbar1.SuccessOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.SuccessOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.SuccessOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.SuccessOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.SuccessOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(255)))), ((int)(((byte)(237)))));
+            this.bunifuSnackbar1.SuccessOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.SuccessOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.SuccessOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon2")));
+            this.bunifuSnackbar1.SuccessOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ViewsMargin = 7;
+            this.bunifuSnackbar1.WarningOptions.ActionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bunifuSnackbar1.WarningOptions.ActionBorderRadius = 1;
+            this.bunifuSnackbar1.WarningOptions.ActionFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuSnackbar1.WarningOptions.ActionForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.BackColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.BorderColor = System.Drawing.Color.White;
+            this.bunifuSnackbar1.WarningOptions.CloseIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(143)))));
+            this.bunifuSnackbar1.WarningOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bunifuSnackbar1.WarningOptions.ForeColor = System.Drawing.Color.Black;
+            this.bunifuSnackbar1.WarningOptions.Icon = ((System.Drawing.Image)(resources.GetObject("resource.Icon3")));
+            this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
+            this.bunifuSnackbar1.ZoomCloseIcon = true;
+            // 
             // LandingForm
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PhBuy.Properties.Resources._125882841_2838879412994219_3149737760896158500_n;
@@ -503,5 +595,7 @@ namespace PhBuy
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private System.Windows.Forms.Button button1;
     }
 }

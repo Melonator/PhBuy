@@ -123,10 +123,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="deleteAllButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHMAAAAeCAYAAAAfKSFiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVGhD7dExEYAwAMDAqqkH8O8CGSwwwbFjoLkffsqY
-        ce/zuPb5sLbv4/gLrMnMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TMEDNDzAwxM8TM
-        EDNDzAwxM8TMEDNDzAwZ1zbPv8Bitnm+h7GJ6O6XGfoAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAIEAAAAeCAYAAAALkH3GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABoSURBVGhD7dIxAcAgFENB1HwP4N9FZbDA1KY7Drjhpox5
+        bY961qiXO/3/t9PAXUSACBABIQJEgAgIESACRECIABEgAkIEiAARECJABIiAEAEiQASECBABIiBEgAgQ
+        AdFWr3kauESv+QFcJmDgppMNMwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="clearButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
