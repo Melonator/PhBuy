@@ -7,8 +7,8 @@ namespace PhBuy
 {
 	public partial class DatabaseForm : Form
 	{
-		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 
 		public DatabaseForm()
 		{
@@ -24,7 +24,7 @@ namespace PhBuy
 		{
 			//Load the dropdown contents based on the tables on the database
 
-			var connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(_connectionString);
 			connection.Open();
 			var queryString = "SELECT * FROM information_schema.tables;";
 			var cmd = new SqlCommand(queryString, connection);
@@ -38,7 +38,7 @@ namespace PhBuy
 
 		private void tableDropDown_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			var connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(_connectionString);
 			connection.Open();
 			var queryString = $"SELECT * FROM {tableDropDown.Text}";
 			var dataAdapter = new SqlDataAdapter(queryString, connection);
@@ -52,7 +52,7 @@ namespace PhBuy
 		private void editButton_Click(object sender, EventArgs e)
 		{
 			//Do edits in the database here!
-			var connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(_connectionString);
 			connection.Open();
 			var queryString = $"";
 			var cmd = new SqlCommand(queryString, connection);
@@ -64,7 +64,7 @@ namespace PhBuy
 		{
 			//Delete the contents of the table selected!
 
-			var connection = new SqlConnection(ConnectionString);
+			var connection = new SqlConnection(_connectionString);
 			connection.Open();
 			var queryString = $"DELETE FROM {tableDropDown.Text}";
 			var cmd = new SqlCommand(queryString, connection);

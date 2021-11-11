@@ -10,8 +10,8 @@ namespace PhBuy
 	{
 		private readonly int _id;
 		private readonly string _userName;
-		private const string ConnectionString =
-"REDACTED";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 		private PhBuyContext _data = new PhBuyContext();
 
 		public CustomerSellerForm(string name, int id)
@@ -50,7 +50,7 @@ namespace PhBuy
 
 		private bool isNewSeller()
         {
-			var myConnection = new SqlConnection(ConnectionString); 
+			var myConnection = new SqlConnection(_connectionString);
 			myConnection.Open();
 			var queryString = $"SELECT ID FROM Seller";
 			var oCmd = new SqlCommand(queryString, myConnection);
@@ -69,7 +69,7 @@ namespace PhBuy
 
 		private bool isNewCustomer()
         {
-			var myConnection = new SqlConnection(ConnectionString); 
+			var myConnection = new SqlConnection(_connectionString);
 			myConnection.Open();
 			var queryString = $"SELECT ID FROM Customer";
 			var oCmd = new SqlCommand(queryString, myConnection);

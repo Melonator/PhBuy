@@ -7,8 +7,8 @@ namespace PhBuy
 {
 	public partial class LandingForm : Form
 	{
-		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 
 
 		public LandingForm()
@@ -47,7 +47,7 @@ namespace PhBuy
 		{
 			var username = nameTextBox.Text;
 			var password = passTextBox.Text;
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 
 			if (username != string.Empty && password != string.Empty)
 			{
@@ -82,7 +82,7 @@ namespace PhBuy
 		private int GetUserId()
 		{
 			var id = 0;
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			myConnection.Open();
 			var queryString = "SELECT * FROM Profiles WHERE Name = @Name;";
 			var param = new SqlParameter {ParameterName = "@Name", Value = nameTextBox.Text};

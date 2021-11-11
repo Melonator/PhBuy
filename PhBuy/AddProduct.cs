@@ -14,14 +14,14 @@ namespace PhBuy
 {
 	public partial class AddProduct : Form
 	{
-		private const string ConnectionString =
-"REDACTED";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 
 		//Photos Data
 		private string _productCoverLocation;
 		private string condition;
 
-		//Instance of cover image 
+		//Instance of cover image
 		private readonly ProductImage coverImage = new ProductImage();
 		private string description;
 		private string fdanum = string.Empty;
@@ -133,10 +133,10 @@ namespace PhBuy
 
 				imageCountLabel.Text = $"Images: {imageNo} / 8";
 			}
-			
+
             else
             {
-				//TODO: Bunifu Snackbar or something notification 
+				//TODO: Bunifu Snackbar or something notification
             }
 		}
 
@@ -162,7 +162,7 @@ namespace PhBuy
 				imagesPanel.Controls.SetChildIndex(addImagePanel, imagesPanel.Controls.Count);
 			}
 
-			
+
 			else
 			{
 				var dlg = new OpenFileDialog {Title = "Choose your product cover image"};
@@ -192,7 +192,7 @@ namespace PhBuy
 				productID = (int) GenerateId();
 
 				//Confirm the stuff
-				var myConnection = new SqlConnection(ConnectionString);
+				var myConnection = new SqlConnection(_connectionString);
 				//Add new entries
 				var queryString = "INSERT INTO Products VALUES(@ProductID, @SellerID, @Name" +
 				                  ", @Price, @Cover, @Stock, @Weight, @Length, @Width, @Height, @Condition, @Description, @FDANumber, @Type, @Rating, @Sales, @Status);";
@@ -279,8 +279,8 @@ namespace PhBuy
 			ClearValues();
 			_sellerPanel.MyProducts.LoadProducts();
 			_sellerPanel.sellerDashBoard.sellerTabControl.SelectedIndex = 3;
-			
-            
+
+
 		}
 
 		//First event when the product form is clicked
@@ -361,7 +361,7 @@ namespace PhBuy
 
 		private bool IsIdValid(uint id)
 		{
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
@@ -401,7 +401,7 @@ namespace PhBuy
 
 		private void InsertImages(string queryString, int productID)
 		{
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			myConnection.Open();
 
 			SqlCommand cmd;

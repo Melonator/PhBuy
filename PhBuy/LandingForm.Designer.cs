@@ -295,7 +295,7 @@ namespace PhBuy
             this.exitButton.FadeWhenInactive = false;
             this.exitButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.exitButton.Image = global::PhBuy.Properties.Resources.close_window_208px_1;
-            this.exitButton.ImageActive = null;
+            this.exitButton.ActiveImage = null;
             this.exitButton.ImageLocation = null;
             this.exitButton.ImageMargin = 0;
             this.exitButton.ImageSize = new System.Drawing.Size(34, 34);
@@ -313,7 +313,7 @@ namespace PhBuy
             this.exitButton.TabStop = false;
             this.exitButton.ToolTipText = "Exit";
             this.exitButton.WaitOnLoad = false;
-            this.exitButton.Zoom = 0;
+            this.exitButton.ImageMargin = 0;
             this.exitButton.ZoomSpeed = 10;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 

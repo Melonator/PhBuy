@@ -8,8 +8,8 @@ namespace PhBuy
 {
 	public partial class Register : Form
 	{
-		private const string ConnectionString =
-"REDACTED";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 
 		private LandingForm _lf = null;
 		public Register(LandingForm lf)
@@ -59,7 +59,7 @@ namespace PhBuy
 			var password = passTextBox.Text;
 			var cPassword = confirmTextBox.Text;
 
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			if (username != string.Empty && password != string.Empty && cPassword != string.Empty)
 			{
 				if (password == cPassword) // The passwords must be matching
@@ -100,7 +100,7 @@ namespace PhBuy
 
 		private void RegisterUser(string name, string password)
 		{
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			//Add new entries
 			var queryString = "INSERT INTO Profiles VALUES(@ID, @Name, @Password);";
 
@@ -140,7 +140,7 @@ namespace PhBuy
 
 		private bool IsIdValid(uint id)
 		{
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			var queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();

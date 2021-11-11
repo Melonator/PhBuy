@@ -28,8 +28,7 @@ namespace PhBuyModels
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123");
+                optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("PhBuyConnectionString") ?? string.Empty);
             }
         }
 
