@@ -12,8 +12,8 @@ namespace PhBuy
 {
 	public partial class SellerRegisterForm : Form
 	{
-		private const string ConnectionString =
-			"Data Source=SQL5097.site4now.net;Initial Catalog=DB_A6A7CB_PhBuy;User Id=DB_A6A7CB_PhBuy_admin;Password=ryanpogi123";
+		private readonly string _connectionString =
+			Environment.GetEnvironmentVariable("PhBuyConnectionString");
 
 		private PhBuyContext _data = new PhBuyContext();
 		private List<string> _selectedTypes = new List<string>();
@@ -206,7 +206,7 @@ namespace PhBuy
 
 		private bool IsIdValid(uint id)
 		{
-			var myConnection = new SqlConnection(ConnectionString);
+			var myConnection = new SqlConnection(_connectionString);
 			const string queryString = "SELECT ID FROM Profiles WHERE ID = @ID";
 
 			myConnection.Open();
